@@ -7,7 +7,7 @@ import gulpIf from 'gulp-if';
 
 import {
   srcFolder,
-  publicFolder,
+  destFolder,
   fileLogger,
   showFiles,
   watcher,
@@ -15,7 +15,7 @@ import {
 
 export const prototypesSources = srcFolder(`html/*.html`);
 export const prototypeComponents = srcFolder(`html/components/**/*.html`);
-export const prototypesDest = publicFolder('');
+export const prototypesDest = destFolder('');
 
 export const processor = (args = {}) =>
   function processPrototypes() {
