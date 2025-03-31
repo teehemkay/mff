@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" itemscope itemtype="https://schema.org/FAQPage">
+	<head>
+		@@include('./components/head.html')
+	</head>
+
+	<body>
+	@@include('./components/shortcut-wai.html')
+
+	<!-- NAVIGATION -->
+	@@include('./components/navigation-main.html')
+
+	<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+	<!-- CONTENT -->
+	<main role="main" id="mainContent" class="mb-8">
+
+		<div class="uyv-page">
+
+			<div class="uyv-banner bg-blue-default flex py-20">
+
+				<div class="uyv-share flex flex-col self-center mx-auto max-w-4xl mx-auto px-4">
+
+					<p class="font-EPGammaBold text-yellow-active text-3lg leading-10 mb-4">Thank you for signing up.</p>
+					<h1 id="h1title" class="block text-white-default text-left mb-10">
+						<span class="block baseline-text line-2 !normal-case !leading-[3rem] sm:!leading-[3.6rem]">Do you want to invite other people to use their vote?</span>
+					</h1>
+
+					<div class="block md:flex copy-block mb-2">
+						<div class="relative mb-2 w-full">
+							<input
+									aria-labelledby="h1title"
+									type="text"
+									class="copy-target text-[1rem] sm:text-[1.25rem] block min-w-[220px] sm:min-w-none min-h-[60px] w-full border-0 bg-white-default px-4 py-1"
+									id="copy-target"
+									placeholder="elections.europa.eu/useyourvote"
+									value="elections.europa.eu/useyourvote" readonly />
+						</div>
+						<div>
+							<button
+									aria-label="copy the URL to your clipboard"
+									id="copy-button"
+									type="button"
+									class="copy-button inline-block bg-yellow-default text-blue-default rounded-r-lg rounded-l-lg md:rounded-l-none min-h-[60px] px-10 pt-1.5 pb-0.5 uppercase leading-normal text-white transition duration-150 ease-in-out">
+								Copy
+							</button>
+						</div>
+					</div>
+
+					<div class="copied-txt" role="status">
+						<span aria-hidden="true" class="fx--fadeOut">The URL has been copied to your clipboard</span>
+					</div>
+					<!-- la classe "fx--fadIn" sert à faire apparaître le texte et la classe "fx--fadOut" sert à le faire disparaitre -->
+					<!-- <div class="copied-txt" role="status">
+						<span class="fx--fadeIn">The URL has been copied to your clipboard</span> /* visible text */
+						<span aria-hidden="true" class="fx--fadeOut">The URL has been copied to your clipboard</span> /* hidden text */
+					</div> -->
+
+					<div class="share-url-zone expand-social-share flex items-center mt-3">
+						<span class="text-lg text-white-default mr-4">Share on:</span>
+						<ul id="share-url-1" class="social-list expand-container-content inline-flex flex-wrap items-center justify-center">
+							<li class="mr-3">
+								<a href="https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.europarl.europa.eu%2Feuropeans-against-covid19%2Fen%2Fyounes-and-brooks-oriental-and-tanger-tetouan-areas-177%2F" target="_blank">
+									<span class="sr-only">Share on facebook</span>
+									<svg class="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="34" height="34" focusable="false" aria-hidden="true">
+										<path class="back" d="M22.5,38.59a17,17,0,1,0-17-17,17,17,0,0,0,17,17" transform="translate(-5.5 -4.59)"></path>
+										<path class="icon" d="M19.9,31.62H24v-10h2.73l.36-3.47H24V16.37c0-.9.08-1.39,1.36-1.39h1.7V11.52H24.33c-3.27,0-4.43,1.68-4.43,4.51V18.1h-2v3.47h2Z" transform="translate(-5.5 -4.59)"></path>
+									</svg>
+								</a>
+							</li>
+							<li class="mr-3">
+								<a href="https://twitter.com/intent/tweet?text=Discover%20European%20stories%20of%20solidarity%20and%20hope%20that%20encourage%20all%20of%20us%20to%20stand%20strong.%20Supporting%20the%20people%20working%20together%20to%20make%20a%20difference.&amp;url=https%3A%2F%2Fwww.europarl.europa.eu%2Feuropeans-against-covid19%2Fen%2Fyounes-and-brooks-oriental-and-tanger-tetouan-areas-177%2F&amp;via=Europarl_EN" target="_blank">
+									<span class="sr-only">Share on Twitter / X</span>
+									<svg aria-hidden="true" class="twitter w-[34px] h-[34px] p-[5px]" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 17.21 15.09" width="17.21" height="15.09">
+										<g>
+											<path class="icon" d="M16.84-0.24l-1.05,1.13l-1.93,2.07c-0.75,0.81-1.51,1.62-2.26,2.42c-0.21,0.23-0.43,0.45-0.64,0.67   c-0.06,0.06-0.08,0.11-0.02,0.19c0.37,0.51,0.74,1.03,1.11,1.55c0.36,0.5,0.72,0.99,1.07,1.49c0.41,0.58,0.82,1.17,1.24,1.75   c0.48,0.67,0.97,1.34,1.45,2.01c0.29,0.4,0.56,0.8,0.84,1.21c0.19,0.27,0.39,0.55,0.58,0.82c0.02,0.03,0.03,0.07,0.04,0.11   c-0.04,0.02-0.08,0.03-0.12,0.04c-0.22,0-0.44,0-0.66,0c-1.68,0-3.35,0-5.03,0c-0.14,0.01-0.28-0.06-0.36-0.18   c-0.43-0.61-0.86-1.21-1.29-1.81c-0.35-0.49-0.71-0.97-1.05-1.46s-0.7-1.01-1.06-1.51c-0.04-0.06-0.1-0.1-0.14-0.16   c-0.18-0.26-0.17-0.25-0.38-0.03c-0.3,0.33-0.61,0.65-0.92,0.97c-0.29,0.31-0.58,0.62-0.87,0.93l-1.93,2.08   c-0.34,0.36-0.67,0.72-1.01,1.08c-0.06,0.05-0.13,0.08-0.21,0.09c-0.64,0.01-1.27,0-1.91,0c-0.05-0.01-0.09-0.02-0.13-0.04   c0.01-0.04,0.03-0.08,0.06-0.12c0.77-0.83,1.55-1.66,2.32-2.48c0.94-1,1.89-2.01,2.83-3.01c0.3-0.32,0.61-0.65,0.91-0.98   C6.37,8.57,6.38,8.5,6.35,8.44c0-0.01-0.01-0.01-0.02-0.02C5.89,7.82,5.45,7.2,5.01,6.59C4.59,6,4.17,5.4,3.74,4.8   c-0.37-0.51-0.73-1.02-1.1-1.53c-0.29-0.4-0.57-0.81-0.86-1.22S1.2,1.25,0.91,0.84C0.67,0.51,0.44,0.18,0.2-0.15   C0.14-0.24,0.18-0.27,0.27-0.27c0.11-0.01,0.22,0,0.32,0c1.83,0,3.65,0,5.48,0C6.21-0.29,6.33-0.22,6.4-0.1   c0.22,0.32,0.45,0.62,0.67,0.94c0.24,0.33,0.46,0.67,0.7,1c0.28,0.4,0.58,0.79,0.86,1.19s0.59,0.83,0.88,1.24   c0.09,0.13,0.19,0.24,0.27,0.37s0.13,0.1,0.22,0.01c0.44-0.48,0.89-0.96,1.34-1.44c0.52-0.56,1.05-1.12,1.57-1.68   c0.42-0.45,0.82-0.9,1.24-1.35c0.12-0.13,0.25-0.26,0.39-0.39c0.05-0.04,0.1-0.06,0.16-0.06c0.66,0,1.31,0,1.97,0   C16.73-0.26,16.79-0.25,16.84-0.24 M14.16,13.61c0-0.03-0.01-0.05-0.02-0.08c-0.25-0.35-0.49-0.7-0.74-1.05   c-0.36-0.5-0.73-1-1.09-1.51s-0.69-1-1.05-1.49c-0.29-0.41-0.6-0.82-0.9-1.23c-0.35-0.48-0.68-0.97-1.03-1.46   c-0.5-0.7-1.02-1.4-1.52-2.1c-0.29-0.4-0.57-0.81-0.86-1.22C6.5,2.85,6.05,2.22,5.6,1.59C5.53,1.45,5.39,1.37,5.24,1.37   c-0.6,0.01-1.21,0-1.81,0c-0.04,0-0.09,0.01-0.13,0.02c0.07,0.11,0.13,0.2,0.19,0.29c0.3,0.41,0.6,0.81,0.89,1.22   C4.75,3.4,5.1,3.92,5.47,4.42c0.3,0.42,0.61,0.84,0.91,1.26s0.61,0.85,0.91,1.27s0.59,0.82,0.89,1.24c0.36,0.5,0.72,1,1.07,1.5   c0.3,0.42,0.61,0.84,0.91,1.26c0.44,0.61,0.88,1.22,1.31,1.83c0.17,0.23,0.33,0.47,0.51,0.7c0.05,0.07,0.13,0.11,0.21,0.12   c0.49,0.01,0.98,0.01,1.47,0.01L14.16,13.61"></path>
+										</g>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwww.europarl.europa.eu%2Feuropeans-against-covid19%2Fen%2Fyounes-and-brooks-oriental-and-tanger-tetouan-areas-177%2F" target="_blank">
+									<span class="sr-only">Share on WhatsApp</span>
+									<svg class="whatsapp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="34" height="34" focusable="false" aria-hidden="true">
+										<path class="back" d="M22.5,38.6a17,17,0,1,0-17-17,17,17,0,0,0,17,17" transform="translate(-5.5 -4.6)"></path>
+										<path class="icon" d="M13.3,30.59l1.36-5A9.58,9.58,0,1,1,23,30.43a9.74,9.74,0,0,1-4.58-1.17Zm5.31-3.07a7.93,7.93,0,1,0-2.21-2.15l-.8,2.94Zm9.18-4.4c-.06-.1-.22-.16-.46-.28s-1.42-.7-1.64-.78-.38-.12-.54.12-.61.78-.75.94-.28.18-.52.06A6.52,6.52,0,0,1,22,22a7.14,7.14,0,0,1-1.33-1.66.35.35,0,0,1,.1-.49,5.52,5.52,0,0,0,.36-.42,1.33,1.33,0,0,0,.24-.4.42.42,0,0,0,0-.42c-.06-.11-.53-1.29-.73-1.77s-.4-.41-.54-.41h-.46a.88.88,0,0,0-.64.3,2.69,2.69,0,0,0-.84,2,4.66,4.66,0,0,0,1,2.47,10.71,10.71,0,0,0,4.09,3.62,12.43,12.43,0,0,0,1.37.5,3.18,3.18,0,0,0,1.5.1,2.48,2.48,0,0,0,1.62-1.14A2,2,0,0,0,27.79,23.12Z" transform="translate(-5.5 -4.6)"></path>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="tg-info-block max-w-4xl mx-auto mt-20 mb-0 px-4">
+				<img src="../assets/img/logos/logo-together-blue-en.svg" alt="Together for Democracy logo" class="max-w-[190px] mb-6">
+				<p class="max-w-[550px]">You can get even more involved in the democratic life of Europe by joining <a href="https://www.together.eu">together.eu<span class="sr-only"> Open in a new window</span></a>,
+					a community that connects people from across Europe to meet, share knowledge and learn new skills.</p>
+			</div>
+
+		</div>
+
+	</main>
+
+	<!-- // ------------------------ END MAIN AREA -------------------------- // -->
+
+	<!-- // ------------------------ START FOOTER AREA ------------------------- // -->
+
+	@@include('./components/footer.html')
+
+	<!-- // ------------------------ END FOOTER AREA ------------------------- // -->
+
+
+	<!-- JS files -->
+	@@include('./components/scripts.html')
+
+	<script>
+		// Menu component
+		window.addEventListener('DOMContentLoaded', () => {
+
+			// Inject the current menu state in JS (only for html prototyping as the main nav is included globally
+			// Trouver l'élément <ul> par sa classe
+			const navul = document.querySelector('ul.footerLinks');
+			const navli = navul.querySelector('li:nth-child(1)');
+			const navlilink = navli.querySelector('a');
+
+			// Ajouter la classe "current" à la balise <a>
+			navlilink.classList.add('current');
+
+			// Ajouter l'attribut "aria-current" avec la valeur "page" à la balise <a>
+			navlilink.setAttribute('aria-current', 'page');
+
+		});
+	</script>
+
+	</body>
+</html>

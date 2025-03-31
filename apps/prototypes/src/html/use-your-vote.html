@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" itemscope itemtype="https://schema.org/FAQPage">
+	<head>
+		@@include('./components/head.html')
+	</head>
+
+	<body>
+	@@include('./components/shortcut-wai.html')
+
+	<!-- NAVIGATION -->
+	@@include('./components/navigation-main.html')
+
+	<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+	<!-- CONTENT -->
+	<main role="main" id="mainContent" class="mb-8">
+
+		<div class="uyv-page">
+
+			<div class="uyv-banner block lg:flex md:block items-stretch min-h-[550px]">
+
+				<div class="left-col flex flex-col self-center w-full lg:w-[50%] md:w-full sm:w-full px-[2rem]">
+					@@include('./components/use-your-vote-brand-left-v2.html')
+				</div>
+
+				<div class="right-col flex flex-col items-start justify-center w-full lg:w-[50%] md:w-full sm:w-full bg-blue-default px-[2rem]">
+					<form class="w-full max-w-none lg:max-w-[400px] pt-6 pb-8 pl-0 lg:pl-8 mb-4" action="">
+						<div class="mb-2">
+							<input aria-label="Email address" autocomplete="email" required class="shadow appearance-none py-3 px-4 error-field" id="email" type="text" placeholder="Email address" aria-describedby="hint-email">
+							<span class="block error-text pt-2" id="hint-email" role="alert" aria-atomic="true">Please fill in your email address</span>
+						</div>
+						<div class="mb-4">
+							<div class="relative">
+								<select aria-label="Country" autocomplete="country" required class="block appearance-none py-3 px-4 pr-8" id="grid-state">
+									<option selected="selected" disabled="disabled">Country</option>
+									<option>Belgium</option>
+									<option>France</option>
+									<option>...</option>
+								</select>
+								<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
+									<svg class="fill-blue-default h-7 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+										<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+									</svg>
+								</div>
+							</div>
+							<span class="block error-text pt-2" id="hint-country" role="alert" aria-atomic="true">Please select a country</span>
+						</div>
+						<div>
+							<div class="block">
+								<label class="flex justify-start items-start mr-0 md:mr-2 mb-4 md:mb-0">
+									<input class="max-w-[18px] mr-2" type="checkbox" aria-describedby="hint-datap">
+									<span class="text-base text-white-default leading-4 mb-6">
+										<p class="text-white-default">I have read and I agree to the <a href="#">privacy statement</a>.</p>
+									</span>
+								</label>
+								<button class="btn-form text-2xl" type="button">Sign Up</button>
+							</div>
+							<span class="block error-text pt-2" id="hint-datap" role="alert" aria-atomic="true">Please check the checkbox</span>
+						</div>
+					</form>
+				</div>
+
+			</div>
+
+		</div>
+
+	</main>
+
+	<!-- // ------------------------ END MAIN AREA -------------------------- // -->
+
+	<!-- // ------------------------ START FOOTER AREA ------------------------- // -->
+
+	@@include('./components/footer.html')
+
+	<!-- // ------------------------ END FOOTER AREA ------------------------- // -->
+
+
+	<!-- JS files -->
+	@@include('./components/scripts.html')
+
+	<script>
+		// Menu component
+		window.addEventListener('DOMContentLoaded', () => {
+
+			// Inject the current menu state in JS (only for html prototyping as the main nav is included globally
+			// Trouver l'élément <ul> par sa classe
+			const navul = document.querySelector('ul.footerLinks');
+			const navli = navul.querySelector('li:nth-child(1)');
+			const navlilink = navli.querySelector('a');
+
+			// Ajouter la classe "current" à la balise <a>
+			navlilink.classList.add('current');
+
+			// Ajouter l'attribut "aria-current" avec la valeur "page" à la balise <a>
+			navlilink.setAttribute('aria-current', 'page');
+
+		});
+	</script>
+
+	</body>
+</html>

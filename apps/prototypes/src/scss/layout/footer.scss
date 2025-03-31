@@ -1,0 +1,37 @@
+/* --------------------------------- */
+/* FOOTER
+------------------------------------ */
+
+.footer{
+  position: relative;
+  &:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    display: block;
+    height: 2px;
+    width: calc(100% - 30px);
+    background-color: #D0D0CE;
+  }
+  .navFooter {
+    .footerLinks {
+      li {
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------- */
+/* COOKIES BANNER
+------------------------------------ */
+body[data-jsactive]{
+  #cookie-policy{
+    &.epjs_cookiepolicy{
+        //font-size: 62.5% !important;
+    }
+  }
+}

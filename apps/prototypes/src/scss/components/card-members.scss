@@ -1,0 +1,83 @@
+@use "../helpers/variables";
+
+/* --------------------------------- */
+/* CARD MEMBERS
+------------------------------------ */
+
+.card-members {
+  h3 {
+    color: variables.$black;
+  }
+  p{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-top:  0 !important;
+    margin-bottom: 0 !important;
+  }
+  a {
+    color: variables.$blue;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+    &:hover, &:focus {
+      text-decoration-thickness: 2px;
+      text-underline-offset: 6px;
+    }
+    &:focus {
+      outline: solid 2px variables.$blue-focus;
+      outline-offset: 4px;
+    }
+  }
+  .card-member-item {
+    h2 {
+      margin-top: 3.5rem;
+    }
+    .card-member-txt {
+      p {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+      }
+    }
+    .card-member-item-content {
+      a {
+        &.link-doc {
+          text-decoration: underline !important;
+          text-decoration-thickness: 1px;
+          h3 {
+            color: variables.$blue;
+          }
+          &:hover, &:focus {
+            text-decoration-thickness: 2px !important;
+          }
+        }
+        &.link-com {
+          text-decoration: none;
+          &:hover, &:focus {
+            h3 {
+              text-decoration: underline !important;
+              text-decoration-thickness: 1px !important;
+            }
+          }
+        }
+        &:hover, &:focus {
+          h3 {
+            text-decoration-thickness: 2px;
+          }
+        }
+        text-decoration: none !important;
+        abbr {
+          text-decoration: none !important;
+        }
+      }
+      h3 {
+        a {
+          color: variables.$blue;
+          text-decoration: underline !important;
+          &:hover, &:focus {
+              text-decoration-thickness: 2px !important;
+          }
+        }
+      }
+    }
+  }
+}

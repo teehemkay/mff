@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" class="no-js">
+	<head>
+		@@include('./components/head.html')
+		<style>
+			body {
+				line-height: 1.6;
+				color: #333;
+				margin: 20px;
+			}
+			table {
+				border-collapse: collapse;
+				width: 100%;
+			}
+			td {
+				padding: 8px;
+				text-align: center;
+			}
+			td:first-child {
+				text-align: left;
+				font-weight: bold;
+			}
+			a {
+				color: #333;
+				text-decoration: none;
+				border-bottom: 1px solid #333;
+			}
+			tr:nth-child(even) {
+				background-color: #f9f9f9;
+			}
+			td:not(:first-child):not(:has(a)) {
+				color: #999;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+		<!-- CONTENT -->
+		<main role="main" id="mainContent" class="mb-8">
+			<h1 class="font-EPGammaBold text-2.5xl text-black-greydark text-left"></h1>
+  		<div class="epol-block lg:flex flex-col md:block sm:block block max-w-4xl mx-auto mb-16 px-4">
+  			<h2 class="text-2lg font-EPGammaBold text-black-greydark mb-6">Document Availability Dashboard</h2>
+
+			@@include('./components/document-availability.html', { name: 'Dan Jørgensen' }) 
+      @@include('./components/document-availability.html', { name: 'Valdis Dombrovskis' })
+
+  		</div>
+		</main>
+	</body>
+</html>

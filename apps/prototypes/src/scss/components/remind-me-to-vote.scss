@@ -1,0 +1,144 @@
+@use "../helpers/variables";
+
+/* -------------------------------------- */
+/* HOW TO VOTE
+----------------------------------------- */
+
+.rtv-banner {
+    form {
+      fieldset {
+        legend {
+          &.text-white-default {
+            outline: 0 !important;
+          }
+        }
+      }
+      input, select, textarea {
+        &.error-field {
+          outline: solid 3px variables.$red-warning;
+          background-color: variables.$bgFieldError;
+        }
+      }
+      input[type="checkbox"] {
+        border: solid 1px #C6C6C6 !important;
+      &::before {
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1rem 1rem variables.$blue-arrow;
+        transform-origin: bottom left;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      }
+        &:checked::before {
+          transform: scale(1);
+        }
+        border-radius: 5px;
+        border: 0;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        min-width: 18px;
+        min-height: 18px;
+        display: grid;
+        place-content: center;
+        &:focus {
+          outline: solid 2px variables.$blue-focus;
+          outline-offset: max(2px, 0.15em);
+          border: 0;
+        }
+      }
+      input, select {
+        min-height: 55px;
+        width: 100%;
+        color: variables.$grey-dark;
+        border-radius: 7px;
+        border: solid 1px #C6C6C6;
+        background-color: variables.$white;
+        &:focus {
+          outline: solid 3px variables.$blue-focus;
+          outline-offset: 1px;
+        }
+        &::placeholder {
+          color: #333;
+        }
+        select {
+          option {
+            color: variables.$grey-dark;
+            font-size: 1rem;
+            &[disabled="disabled"] {
+              color: #666666;
+            }
+          }
+        }
+        &.code-field {
+          &[type=number]{
+            -moz-appearance: textfield;
+          }
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+          &::placeholder {
+            color: variables.$grey-dark;
+          }
+          font-size: 1.5rem;
+          width: 41px;
+          height: 80px;
+          border-radius: 9px;
+          text-align: center;
+        }
+      }
+      select{
+        &[disabled] {
+          background-color: #D9D9D9;
+        }
+        option {
+          font-weight: 700;
+        }
+      }
+      .error-text {
+        color: variables.$red-warning;
+        font-size: 1rem;
+      }
+      .btn-form {
+        appearance: none;
+        min-width: 120px;
+        min-height: 55px;
+        font-family: "EPGammaBold", Arial, sans-serif;
+        text-transform: uppercase;
+        background-color: variables.$blue-arrow;
+        color: variables.$white;
+        border: none;
+        border-radius: 7px;
+        padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+        transition: background-color .1s ease-out;
+        &:hover, &:focus {
+          background-color: variables.$blue-link;
+          color: variables.$white;
+        }
+        &:focus {
+          outline: solid 3px variables.$blue-focus;
+          outline-offset: 1px;
+        }
+        &[disabled]{
+          background-color: variables.$grey-bg !important;
+          color: variables.$grey-text !important;
+          border: solid 1px variables.$grey-border !important;
+        }
+      }
+    }
+  .block {
+    &.text-white-default {
+      &.text-left {
+        &.bg-blue-default {
+          p {
+            color: variables.$white;
+          }
+        }
+      }
+    }
+  }
+}

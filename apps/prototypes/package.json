@@ -1,0 +1,133 @@
+{
+  "name": "@packages/prototypes",
+  "version": "1.0.0",
+  "description": "Prototypes for the MFF website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teehemkay/mff"
+  },
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name clean resources:publish build:tailwind build:gulp",
+    "build:gulp": "gulp",
+    "build:js": "gulp transpile",
+    "build:scss": "gulp processScss",
+    "build:tailwind": "tailwind -i ./src/css/tailwind.css -o ./public/assets/css/tailwind.css",
+    "clean": "fse remove public",
+    "deliver": "run-s --print-name build export:*",
+    "dev": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name build --parallel watch serve",
+    "export:prototypes": "fse copy public/ ../../_site/prototypes/",
+    "preview": "serve --listen 8080 public",
+    "resources:publish": "fse copy resources/ public/",
+    "serve": "live-server --mount=/:public --watch=public --no-browser",
+    "watch": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name --parallel watch:**",
+    "watch:gulp": "gulp watch",
+    "watch:resources": "onchange 'resources/**' --exclude 'resources/img/**' -- pnpm resources:publish",
+    "watch:tailwind": "pnpm build:tailwind --watch"
+  },
+  "keywords": [],
+  "author": "webmaster@europarl.europa.eu",
+  "license": "ISC",
+  "devDependencies": {
+    "@atao60/fse-cli": "^0.1.9",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "@packages/build-tools": "workspace:^",
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.1",
+    "gulp": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-changed": "^5.0.2",
+    "gulp-cli": "^3.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^5.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-inline-source": "^4.0.0",
+    "gulp-notify": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^6.0.0",
+    "live-server": "^1.2.2",
+    "npm-run-all2": "^7.0.1",
+    "onchange": "^7.1.0",
+    "tailwindcss": "^3.4.15",
+    "terser": "^5.36.0",
+    "through2": "^4.0.2",
+    "xo": "^0.60.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": false
+        }
+      ],
+      [
+        "@babel/preset-react",
+        {
+          "pragma": "jsx",
+          "useSpread": true
+        }
+      ]
+    ]
+  },
+  "prettier": {
+    "useTabs": false,
+    "arrowParens": "always",
+    "bracketSameLine": true,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "xo": {
+    "space": true,
+    "prettier": true,
+    "envs": [
+      "node",
+      "browser"
+    ],
+    "rules": {
+      "capitalized-comments": "off",
+      "import/order": [
+        "error",
+        {
+          "newlines-between": "always-and-inside-groups",
+          "warnOnUnassignedImports": true
+        }
+      ],
+      "func-names": [
+        "error",
+        "as-needed"
+      ],
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "spaced-comment": [
+        "error",
+        "always",
+        {
+          "exceptions": [
+            "#__PURE__"
+          ]
+        }
+      ],
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/prefer-object-from-entries": "off"
+    },
+    "ignores": [
+      "build/**",
+      "out/**",
+      "public/**",
+      "site/**",
+      "site_trials/**",
+      "_site/**"
+    ]
+  }
+}

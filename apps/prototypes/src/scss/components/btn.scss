@@ -1,0 +1,22 @@
+@use "../helpers/variables";
+
+/* svg */
+
+.btn-etr {
+  background-color: variables.$blue !important;
+  border: solid 2px variables.$blue !important;
+  color: variables.$white;
+  padding: 15px !important;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .1s ease;
+  font-weight: 600;
+  &:hover, &:focus {
+    background-color: #003a79 !important;
+    color: variables.$white !important;
+  }
+  &:focus {
+    outline-offset: 1px;
+  }
+}

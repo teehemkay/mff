@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		@@include('./components/head.html')
+	</head>
+
+	<body>
+	@@include('./components/shortcut-wai.html')
+
+	<!-- NAVIGATION -->
+	@@include('./components/navigation-revamp.html')
+
+	<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+	<!-- CONTENT -->
+	<main role="main" id="mainContent" class="mb-8">
+		<!-- On mobile and the main menu is open the <main> tag is modified like that: -->
+		<!-- <main role="main" id="mainContent" tabindex="-1" class="mb-8 none"> -->
+
+		<div id="returnToTop" class="hidden"></div>
+
+		<div class="max-w-5xl mx-auto px-4 mt-54px mb-10">
+			<h1 class="logo-brand font-epSemiBold text-2.5xl text-black-greydark text-left">European elections 2024</h1>
+			<span class="text-brand-title inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2">6-9 June 2024</span>
+		</div>
+
+		<div class="max-w-5xl mx-auto px-4 mt-54px mb-3">
+			<h2 class="font-EPGammaBold text-2.5xl text-black-greydark text-left">
+				How to vote
+			</h2>
+		</div>
+
+		<div class="htv-page max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4 mb-8">
+
+			<p class="max-w-3xl">Choose your country of voting and your preferred language to find out how to vote.
+				<br>
+				As an EU citizen, you can vote in your country of origin, from abroad or in the EU country you live in. Please note that registration might be required in order to vote</p>
+		</div>
+
+<!--		<a href="#mainContent" class="top-link hide">-->
+<!--			<span class="hidden">Scroll back to top of the page</span>-->
+<!--		</a>-->
+		<a href="#returnToTop" class="top-link hide js-top" aria-label="Scroll back to top of the page"></a>
+
+	</main>
+
+	<!-- // ------------------------ END MAIN AREA -------------------------- // -->
+
+	<!-- // ------------------------ START FOOTER AREA ------------------------- // -->
+
+	@@include('./components/footer.html')
+
+	<!-- // ------------------------ END FOOTER AREA ------------------------- // -->
+
+	<!-- JS files -->
+	@@include('./components/scripts.html')
+
+	</body>
+</html>

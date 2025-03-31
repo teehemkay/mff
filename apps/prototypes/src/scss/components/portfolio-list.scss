@@ -1,0 +1,36 @@
+@use "../helpers/variables";
+
+/* --------------------------------- */
+/* COMMITTEES :: PORTFOLIO LIST
+------------------------------------ */
+
+.portfolio-list {
+  h3 {}
+  p{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 0 !important;
+  }
+  ul {
+    list-style: disc;
+    margin-left: 1rem;
+    li {
+      list-style-position: outside;
+      line-height: 1.5rem;
+    }
+  }
+  a {
+    color: variables.$blue;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+    &:hover, &:focus {
+      text-decoration-thickness: 2px;
+      text-underline-offset: 6px;
+    }
+    &:focus {
+      outline: solid 2px variables.$blue-focus;
+      outline-offset: 4px;
+    }
+  }
+}

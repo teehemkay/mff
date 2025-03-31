@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" itemscope itemtype="https://schema.org/FAQPage">
+	<head>
+		@@include('./components/head.html')
+	</head>
+
+	<body>
+	@@include('./components/shortcut-wai.html')
+
+	<!-- NAVIGATION -->
+	@@include('./components/navigation-main.html')
+
+	<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+	<!-- CONTENT -->
+	<main role="main" id="mainContent" class="mb-8">
+
+		<div class="legal-page">
+
+		<div class="max-w-5xl mx-auto px-4 mt-54px mb-27px">
+			<span class="block font-EPGammaBold text-2lg text-black-default text-left mb-12">
+				European Election 2024
+			</span>
+			<h1 class="font-EPGammaBold text-2.5xl text-black-greydark text-left">
+				Legal notice
+			</h1>
+		</div>
+
+		<div class="max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4 mb-16">
+			<div class="max-w-3xl">
+
+				<h2>Disclaimer</h2>
+
+				<p>The European Parliament maintains this website to enhance public access to information about the institution and its activities.</p>
+				<p>Our goal is to keep this information as complete, accurate and up to date as possible. If errors are brought to its attention, the European Parliament will take all possible steps to make any necessary corrections without delay. It can be held liable only for damage which may arise from its errors, under the conditions provided for in the last paragraph below.</p>
+				<p>The information published on this site is of a general nature only and has not been designed to meet any individual needs. It therefore does not constitute professional or legal advice (if you need specific advice, we suggest you consult a suitably qualified professional).</p>
+				<p>Certain information, including the interpretation of speeches, and the documents available on or via this site can be considered neither as an authentic reproduction of the official texts nor as a faithful verbatim report of parliamentary debates. Only the official texts published in the Official Journal of the European Union may be considered authentic. Where there are differences between the electronic version and the printed text, only the official printed text published in the Official Journal of the European Union is authentic. Likewise, only the original text of the speech or its revised translation is authentic.</p>
+				<p>The European Parliament cannot be held liable for direct or indirect damage which may result from use of this site. We take all possible steps to minimise disruption caused by technical errors. Some data or information on this site may have been created or structured in files or formats that are not error-free. We cannot in such cases guarantee that our service will not be interrupted or otherwise affected by such problems. The European Parliament accepts no responsibility in case of defective transmission of data due to the various networks of the internet or to incompatibilities due to the user's web browser.</p>
+				<p>The European Parliament cannot guarantee that information from external sources contained on this site is reliable or up to date. The information on this site may link to external sites over which the European Parliament's services have no control and for which the European Parliament can accept no responsibility.</p>
+				<p>This disclaimer is not intended to limit the liability of the European Parliament arising from Article 340 TFEU.</p>
+
+				<h2>Copyright</h2>
+
+				<p>The content of this website includes text data and multimedia items such as texts, drawings, graphics, logos, icons, images, audio and video material, photographs, programmes and the technology described, which are protected by the provisions of national and international law applying to intellectual property.</p>
+				<p>These textual data and multimedia items are the exclusive property either of the European Union represented by the European Parliament and/or of their authors and beneficiaries. The intellectual property right holders waive their right to have their name or any other indication appear on the items which they supply for this website.</p>
+				<p>The user undertakes to respect the intellectual property rights held by the European Union and third parties without prejudice to the rights and exceptions provided for by any binding provisions.</p>
+				<p>As a general rule, the reuse (reproduction or use) of textual data and multimedia items which are the property of the European Union (identified by the words “© European Union, [year(s)] – Source: European Parliament” or “© European Union, [year(s)] – EP”) or of third parties (© External source, [year(s)]), and for which the European Union holds the rights of use, is authorised, for personal use or for further non-commercial or commercial dissemination, provided that the entire item is reproduced and the source is acknowledged. However, the reuse of certain data may be subject to different conditions in some instances; in this case, the item concerned is accompanied by a mention of the specific conditions relating to it.</p>
+				<p>Any partial reproduction of data or multimedia items from this website must also cite the URL link of the complete item or the web page from which it was sourced.</p>
+				<p>The user undertakes not to delete or change the indications of the author or the source and not to seek to circumvent the technical measures put in place to protect documents and multimedia items, such as print or download restrictions and visible or invisible tagging. Any infringement may lead to civil and criminal proceedings.</p>
+				<p>Translations of texts or documents into languages other than the official language versions displayed on the website are authorised subject to the condition that due acknowledgement is given at a suitably prominent place, followed by an appropriate disclaimer, both translated into the relevant language:</p>
+				<p>“Translated from the original [specify the language] version published by the European Union on the following website [specify the URL] : '© European Union, [year(s)] - Source: European Parliament”; or '© European Union, [year(s)] EP', [Name of intellectual property right holder of the translation] assumes full responsibility for the translation into [specify target language]'</p>
+				<p>In cases of doubt as to the identity of the right holders or as to the conditions of use of a particular item, a request for information may be sent to the webmaster.</p>
+				<p>Despite extensive research, it may be that the European Parliament has not been able to identify certain authors or right holders of documents appearing on the site. If you are such a right holder, or if you have identified such a right holder, or if there is a mistake on our part, we would be grateful if you could kindly contact the webmaster.</p>
+
+				<h2>Use of European Parliament trademarks and logos</h2>
+
+				<p>The European Parliament trademarks europarl®, europarltv®, myeuroparl®, Parlamentarium® and the European Parliament logo may not be used without the European Parliament’s prior consent.</p>
+			</div>
+		</div>
+
+		</div>
+
+	</main>
+
+	<!-- // ------------------------ END MAIN AREA -------------------------- // -->
+
+	<!-- // ------------------------ START FOOTER AREA ------------------------- // -->
+
+	@@include('./components/footer.html')
+
+	<!-- // ------------------------ END FOOTER AREA ------------------------- // -->
+
+
+	<!-- JS files -->
+	@@include('./components/scripts.html')
+
+	<script>
+		// Menu component
+		window.addEventListener('DOMContentLoaded', () => {
+
+			// Inject the current menu state in JS (only for html prototyping as the main nav is included globally
+			// Trouver l'élément <ul> par sa classe
+			const navul = document.querySelector('ul.footerLinks');
+			const navli = navul.querySelector('li:nth-child(1)');
+			const navlilink = navli.querySelector('a');
+
+			// Ajouter la classe "current" à la balise <a>
+			navlilink.classList.add('current');
+
+			// Ajouter l'attribut "aria-current" avec la valeur "page" à la balise <a>
+			navlilink.setAttribute('aria-current', 'page');
+
+		});
+	</script>
+
+	</body>
+</html>

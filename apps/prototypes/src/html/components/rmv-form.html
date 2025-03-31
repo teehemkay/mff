@@ -1,0 +1,89 @@
+<!-- FORM - REMIND ME TO VOTE -->
+<form class="block pt-6 pb-6 pl-0" action="">
+  <div class="lg:flex w-full">
+    <div class="flex flex-col w-full lg:max-w-[50%] mr-8 mb-4">
+      <div class="relative">
+        <input
+          aria-label="Email address"
+          autocomplete="email"
+          required
+          class="shadow appearance-none py-3 px-4"
+          id="email"
+          type="text"
+          placeholder="Email address"
+          aria-describedby="hint-email"
+        />
+      </div>
+      <span
+        class="hidden block error-text pt-2"
+        id="hint-email"
+        role="alert"
+        aria-atomic="true"
+        >Please fill in your email address</span
+      >
+    </div>
+    <div class="flex flex-col w-full lg:max-w-[50%] mb-4">
+      <div class="relative">
+        <select
+          autocomplete="country-name"
+          required
+          class="block appearance-none py-3 px-4 pr-8"
+          id="country-name"
+          aria-describedby="hint-country"
+        >
+          <option selected="selected" disabled="disabled">Country</option>
+          <option>Belgium</option>
+          <option>France</option>
+          <option>...</option>
+        </select>
+        <div
+          class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2"
+        >
+          <svg
+            class="fill-blue-default h-7 w-8"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+            />
+          </svg>
+        </div>
+      </div>
+      <span
+        class="hidden block error-text pt-2"
+        id="hint-country"
+        role="alert"
+        aria-atomic="true"
+        >Please choose a country</span
+      >
+    </div>
+  </div>
+  <div class="lg:flex w-full">
+    <label class="flex justify-start items-center mr-0 md:mr-2 mb-6 lg:mb-0">
+      <input
+        class="max-w-[18px] mr-2"
+        type="checkbox"
+        aria-describedby="hint-datap"
+      />
+      <span class="text-base text-black-default leading-5"
+        >I have read and I agree to the
+        <a href="#">data protection notice</a>.</span
+      >
+    </label>
+    <div class="flex items-start ml-auto">
+      <button class="btn-form text-lg font-normal px-4" type="submit">
+        Sign up
+      </button>
+    </div>
+  </div>
+  <div class="block mb-2">
+    <span
+      class="hidden block error-text pt-2"
+      id="hint-datap"
+      role="alert"
+      aria-atomic="true"
+      >* Please check the checkbox</span
+    >
+  </div>
+</form>

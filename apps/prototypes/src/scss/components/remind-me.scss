@@ -1,0 +1,45 @@
+@use "../helpers/variables";
+
+/* -------------------------------------- */
+/* REMIND ME
+----------------------------------------- */
+
+.remind-page {
+  .bg-blue-default {
+    -webkit-box-shadow: inset 0px 9px 9px 0px rgba(0,0,0,0.49);
+    box-shadow: inset 0px 9px 9px 0px rgba(0,0,0,0.49);
+    .remind-block {
+      h1 {
+        font-family: EPGammaBold, Arial, sans-serif;
+        color: #fff200;
+        font-size: 1.781rem;
+        line-height: 2.5rem;
+        margin: 2rem 0;
+      }
+      p {
+        color: variables.$white;
+        font-size: 1.389rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.9rem;
+        small {
+          display: inline-block;
+          font-size: 1.1rem;
+          line-height: 1.4rem !important;
+        }
+      }
+      a {
+        text-decoration: underline !important;
+        color: variables.$white !important;
+        text-decoration-thickness: 1px !important;
+        text-underline-offset: 4px !important;
+        &:hover, &:focus {
+          text-decoration-thickness: 2px !important;
+        }
+        &:focus {
+          outline-offset: 2.5px !important;
+          outline-color: variables.$white !important;
+        }
+      }
+    }
+  }
+}

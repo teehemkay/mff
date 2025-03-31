@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" itemscope itemtype="https://schema.org/FAQPage">
+	<head>
+		@@include('./components/head.html')
+	</head>
+
+	<body>
+	@@include('./components/shortcut-wai.html')
+
+	<!-- NAVIGATION -->
+	@@include('./components/navigation-main.html')
+
+	<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+	<!-- CONTENT -->
+	<main role="main" id="mainContent" class="mb-8">
+
+		<div class="uyv-page">
+
+			<div class="uyv-banner block lg:flex md:block items-stretch min-h-[500px]">
+
+				<div class="left-col flex flex-col self-center w-full lg:w-[50%] md:w-full sm:w-full px-[2rem]">
+					@@include('./components/use-your-vote-brand-left-v2.html')
+				</div>
+
+				<div class="right-col flex flex-col items-start justify-center w-full lg:w-[50%] md:w-full sm:w-full bg-blue-default px-[2rem]">
+				<form class="w-full max-w-none lg:max-w-[400px] pt-6 pb-8 pl-0 lg:pl-8 mb-4" action="">
+						<div class="mb-3">
+							<fieldset class="flex flex-nowrap">
+
+								<legend class="text-white-default font-EPGammaBold text-lg leading-5 mr-16 mb-4">Please enter the code you have received by email</legend>
+
+								<label class="sr-only" for="code1">Digit 1</label>
+								<input class="code-field shadow appearance-none py-3 px-2 mb-3 mr-3" id="code1" type="number" placeholder="2">
+
+								<label class="sr-only" for="code2">Digit 2</label>
+								<input class="code-field shadow appearance-none py-3 px-2 mb-3 mr-3" id="code2" type="number" placeholder="6">
+
+								<label class="sr-only" for="code3">Digit 3</label>
+								<input class="code-field shadow appearance-none py-3 px-2 mb-3 mr-6" id="code3" type="number" placeholder="3">
+
+								<label class="sr-only" for="code4">Digit 4</label>
+								<input class="code-field shadow appearance-none py-3 px-2 mb-3 mr-3" id="code4" type="number" placeholder="8">
+
+								<label class="sr-only" for="code5">Digit 5</label>
+								<input class="code-field shadow appearance-none py-3 px-2 mb-3 mr-3" id="code5" type="number" placeholder="5">
+
+								<label class="sr-only" for="code6">Digit 6</label>
+								<input class="code-field shadow appearance-none py-3 px-2 mb-3 mr-0 error-field" id="code6" type="number" placeholder="9">
+
+							</fieldset>
+							<span class="block error-text pt-2 lg:w-[315px] w-auto text-left max-w-[320px] mx-auto lg:mx-0">Please make sure the code is correct</span>
+						</div>
+						<div class="block">
+							<!-- Remove the "disabled" attribute to enable the button when the field is correctly completed -->
+							<button class="btn-form block text-2xl mx-auto lg:ml-0 lg:mr-0" type="button" disabled>
+								Send
+							</button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+
+		</div>
+
+	</main>
+
+	<!-- // ------------------------ END MAIN AREA -------------------------- // -->
+
+	<!-- // ------------------------ START FOOTER AREA ------------------------- // -->
+
+	@@include('./components/footer.html')
+
+	<!-- // ------------------------ END FOOTER AREA ------------------------- // -->
+
+
+	<!-- JS files -->
+	@@include('./components/scripts.html')
+
+	<script>
+		// Menu component
+		window.addEventListener('DOMContentLoaded', () => {
+
+			// Inject the current menu state in JS (only for html prototyping as the main nav is included globally
+			// Trouver l'élément <ul> par sa classe
+			const navul = document.querySelector('ul.footerLinks');
+			const navli = navul.querySelector('li:nth-child(1)');
+			const navlilink = navli.querySelector('a');
+
+			// Ajouter la classe "current" à la balise <a>
+			navlilink.classList.add('current');
+
+			// Ajouter l'attribut "aria-current" avec la valeur "page" à la balise <a>
+			navlilink.setAttribute('aria-current', 'page');
+
+		});
+	</script>
+
+	</body>
+</html>

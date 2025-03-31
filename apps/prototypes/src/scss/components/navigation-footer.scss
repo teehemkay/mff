@@ -1,0 +1,46 @@
+@use "../helpers/variables";
+
+/* NAVIGATION FOOTER ======== */
+/* ========================== */
+
+nav.navFooter {
+  .footerLinks {
+      li {
+        a {
+          text-decoration: none;
+          color: variables.$black;
+          &.current[aria-current="page"],
+          li.current[aria-current="true"] a {
+            color: variables.$blue;
+            position: relative;
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: -2px;
+              left: 0;
+              height: 1px;
+              display: block;
+              width: 100%;
+              background-color: variables.$blue;
+            }
+              &:after {
+                background-color: variables.$blue;
+              }
+          }
+          &:hover, &:focus {
+            text-decoration: underline;
+            text-decoration-color: variables.$blue;
+            color: variables.$blue;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 6px;
+          }
+          &:focus {
+            outline-offset: 5px;
+          }
+            &:after {
+              background-color: variables.$blue !important;
+            }
+        }
+      }
+    }
+}

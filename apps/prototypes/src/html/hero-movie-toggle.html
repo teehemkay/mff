@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" itemscope itemtype="https://schema.org/FAQPage">
+	<head>
+		@@include('./components/head.html')
+	</head>
+
+	<body>
+
+	<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+	<div class="hero-page">
+
+	<header>
+
+		<!-- bg video -->
+		<div class="bg-video">
+
+			<div class="max-h-[400px] overflow-y-hidden" aria-hidden="true" tabindex="-1">
+				<video id="ambiance-video" poster="/assets/img/video_poster.png" autoplay muted loop playsinline aria-hidden="true" tabindex="-1">
+					<source src="/assets/media/video_uyv.webm" type="video/webm">
+				</video>
+			</div>
+
+			<!-- Iframe full width -->
+			<!-- <div class="rwd-media">
+				<iframe tabindex="0" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true" src="https://multimedia.europarl.europa.eu/en/share/NO1_AFPS_230804_HIW3?lang=en&amp;autoplay=off&amp;controls=on" title="Voting in European elections" scrolling="no" frameborder="0"></iframe>
+			</div> -->
+
+			<a href="#" class="uyv-logo-wrapper" tabindex="-1" aria-hidden="true">
+				<img src="/assets/img/logos/ep_ballot_hashtag_flag_logo_en.svg" alt="Logo of the European Parliament: Use your vote" class="ballot-logo" />
+				<span class='sr-only'>Logo of the European Parliament: Use your vote</span>
+			</a>
+
+			<nav class="marker-nav bg-black-greydark px-6 py-4" role="navigation" aria-label="select your video settings">
+				<ul class="block sm:flex sm:flex-wrap sm:items-center">
+					<li class="mx-3 my-2">
+						<button
+									id="options-menu"
+									class="nav-button flex items-center rounded-md border border-1 border-solid border-black-buttonHero bg-black-buttonHero focus:outline focus:outline-2 focus:outline-white-default p-2.5 mr-4"
+									aria-expanded="false"
+									data-button
+									data-controls="options-list"
+									aria-controls="options-list">
+								<span class="inline-block text-lg text-left text-white-default font-epSemiBold pt-0.5 mr-3">
+									Change Language
+								</span>
+							  <svg
+										class="inline-block w-[15px] h-[9px]"
+										viewBox="0 0 21.741 12.602"
+										aria-hidden="true"
+										focusable="false">
+										<path
+											id="Arrow"
+											d="M0,.055,9.8,9.442,14.545,4.9,19.666,0"
+											transform="translate(1.037 1.083)"
+											fill="none"
+											stroke="#ffffff"
+											stroke-width="3"
+										/>
+									</svg>
+						</button>
+					</li>
+					<li class="mx-3 my-2">
+						<label class="Toggle" for="toggle-audio">
+
+							<span class="label-toggle text-white-default text-lg font-epSemiBold p-2.5">Audio description</span>
+
+							<input type="checkbox" name="toggle" id="toggle-audio" class="Toggle__input" checked />
+							<span class="Toggle__display" hidden>
+								<svg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden="true" focusable="false" class="Toggle__icon Toggle__icon--checkmark">
+									<path d='M6.08471 10.6237L2.29164 6.83059L1 8.11313L6.08471 13.1978L17 2.28255L15.7175 1L6.08471 10.6237Z' fill='currentcolor' stroke='currentcolor' />
+								</svg>
+								<svg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden="true" focusable="false" class="Toggle__icon Toggle__icon--cross">
+									<path d='M11.167 0L6.5 4.667L1.833 0L0 1.833L4.667 6.5L0 11.167L1.833 13L6.5 8.333L11.167 13L13 11.167L8.333 6.5L13 1.833L11.167 0Z' fill='currentcolor' />
+								</svg>
+							</span>
+
+						</label>
+					</li>
+					<li class="mx-3 my-2">
+						<label class="Toggle" for="toggle-lang">
+
+							<span class="label-toggle text-white-default text-lg font-epSemiBold p-2.5">Sign language</span>
+
+							<input type="checkbox" name="toggle" id="toggle-lang" class="Toggle__input" checked />
+							<span class="Toggle__display" hidden>
+								<svg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden="true" focusable="false" class="Toggle__icon Toggle__icon--checkmark">
+									<path d='M6.08471 10.6237L2.29164 6.83059L1 8.11313L6.08471 13.1978L17 2.28255L15.7175 1L6.08471 10.6237Z' fill='currentcolor' stroke='currentcolor' />
+								</svg>
+								<svg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden="true" focusable="false" class="Toggle__icon Toggle__icon--cross">
+									<path d='M11.167 0L6.5 4.667L1.833 0L0 1.833L4.667 6.5L0 11.167L1.833 13L6.5 8.333L11.167 13L13 11.167L8.333 6.5L13 1.833L11.167 0Z' fill='currentcolor' />
+								</svg>
+							</span>
+
+						</label>
+					</li>
+					<li class="mx-3 my-2">
+						<a href="#" class="button flex items-center rounded-md border border-0 focus:outline focus:outline-2 focus:outline-white-default p-2.5 mr-4">
+							<span class="inline-block text-white-default text-lg font-epSemiBold mr-3">Transcript</span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="48" height="28.328" viewBox="0 0 48 28.328" focusable="false" tabindex="-1">
+								<path d="M11.369,25.834a4.277,4.277,0,0,0,6.05,0L22,21.257a1.426,1.426,0,0,0-2.016-2.011L15.81,23.418l.01-11.992A1.426,1.426,0,0,0,14.394,10h0a1.426,1.426,0,0,0-1.426,1.426l-.013,11.965L8.808,19.245a1.426,1.426,0,1,0-2.016,2.017Z" transform="translate(9.514 -10)" fill="#fff"/>
+								<path d="M36.487,16h0a1.471,1.471,0,0,0-1.513,1.426v5.7a1.471,1.471,0,0,1-1.513,1.426H-5.46a1.471,1.471,0,0,1-1.513-1.426v-5.7A1.471,1.471,0,0,0-8.487,16h0A1.471,1.471,0,0,0-10,17.426v5.7A4.414,4.414,0,0,0-5.46,27.4H33.46A4.414,4.414,0,0,0,38,23.128v-5.7A1.471,1.471,0,0,0,36.487,16Z" transform="translate(10 0.924)" fill="#fff"/>
+							</svg>
+						</a>
+					</li>
+					<li class="sm:ml-auto mx-3 my-2">
+						<a href="#" class="button flex items-center rounded-md border border-0 focus:outline focus:outline-2 focus:outline-white-default px-2.5">
+							<span class="inline-block text-white-default text-lg font-epSemiBold mr-3">Share</span>
+
+							<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" focusable="false" tabindex="-1">
+								<g transform="translate(-3 -2)">
+									<rect width="52" height="52" transform="translate(3 2)" fill="none"/>
+								</g>
+								<g transform="translate(10 11.018)">
+									<path d="M25.757,19.534a6.206,6.206,0,0,0-5.113,2.7l-8.669-3.914a6.092,6.092,0,0,0,.007-4.645l8.657-3.934a6.206,6.206,0,1,0-1.1-3.52,6.171,6.171,0,0,0,.107,1.047l-9.2,4.182a6.217,6.217,0,1,0-.02,9.092L19.648,24.7a6.308,6.308,0,0,0-.105,1.045,6.216,6.216,0,1,0,6.215-6.214Z" transform="translate(0.027 -0.999)" fill="#fff302"/>
+								</g>
+							</svg>
+						</a>
+					</li>
+				</ul>
+				<div id="options-list" class="submenu-content hidden" data-content aria-labelledby="options-menu">
+					<ul class="lang-content block px-6 mx-auto max-w-[1100px]">
+						<li><a lang="bg" hreflang="bg" href="../bg/">BG - Български</a></li>
+						<li><a lang="es" hreflang="es" href="../es/">ES - Español</a></li>
+						<li><a lang="cs" hreflang="cs" href="../cs/">CS - Čeština</a></li>
+						<li><a lang="da" hreflang="da" href="../da/">DA - Dansk</a></li>
+						<li><a lang="de" hreflang="de" href="../de/">DE - Deutsch</a></li>
+						<li>
+							<a lang="et" hreflang="et" href="../et/">ET - Eesti keel</a>
+						</li>
+						<li><a lang="el" hreflang="el" href="../el/">EL - Ελληνικά</a></li>
+						<li>
+							<a lang="en" hreflang="en" href="../en/" class="current" aria-current="true">EN - English</a>
+						</li>
+						<li><a lang="fr" hreflang="fr" href="../fr/">FR - Français</a></li>
+						<li><a lang="ga" hreflang="ga" href="../ga/">GA - Gaeilge</a></li>
+						<li><a lang="hr" hreflang="hr" href="../hr/">HR - Hrvatski</a></li>
+						<li><a lang="it" hreflang="it" href="../it/">IT - Italiano</a></li>
+						<li>
+							<a lang="lv" hreflang="lv" href="../lv/">LV - Latviešu valoda</a>
+						</li>
+						<li>
+							<a lang="lt" hreflang="lt" href="../lt/">LT - Lietuvių kalba</a>
+						</li>
+						<li><a lang="hu" hreflang="hu" href="../hu/">HU - Magyar</a></li>
+						<li><a lang="mt" hreflang="mt" href="../mt/">MT - Malti</a></li>
+						<li>
+							<a lang="nl" hreflang="nl" href="../nl/">NL - Nederlands</a>
+						</li>
+						<li><a lang="pl" hreflang="pl" href="../pl/">PL - Polski</a></li>
+						<li><a lang="pt" hreflang="pt" href="../pt/">PT - Português</a></li>
+						<li><a lang="ro" hreflang="ro" href="../ro/">RO - Română</a></li>
+						<li>
+							<a lang="sk" hreflang="sk" href="../sk/">SK - Slovenčina</a>
+						</li>
+						<li>
+							<a lang="sl" hreflang="sl" href="../sl/">SL - Slovenščina</a>
+						</li>
+						<li><a lang="fi" hreflang="fi" href="../fi/">FI - Suomi</a></li>
+						<li><a lang="sv" hreflang="sv" href="../sv/">SV - Svenska</a></li>
+					</ul>
+				</div>
+
+			</nav>
+
+		</div>
+
+		<div class="blue-banner relative z-0 flex flex-col w-full bg-blue-default text-white-default py-20 px-10 md:px-16">
+
+			<svg class="stars" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 65.01 64.59" xml:space="preserve" focusable="false" tabindex="-1">
+				<path id="path01" class="star-only" d="m32.49 0 1.18 3.66 3.84-.02-3.12 2.25 1.21 3.65-3.11-2.27-3.09 2.27 1.2-3.65-3.12-2.25 3.84.02L32.49 0z"/>
+				<path id="path02" class="star-only" d="m32.49 55.05 1.18 3.65 3.84-.02-3.12 2.25 1.21 3.65-3.1-2.27-3.1 2.27 1.2-3.65-3.12-2.25 3.84.02 1.17-3.65z"/>
+				<path id="path03" class="star-only" d="m18.8 3.66 1.17 3.66 3.84-.01-3.11 2.24 1.2 3.65-3.1-2.27-3.09 2.27 1.2-3.65-3.11-2.24 3.84.01 1.16-3.66z"/>
+				<path id="path04" class="star-only" d="m8.73 13.77 1.17 3.66 3.84-.03-3.12 2.25 1.2 3.65-3.09-2.27-3.1 2.27 1.2-3.65L3.7 17.4l3.85.03 1.18-3.66z"/>
+				<path id="path05" class="star-only" d="m5.02 27.5 1.16 3.65 3.85-.02-3.12 2.25 1.19 3.64-3.08-2.27-3.1 2.27 1.21-3.64L0 31.12l3.84.02 1.18-3.64z"/>
+				<path id="path06" class="star-only" d="m8.69 41.22 1.18 3.67 3.83-.03-3.11 2.25 1.21 3.65-3.1-2.28-3.1 2.28 1.21-3.65-3.12-2.24 3.84.02 1.16-3.67z"/>
+				<path id="path07" class="star-only" d="m18.8 51.32 1.17 3.66 3.84-.02-3.11 2.24 1.2 3.65-3.1-2.27-3.09 2.27 1.2-3.65-3.11-2.24 3.84.02 1.16-3.66z"/>
+				<path id="path08" class="star-only" d="m46.21 3.66-1.17 3.66-3.85-.01 3.12 2.24-1.2 3.65 3.1-2.27 3.09 2.27-1.2-3.65 3.11-2.24-3.83.01-1.17-3.66z"/>
+				<path id="path09" class="star-only" d="m56.29 13.77-1.17 3.66-3.85-.03 3.12 2.25-1.21 3.65 3.11-2.27 3.1 2.27-1.21-3.65 3.11-2.25-3.84.03-1.16-3.66z"/>
+				<path id="path10" class="star-only" d="m60.01 27.5-1.17 3.65-3.85-.02 3.12 2.25-1.2 3.64 3.1-2.27 3.1 2.27-1.2-3.64 3.11-2.25-3.84.02-1.17-3.65z"/>
+				<path id="path11" class="star-only" d="m56.31 41.22-1.16 3.67-3.85-.03 3.12 2.25-1.21 3.65 3.09-2.28 3.11 2.28-1.2-3.65 3.12-2.24-3.85.02-1.17-3.67z"/>
+				<path id="path12" class="star-only" d="m46.21 51.32-1.17 3.66-3.85-.02 3.12 2.24-1.2 3.65 3.1-2.27 3.09 2.27-1.2-3.65 3.11-2.24-3.83.02-1.17-3.66z"/>
+		</svg>
+
+			<div class="w-full max-w-3xl mx-auto">
+				<img src="/assets/img/logos/EE24_FULL_CAMPAIGN_LINE_RGB_neg_EN.svg" alt="Use your vote or others will decide for you" />
+				<span class="sr-only">Use your vote or others will decide for you</span>
+			</div>
+
+		</div>
+
+	</header>
+
+	<!-- CONTENT -->
+	<main role="main">
+
+		<div class="main-container relative flex flex-col w-full text-black-default max-w-3xl mx-auto px-10 pt-60px md:pt-20">
+
+			<p>Democracy may seem such an obvious and normal thing. But this has not always been the case.
+				Millions and millions of Europeans who are still with us today lived through times when they could not speak their minds freely,
+				when they had no say over what was happening around them or when their lives were in danger because they were different.</p>
+			<img src="/assets/img/lady_img.png" alt="A picture of a Lady who says: 'Use your vote or others will decide for you'" />
+			<p>Democracy may seem such an obvious and normal thing. But this has not always been the case.
+				Millions and millions of Europeans who are still with us today lived through times when they could not speak their minds freely,
+				when they had no say over what was happening around them or when their lives were in danger because they were different.</p>
+
+			<div class="logo-footer-container mt-4 mb-16 md:mb-28">
+				<span>European elections</span>
+				<span>6-9 June 2024</span>
+			</div>
+
+		</div>
+
+	</main>
+
+	<!-- // ------------------------ END MAIN AREA -------------------------- // -->
+
+	<!-- // ------------------------ START FOOTER AREA ------------------------- // -->
+
+	<footer>
+
+		<div class="card-container flex flex-col bg-blue-default text-white-default px-4 py-16">
+
+			<ul class="card-list max-w-5xl mx-auto px-4">
+
+				<li class="card-list-item">
+					<a href="#" class="button">Remind me</a>
+					<p>Get voting reminders so that you do not miss the election date.</p>
+				</li>
+				<li class="card-list-item">
+					<a href="#" class="button">How to vote</a>
+					<p>Discover how you can vote in any EU country and read more on why you should vote.</p>
+				</li>
+				<li class="card-list-item">
+					<a href="#" class="button">Together.eu</a>
+					<p>Join the together.eu community to take action and spread the word about the elections.</p>
+				</li>
+
+			</ul>
+		</div>
+
+		<div class="footer-links flex justify-center flex-col px-4 pt-20 pb-10">
+
+			<a href="https://www.europarl.europa.eu/portal/en" data-analytics-event-attached="true">
+				<img src="../assets/img/logos/logo-ep-en.svg" alt="European Parliament logo" class="w-full min-w-[120px] max-w-[300px] mx-auto mb-15">
+			</a>
+
+			<nav class="infos-links" aria-label="Information links">
+				<ul class="block lg:flex lg:flex-wrap justify-center mt-16">
+					<li class="lg:pb-0 mx-3 pb-3">
+						<a rel="noreferrer" href="/en/legal-notice/" data-analytics-event-attached="true">Legal notice</a>
+					</li>
+					<li class="lg:pb-0 mx-3 pb-3">
+						<a rel="noreferrer" href="/en/privacy-policy/" data-analytics-event-attached="true">Privacy policy</a>
+					</li>
+					<li class="lg:pb-0 mx-3 pb-3">
+						<a rel="noreferrer" href="/en/accessibility/" data-analytics-event-attached="true">Accessibility</a>
+					</li>
+					<li class="lg:pb-0 mx-3 pb-3">
+						<a rel="noreferrer" href="/en/easy-to-read/" data-analytics-event-attached="true">Easy-to-read</a>
+					</li>
+					<li class="lg:pb-0 mx-3 pb-3">
+						<a rel="noreferrer" href="/en/sitemap/" data-analytics-event-attached="true">Sitemap</a>
+					</li>
+					<li class="lg:pb-0 mx-3 pb-3">
+						<a href="https://europa.eu/european-union/contact_en" target="_blank" rel="noopener noreferrer" data-analytics-event-attached="true">Contact</a>
+					</li>
+			</ul>
+			</nav>
+		</div>
+
+	</footer>
+
+	</div>
+
+	<!-- // ------------------------ END FOOTER AREA ------------------------- // -->
+
+	<!-- JS files -->
+	@@include('./components/hero.html')
+
+	</body>
+</html>

@@ -1,0 +1,91 @@
+{
+  "name": "mff",
+  "description": "European Parliament MFF website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teehemkay/mff"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "pnpm --filter @packages/build-tools run build:bundle",
+    "compress": "pnpm --filter @packages/build-tools run build:compress",
+    "clean": "fse remove _site",
+    "data": "pnpm --filter @packages/etl run export",
+    "deliver": "run-s --print-name deliver:*",
+    "deliver1:protos": "pnpm --filter @packages/prototypes run deliver",
+    "deliver:site": "pnpm --filter @packages/site run deliver",
+    "dev:protos": "pnpm --filter @packages/prototypes run dev",
+    "dev": "pnpm --filter @packages/site run dev",
+    "dev:site": "pnpm --filter @packages/site run dev",
+    "preview": "serve --listen 3000 _site",
+    "site": "cross-env NODE_ENV=production run-s --print-name clean data deliver bundle"
+  },
+  "author": "webmaster@europarl.europa.eu",
+  "license": "ISC",
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
+  "devDependencies": {
+    "@atao60/fse-cli": "^0.1.9",
+    "cross-env": "^7.0.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "npm-run-all2": "^7.0.2",
+    "serve": "^14.2.4",
+    "typescript": "^5.8.2",
+    "xo": "^0.60.0"
+  },
+  "prettier": {
+    "useTabs": false,
+    "arrowParens": "always",
+    "bracketSameLine": true,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "xo": {
+    "space": true,
+    "prettier": true,
+    "envs": [
+      "node",
+      "browser"
+    ],
+    "rules": {
+      "capitalized-comments": "off",
+      "import/order": [
+        "error",
+        {
+          "newlines-between": "always-and-inside-groups",
+          "warnOnUnassignedImports": true
+        }
+      ],
+      "func-names": [
+        "error",
+        "as-needed"
+      ],
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "spaced-comment": [
+        "error",
+        "always",
+        {
+          "exceptions": [
+            "#__PURE__"
+          ]
+        }
+      ],
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/prefer-object-from-entries": "off"
+    },
+    "ignores": [
+      "build/**",
+      "out/**",
+      "public/**",
+      "site/**",
+      "site_trials/**",
+      "_site/**"
+    ]
+  }
+}

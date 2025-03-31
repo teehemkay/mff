@@ -1,0 +1,41 @@
+<!-- FORM - HOW TO VOTE -->
+<form class="lg:flex md:flex sm:block pt-10 pb-8 pl-0 mb-4" action="">
+
+    <div class="flex flex-col w-full lg:max-w-[330px] mr-5 mb-4">
+        <label for="country-name" class="flex items-end flex-1 mb-2 text-lg">Choose a country of voting. This label is much longer.</label>
+        <div class="relative">
+            <select autocomplete="country-name" required class="block appearance-none py-3 px-4 pr-8" id="country-name" aria-describedby="hint-country">
+                <option selected="selected" disabled="disabled">Country</option>
+                <option>Belgium</option>
+                <option>France</option>
+                <option>...</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
+                <svg class="fill-blue-default h-7 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                </svg>
+            </div>
+        </div>
+        <span class="hidden block error-text pt-2" id="hint-country" role="alert" aria-atomic="true">Please choose a country</span>
+    </div>
+    <div class="flex flex-col w-full lg:max-w-[330px] mr-5 mb-4">
+        <label for="language" class="flex items-end flex-1 mb-2 text-lg">Choose a language</label>
+        <div class="relative">
+            <select aria-label="language" autocomplete="language" required class="block appearance-none py-3 px-4 pr-8" id="language" aria-describedby="hint-language" disabled>
+                <option selected="selected" disabled="disabled">Language</option>
+                <option>English</option>
+                <option>French</option>
+                <option>...</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
+                <svg class="fill-blue-default h-7 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                </svg>
+            </div>
+        </div>
+        <span class="hidden block error-text pt-2" id="hint-language" role="alert" aria-atomic="true">Please choose a language</span>
+    </div>
+    <div class="flex items-end mb-4">
+        <button class="btn-form text-lg font-normal" type="submit">Ok</button>
+    </div>
+</form>

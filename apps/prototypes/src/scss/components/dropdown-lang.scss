@@ -1,0 +1,162 @@
+@use "../helpers/mixins";
+@use "../helpers/variables";
+
+/* SELECT MENU DROPDOWN LANG ==============================================================
+ =================================================================================== */
+
+.menu {
+  display: none;
+}
+
+.language-select, .menu-content {
+  @media screen and (max-width: 544px) {
+    width: 100%;
+  }
+}
+
+.dropdown-lang{
+  position: relative;
+  z-index: 60;
+  .custom-select{
+    position: relative;
+    display: flex;
+    .btn{
+      &.lang_select {
+        border: 1px solid #BFBFBF;
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+        border-radius: 10px 10px 10px 10px;
+        display: inline-block;
+        background-color: #fff;
+        padding: 6px 10px;
+        color: variables.$grey-darker;
+        text-decoration: none;
+        text-align: left;
+        font-size: 1rem;
+        font-weight: bold;
+        position: relative;
+        max-width: 70px;
+        width: 70px;
+        z-index:49;
+        @include mixins.transition(.15s);
+        cursor:pointer;
+        &:hover, &:focus{
+          background-color: variables.$blue-middle;
+          color: #fff;
+          &:after{
+            border-color: transparent #fff #fff transparent;
+          }
+        }
+        &:after {
+          position: absolute;
+          content: "";
+          top: 8px;
+          right: 16px;
+          width: 12px;
+          height: 12px;
+          border-radius: 2px;
+          transform: rotate(45deg) translate(0,0);
+          background-color: transparent;
+          border-width: 2px;
+          border-style: solid;
+          border-color: transparent variables.$blue variables.$blue transparent;
+          @include mixins.transition(.15s);
+        }
+        @include mixins.desktop{
+          font-size: .8rem;
+          &:after{
+            top: 6px;
+          }
+        }
+        &[aria-expanded="true"]{
+          border-radius: 10px 10px 0 0;
+          border-bottom: 1px solid #fff;
+          z-index: 100;
+          &:after {
+            transform: rotate(-136deg) translate(-7px,-2px);
+          }
+        }
+      }
+    }
+  }
+  .menu-content {
+    position: absolute;
+    background-color: #fff;
+    top: 37px;
+    right: 0;
+    z-index: 99;
+    border: 1px solid #BFBFBF;
+    padding: 0 12px;
+    margin: 0;
+    list-style-type: none;
+    display: block;
+    height: 250px;
+    width: 180px;
+    overflow-y: auto;
+    @include mixins.transition();
+    &.invisible {
+      display: none;
+    }
+    li{
+      color: #ffffff;
+      padding: 8px 8px 8px 0;
+      cursor: pointer;
+      @include mixins.transition();
+      &.current{
+        a{
+          &:after{
+            width: 100%;
+          }
+        }
+      }
+      a{
+        text-decoration: none;
+        display: block;
+        padding: .2em 0;
+        transition: all .2s ease-out;
+        margin-right: 0;
+        color: darkblue;
+        font-size: .8rem;
+        position: relative;
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -10px;
+          background-color: #1D2862;
+          width: 0;
+          height: 1px;
+          transform-origin: center;
+          @include mixins.transition(.3s);
+        }
+        &:hover{
+          &:after{
+            width: 100%;
+          }
+        }
+        &:focus{
+          transform: translate(0, -4px);
+          &:after{
+            width: 100%;
+          }
+        }
+      }
+      &:last-of-type{
+        a{
+          &:after{
+            display: none;
+          }
+        }
+      }
+    }
+    &.select-hide {
+      display: none;
+    }
+    @include mixins.desktop{
+      top: 32px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@use "../helpers/variables";
+
+/* --------------------------------- */
+/* RELATED LINKS
+------------------------------------ */
+
+.related-links {
+  .related-links-list {
+    padding-top: 0.5rem;
+    li {
+      margin: 1rem 0;
+    }
+  }
+  p{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 0 !important;
+  }
+  a {
+    color: variables.$blue;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+    &:hover, &:focus {
+      text-decoration-thickness: 2px;
+      text-underline-offset: 6px;
+    }
+    &:focus {
+      outline: solid 2px variables.$blue-focus;
+      outline-offset: 4px;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@use "../helpers/variables";
+
+/* --------------------------------- */
+/* RADIO BUTTONS
+------------------------------------ */
+
+/* Radio button component */
+fieldset {
+  border: none;
+  color: #fff;
+}
+.radio-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 2.25rem;
+  label {
+    font-size: 1rem;
+    color: variables.$white;
+  }
+}
+input[type=radio] {
+  opacity: 0;
+}
+input[type=radio] + label {
+  position: relative;
+  cursor: pointer;
+}
+input[type=radio] + label::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  /* Fixed alignment in some browsers. */
+  top: 0;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  width: 18px;
+  height: 18px;
+}
+input[type=radio] + label::after {
+  content: "";
+  position: absolute;
+  left: -21px;
+  top: 3px;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+input[type=radio]:checked + label::after {
+  background: yellow;
+}
+@media screen and (-ms-high-contrast: active) {
+  input[type=radio]:checked + label::after {
+    background: WindowText;
+  }
+}
+input[type=radio]:focus + label::before {
+  box-shadow: 0 0px 0px 1px yellow, 0 0px 8px yellow;
+  outline: 2px dotted transparent;
+}
+@media screen and (max-width: 649px) {
+  .radio-wrapper {
+    padding: 0.5rem 1rem !important;
+    margin: 0 !important;
+    background-color: #4e4e4e;
+    border-radius: 0.556rem; // 10px
+  }
+}
+@media screen and (max-width: 480px) {
+  .radio-wrapper {
+    margin: 0.25rem !important;
+  }
+}

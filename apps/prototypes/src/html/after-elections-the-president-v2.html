@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		@@include('./components/head.html')
+	</head>
+
+	<body>
+	@@include('./components/shortcut-wai.html')
+
+	<!-- NAVIGATION -->
+	@@include('./components/navigation-ae.html')
+
+	<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+	<!-- CONTENT -->
+	<main role="main" id="mainContent" class="mb-8">
+
+		<div id="returnToTop" class="hidden"></div>
+
+<div class="ae-page" itemscope itemtype="https://schema.org/FAQPage">
+
+		<div class="max-w-5xl mx-auto px-4 mt-54px mb-3">
+			<span class="block font-EPGammaBold text-2lg text-black-default text-left">
+				European Election 2024
+			</span>
+			<span class="text-brand-title-page inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2 mb-12">6-9 June</span>
+			<h1 class="max-w-[750px] font-EPGammaBold text-2.5xl text-black-greydark text-left">
+				Electing the President of the European Parliament
+			</h1>
+			<!-- <p class="text-base text-black-grey my-5">
+				<span class="inline-block bg-black-greylighter px-1.5 py-1">Last update on 07/12/2023</span>
+			</p> -->
+		</div>
+
+		<div class="max-w-5xl block mx-auto justify-between items-center px-4 mb-72px" itemprop="description">
+
+			<div class="max-w-[750px] text-lg mr-5 lg:mb-0 md:mb-3 sm:mb-3 mb-3">
+
+				<h2 class="font-epSemiBold text-[1.556rem] pb-3 mt-12">Responsibilities</h2>
+
+				<p>Elected for a renewable term of two-and-a-half years, the President represents the European Parliament when dealing with other EU institutions and the outside world.</p>
+				<p>The President also directs Parliament’s activities, chairs plenary sessions and declares the EU budget finally adopted.</p>
+				<p>At the beginning of every European Council meeting, the President of the European Parliament sets out Parliament’s point of view as regards the items on the agenda and other subjects.</p>
+
+				<h2 class="font-epSemiBold text-[1.556rem] pb-3 mt-12">Election</h2>
+
+				<p>Parliament’s President is elected by Members of the European Parliament (MEPs) in a secret ballot. This takes place in the first plenary session after the elections.</p>
+				<p>Political groups or groups of at least 36 MEPs can put forward their nominations for the role.</p>
+				<p>The candidate who receives an absolute majority of the votes cast gets the post.</p>
+				<p>If none of the candidates receives an absolute majority after three rounds of voting, the top two candidates compete in a final ballot with the person receiving the most votes declared the new President of the European Parliament.</p>
+				<p>Immediately after the vote, MEPs will elect the 14 Vice-Presidents and five Quaestors.</p>
+
+				<h2 class="font-epSemiBold text-[1.556rem] pb-3 mt-12">Current President</h2>
+
+				<p>Roberta Metsola was re-elected as President of the European Parliament for a second term of two-and-a-half years in July 2024.</p>
+				<p>Immediately after the vote, MEPs will elect the 14 Vice-Presidents and five Quaestors.</p>
+
+				<p>XX was elected as President of the European Parliament for a renewable term of two-and-a-half years in July 2024.</p>
+
+			</div>
+
+			<br>
+
+			<p><em><strong>Watch the first speech by the new President</strong></em></p>
+
+			<div class="expand-collapse max-w-5xl block mx-auto justify-between items-center mt-10">
+
+				<div class="expand-container">
+					<div class="expand-container-content">
+						@@include('./components/iframe-video.html')
+						@@include('./components/transcript.html')
+						@@include('./components/btn-social-share.html')
+					</div>
+				</div>
+
+			</div>
+
+			<div class="related-links w-full mt-10">
+				@@include('./components/related-links.html')
+			</div>
+
+		</div>
+
+</div>
+
+		<a href="#returnTotop" class="top-link hide js-top" aria-label="Scroll back to top of the page"></a>
+
+	</main>
+
+	<!-- // ------------------------ END MAIN AREA -------------------------- // -->
+
+	<!-- // ------------------------ START FOOTER AREA ------------------------- // -->
+
+	@@include('./components/footer.html')
+
+	<!-- // ------------------------ END FOOTER AREA ------------------------- // -->
+
+	<!-- JS files -->
+	@@include('./components/scripts.html')
+
+	<script>
+		/* ********* EXPAND / COLLAPSE COMPONENT ******** */
+
+		const containers = document.querySelectorAll('.expand-container');
+
+		containers.forEach((container) => {
+			const buttonExpand = container.querySelector('.expand-button');
+			const targetId = buttonExpand.dataset.target;
+			const target = document.getElementById(targetId);
+			const isExpanded =
+				buttonExpand.getAttribute('aria-expanded') === 'true';
+
+			if (container.dataset.initialState === 'expanded') {
+				target.classList.remove('hidden');
+				buttonExpand.setAttribute('aria-expanded', 'true');
+				buttonExpand.setAttribute('aria-label', 'Collapse Content');
+			} else {
+				target.classList.add('hidden');
+				buttonExpand.setAttribute('aria-expanded', 'false');
+				buttonExpand.setAttribute('aria-label', 'Expand Content');
+				container.dataset.initialState = 'collapsed'; // Ajout de cette ligne
+			}
+
+			buttonExpand.addEventListener('click', toggleContent);
+		});
+
+		function toggleContent() {
+			const targetId = this.dataset.target;
+			const target = document.getElementById(targetId);
+			const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+			target.classList.toggle('hidden');
+			this.setAttribute('aria-expanded', !isExpanded);
+
+			if (!isExpanded) {
+				this.setAttribute('aria-label', 'Collapse Content');
+				this.parentNode.parentNode.dataset.initialState = 'expanded';
+				target.style.opacity = '0';
+				setTimeout(() => {
+					target.style.opacity = '1';
+				}, 10);
+			} else {
+				this.setAttribute('aria-label', 'Expand Content');
+				this.parentNode.parentNode.dataset.initialState = 'collapsed';
+				target.style.opacity = '1';
+				setTimeout(() => {
+					target.style.opacity = '0';
+				}, 10);
+			}
+		}
+	</script>
+
+	</body>
+</html>

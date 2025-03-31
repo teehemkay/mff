@@ -1,0 +1,26 @@
+@use "../helpers/variables";
+
+/* ---------------------------------------- */
+/* CARDS LINKS POLITICAL GROUPS FOR ELECTIONS
+------------------------------------------- */
+
+.cards-links-block a {
+  display: block;
+  color: variables.$blue;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+  &:hover, &:focus {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+    outline-offset: 1px;
+  }
+  &:focus {
+    outline: solid 2px variables.$blue-focus;
+    outline-offset: 4px;
+  }
+}
+.ul-logos {
+  width: 54px;
+  height: 54px;
+}

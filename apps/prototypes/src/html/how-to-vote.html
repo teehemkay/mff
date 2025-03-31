@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" itemscope itemtype="https://schema.org/FAQPage">
+	<head>
+		@@include('./components/head.html')
+	</head>
+
+	<body>
+	@@include('./components/shortcut-wai.html')
+
+	<!-- NAVIGATION -->
+	@@include('./components/navigation-revamp.html')
+
+	<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+	<!-- CONTENT -->
+	<main role="main" id="mainContent" class="mb-8">
+
+		<div class="htv-page">
+
+		<div class="max-w-4xl mx-auto px-4 mt-54px mb-3">
+			<span class="block font-EPGammaBold text-2lg text-black-default text-left">European elections 2024</span>
+			<span class="text-brand-title-page inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2 mb-12">6-9 June 2024</span>
+			<h1 class="font-EPGammaBold text-2.5xl text-black-greydark text-left">
+				How to vote
+			</h1>
+		</div>
+
+		<div class="max-w-4xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4 mb-8">
+
+			<p>Almost all Member States allow the possibility of voting from abroad in European elections. In some Member States, voters are required to register with their national electoral authorities in order to be eligible to vote from abroad by post or at an embassy or consulate.</p>
+
+			@@include('./components/htv-form.html')
+
+		</div>
+
+			<!-- Europe Direct block -->
+			<div class="eu-direct-block lg:flex flex-col md:block sm:block block max-w-4xl mx-auto mb-8 px-4">
+				@@include('./components/eu-direct.html')
+			</div>
+
+		</div>
+
+		<a href="#mainContent" class="top-link hide">
+			<span class="hidden">Scroll back to top of the page</span>
+		</a>
+
+	</main>
+
+	<!-- // ------------------------ END MAIN AREA -------------------------- // -->
+
+	<!-- // ------------------------ START FOOTER AREA ------------------------- // -->
+
+	@@include('./components/footer.html')
+
+	<!-- // ------------------------ END FOOTER AREA ------------------------- // -->
+
+
+	<!-- JS files -->
+	@@include('./components/scripts.html')
+
+		<script>
+			/* ********* EXPAND / COLLAPSE COMPONENT ******** */
+
+			const containers = document.querySelectorAll('.expand-container');
+
+			containers.forEach((container) => {
+			const buttonExpand = container.querySelector('.expand-button');
+			const targetId = buttonExpand.dataset.target;
+			const target = document.getElementById(targetId);
+			const isExpanded =
+			buttonExpand.getAttribute('aria-expanded') === 'true';
+
+			if (container.dataset.initialState === 'expanded') {
+			target.classList.remove('hidden');
+			buttonExpand.setAttribute('aria-expanded', 'true');
+			buttonExpand.setAttribute('aria-label', 'Collapse Content');
+		} else {
+			target.classList.add('hidden');
+			buttonExpand.setAttribute('aria-expanded', 'false');
+			buttonExpand.setAttribute('aria-label', 'Expand Content');
+			container.dataset.initialState = 'collapsed'; // Ajout de cette ligne
+		}
+
+			buttonExpand.addEventListener('click', toggleContent);
+		});
+
+			function toggleContent() {
+			const targetId = this.dataset.target;
+			const target = document.getElementById(targetId);
+			const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+			target.classList.toggle('hidden');
+			this.setAttribute('aria-expanded', !isExpanded);
+
+			if (!isExpanded) {
+			this.setAttribute('aria-label', 'Collapse Content');
+			this.parentNode.parentNode.dataset.initialState = 'expanded';
+			target.style.opacity = '0';
+			setTimeout(() => {
+			target.style.opacity = '1';
+		}, 10);
+		} else {
+			this.setAttribute('aria-label', 'Expand Content');
+			this.parentNode.parentNode.dataset.initialState = 'collapsed';
+			target.style.opacity = '1';
+			setTimeout(() => {
+			target.style.opacity = '0';
+		}, 10);
+		}
+		}
+
+		// Scroll To Top component
+		window.addEventListener('DOMContentLoaded', () => {
+
+			var scrollToTopButton = document.querySelector(".top-link");
+
+			// Scroll event listener
+			window.addEventListener("scroll", function () {
+				if (window.scrollY > 150) {
+					scrollToTopButton.classList.add("show");
+					scrollToTopButton.classList.remove("hide");
+				} else {
+					scrollToTopButton.classList.add("hide");
+					scrollToTopButton.classList.remove("show");
+				}
+			});
+
+			// Click event listener for the anchor link
+			scrollToTopButton.addEventListener("click", function () {
+				event.preventDefault(); // to remove anchor from url
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				});
+			});
+
+		});
+
+	</script>
+
+	</body>
+</html>

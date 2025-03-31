@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" itemscope itemtype="https://schema.org/FAQPage">
+	<head>
+		@@include('./components/head.html')
+	</head>
+
+	<body>
+	@@include('./components/shortcut-wai.html')
+
+	<!-- NAVIGATION -->
+	@@include('./components/navigation-main.html')
+
+	<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+	<!-- CONTENT -->
+	<main role="main" id="mainContent" class="mb-8">
+
+		<div class="legal-page">
+
+		<div class="max-w-4xl mx-auto px-4 mt-54px mb-27px">
+			<span class="block font-EPGammaBold text-2lg text-black-default text-left mb-12">
+				European Election 2024
+			</span>
+			<h1 class="font-EPGammaBold text-2.5xl text-black-greydark text-left">
+				Cookies inventory
+			</h1>
+			<p>In order to carry out its duties towards European citizens, we may collect personal information (“personal data”), which is gathered and treated in full compliance with Regulation (EU) 2018/1725, “the Regulation”.</p>
+		</div>
+
+
+				<div class="max-w-4xl lg:flex md:block sm:block block mx-auto justify-between items-center">
+
+					@@include('./components/expand-collapse-cookies-inventory.html')
+
+				</div>
+
+
+			<!-- Europe Direct block -->
+			<div class="eu-direct-block lg:flex flex-col md:block sm:block block max-w-4xl mx-auto mb-8 px-4">
+				@@include('./components/eu-direct.html')
+			</div>
+
+		</div>
+
+	</main>
+
+	<!-- // ------------------------ END MAIN AREA -------------------------- // -->
+
+	<!-- // ------------------------ START FOOTER AREA ------------------------- // -->
+
+	@@include('./components/footer.html')
+
+	<!-- // ------------------------ END FOOTER AREA ------------------------- // -->
+
+
+	<!-- JS files -->
+	@@include('./components/scripts.html')
+
+	<script>
+		window.addEventListener('DOMContentLoaded', () => {
+			/* ********* EXPAND / COLLAPSE COMPONENT ******** */
+			const containers = document.querySelectorAll('.expand-container');
+
+			containers.forEach((container) => {
+				const buttonExpand = container.querySelector('.expand-button');
+				const targetId = buttonExpand.dataset.target;
+				const target = document.getElementById(targetId);
+				const isExpanded = buttonExpand.getAttribute('aria-expanded') === 'true';
+
+				if (container.dataset.initialState === 'expanded') {
+					target.classList.remove('hidden');
+					buttonExpand.setAttribute('aria-expanded', 'true');
+					buttonExpand.setAttribute('aria-label', 'Collapse Content');
+				} else {
+					target.classList.add('hidden');
+					buttonExpand.setAttribute('aria-expanded', 'false');
+					buttonExpand.setAttribute('aria-label', 'Expand Content');
+					container.dataset.initialState = 'collapsed';
+				}
+
+				buttonExpand.addEventListener('click', toggleContent);
+			});
+
+			function toggleContent() {
+				const targetId = this.dataset.target;
+				const target = document.getElementById(targetId);
+				const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+				target.classList.toggle('hidden');
+				this.setAttribute('aria-expanded', !isExpanded);
+
+				if (!isExpanded) {
+					this.setAttribute('aria-label', 'Collapse Content');
+					this.parentNode.parentNode.dataset.initialState = 'expanded';
+					target.style.opacity = '0';
+					setTimeout(() => {
+						target.style.opacity = '1';
+					}, 10);
+				} else {
+					this.setAttribute('aria-label', 'Expand Content');
+					this.parentNode.parentNode.dataset.initialState = 'collapsed';
+					target.style.opacity = '1';
+					setTimeout(() => {
+						target.style.opacity = '0';
+					}, 10);
+				}
+			}
+
+			// Inject the current menu state in JS (only for html prototyping as the main nav is included globally
+			// Trouver l'élément <ul> par sa classe
+			const navul = document.querySelector('ul.footerLinks');
+			const navli = navul.querySelector('li:nth-child(2)');
+			const navlilink = navli.querySelector('a');
+
+			// Ajouter la classe "current" à la balise <a>
+			navlilink.classList.add('current');
+
+			// Ajouter l'attribut "aria-current" avec la valeur "page" à la balise <a>
+			navlilink.setAttribute('aria-current', 'page');
+
+		});
+
+	</script>
+
+	</body>
+</html>

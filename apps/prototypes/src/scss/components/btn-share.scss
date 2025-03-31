@@ -1,0 +1,67 @@
+@use "../helpers/variables";
+
+/* BTN SHARE */
+
+.expand-social-share {
+  a {
+    color: variables.$blue;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    &:hover, &:focus {
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+      outline-offset: 1px;
+    }
+    &:focus {
+      outline: solid 2px variables.$blue-focus;
+      outline-offset: 1px;
+    }
+  }
+  button {
+    &.cursor-pointer {
+      &:focus {
+        outline-color: variables.$blue-focus;
+      }
+    }
+  }
+  .social-list {
+    li {
+      display: inline-block;
+      list-style: none;
+      a {
+        svg {
+          border: solid 1px variables.$blue;
+          &.twitter {
+            border-color: variables.$blue;
+            fill: variables.$blue;
+          }
+          border-radius: 100%;
+          .back {
+            fill: variables.$white;
+            transition: .1s all ease-out;
+          }
+          .icon {
+            fill: variables.$blue;
+            transition: .1s all ease-out;
+          }
+        }
+        &:hover, &:focus {
+          svg {
+            border: solid 1px variables.$white;
+            &.twitter {
+              background-color: variables.$blue;
+              border-color: variables.$blue;
+            }
+            .back {
+              fill: variables.$blue;
+            }
+            .icon {
+              fill: variables.$white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

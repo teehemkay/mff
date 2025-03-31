@@ -1,0 +1,48 @@
+@use "../helpers/variables";
+
+/* --------------------------------- */
+/* EASY TO READ BLOCK
+------------------------------------ */
+
+.etr-block {
+  p{
+    font-size: 1.33rem;
+    line-height: 2.2rem;
+    margin-bottom: 0 !important;
+  }
+  img {
+    max-width: 250px;
+    height: 100%;
+  }
+  li {
+    ul {
+      margin-left: 2rem;
+      li {
+        list-style-type: disc;
+        font-size: 1.33rem;
+        line-height: 2.2rem;
+      }
+    }
+  }
+  a {
+    color: variables.$blue;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+    &:hover, &:focus {
+      text-decoration-thickness: 2px;
+      text-underline-offset: 6px;
+    }
+    &:focus {
+      outline: solid 2px variables.$blue-focus;
+      outline-offset: 4px;
+    }
+  }
+}
+@media screen and (max-width: 649px) {
+  .etr-block {
+    img {
+      margin: auto;
+    }
+  }
+}

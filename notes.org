@@ -1,0 +1,59 @@
+* Tailwind 4 upgrade
+:PROPERTIES:
+:CREATED: [2025-03-31 Mon 16:20]
+:END:
+
+
+!!! If =tailwind.config.js= is an =esm= module, it must ~export default {...}~ (ie NO ~export config default;~) otherwise =@tailwindcss/upgrade= will fail to recognize it.
+
+The combination of the ~-ep~ =prefix= property and the properties below in the tailwind config results in the failure of the automated ugrade using ~pnpx @tailwindcss/upgrade~ with the following error message: "Could not load the configuration file: Reflect.ownKeys called on non-object".
+
+(N.B. The =outline= property prevents the automated migration but doesn't produce the error message)
+
+When the ~-ep~ =prefix= is removed, the automated upgrade is performed without problem but the utility classes name are not correctly updated in the source files.
+
+#+begin_src javascript
+
+export default {
+  theme: {
+    outline: {
+      black: ['3px solid #939393', '-3px'],
+    },
+    padding: {
+      '3xs': '.25rem', // 4px
+      '2xs': '.5rem', // 8px
+      xs: '.625rem', // 10px
+      m: '.875rem', // 14px
+      l: '1rem', // 16px
+      xl: '1.5rem', // 24px
+      '2xl': '2rem', // 32px
+      '3xl': '3rem', // 48px
+    },
+    gap: {
+      '2xs': '.25rem', // 4px
+      xs: '.5rem', // 8px
+      s: '1rem', // 16px
+      m: '1.5rem', // 24px
+      l: '2rem', // 32px
+      xl: '3rem', // 48px
+    },
+    space: {
+      '2xs': '.5rem', // 8px
+      xs: '1rem', // 16px
+      m: '1.5rem', // 24px
+      l: '2rem', // 32px
+      xl: '3rem', // 48px
+    },
+    variants: {
+      extend: {
+        borderWidth: ['hover', 'focus'],
+      },
+    },
+  },
+};
+
+#+end_src
+
+[[file:~/dev/ep/europe-day/packages/prototypes/package.json::"tailwindcss": "^4.0.12",]]
+
+[[file:~/dev/ep/mff/apps/prototypes/tailwind.config.js]]

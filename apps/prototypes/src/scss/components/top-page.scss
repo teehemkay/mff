@@ -1,0 +1,63 @@
+@use "../helpers/variables";
+
+/* top of the page */
+.top-link{
+  z-index: 1000;
+  background-color: #fff;
+  border: 1px solid #024EA2;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  right: 40px;
+  bottom: 270px;
+  transition: .15s all ease-out;
+  &:before, &:after{
+    content: '';
+    border: solid 1px #024EA2;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #024EA2;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  &:after{
+    background-color: #024EA2;
+    transform: rotate(45deg);
+    top: 49%;
+    left: 27px;
+    width: 19px;
+  }
+  &:hover, &:focus{
+    &:before, &:after{
+      background-color: variables.$blue-focus;
+    }
+  }
+  &.hidden {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  &.hide {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+@media screen and (max-width: 479px){
+  .top-link {
+    right: 15px;
+    bottom: 150px;
+    scale: 0.8;
+  }
+}

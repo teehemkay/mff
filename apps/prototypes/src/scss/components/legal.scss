@@ -1,0 +1,101 @@
+@use "../helpers/variables";
+
+/* -------------------------------------- */
+/* LEGAL / PRIVACY POLICY / ACCESSIBILITY
+----------------------------------------- */
+
+.legal-page {
+  h1 {
+    margin-bottom: 1.125rem;
+  }
+  h2 {
+    font-family: "EPGammaBold", Arial, sans-serif;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    text-align: left;
+    margin-bottom: 1.125rem;
+  }
+  h3 {
+    font-family: "EPGammaBold", Helvetica, Arial, sans-serif;
+    font-size: 1.125rem;
+  }
+  a {
+    text-decoration: underline;
+    color: variables.$blue;
+    text-decoration-thickness: 1px;
+    &:hover, &:focus {
+      text-decoration-thickness: 2px;
+    }
+  }
+  p{
+    margin-bottom: 1.5rem;
+    }
+  ol {
+    margin-bottom: 3.375rem;
+    list-style-type: decimal;
+    list-style-position: inside;
+    counter-reset: item !important;
+
+    > li {
+      margin: 0;
+      padding: 0;
+      text-indent: -0.3rem;
+      list-style-type: none;
+      counter-increment: item;
+      color: variables.$blackGreyTxt;
+
+      &:before {
+        display: inline-block;
+        width: 1.5em;
+        padding-right: 0.5em;
+        font-weight: bold;
+        text-align: right;
+        content: counter(item) ".";
+      }
+    }
+  }
+  ul {
+    margin-bottom: 1.5rem;
+    margin-left: 0.5rem;
+    list-style-type: disc;
+    &.elections-block {
+      list-style-type: none;
+    }
+    &.expand-collapse {
+      list-style-type: none;
+      .expand-container {
+        .expand-container-content {
+          h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.125rem;
+          }
+        }
+      }
+    }
+    li {
+      list-style-position: inside;
+    }
+  }
+  .ep_opt-form {
+    * {
+      color: variables.$black;
+    }
+    .ep_cookies-form-field {
+      label {
+        font-family: "EPGammaBold",Helvetica,Arial,sans-serif;
+        font-size: inherit;
+        padding: 0 0 .5rem 2rem;
+      }
+      input {
+        width: 30px;
+        height: 30px;
+      }
+      input + label::before {
+        top: .1rem;
+      }
+      input + label::after {
+        top: .4rem;
+      }
+    }
+  }
+}

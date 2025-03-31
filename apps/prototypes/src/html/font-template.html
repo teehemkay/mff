@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" itemscope itemtype="https://schema.org/FAQPage">
+	<head>
+		@@include('./components/head.html')
+	</head>
+
+	<body>
+	@@include('./components/shortcut-wai.html')
+
+	<!-- NAVIGATION -->
+	@@include('./components/navigation-main.html')
+
+	<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+	<!-- CONTENT -->
+	<main role="main" id="mainContent" class="mb-8">
+
+		<div class="legal-page">
+
+		<div class="max-w-4xl mx-auto px-4 mt-54px mb-8">
+			<span class="block font-EPGammaBold text-2lg text-black-default text-left mb-12">
+				Europea - EP font styles
+			</span>
+		</div>
+
+		<div class="max-w-4xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4 my-16">
+
+			<div class="mb-8">
+				<h2 class="text-heading-2xl">Original font class css</h2>
+				<ul>
+					<li class="europea-reg">Font Regular (.europea-reg)</li>
+					<li class="europea-med">Font Medium (.europea-med)</li>
+					<li class="europea-sb">Font Semibold (.europea-sb)</li>
+					<li class="europea-bold">Font Bold (.europea-bold)</li>
+				</ul>
+			</div>
+
+			<div class="mb-8">
+				<h2 class="text-heading-2xl">Settings variable font</h2>
+				<ul>
+					<li class="font-epRegular">Font Regular (.font-epRegular)</li>
+					<li class="font-epMedium">Font Medium (.font-epMedium)</li>
+					<li class="font-epSemiBold">Font Semibold (.font-epSemiBold)</li>
+					<li class="font-epBold">Font Bold (.font-epBold)</li>
+				</ul>
+			</div>
+
+			<div>
+				<h2 class="text-heading-2xl">with tailwind properties font-weight</h2>
+				<ul>
+					<li class="font-normal">Font Regular (.font-regular)</li>
+					<li class="font-medium">Font Medium (.font-medium)</li>
+					<li class="font-semibold">Font Semibold (.font-semibold)</li>
+					<li class="font-bold">Font Bold (.font-bold)</li>
+				</ul>
+			</div>
+
+		</div>
+
+		</div>
+
+	</main>
+
+	<!-- // ------------------------ END MAIN AREA -------------------------- // -->
+
+	<!-- // ------------------------ START FOOTER AREA ------------------------- // -->
+
+	@@include('./components/footer.html')
+
+	<!-- // ------------------------ END FOOTER AREA ------------------------- // -->
+
+
+	<!-- JS files -->
+	@@include('./components/scripts.html')
+
+	<script>
+		// Menu component
+		window.addEventListener('DOMContentLoaded', () => {
+
+			// Inject the current menu state in JS (only for html prototyping as the main nav is included globally
+			// Trouver l'élément <ul> par sa classe
+			const navul = document.querySelector('ul.footerLinks');
+			const navli = navul.querySelector('li:nth-child(4)');
+			const navlilink = navli.querySelector('a');
+
+			// Ajouter la classe "current" à la balise <a>
+			navlilink.classList.add('current');
+
+			// Ajouter l'attribut "aria-current" avec la valeur "page" à la balise <a>
+			navlilink.setAttribute('aria-current', 'page');
+
+		});
+	</script>
+
+	</body>
+</html>

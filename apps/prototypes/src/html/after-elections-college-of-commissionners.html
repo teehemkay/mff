@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" class="no-js">
+	<head>
+		@@include('./components/head.html')
+	</head>
+
+	<body>
+		@@include('./components/shortcut-wai.html')
+
+		<!-- NAVIGATION -->
+		@@include('./components/navigation-ae.html')
+
+		<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+		<!-- CONTENT -->
+		<main role="main" id="mainContent" class="mb-8">
+			<div id="returnToTop" class="hidden"></div>
+
+			<div class="max-w-5xl mx-auto px-4 mt-54px mb-3">
+				<span
+					class="block font-EPGammaBold text-2lg text-black-default text-left">
+					European Election 2024
+				</span>
+				<span
+					class="text-brand-title-page inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2 mb-12"
+					>6-9 June</span
+				>
+				<h1 class="max-w-[750px] font-EPGammaBold text-2.5xl text-black-greydark text-left">
+					College of commissionners
+				</h1>
+			</div>
+
+			<div
+				class="max-w-5xl block mx-auto justify-between items-center px-4 mb-72px"
+				itemprop="description">
+				<div class="ae-page max-w-[750px] text-lg mr-5 lg:mb-0 md:mb-3 sm:mb-3 mb-3">
+					<p>
+					The College of Commissioners, composed of the President of the
+					European Commission and 26 other Commissioners, leads the European
+					Commission. They propose new laws, manage the EU’s daily operations,
+					and ensure policies are implemented correctly.
+					</p>
+					<p>
+					The President is selected by the European Council and approved by the
+					European Parliament, while the other Commissioners are nominated by EU
+					member states and must also be approved by the European Parliament.
+					</p>
+					<p>
+					The Treaty establishing the European Community requires that the
+					Members of the European Commission receive approval from the European
+					Parliament before they are appointed. To do this, each
+					Commissioner-designate goes through hearings with the relevant
+					parliamentary committees.
+					</p>
+				</div>
+
+				<div class="card-members w-full max-w-[750px] mt-10">
+					@@include('./components/card-member-item-multiple.html')
+				</div>
+
+				<div class="related-links w-full mt-20">
+					@@include('./components/related-links.html')
+				</div>
+			</div>
+
+			<a
+				href="#returnTotop"
+				class="top-link hide js-top"
+				aria-label="Scroll back to top of the page"></a>
+		</main>
+
+		<!-- // ------------------------ END MAIN AREA -------------------------- // -->
+
+		<!-- // ------------------------ START FOOTER AREA ------------------------- // -->
+
+		@@include('./components/footer.html')
+
+		<!-- // ------------------------ END FOOTER AREA ------------------------- // -->
+
+		<!-- JS files -->
+		@@include('./components/scripts.html')
+	</body>
+</html>

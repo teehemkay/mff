@@ -1,0 +1,687 @@
+<!-- Navigation :: After Elections -->
+<!-- When we are on mobile device view, the header needs a role="presentation" that Fernando asked to add -->
+<!-- <header class="min-h-[72px] shadow-md" role="presentation"> -->
+<header class="min-h-[72px] shadow-md" id="header">
+  <div
+    class="lg:max-w-6xl lg:mx-auto relative flex flex-wrap items-center justify-between py-2"
+  >
+    <div class="logo flex-1 mx-2 sm:mx-0 my-2">
+      <a href="./">
+        <img
+          src="../assets/img/logos/logo-ep-en.svg"
+          alt="Logo of the European Parliament"
+          class="logo-european-union max-w-[200px] h-[40px]"
+        />
+      </a>
+    </div>
+    <div class="flex items-center ml-auto justify-end pb-0">
+      <div class="desktop-menu flex justify-end">
+        <nav role="navigation" aria-label="Main menu" class="default-menu">
+          <div class="desktop-menu-display">
+            <ul class="navList lg:mr-1">
+              <li><a href="homepage.html">Homepage</a></li>
+              <li><a href="how-elections-work.html">How elections work</a></li>
+              <li class="current">
+                <a href="after-elections.html" aria-current="page">After the elections</a>
+              </li>
+
+              <li>
+                <div class="relative">
+                  <button
+                    id="er-menu"
+                    class="er-menu"
+                    data-button
+                    aria-expanded="false"
+                    data-controls="contenu"
+                    aria-controls="contenu"
+                  >
+                    <span class="inline-block pt-0.5 mr-2"
+                      >Election results</span
+                    >
+                    <svg
+                      class="inline-block w-[15px] h-[9px]"
+                      viewBox="0 0 21.741 12.602"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        id="Arrow"
+                        d="M0,.055,9.8,9.442,14.545,4.9,19.666,0"
+                        transform="translate(1.037 1.083)"
+                        fill="none"
+                        stroke="#024ea2"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="mobile-menu flex justify-end">
+        <!-- <div id="navWrapper" class="navWrapper" role="dialog" aria-label="Navigation" aria-modal="true"> -->
+        <div
+          id="navWrapper"
+          class="navWrapper"
+          role="navigation"
+          aria-label="Main navigation"
+        >
+          <div class="divNavigation" id="divNavigation">
+            <div id="divBack" class="divBack">
+              <a href="#" id="back" role="button" class="backBtn none">
+                <!-- the following cygle is injected in Fernando's JS for the back arrow but it should be replaced by the svg below -->
+                <!-- &lt;  -->
+
+                <!-- SVG to inject innto the <a> instead of the "&lt;" -->
+                <!-- <svg x="0px" y="0px" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                  <rect width="24" height="24" style="fill:none;" />
+                  <path d="M16.2,4.5L9.1,12l3.5,3.6l3.7,3.9" style="fill:none;stroke:#FFFFFF;stroke-width:2;" />
+                </svg> -->
+              </a>
+            </div>
+            <div id="divMenuTitle" class="divMenuTitle" aria-hidden="true">
+              <!-- Election Results -->
+            </div>
+            <div id="divmainMenuButton" class="divmainMenuButton">
+              <!-- <a id="mainMenuButton" class="mainMenuButton" role="button" aria-label="Close main navigation menu" href="#"> -->
+              <a
+                id="mainMenuButton"
+                data-expanded="false"
+                role="button"
+                href="#"
+                aria-label="Open main navigation menu (opens in a dialog)">
+                <span class="mr-3">Menu</span>
+
+                <svg class="inline-block w-[15px] h-[9px]" viewBox="0 0 21.741 12.602" aria-hidden="true" focusable="false">
+                  <path id="Arrow" d="M0,.055,9.8,9.442,14.545,4.9,19.666,0" transform="translate(1.037 1.083)" fill="none" stroke="#024ea2" stroke-width="3"></path>
+                </svg>
+              </a>
+              <!-- <a id="mainMenuButton" data-expanded="false" role="button" class="mainMenuButton inline-block text-base font-epSemiBold rounded-md border border-1 border-solid border-black-greymiddle focus:outline focus:outline-2 focus:outline-blue-focus focus:outline-offset-0 px-5 py-[0.3rem]" href="#" aria-label="Open main navigation menu (opens in a dialog)">Menu</a>-->
+            </div>
+          </div>
+
+          <ul
+            id="mainList"
+            class="main-menu flex flex-wrap items-center mx-3 my-2 none"
+          >
+            <li class="level1 main">
+              <a href="#" class="current" aria-current="page">Home page</a>
+            </li>
+            <li class="level1 main"><a href="#">How to vote</a></li>
+            <li class="level1 main"><a href="#">Use your vote</a></li>
+            <li class="level1 main"><a href="#">Why to vote</a></li>
+            <li class="level1 main"><a href="#">How elections work</a></li>
+            <li class="level1 button">
+              <a class="" id="r" data-expanded="false" role="button" href="#">
+                <span class="mr-3 pointer-events-none">Election Results</span>
+                <svg
+                  class="inline-block w-[15px] h-[9px]"
+                  viewBox="0 0 21.741 12.602"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    id="Arrow"
+                    d="M0,.055,9.8,9.442,14.545,4.9,19.666,0"
+                    transform="translate(1.037 1.083)"
+                    fill="none"
+                    stroke="#024ea2"
+                    stroke-width="3"
+                  />
+                </svg>
+              </a>
+              <ul id="resultsList" class="none">
+                <li class="level2"><a href="#">Results overview</a></li>
+                <li class="level2 button">
+                  <a id="er" data-expanded="false" role="button" href="#">
+                    <span class="mr-3 pointer-events-none"
+                      >European Results</span
+                    >
+                    <svg
+                      class="inline-block w-[15px] h-[9px]"
+                      viewBox="0 0 21.741 12.602"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        id="Arrow"
+                        d="M0,.055,9.8,9.442,14.545,4.9,19.666,0"
+                        transform="translate(1.037 1.083)"
+                        fill="none"
+                        stroke="#024ea2"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </a>
+                  <ul id="euResultsList" class="none">
+                    <li>
+                      <a href="#">Election Results</a>
+                    </li>
+                    <li>
+                      <a href="#">Seats by political group and country</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        >Breakdown by national parties and political groups</a
+                      >
+                    </li>
+                    <li><a href="#">MEP"s gender balance</a></li>
+                    <li><a href="#">Turnout</a></li>
+                  </ul>
+                </li>
+                <li class="level2 button">
+                  <a id="nr" data-expanded="false" role="button" href="#">
+                    <span class="mr-3 pointer-events-none"
+                      >National Results</span
+                    >
+                    <svg
+                      class="inline-block w-[15px] h-[9px]"
+                      viewBox="0 0 21.741 12.602"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        id="Arrow"
+                        d="M0,.055,9.8,9.442,14.545,4.9,19.666,0"
+                        transform="translate(1.037 1.083)"
+                        fill="none"
+                        stroke="#024ea2"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </a>
+                  <ul id="natResultsList" class="none">
+                    <li><a href="#" class="font-semibold">All countries</a></li>
+                    <li><a href="#">Austria</a></li>
+                  </ul>
+                </li>
+                <li class="level2 button">
+                  <a id="tr" data-expanded="false" role="button" href="#">
+                    <span class="mr-3 pointer-events-none">Tools</span>
+                    <svg
+                      class="inline-block w-[15px] h-[9px]"
+                      viewBox="0 0 21.741 12.602"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        id="Arrow"
+                        d="M0,.055,9.8,9.442,14.545,4.9,19.666,0"
+                        transform="translate(1.037 1.083)"
+                        fill="none"
+                        stroke="#024ea2"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </a>
+                  <ul id="toolsList" class="none">
+                    <li><a href="#">Comparative tool</a></li>
+                    <li><a href="#">Majority calculator</a></li>
+                    <li><a href="#">Create your widget</a></li>
+                    <li><a href="#">Download datasheets</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Lang menu dropdown -->
+      <nav
+        role="navigation"
+        aria-label="language menu"
+        class="lang-nav flex justify-end"
+      >
+        <div class="expand-collapse">
+          <button
+            id="lang-menu"
+            class="nav-button flex items-center rounded-md border border-1 border-solid border-black-greymiddle focus:outline focus:outline-2 focus:outline-blue-focus px-2.5 py-1 mr-4"
+            aria-expanded="false"
+            data-button
+            data-controls="lang-list"
+            aria-controls="lang-list"
+          >
+            <span class="inline-block text-base pt-0.5 mr-3">
+              EN <span class="sr-only">- English</span>
+            </span>
+            <svg
+              class="inline-block w-[15px] h-[9px]"
+              viewBox="0 0 21.741 12.602"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                id="Arrow"
+                d="M0,.055,9.8,9.442,14.545,4.9,19.666,0"
+                transform="translate(1.037 1.083)"
+                fill="none"
+                stroke="#024ea2"
+                stroke-width="3"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Desktop content -->
+    <div
+      id="contenu"
+      class="submenu-content hidden"
+      data-content
+      aria-labelledby="er-menu"
+    >
+      <div class="menu-inner-wrapper max-w-[1000px] mx-auto">
+        <div class="column">
+          <span class="sub-nav-heading">Overview</span>
+          <ul class="sub-nav">
+            <li><a class="header_links" href="/en/">Results overview</a></li>
+          </ul>
+          <span class="sub-nav-heading">European results</span>
+          <ul class="sub-nav">
+            <li>
+              <a
+                class="header_links"
+                href="/en/european-results/2019-2024/outgoing-parliament/"
+                >Election results</a
+              >
+            </li>
+            <li>
+              <a
+                class="header_links"
+                href="/en/seats-political-group-country/2019-2024/outgoing-parliament/"
+                >Seats by political group and country</a
+              >
+            </li>
+            <li>
+              <a
+                class="header_links"
+                href="/en/breakdown-national-parties-political-group/2019-2024/outgoing-parliament/"
+                >Breakdown by national parties and political groups</a
+              >
+            </li>
+            <li>
+              <a class="header_links" href="/en/mep-gender-balance/2019-2024/"
+                >MEPs' gender balance</a
+              >
+            </li>
+            <li><a class="header_links" href="/en/turnout/">Turnout</a></li>
+          </ul>
+          <span class="sub-nav-heading">Tools</span>
+          <ul class="sub-nav">
+            <li>
+              <a class="header_links" href="/en/tools/comparative-tool/"
+                >Comparative tool</a
+              >
+            </li>
+            <li>
+              <a class="header_links" href="/en/tools/majority-calculator/"
+                >Majority calculator</a
+              >
+            </li>
+            <li>
+              <a class="header_links" href="/en/tools/create-your-widget/"
+                >Create your widget</a
+              >
+            </li>
+            <li>
+              <a class="header_links" href="/en/tools/download-datasheets/"
+                >Download datasheets</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="column !ml-auto">
+          <span class="sub-nav-heading">National results</span>
+          <ul class="column_countries sub-nav">
+            <li>
+              <a class="header_links" href="/en/national-results-overview/"
+                >All countries</a
+              >
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/austria/2019-2024/outgoing-parliament/"
+                aria-label="Austria"
+              >
+                Austria
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/belgium/2019-2024/outgoing-parliament/"
+                aria-label="Belgium"
+              >
+                Belgium
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/bulgaria/2019-2024/outgoing-parliament/"
+                aria-label="Bulgaria"
+              >
+                Bulgaria
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/croatia/2019-2024/outgoing-parliament/"
+                aria-label="Croatia"
+              >
+                Croatia
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/cyprus/2019-2024/outgoing-parliament/"
+                aria-label="Cyprus"
+              >
+                Cyprus
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/czechia/2019-2024/outgoing-parliament/"
+                aria-label="Czechia"
+              >
+                Czechia
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/denmark/2019-2024/outgoing-parliament/"
+                aria-label="Denmark"
+              >
+                Denmark
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/estonia/2019-2024/outgoing-parliament/"
+                aria-label="Estonia"
+              >
+                Estonia
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/finland/2019-2024/outgoing-parliament/"
+                aria-label="Finland"
+              >
+                Finland
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/france/2019-2024/outgoing-parliament/"
+                aria-label="France"
+              >
+                France
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/germany/2019-2024/outgoing-parliament/"
+                aria-label="Germany"
+              >
+                Germany
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/greece/2019-2024/outgoing-parliament/"
+                aria-label="Greece"
+              >
+                Greece
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/hungary/2019-2024/outgoing-parliament/"
+                aria-label="Hungary"
+              >
+                Hungary
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/ireland/2019-2024/outgoing-parliament/"
+                aria-label="Ireland"
+              >
+                Ireland
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/italy/2019-2024/outgoing-parliament/"
+                aria-label="Italy"
+              >
+                Italy
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/latvia/2019-2024/outgoing-parliament/"
+                aria-label="Latvia"
+              >
+                Latvia
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/lithuania/2019-2024/outgoing-parliament/"
+                aria-label="Lithuania"
+              >
+                Lithuania
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/luxembourg/2019-2024/outgoing-parliament/"
+                aria-label="Luxembourg"
+              >
+                Luxembourg
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/malta/2019-2024/outgoing-parliament/"
+                aria-label="Malta"
+              >
+                Malta
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/netherlands/2019-2024/outgoing-parliament/"
+                aria-label="Netherlands"
+              >
+                Netherlands
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/poland/2019-2024/outgoing-parliament/"
+                aria-label="Poland"
+              >
+                Poland
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/portugal/2019-2024/outgoing-parliament/"
+                aria-label="Portugal"
+              >
+                Portugal
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/romania/2019-2024/outgoing-parliament/"
+                aria-label="Romania"
+              >
+                Romania
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/slovakia/2019-2024/outgoing-parliament/"
+                aria-label="Slovakia"
+              >
+                Slovakia
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/slovenia/2019-2024/outgoing-parliament/"
+                aria-label="Slovenia"
+              >
+                Slovenia
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/spain/2019-2024/outgoing-parliament/"
+                aria-label="Spain"
+              >
+                Spain
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/sweden/2019-2024/outgoing-parliament/"
+                aria-label="Sweden"
+              >
+                Sweden
+              </a>
+            </li>
+            <li>
+              <a
+                rel="nofollow"
+                class="header_links"
+                href="/en/national-results/united-kingdom/2019-2024/constitutive-session/"
+                aria-label="United Kingdom"
+              >
+                United Kingdom
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lang content -->
+    <div
+      id="lang-list"
+      class="submenu-content hidden"
+      data-content
+      aria-labelledby="lang-menu"
+    >
+      <ul class="lang-content block px-6 mx-auto max-w-[1100px]">
+        <li><a lang="bg" hreflang="bg" href="../bg/">BG - Български</a></li>
+        <li><a lang="es" hreflang="es" href="../es/">ES - Español</a></li>
+        <li><a lang="cs" hreflang="cs" href="../cs/">CS - Čeština</a></li>
+        <li><a lang="da" hreflang="da" href="../da/">DA - Dansk</a></li>
+        <li><a lang="de" hreflang="de" href="../de/">DE - Deutsch</a></li>
+        <li>
+          <a lang="et" hreflang="et" href="../et/">ET - Eesti keel</a>
+        </li>
+        <li><a lang="el" hreflang="el" href="../el/">EL - Ελληνικά</a></li>
+        <li>
+          <a
+            lang="en"
+            hreflang="en"
+            href="../en/"
+            class="current"
+            aria-current="true"
+            >EN - English</a>
+        </li>
+        <li><a lang="fr" hreflang="fr" href="../fr/">FR - Français</a></li>
+        <li><a lang="ga" hreflang="ga" href="../ga/">GA - Gaeilge</a></li>
+        <li><a lang="hr" hreflang="hr" href="../hr/">HR - Hrvatski</a></li>
+        <li><a lang="it" hreflang="it" href="../it/">IT - Italiano</a></li>
+        <li>
+          <a lang="lv" hreflang="lv" href="../lv/">LV - Latviešu valoda</a>
+        </li>
+        <li>
+          <a lang="lt" hreflang="lt" href="../lt/">LT - Lietuvių kalba</a>
+        </li>
+        <li><a lang="hu" hreflang="hu" href="../hu/">HU - Magyar</a></li>
+        <li><a lang="mt" hreflang="mt" href="../mt/">MT - Malti</a></li>
+        <li>
+          <a lang="nl" hreflang="nl" href="../nl/">NL - Nederlands</a>
+        </li>
+        <li><a lang="pl" hreflang="pl" href="../pl/">PL - Polski</a></li>
+        <li><a lang="pt" hreflang="pt" href="../pt/">PT - Português</a></li>
+        <li><a lang="ro" hreflang="ro" href="../ro/">RO - Română</a></li>
+        <li>
+          <a lang="sk" hreflang="sk" href="../sk/">SK - Slovenčina</a>
+        </li>
+        <li>
+          <a lang="sl" hreflang="sl" href="../sl/">SL - Slovenščina</a>
+        </li>
+        <li><a lang="fi" hreflang="fi" href="../fi/">FI - Suomi</a></li>
+        <li><a lang="sv" hreflang="sv" href="../sv/">SV - Svenska</a></li>
+      </ul>
+    </div>
+  </div>
+</header>

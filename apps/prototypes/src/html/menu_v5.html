@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Complex menu - Version 5</title>
+    <style type="text/css">
+        :root {
+            --text-wght-rl: 350;
+            --text-wght-r: 400;
+            --text-wght-m: 500;
+            --text-wght-sb: 625;
+            --text-wght-b: 700;
+            --text-wdth: 85;
+            --text-opsz: 80;
+            --text-GRAD: 88;
+            --text-axis: 1;
+        }
+        @font-face {
+            font-family: "EuropeaVar";
+            src: url("../../public/assets/fonts/EuropeaVar.woff2") format("woff2");
+            font-weight: normal;
+            font-style: normal;
+        }
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            font-family: "EuropeaVar", sans-serif;
+            font-variation-settings: "wght" var(--text-wght-rl), "wdth" var(--text-wdth), "opsz" var(--text-opsz), "GRAD" var(--text-GRAD), "ital" var(--text-axis);
+            color: #000000;
+        }
+        .divNavigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 57px;
+            padding: 0;
+            background-color: rgba(200,200,200,0.10);
+        }
+        #navWrapper #divNavigation #divmainMenuButton #mainMenuButton[data-expanded="false"] {
+            font-variation-settings: "wght" var(--text-wght-sb);
+            background-color: transparent;
+            border: solid 1px lightgray;
+            border-radius: 9px;
+            color: #000;
+            padding: 0.6rem 1.2rem;
+            margin-right: 10px;
+        }
+        #navWrapper[role="dialog"] .divNavigation #divBack #back[data-expanded="true"] {
+            background-color: #0C4DA2;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 57px;
+            min-height: 57px;
+        }
+        #navWrapper[role="dialog"] .divNavigation #divmainMenuButton #mainMenuButton {
+            background-color: transparent;
+            color: #0C4DA2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 57px;
+            min-height: 57px;
+        }
+        #navWrapper[role="dialog"] .divNavigation #divmainMenuButton #mainMenuButton .closeIcon {
+            display: flex;
+            width: 25px;
+            height: 25px;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iZXAtRUUyNC1lbGVjdGlvbnMtcmVzdWx0cy1jbG9zZS1idXR0b24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPg0KICA8ZyBpZD0iUmV0w6JuZ3Vsb18zODk2IiBkYXRhLW5hbWU9IlJldMOibmd1bG8gMzg5NiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuMiI+DQogICAgPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBzdHJva2U9Im5vbmUiLz4NCiAgICA8cmVjdCB4PSIwLjUiIHk9IjAuNSIgd2lkdGg9IjIzIiBoZWlnaHQ9IjIzIiBmaWxsPSJub25lIi8+DQogIDwvZz4NCiAgPGcgaWQ9IkdydXBvXzExMjE4IiBkYXRhLW5hbWU9IkdydXBvIDExMjE4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzk1LjgzNSAtNDg3LjQxNSkiPg0KICAgIDxnIGlkPSJHcnVwb183MTQwIiBkYXRhLW5hbWU9IkdydXBvIDcxNDAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQwMC44MzUgNDkyLjQxNSkiPg0KICAgICAgPHBhdGggaWQ9IkNhbWluaG9fNzIwMiIgZGF0YS1uYW1lPSJDYW1pbmhvIDcyMDIiIGQ9Ik0wLDAsMTQsMTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBjNGRhMiIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogICAgPC9nPg0KICAgIDxnIGlkPSJHcnVwb183MTQxIiBkYXRhLW5hbWU9IkdydXBvIDcxNDEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQwMC44MzUgNDkyLjQxNSkiPg0KICAgICAgPHBhdGggaWQ9IkNhbWluaG9fNzIwMyIgZGF0YS1uYW1lPSJDYW1pbmhvIDcyMDMiIGQ9Ik0tOSwwLTIzLDE0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMykiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBjNGRhMiIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogICAgPC9nPg0KICA8L2c+DQo8L3N2Zz4NCg==);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            pointer-events: none;
+        }
+        #navWrapper[role="dialog"] ul {
+            line-height: 3.5rem;
+        }
+        #navWrapper[role="dialog"] ul li.level1 {
+            border-bottom: solid 1px lightgray;
+            min-height: 57px;
+        }
+        #navWrapper[role="dialog"] ul li.level1 ul li.level2:last-child {
+            border-bottom: 0;
+        }
+
+        #navWrapper[role="dialog"] ul#mainList li a[role="button"][data-expanded="false"] {
+            display: flex;
+            color: #000;
+            background-color: transparent;
+        }
+        #navWrapper[role="dialog"] ul#mainList li a[role="button"][data-expanded="false"]::after {
+            display: block;
+            position: relative;
+            right: 10px;
+            content: "";
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNy4zLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iZXAtaWMtYXJyb3ctZG93biIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4Ig0KCSB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOm5vbmU7fQ0KCS5zdDF7ZmlsbDpub25lO3N0cm9rZTojMEM0REEyO3N0cm9rZS13aWR0aDoyO30NCjwvc3R5bGU+DQo8cmVjdCBpZD0iRnJhbWUiIHg9IjAiIHk9IjAiIGNsYXNzPSJzdDAiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIvPg0KPHBhdGggaWQ9IkNhbWluaG9fNDIyMCIgY2xhc3M9InN0MSIgZD0iTTcuOCwxOS41bDcuMi03LjVsLTMuNS0zLjZMNy43LDQuNSIvPg0KPC9zdmc+DQo=);
+            background-size: 100%;
+            width: 25px;
+            height: 25px;
+            transform: translateY(50%);
+            margin-left: auto;
+            pointer-events: none;
+        }
+        .backBtn {
+            width: 25px;
+            height: 25px;
+            pointer-events: none;
+        }
+        #navWrapper[role="dialog"] ul#mainList {
+            padding: 10px;
+        }
+        #navWrapper[role="dialog"] ul#mainList li a[role="button"][data-expanded="false"]:hover,
+        #navWrapper[role="dialog"] ul#mainList li a[role="button"][data-expanded="false"]:focus {
+            text-decoration: underline;
+        }
+        #divMenuTitle {
+            flex: auto;
+            padding: 5px 15px;
+            font-size: 1.125rem;
+            font-variation-settings: "wght" var(--text-wght-sb);
+        }
+        .none {
+            display: none !important;
+        }
+        ul {
+            list-style: none;
+            line-height: 2.5rem;
+        }
+        [role="button"] {
+            text-decoration: none;
+        }
+        a:focus {
+            outline: 3px solid blue;
+            outline-offset: 2px;
+        }
+        [role="button"]:hover,
+        [role="button"]:focus,
+        [role="button"]:active {
+            color: #000000;
+        }
+        a:hover,
+        a:focus,
+        a:active {
+            text-decoration-thickness: 2px;
+        }
+
+        [role="dialog"] {
+            box-sizing: border-box;
+            padding: 5px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body cz-shortcut-listen="true">
+    <header>
+        <div id="topHeader">
+            <p>Some text in the header</p>
+        </div>
+        <div id="navWrapper" role="navigation" aria-label="Main navigation">
+            <div class="divNavigation" id="divNavigation">
+                <div id="divBack">
+                    <a id="back" role="button" class="backBtn none" href="#"></a>
+                </div>
+                <div id="divMenuTitle" aria-hidden="true">
+                </div>
+                <div id="divmainMenuButton">
+                    <a id="mainMenuButton" data-expanded="false" role="button" class="" href="#" aria-label="Open main navigation menu (opens in a dialog)">Menu</a>
+                </div>
+            </div>
+
+            <ul id="mainList" class="none">
+                <li class="level1 main"><a href="#">Home page</a></li>
+                <li class="level1 main"><a href="#">How to vote</a></li>
+                <li class="level1 main"><a href="#">Use your vote</a></li>
+                <li class="level1 main"><a href="#">Why to vote</a></li>
+                <li class="level1 main"><a href="#">How elections work</a></li>
+                <li class="level1 button">
+                    <a class="" id="r" data-expanded="false" role="button" href="#">Election Results</a>
+                    <ul id="resultsList" class="none">
+                        <li class="level2"><a href="#">Results overview</a></li>
+                        <li class="level2 button"><a id="er" data-expanded="false" role="button" href="#">European
+                                Results</a>
+                            <ul id="euResultsList" class="none">
+                                <li><a href="#">Election Results</a></li>
+                                <li><a href="#">Seats by political group and country</a></li>
+                                <li><a href="#">Breakdown by national parties and political groups</a></li>
+                                <li><a href="#">MEP's gender balance</a></li>
+                                <li><a href="#">Turnout</a></li>
+                            </ul>
+                        </li>
+                        <li class="level2 button"><a id="nr" data-expanded="false" role="button" href="#">National
+                                Results</a>
+                            <ul id="natResultsList" class="none">
+                                <li><a href="#" style='font-weight: 650;'>All countries</a></li>
+                                <li><a href="#">Austria</a></li>
+                            </ul>
+                        </li>
+                        <li class="level2 button"><a id="nr" data-expanded="false" role="button" href="#">Tools</a>
+                            <ul id="toolsList" class="none">
+                                <li><a href="#">Comparative tool</a></li>
+                                <li><a href="#">Majority calculator</a></li>
+                                <li><a href="#">Create your widget</a></li>
+                                <li><a href="#">Download datasheets</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!--<span id="navigHint" class="sr-only">Click or Enter to go to the previous menu</span>-->
+
+        </div>
+
+    </header>
+    <main id="main">
+        <a href="https://fpetrone.github.io/tests/complex-menu/example.html">A link in the main landmark</a>
+
+    </main>
+    <footer id="footer"> <a href="https://fpetrone.github.io/tests/complex-menu/example.html">A link in the footer landmark</a></footer>
+
+
+
+
+    <!--<a href="menuMap.html" target="_blank">Menu map  (Not part of the menu, just for reference)</a> -->
+
+    <script>
+        let mainMenuButton = document.getElementById("mainMenuButton");
+        let r = document.getElementById("r");
+        let er = document.getElementById("er");
+        let nr = document.getElementById("nr");
+        let navWrapper = document.getElementById("navWrapper");
+
+        let divBack = document.getElementById("divBack");
+        let backButton = document.getElementById("back");
+        let menuTitle = document.getElementById("menuTitle");
+        let divMenuTitle = document.getElementById('divMenuTitle');
+
+        let topHeader = document.getElementById("topHeader");
+        let main = document.getElementById("main");
+        let footer = document.getElementById("footer");
+
+        var mainList = document.getElementById("mainList");
+        var resultsList = document.getElementById("resultsList");
+        var euResultsList = document.getElementById("euResultsList");
+        var natResultsList = document.getElementById("natResultsList");
+
+        document.body.addEventListener("keydown", closeOnEscape, false); // close nav on ESC
+        mainMenuButton.addEventListener("click", displayMenu, false);
+        r.addEventListener("click", displayMenu, false);
+        er.addEventListener("click", displayMenu, false);
+        nr.addEventListener("click", displayMenu, false);
+        back.addEventListener("click", goBack, false);
+
+        let resultsText = "Election Results";
+        let euResultsText = "European Results";
+        let natResultsText = "National Results";
+
+        let navigHint = " - Submenu. Click or Enter to go to the previous menu."
+        let resultsTextA11yLabel = resultsText + navigHint;
+        let euResultsTextA11yLabel = euResultsText + navigHint;
+        let natResultsTextA11yLabel = natResultsText + navigHint;
+
+        function closeOnEscape(e) {
+            if ((e.keyCode == 27) && (navWrapper.hasAttribute("aria-modal"))){
+                mainMenuButton.click();
+            }
+        }
+
+        function goBack(e) {
+            e.preventDefault();
+            switch (e.target.attributes["data-from"].value) { // coming From
+                case 'r':
+                    for (let child of mainList.children) {
+                        child.classList.remove('none');
+                    }
+                    resultsList.classList.add('none');
+
+                    let backButton = document.getElementById("back");
+                    backButton.remove();
+                    divMenuTitle.innerHTML = "";
+
+
+                    mainList.removeAttribute("role"); // ul
+                    mainList.lastElementChild.removeAttribute("role"); // li
+
+                    r.setAttribute("data-expanded", "false");
+                    r.classList.remove('none');
+                    mainMenuButton.classList.remove("none");
+
+                    setTimeout(() => {
+                        mainMenuButton.focus();
+                    }, "50");
+
+                    mainMenuButton.setAttribute("aria-label", "Close main navigation menu");
+                    mainMenuButton.setAttribute("data-expanded", "true");
+
+
+                    break; // case r
+
+                case 'er':
+                    console.log("click ER back")
+
+                    for (let child of resultsList.children) {
+                        child.classList.remove('none');
+                        child.removeAttribute('role');
+                    }
+                    resultsList.removeAttribute("role")
+
+                    euResultsList.removeAttribute("role"); // ul
+
+                    er.setAttribute("data-expanded", "false");
+                    er.classList.remove('none');
+
+                    r.click()
+                    break; // case er
+
+                case 'nr':
+                    console.log("click NR back")
+                    for (let child of resultsList.children) {
+                        child.classList.remove('none');
+                        child.removeAttribute('role');
+                    }
+                    resultsList.removeAttribute("role")
+
+                    natResultsList.removeAttribute("role"); // ul
+                    natResultsList.lastElementChild.removeAttribute("role"); // li
+
+                    nr.setAttribute("data-expanded", "false");
+                    nr.classList.remove('none');
+
+                    r.click()
+                    break; // case er
+            } // sw
+        } // fn
+
+
+        function displayMenu(e) {
+            e.preventDefault();
+
+            // if the menu is diplayed we change and block a few things
+            navWrapper.setAttribute("role", "dialog");
+            navWrapper.setAttribute("aria-modal", "true");
+            navWrapper.setAttribute("aria-label", "Navigation");
+
+            topHeader.classList.add("none");
+            main.classList.add("none");
+            footer.classList.add("none");
+
+            switch (e.target.id) {
+                case "mainMenuButton":
+                    mainMenuButton = document.getElementById("mainMenuButton");
+
+                    if ((!mainMenuButton.attributes["data-expanded"]) || (mainMenuButton.attributes["data-expanded"]
+                        .value ==
+                      "true")) {
+
+                        mainMenuButton.setAttribute("data-expanded", "false");
+                        mainMenuButton.setAttribute("aria-label", "Open main navigation menu (opens in a dialog)");
+                        mainMenuButton.innerHTML = "Menu";
+
+                        // remove role presentation
+                        document.querySelectorAll('li').forEach(function (el) {
+                            el.removeAttribute('role');
+                        }); // forEach
+                        document.querySelectorAll('ul').forEach(function (el) {
+                            el.removeAttribute('role');
+                        }); // forEach
+                        document.querySelectorAll('a[role="button"]').forEach(function (el) {
+                            el.setAttribute("data-expanded", "false");
+                        }); // forEach
+
+                        // none to all lists
+                        mainList.classList.add("none");
+                        resultsList.classList.add("none");
+                        r.classList.remove('none');
+                        er.classList.remove('none');
+                        nr.classList.remove('none');
+
+                        // clear Title of Menu
+                        divMenuTitle.innerHTML = "";
+                        divBack.innerHTML = "";
+
+                        // Go back to normal page
+                        navWrapper.setAttribute("role", "navigation");
+                        navWrapper.removeAttribute("aria-modal");
+                        navWrapper.setAttribute("aria-label", "Main navigation");
+
+                        topHeader.classList.remove("none");
+                        main.classList.remove("none");
+                        footer.classList.remove("none");
+
+                        setTimeout(() => {
+                            mainMenuButton.focus();
+                        }, "50");
+
+                    } else {
+                        mainMenuButton = document.getElementById(
+                          "mainMenuButton"); // I have to remove and create for issue in NVDA
+                        if (mainMenuButton) {
+                            mainMenuButton.remove();
+                        }
+                        mainMenuButton = document.createElement("a");
+                        mainMenuButton.setAttribute("data-expanded", "true");
+                        mainMenuButton.setAttribute("id", "mainMenuButton");
+                        mainMenuButton.setAttribute("role", "button");
+                        mainMenuButton.setAttribute("aria-label", "Close main navigation menu");
+                        mainMenuButton.setAttribute("href", "#");
+                        mainMenuButton.innerHTML = "X";
+
+                        divmainMenuButton.prepend(mainMenuButton);
+                        mainMenuButton.addEventListener("click", displayMenu, false);
+
+                        setTimeout(() => {
+                            mainMenuButton.focus();
+                        }, "50");
+                        mainList.classList.remove("none");
+                        document.querySelectorAll('.main').forEach(function (el) {
+                            el.classList.remove('none');
+                        }); // forEach
+                    }
+                    break;
+                case "r": // election results
+
+                    console.log("Menu - Results")
+                    if (e.target.attributes["data-expanded"].value == "false") {
+                        console.log("Menu - Results true")
+                        e.target.nextElementSibling.classList.remove('none');
+                        e.target.setAttribute("data-expanded", "true");
+                        document.querySelectorAll('.main').forEach(function (el) {
+                            el.classList.add('none');
+                        }); // forEach
+
+                        divMenuTitle.innerHTML = resultsText;;
+
+                        let backButton = document.getElementById(
+                          "back"); // I have to remove and create for issue in NVDA
+                        if (backButton) {
+                            backButton.remove();
+                        }
+                        backButton = document.createElement("a");
+                        backButton.setAttribute("data-expanded", "true");
+                        backButton.setAttribute("id", "back");
+                        backButton.setAttribute("role", "button");
+                        backButton.setAttribute("aria-label", resultsTextA11yLabel);
+                        backButton.setAttribute("data-from", "r");
+                        backButton.setAttribute("href", "#");
+                        backButton.appendChild(document.createTextNode('\u003C'));
+                        divBack.prepend(backButton);
+                        backButton.addEventListener("click", goBack, false);
+
+                        setTimeout(() => {
+                            backButton.focus();
+                        }, "50");
+
+                        mainList.setAttribute("role", "presentation"); // ul
+                        mainList.lastElementChild.setAttribute("role", "presentation"); // li
+
+                        document.querySelectorAll('.level2').forEach(function (el) {
+                            el.classList.remove('none'); // other level 2
+                        }); // forEach
+
+                        euResultsList.classList.add('none');
+                        natResultsList.classList.add('none');
+
+                        r.classList.add('none');
+
+                        mainMenuButton.setAttribute("aria-label", "Close main navigation menu");
+                        mainMenuButton.removeAttribute("data-expanded");
+
+                    } else { // else
+                        backButton.remove();
+                        divMenuTitle.innerHTML = "";
+                        console.log("enter");
+
+                    }
+                    break;
+                case "er":
+                    console.log("Menu - EU results")
+                    if (e.target.attributes["data-expanded"].value == "false") {
+
+                        e.target.nextElementSibling.classList.remove('none'); //ul
+
+                        document.querySelectorAll('.level2').forEach(function (el) {
+                            if (el == e.target.parentElement) {
+                                e.target.parentElement.setAttribute("role", "presentation"); // li above
+                            } else {
+                                el.classList.add('none'); // other level 2
+                            }
+                        }); // forEach
+
+                        let backButton = document.getElementById(
+                          "back"); // I have to remove and create for issue in NVDA
+                        backButton.remove();
+                        backButton = document.createElement("a");
+                        backButton.setAttribute("data-expanded", "true");
+                        backButton.setAttribute("id", "back");
+                        backButton.setAttribute("role", "button");
+                        backButton.setAttribute("aria-label", euResultsTextA11yLabel);
+                        backButton.setAttribute("data-from", "er");
+                        backButton.setAttribute("href", "#");
+                        backButton.appendChild(document.createTextNode('\u003C'));
+                        divBack.prepend(backButton);
+                        backButton.addEventListener("click", goBack, false);
+
+                        setTimeout(() => {
+                            backButton.focus();
+                        }, "50");
+
+                        // menuTitle.classList.remove('none');
+                        resultsList.setAttribute("role", "presentation"); // ul
+                        mainList.lastElementChild.setAttribute("role", "presentation"); // li
+
+                        er.classList.add('none');
+
+                        let ele = document.getElementById('divMenuTitle');
+                        ele.innerHTML = euResultsText;
+
+                        mainMenuButton.setAttribute("aria-label", "Close main navigation menu");
+                        mainMenuButton.removeAttribute("data-expanded");
+                    } else { // if
+                        e.target.setAttribute("data-expanded", "false");
+                        e.target.nextElementSibling.classList.add('none');
+                    }
+                    r.setAttribute("data-expanded", "false");
+                    break;
+                case "nr":
+                    console.log("Menu - Nat results")
+                    if (e.target.attributes["data-expanded"].value == "false") {
+                        e.target.nextElementSibling.classList.remove('none'); //ul
+
+                        document.querySelectorAll('.level2').forEach(function (el) {
+                            if (el == e.target.parentElement) {
+                                e.target.parentElement.setAttribute("role", "presentation"); // li above
+                            } else {
+                                el.classList.add('none'); // other level 2
+                            }
+                        }); // forEach
+
+                        let backButton = document.getElementById(
+                          "back"); // I have to remove and create for issue in NVDA
+                        backButton.remove();
+                        backButton = document.createElement("a");
+                        backButton.setAttribute("data-expanded", "true");
+                        backButton.setAttribute("id", "back");
+                        backButton.setAttribute("role", "button");
+                        backButton.setAttribute("aria-label", natResultsTextA11yLabel);
+                        backButton.setAttribute("data-from", "nr");
+                        backButton.setAttribute("href", "#");
+                        backButton.appendChild(document.createTextNode('\u003C'));
+                        divBack.prepend(backButton);
+                        backButton.addEventListener("click", goBack, false);
+
+                        //menuTitle.classList.remove('none');
+                        resultsList.setAttribute("role", "presentation"); // ul
+                        mainList.lastElementChild.setAttribute("role", "presentation"); // li
+
+                        nr.classList.add('none');
+
+                        let ele = document.getElementById('divMenuTitle');
+                        ele.innerHTML = natResultsText;
+
+                        mainMenuButton.setAttribute("aria-label", "Close main navigation menu");
+                        mainMenuButton.removeAttribute("data-expanded");
+
+                        setTimeout(() => {
+                            backButton.focus();
+                        }, "50");
+                    } else { // if
+                        e.target.setAttribute("data-expanded", "false");
+                        e.target.nextElementSibling.classList.add('none');
+                    }
+                    r.setAttribute("data-expanded", "false");
+                    break;
+            }
+        } // fn
+    </script>
+    
+
+
+</body></html>

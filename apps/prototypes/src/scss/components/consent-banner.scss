@@ -1,0 +1,80 @@
+@use "../helpers/variables";
+
+/* ------------- */
+/* CONSENT BANNER
+---------------- */
+
+/*style form to limit width and highlight the long label*/
+form.ep_opt-form {
+  padding: 1.5rem;
+  .ep_cookies-form-field {
+    position: relative;
+    margin-bottom: .25rem;
+    margin-top: .25rem;
+    label {
+      display: block;
+      font-family: "EPGammaBold", Helvetica, Arial, sans-serif;
+      font-size: 1.406rem;
+      padding: 0 0 .5rem 2rem;
+    }
+    input {
+      height: 40px;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 40px;
+    }
+    input + label::before {
+      border: 2px solid;
+      content: "";
+      height: 22px;
+      left: 0;
+      position: absolute;
+      top: 0.3rem;
+      width: 22px;
+      border-radius: 50%;
+    }
+    input + label::after {
+      content: "";
+      opacity: 0;
+      border: 0 solid;
+      border-radius: 50%;
+      position: absolute;
+      left: .3rem;
+      top: .6rem;
+      width: 13px;
+      height: 13px;
+      background-color: #505154;
+      transition: opacity .15s ease-in-out;
+    }
+    /*reveal check for 'on' state*/
+    input:checked + label::after {
+      opacity: 1;
+    }
+    /*focus styles*/
+    input:focus + label::before {
+      outline: 3px solid variables.$blue-focus;
+      outline-offset: 0;
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .group-fields input + label::after {
+    border: 10px solid;
+    left: 10px;
+    top: 10px;
+  }
+}
+
+/*reveal check for 'on' state*/
+.group-fields input:checked + label::after {
+  opacity: 1;
+}
+
+/*focus styles*/
+.group-fields input:focus + label::before {
+  box-shadow: 0 0 0 3px #ffbf47;
+  outline: 3px solid transparent; /* For Windows high contrast mode. */
+}
