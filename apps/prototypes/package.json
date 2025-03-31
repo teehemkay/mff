@@ -13,7 +13,7 @@
     "build:gulp": "gulp",
     "build:js": "gulp transpile",
     "build:scss": "gulp processScss",
-    "build:tailwind": "tailwind -i ./src/css/tailwind.css -o ./public/assets/css/tailwind.css",
+    "build:tailwind": "tailwindcss -i ./src/css/tailwind.css -o ./public/assets/css/tailwind.css",
     "clean": "fse remove public",
     "deliver": "run-s --print-name build export:*",
     "dev": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name build --parallel watch serve",
@@ -34,7 +34,8 @@
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9",
     "@packages/build-tools": "workspace:^",
-    "autoprefixer": "^10.4.20",
+    "@tailwindcss/cli": "^4.0.17",
+    "@tailwindcss/postcss": "^4.0.17",
     "cross-env": "^7.0.3",
     "eslint": "^8.57.1",
     "gulp": "^5.0.0",
@@ -57,7 +58,7 @@
     "live-server": "^1.2.2",
     "npm-run-all2": "^7.0.1",
     "onchange": "^7.1.0",
-    "tailwindcss": "^3.4.15",
+    "tailwindcss": "^4.0.17",
     "terser": "^5.36.0",
     "through2": "^4.0.2",
     "xo": "^0.60.0"
@@ -90,10 +91,7 @@
   "xo": {
     "space": true,
     "prettier": true,
-    "envs": [
-      "node",
-      "browser"
-    ],
+    "envs": ["node", "browser"],
     "rules": {
       "capitalized-comments": "off",
       "import/order": [
@@ -103,19 +101,14 @@
           "warnOnUnassignedImports": true
         }
       ],
-      "func-names": [
-        "error",
-        "as-needed"
-      ],
+      "func-names": ["error", "as-needed"],
       "react/react-in-jsx-scope": "off",
       "react/prop-types": "off",
       "spaced-comment": [
         "error",
         "always",
         {
-          "exceptions": [
-            "#__PURE__"
-          ]
+          "exceptions": ["#__PURE__"]
         }
       ],
       "unicorn/prevent-abbreviations": "off",

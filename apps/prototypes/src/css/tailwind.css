@@ -1,3 +1,111 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --font-*: initial;
+  --font-sans: Helvetica, Arial, sans-serif;
+  --font-EPGamma-regular: EPGammaRegular, Arial, sans-serif;
+  --font-EPGamma-bold: EPGammaBold, Arial, sans-serif;
+  --font-Europea-semi-bold: EuropeaSemiBold, Arial, sans-serif;
+  --font-Europea-medium: EuropeaMedium, Arial, sans-serif;
+  --font-EPGamma-narrow-ultra: EPGammaNarrowUltra, Arial, sans-serif;
+  --font-EPGamma-narrow-extra-bold: EPGammaNarrowExtraBold, Arial, sans-serif;
+  --font-Europea-var: EuropeaVar, Arial, sans-serif;
+
+  --text-*: initial;
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.75rem;
+  --text-2sm: 0.875rem;
+  --text-2sm--line-height: 1.2rem;
+  --text-2lg: 1.406rem;
+  --text-2lg--line-height: 1.75rem;
+  --text-3lg: 1.781rem;
+  --text-3lg--line-height: 2rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 2rem;
+  --text-2xl--letter-spacing: -0.01em;
+  --text-2xl--font-weight: 500;
+  --text-brand-title: clamp(1rem, 2vw + 1rem, 1.5rem);
+  --text-brand-title--line-height: clamp(1rem, 2vw + 1rem, 1.5rem);
+  --text-brand-title-page: clamp(1rem, 1.5vw + 1rem, 1.2rem);
+  --text-brand-title-page--line-height: clamp(1rem, 1.5vw + 1rem, 1.2rem);
+  --text-2_5xl: 2.197rem;
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: 2.25rem;
+  --text-3xl--letter-spacing: -0.02em;
+  --text-3xl--font-weight: 700;
+  --text-4xl: 2.441rem;
+  --text-5xl: 3.052rem;
+  --text-etr-body-text: 1.394rem;
+  --text-etr-body-text--line-height: 2.25rem;
+
+  --color-*: initial;
+  --color-transparent: transparent;
+
+  --color-white-default: #fff;
+  --color-white-light-warning-text: #fff3f2;
+
+  --color-yellow-default: #fff200;
+  --color-yellow-active: #fde021;
+
+  --color-black-default: #1f1f1f;
+  --color-black-greydark: #1e1e1f;
+  --color-black-hero-dark: #363636;
+  --color-black-hero-grey: #919191;
+  --color-black-button-hero: #2b2d30;
+  --color-black-grey: #505154;
+  --color-black-greymiddle: #bfbfbf;
+  --color-black-greydefault: #7a868e;
+  --color-black-grey-border: #bdbdbd;
+  --color-black-grey-bG: #d9d9d9;
+  --color-black-grey-text: #6e6e6e;
+  --color-black-greylight: #d0d0ce;
+  --color-black-greylighter: #f7f7f7;
+
+  --color-blue-default: #004da0;
+  --color-blue-focus: #1e6cff;
+  --color-blue-linkbody: #024ea2;
+  --color-blue-linkbodyhover: #1e6cff;
+  --color-blue-utv-base-line: #1b9fd0;
+  --color-blue-hero-blue: #0c4da2;
+
+  --color-green-default: #008400;
+
+  --color-red-default: #ed0100;
+  --color-red-warning: #ce2d3c;
+  --color-red-bg-field-error: #f9a3a3;
+
+  --breakpoint-*: initial;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 650px;
+  --breakpoint-lg: 768px;
+  --breakpoint-xl: 1024px;
+  --breakpoint-xxl: 1176px;
+
+  --margin-18px: 1.125rem;
+  --margin-27px: 1.688rem;
+  --margin-54px: 3.375rem;
+  --margin-72px: 4.5rem;
+
+  --padding-60px: 3.75rem;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
