@@ -3,8 +3,11 @@
 :CREATED: [2025-03-31 Mon 16:20]
 :END:
 
+** DOs & DON'Ts
 
-!!! If =tailwind.config.js= is an =esm= module, it must ~export default {...}~ (ie NO ~export config default;~) otherwise =@tailwindcss/upgrade= will fail to recognize it.
+- You *MUST* have a =.gitignore= next to the =package.json= that exclude the =node-modules= folder. (see for example [[https://github.com/tailwindlabs/tailwindcss/discussions/16499][Blazor TW V4 Upgrade - Could not determine config. file #16499]])
+
+- If =tailwind.config.js= is an =esm= module, it *MUST* ~export default {...}~ (ie NO ~export config default;~) otherwise =@tailwindcss/upgrade= will fail to recognize it.
 
 The combination of the ~-ep~ =prefix= property and the properties below in the tailwind config results in the failure of the automated ugrade using ~pnpx @tailwindcss/upgrade~ with the following error message: "Could not load the configuration file: Reflect.ownKeys called on non-object".
 
@@ -53,7 +56,3 @@ export default {
 };
 
 #+end_src
-
-[[file:~/dev/ep/europe-day/packages/prototypes/package.json::"tailwindcss": "^4.0.12",]]
-
-[[file:~/dev/ep/mff/apps/prototypes/tailwind.config.js]]

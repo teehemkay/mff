@@ -61,7 +61,6 @@ fabric.properties
 _site/
 *.js.map
 *.css.map
-public/
 _data/uk/
 
 # From astro

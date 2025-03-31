@@ -61,7 +61,7 @@ cd apps/prototypes
 pnpm dev
 ```
 
-Open http://127.0.0.1:8080/prototypes/
+Open http://127.0.0.1:8080/
 
 ## Run in development mode (including prototypes)
 
@@ -74,7 +74,7 @@ Open:
 http://localhost:3000/
 
 The prototypes are at:
-http://localhost:8080/prototypes/
+http://localhost:8080/
 
 ## Development preview
 
