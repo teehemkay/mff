@@ -18,57 +18,61 @@
 		<div id="returnToTop" class="hidden"></div>
 
 		<div class="max-w-5xl mx-auto px-4 mt-54px mb-10">
-			<h1 class="logo-brand font-epSemiBold text-2.5xl text-black-greydark text-left">European elections 2024</h1>
-			<span class="text-brand-title inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2">6-9 June 2024</span>
+			<h1 class="logo-brand font-epSemiBold text-2.5xl text-black-greydark text-left">The EU's long-term budget from 2028</h1>
+			<span class="text-brand-title inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2">Invest in what matters</span>
 		</div>
 
-		<div class="max-w-5xl mx-auto px-4 mt-54px mb-3">
+		<!-- <div class="max-w-5xl mx-auto px-4 mt-54px mb-3">
 			<h2 class="font-EPGammaBold text-2.5xl text-black-greydark text-left">
 				How to vote
 			</h2>
-		</div>
+		</div> -->
 
 		<div class="htv-page max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4 mb-8">
 
-			<p class="max-w-3xl">Choose your country of voting and your preferred language to find out how to vote.
-				<br>
-				As an EU citizen, you can vote in your country of origin, from abroad or in the EU country you live in. Please note that registration might be required in order to vote</p>
+			<p class="max-w-3xl mb-6">The EU's long-term budget drives investments in Europe's future, improving citizens' lives.
+				It funds common projects and delivers on priorities from digital innovation to border security.
+			</p>
+			<p><span class="font-EPGammaBold">Discover the benefits of the EU budget and learn how decisions about it are made.</span></p>
 
-				@@include('./components/htv-form.html')
+			<!-- @@include('./components/htv-form.html') -->
 
 		</div>
 
 		@@include('./components/cards.html')
 
-		@@include('./components/rtv-banner.html')
+		<!-- @@include('./components/rtv-banner.html') -->
 		<!-- @@include('./components/together-banner.html') -->
+
+
+		<div class="max-w-5xl sm:block block mx-auto justify-between items-center px-4">
+			@@include('./components/iframe-video.html')
+			@@include('./components/transcript.html')
+			<div class="share-home">
+				@@include('./components/btn-social-share.html')
+			</div>
+
+			<hr class="text-[#cccccc] mt-10 mb-16">
+
+		</div>
 
 		<!-- Link list title -->
 		<div class="cards-links-block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mb-16 px-4">
-			<h2 class="font-EPGammaBold mb-6">Useful links</h2>
-			<h3 class="text-2lg font-EPGammaBold text-black-greydark mb-8">Political groups in the European Parliament</h3>
+			<h2 class="font-EPGammaBold pb-6">Latest updates</h2>
 
 			<!-- Cards Elections political group -->
-			@@include('./components/card-elections-links-political.html')
+			@@include('./components/cards-updates.html')
 
 		</div>
 
 		<!-- European  Political parties -->
 		<div class="epol-block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mb-16 px-4">
-			<h3 class="text-2lg font-EPGammaBold text-black-greydark mb-6">European Political Parties</h3>
+			<h2 class="font-EPGammaBold pb-6">Related links</h2>
 
 			@@include('./components/links-political-parties.html')
 
 		</div>
 
-		<!-- Europe Direct block -->
-		<div class="eu-direct-block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mb-8 px-4">
-			@@include('./components/eu-direct.html')
-		</div>
-
-<!--		<a href="#mainContent" class="top-link hide">-->
-<!--			<span class="hidden">Scroll back to top of the page</span>-->
-<!--		</a>-->
 		<a href="#returnToTop" class="top-link hide js-top" aria-label="Scroll back to top of the page"></a>
 
 	</main>
@@ -84,6 +88,57 @@
 
 	<!-- JS files -->
 	@@include('./components/scripts.html')
+
+	<script>
+		/* ********* EXPAND / COLLAPSE COMPONENT ******** */
+		const containers = document.querySelectorAll('.expand-container');
+
+		containers.forEach((container) => {
+			const buttonExpand = container.querySelector('.expand-button');
+			const targetId = buttonExpand.dataset.target;
+			const target = document.getElementById(targetId);
+			const isExpanded =
+					buttonExpand.getAttribute('aria-expanded') === 'true';
+
+			if (container.dataset.initialState === 'expanded') {
+				target.classList.remove('hidden');
+				buttonExpand.setAttribute('aria-expanded', 'true');
+				buttonExpand.setAttribute('aria-label', 'Collapse Content');
+			} else {
+				target.classList.add('hidden');
+				buttonExpand.setAttribute('aria-expanded', 'false');
+				buttonExpand.setAttribute('aria-label', 'Expand Content');
+				container.dataset.initialState = 'collapsed'; // Ajout de cette ligne
+			}
+
+			buttonExpand.addEventListener('click', toggleContent);
+		});
+
+		function toggleContent() {
+			const targetId = this.dataset.target;
+			const target = document.getElementById(targetId);
+			const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+			target.classList.toggle('hidden');
+			this.setAttribute('aria-expanded', !isExpanded);
+
+			if (!isExpanded) {
+				this.setAttribute('aria-label', 'Collapse Content');
+				this.parentNode.parentNode.dataset.initialState = 'expanded';
+				target.style.opacity = '0';
+				setTimeout(() => {
+					target.style.opacity = '1';
+				}, 10);
+			} else {
+				this.setAttribute('aria-label', 'Expand Content');
+				this.parentNode.parentNode.dataset.initialState = 'collapsed';
+				target.style.opacity = '1';
+				setTimeout(() => {
+					target.style.opacity = '0';
+				}, 10);
+			}
+		}
+	</script>
 
 	</body>
 </html>

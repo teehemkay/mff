@@ -17,16 +17,20 @@
 }
 /* Variable fonts */
 .europea-reg {
-  font-family: "EPGammaRegular", sans-serif;
+  font-family: "EuropeaVar", sans-serif;
+  font-variation-settings: "wght" var(--text-wght-r), "wdth" var(--text-wdth), "opsz" var(--text-opsz), "GRAD" var(--text-GRAD), "ital" var(--text-axis);
 }
 .europea-med {
-  font-family: "EuropeaMedium", sans-serif;
+  font-family: "EuropeaVar", sans-serif;
+  font-variation-settings: "wght" var(--text-wght-m), "wdth" var(--text-wdth), "opsz" var(--text-opsz), "GRAD" var(--text-GRAD), "ital" var(--text-axis);
 }
-.europea-sb {
-  font-family: "EuropeaSemiBold", sans-serif;
+.europea-sb, .font-EPGammaBold {
+  font-family: "EuropeaVar", sans-serif;
+  font-variation-settings: "wght" var(--text-wght-sb), "wdth" var(--text-wdth), "opsz" var(--text-opsz), "GRAD" var(--text-GRAD), "ital" var(--text-axis);
 }
 .europea-bold {
-  font-family: "EPGammaBold", sans-serif;
+  font-family: "EuropeaVar", sans-serif;
+  font-variation-settings: "wght" var(--text-wght-b), "wdth" var(--text-wdth), "opsz" var(--text-opsz), "GRAD" var(--text-GRAD), "ital" var(--text-axis);
 }
 .font-epRegular{
   font-family: "EuropeaVar", sans-serif;

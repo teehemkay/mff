@@ -210,3 +210,212 @@ EXPAND / COLLAPSE
       }
     }
   }
+
+.share-home {
+  button {
+    &.copy-url-button {
+      position: relative;
+      margin-left: 15px;
+      &::before {
+        content:"";
+        position: absolute;
+        left: -15px;
+        width: 1px;
+        height: 100%;
+        background-color: variables.$grey-border;
+      }
+      @media screen and (max-width: 479px) {
+        &.copy-url-button {
+          position: relative;
+          margin-left: 0;
+          &::before {
+            display: none;
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 0;
+            background-color: transparent;
+          }
+        }
+      }
+      &:focus {
+        outline: solid 2px variables.$blue-focus;
+        outline-offset: 2px;
+        span {
+          text-decoration-thickness: 2px;
+        }
+      }
+      svg {
+        border: 0 !important;
+        padding: 0 !important;
+      }
+      span {
+        font-size: 0.9rem;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+        &:hover, &:focus {
+          text-decoration-thickness: 2px;
+        }
+      }
+    }
+    svg {
+      .vert {
+        display: none;
+      }
+      width: 100%;
+      max-width: 35px;
+      height: 35px;
+      border-radius: 360px;
+      border: solid 2px variables.$blue-arrow;
+      color: variables.$blue-arrow;
+      padding: 5px;
+      right: 0;
+      top: 0;
+      text-decoration: underline;
+      &.global-share-icon {
+        border: none !important;
+      }
+    }
+    &[aria-expanded] {
+      .expand-title
+      {
+        color: variables.$blue;
+        font-size: 1.781rem;
+        line-height: 2.25rem;
+        padding-right: 2rem;
+      }
+      rect {
+        fill: currentColor;
+      }
+    }
+    &[aria-expanded="false"] {
+      svg {
+        .vert {
+          display: block;
+        }
+      }
+    }
+    &[aria-expanded="true"] {
+      .expand-title {
+        color: variables.$blue;
+      }
+      svg {
+        .vert {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.expand-container-content {
+   font-size: 1.125rem;
+   margin-top: -1rem;
+   opacity: 1; /* Ajouter cette ligne */
+   transition: opacity 0.5s; /* Ajouter cette ligne */
+   &.hidden {
+     opacity: 0; /* Ajouter cette ligne */
+     transition: opacity 0.5s; /* Ajouter cette ligne */
+   }
+   p {
+     margin-bottom: 1rem;
+   }
+   div[itemprop="text"] {
+     p {
+       margin-top: 1rem;
+     }
+   }
+   li {
+     list-style: disc;
+     list-style-position: inside;
+     display: list-item;
+   }
+   @media screen and (max-width: 479px) {
+     li {
+       &:last-of-type {
+         display: block;
+       }
+     }
+   }
+   a {
+     text-decoration: underline;
+     color: #024ea2;
+     &:hover, &:focus {
+       text-decoration-thickness: 2px;
+       text-underline-offset: 4px;
+       outline-offset: 3px;
+       outline-width: 2px;
+     }
+   }
+   .expand-list {
+     margin: 0.5rem 0;
+     li {
+       list-style: inside;
+     }
+   }
+   .iframe-container {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     &.landscape {
+       aspect-ratio: 16/9;
+     }
+   }
+   .expand-social-share {
+     font-size: 0.9rem;
+     li {
+       list-style: none;
+       display: inline-block;
+       margin-right: 0.3rem;
+       &:last-of-type{
+         margin-left: 15px;
+         margin-right: 0;
+       }
+       @media screen and (max-width: 479px) {
+         &:last-of-type {
+           margin-left: 0;
+         }
+       }
+       a {
+         color: #024ea2;
+         text-decoration: underline;
+         &:hover, &:focus {
+           text-decoration-thickness: 2px;
+           text-underline-offset: 4px;
+           outline-offset: 1px;
+           outline-width: 2px;
+         }
+       }
+     }
+     svg {
+       &.global-share-icon {
+         width: 35px;
+         height: 35px;
+         border: 0;
+       }
+     }
+     .copied-txt {
+       span {
+         opacity: 0;
+         visibility: hidden;
+         &.fx--fadeOut {
+           opacity: 0;
+           visibility: hidden;
+         }
+         &.fx--fadeIn {
+           opacity: 1;
+           visibility: visible;
+         }
+       }
+     }
+     .copy-target {
+       background-color: #4e4e4e;
+       color: variables.$white;
+       border-radius: 6px;
+     }
+     .copy-button {
+       border-radius: 6px;
+     }
+   }
+ }

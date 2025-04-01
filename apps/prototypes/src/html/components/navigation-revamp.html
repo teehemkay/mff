@@ -5,11 +5,11 @@
     class="lg:max-w-6xl lg:mx-auto relative flex flex-wrap items-center justify-between py-2"
   >
     <div class="logo flex-1 mx-2 sm:mx-0 my-2">
-      <a href="./">
+      <a href="#">
         <img
-          src="../assets/img/logos/logo-ee24-en.svg"
-          alt="Logo of the European Parliament"
-          class="logo-european-union max-w-[200px] h-[40px]"
+                src="../assets/img/logos/logo-ep-en.svg"
+                alt="European Parliament logo"
+                class="w-full max-w-[150px] h-[40px]"
         />
       </a>
     </div>
@@ -25,7 +25,7 @@
               <li><a href="use-your-vote.html">Use your vote</a></li>
               <li><a href="#">Why vote</a></li>
               <li><a href="how-elections-work.html">How Elections work</a></li>
-              <li>
+              <li class="hidden">
                 <div class="relative">
                   <button
                     id="er-menu"
@@ -115,9 +115,9 @@
             <li class="level1 main"><a href="#">Use your vote</a></li>
             <li class="level1 main"><a href="#">Why to vote</a></li>
             <li class="level1 main"><a href="#">How elections work</a></li>
-            <li class="level1 button">
+            <li class="level1 button hidden">
               <a class="" id="r" data-expanded="false" role="button" href="#">
-                <span class="mr-3 pointer-events-none">Election Results</span>
+<!--                <span class="mr-3 pointer-events-none">Election Results</span>-->
                 <svg
                   class="inline-block w-[15px] h-[9px]"
                   viewBox="0 0 21.741 12.602"
@@ -237,7 +237,7 @@
         aria-label="language menu"
         class="lang-nav flex justify-end"
       >
-        <div class="expand-collapse">
+        <div class="expand-collapse border-[LightGray] border-1 rounded-lg">
           <button
             id="lang-menu"
             class="nav-button flex items-center rounded-md border border-1 border-solid border-black-greymiddle focus:outline focus:outline-2 focus:outline-blue-focus px-2.5 py-1 mr-4"
