@@ -28,7 +28,7 @@
 			</h2>
 		</div> -->
 
-		<div class="htv-page max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4 mb-8">
+		<div class="htv-page max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4 mb-12">
 
 			<p class="max-w-3xl mb-6">The EU's long-term budget drives investments in Europe's future, improving citizens' lives.
 				It funds common projects and delivers on priorities from digital innovation to border security.
@@ -137,6 +137,27 @@
 				}, 10);
 			}
 		}
+
+		document.addEventListener("DOMContentLoaded", function () {
+			const menuItems = document.querySelectorAll(".navList li");
+
+			// Retirer "current" de tous les <li> et aria-current des <a>
+			menuItems.forEach(item => {
+				item.classList.remove("current");
+				const link = item.querySelector("a");
+				if (link) link.removeAttribute("aria-current");
+			});
+
+			// Définir quel <li> doit avoir la classe "current" (ex: le 5e élément)
+			const targetIndex = 0; // Index 0 = 1er élément
+
+			if (menuItems[targetIndex]) {
+				menuItems[targetIndex].classList.add("current");
+				const link = menuItems[targetIndex].querySelector("a");
+				if (link) link.setAttribute("aria-current", "page");
+			}
+		});
+
 	</script>
 
 	</body>

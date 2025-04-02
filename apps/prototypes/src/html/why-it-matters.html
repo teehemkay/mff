@@ -27,7 +27,7 @@
 			<h1 class="font-EPGammaBold text-2.5xl text-black-greydark text-left">
 				Why it matters
 			</h1>
-			<p class="text-[1.4rem] text-black-grey my-5 lg:max-w-2xl">
+			<p class="max-w-3xl text-[1.4rem] text-black-grey my-5">
 				Understand why the EU long-term budget matters and how it allows EU countries to achieve more together than if they acted alone
 			</p>
 
@@ -41,7 +41,7 @@
 
 		<div class="max-w-5xl sm:block mx-auto justify-between items-center px-4">
 
-			<div class="lg:max-w-2xl">
+			<div class="lg:max-w-3xl">
 				@@include('./components/iframe-video.html', { "videoText": "What is the EU long-term budget and how does it affect your everyday life?" })
 				@@include('./components/transcript.html')
 				<div class="share-home">
@@ -68,7 +68,7 @@
 							</svg>
 						</button>
 					</h2>
-					<div id="content-2" class="expand-container-content pb-8 hidden" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div id="content-2" class="expand-container-content max-w-3xl pb-8 hidden" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
 						<div itemprop="text">
 							<p class="mb-6">It is up to each country to manage the election, but there are some common principles they must apply.</p>
 							<ul class="expand-list mb-6">
@@ -82,11 +82,7 @@
 
 						<ul class="video-list block lg:flex md:block sm:block">
 							<li class="video-item mr-5">
-								@@include('./components/iframe-video.html')
-								@@include('./components/transcript.html')
-							</li>
-							<li class="video-item">
-								@@include('./components/iframe-video.html')
+								@@include('./components/iframe-video.html', { "videoText": "How the European Parliament supports citizens’ in the next budget term" })
 								@@include('./components/transcript.html')
 							</li>
 						</ul>
@@ -104,11 +100,11 @@
 							</svg>
 						</button>
 					</h2>
-					<div id="content-3" class="expand-container-content pb-8 hidden" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div id="content-3" class="expand-container-content max-w-3xl pb-8 hidden" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
 						<div itemprop="text">
 							<p class="mb-6">The elected MEPs work to form political groups. At its first plenary session where all MEPs meet, the new Parliament elects a President. In a subsequent session, Parliament will elect the new President of the European Commission and later will examine and approve the entire College of Commissioners.</p>
 						</div>
-						@@include('./components/iframe-video.html')
+						@@include('./components/iframe-video.html', { "videoText": "How the European Parliament supports citizens’ in the next budget term" })
 						@@include('./components/transcript.html')
 						@@include('./components/btn-social-share.html')
 					</div>
@@ -124,7 +120,7 @@
 							</svg>
 						</button>
 					</h2>
-					<div id="content-4" class="expand-container-content pb-8 hidden" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+					<div id="content-4" class="expand-container-content max-w-3xl pb-8 hidden" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
 						<div itemprop="text">
 							<p>The European Parliament is the world’s only directly elected transnational assembly.<br>The Members of the European Parliament represent the interests of EU citizens at the European level.</p>
 							<ul class="expand-list">
@@ -132,7 +128,7 @@
 								<li><a href="#">How do MEPs represent me?</a></li>
 							</ul>
 						</div>
-						@@include('./components/iframe-video.html')
+						@@include('./components/iframe-video.html', { "videoText": "How the European Parliament supports citizens’ in the next budget term" })
 						@@include('./components/transcript.html')
 						@@include('./components/btn-social-share.html')
 					</div>
@@ -208,6 +204,27 @@
 				}, 10);
 			}
 		}
+
+		document.addEventListener("DOMContentLoaded", function () {
+			const menuItems = document.querySelectorAll(".navList li");
+
+			// Retirer "current" de tous les <li> et aria-current des <a>
+			menuItems.forEach(item => {
+				item.classList.remove("current");
+				const link = item.querySelector("a");
+				if (link) link.removeAttribute("aria-current");
+			});
+
+			// Définir quel <li> doit avoir la classe "current" (ex: le 5e élément)
+			const targetIndex = 1; // Index 1 = 2e élément
+
+			if (menuItems[targetIndex]) {
+				menuItems[targetIndex].classList.add("current");
+				const link = menuItems[targetIndex].querySelector("a");
+				if (link) link.setAttribute("aria-current", "page");
+			}
+		});
+
 	</script>
 
 	</body>
