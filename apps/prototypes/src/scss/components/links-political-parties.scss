@@ -20,3 +20,13 @@
     outline-offset: 4px;
   }
 }
+
+/* Related Links in expand / collapse */
+.related-links-list {
+  ul {
+    margin: 0 !important;
+    li {
+      list-style: none !important;
+    }
+  }
+}
