@@ -4,7 +4,8 @@
         <label for="country" class="flex flex-1 items-end font-epSemiBold mb-2">Choose a country</label>
         <div class="relative">
             <select aria-label="country" autocomplete="country" required class="block appearance-none py-3 px-4 pr-8" id="country" aria-describedby="hint-country" disabled>
-                <option selected="selected" disabled="disabled">Country</option>
+                <option selected="selected">Choose a country</option>
+                <!-- Add disabled="disabled" in the previous <option> to disable the field by default  -->
                 <option>Belgium</option>
                 <option>Netherlands</option>
                 <option>Malta</option>
@@ -19,6 +20,6 @@
         <span class="hidden block error-text pt-2" id="hint-language" role="alert" aria-atomic="true">Please choose a language</span>
     </div>
     <div class="flex items-end mb-4">
-        <button class="btn-form !normal-case !px-16" type="submit">Continue</button>
+        <button class="btn-form btn-country !normal-case !px-16" type="submit">Continue</button>
     </div>
 </form>

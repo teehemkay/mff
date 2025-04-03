@@ -115,7 +115,7 @@
         padding: 0.5rem 0.5rem 0.2rem 0.5rem;
         transition: background-color .1s ease-out;
         &:hover, &:focus {
-          background-color: variables.$blue-link;
+          background-color: variables.$blue-focus;
           color: variables.$white;
         }
         &:focus {
