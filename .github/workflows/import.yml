@@ -1,0 +1,47 @@
+name: XLS data import
+
+on:
+  push:
+    branches:
+      - 'release/**'
+      - 'hotfix/**'
+    paths:
+      - '_imports/*.xlsx'
+
+jobs:
+  import-data:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.x
+
+      - name: use node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: install dependencies
+        run: pnpm install
+
+      - name: import data from XLS files
+        run: pnpm -w data
+
+      - name: commit changes
+        run: |
+          git config --local user.email "tmk@exidia.com"
+          git config --local user.name "Narratio Team Member [via GitHub Action]"
+          git add .
+          git commit -m "Update content"
+
+      - name: push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
