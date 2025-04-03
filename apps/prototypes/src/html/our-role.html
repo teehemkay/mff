@@ -154,23 +154,6 @@
 	@@include('./components/scripts.html')
 
 	<script>
-		// Menu component
-		window.addEventListener('DOMContentLoaded', () => {
-
-			// Inject the current menu state in JS (only for html prototyping as the main nav is included globally
-			// Trouver l'élément <ul> par sa classe
-			const navul = document.querySelector('ul.footerLinks');
-			const navli = navul.querySelector('li:nth-child(1)');
-			const navlilink = navli.querySelector('a');
-
-			// Ajouter la classe "current" à la balise <a>
-			navlilink.classList.add('current');
-
-			// Ajouter l'attribut "aria-current" avec la valeur "page" à la balise <a>
-			navlilink.setAttribute('aria-current', 'page');
-
-		});
-
 		/* ********* EXPAND / COLLAPSE COMPONENT ******** */
 		const containers = document.querySelectorAll('.expand-container');
 
