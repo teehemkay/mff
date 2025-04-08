@@ -1,4 +1,4 @@
-# EE24 Hub
+# MFF
 
 ## GitHub Content Update Workflow
 
