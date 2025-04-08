@@ -1,0 +1,28 @@
+---
+interface Props {
+  lang: string;
+  currentPage: string;
+}
+
+import Layout from '../layouts/layout.astro';
+import Homepage from '../components/homepage.astro';
+import LocalEventPage from '../components/local-events.astro';
+import { kIndex } from '../js/utils.js';
+
+const { lang, currentPage } = Astro.props;
+
+export { getStaticPaths } from '../js/utils.js';
+---
+
+<Layout {lang} {currentPage}>
+  <!-- // ------------------------ START MAIN AREA ------------------------- // -->
+  <!-- CONTENT -->
+  {
+    currentPage === kIndex ? (
+      <Homepage {lang} {currentPage} />
+    ) : (
+      <LocalEventPage {lang} {currentPage} />
+    )
+  }
+  <!-- // ------------------------ END MAIN AREA ------------------------- // -->
+</Layout>

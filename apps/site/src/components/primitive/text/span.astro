@@ -1,0 +1,16 @@
+---
+interface Props {
+  colorfont: string;
+  hidden: string;
+  label: string;
+  sizefont: string;
+  weightfont: string;
+}
+
+const { label, sizefont, weightfont, colorfont, hidden } = Astro.props;
+---
+
+<span
+  class=`label ep:whitespace-pre-wrap ${sizefont} ${weightfont} ${colorfont} ${hidden}`
+  >{label}</span
+>

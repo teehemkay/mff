@@ -1,0 +1,26 @@
+/* Breakpoints -----------------
+// -------------------------------------------- */
+
+@mixin mobile {
+	@media (min-width: 480px) { @content; }
+}
+@mixin phone {
+	@media (min-width: 600px) { @content; }
+}
+@mixin tablet {
+	@media (min-width: 767px) { @content; }
+}
+@mixin desktop {
+	@media (min-width: 1019px) { @content; }
+}
+
+/* Effect Animation -----------------
+// -------------------------------------------- */
+
+@mixin transition($duree : .3s) {
+	transition:$duree all ease-in-out;
+}
+
+@mixin animate($name: anim, $duree:.3s){
+	animation:$name $duree infinite alternate;
+}

@@ -1,0 +1,36 @@
+switchLanguage: Change the navigation language
+infoLinks: Information links
+epOnSocialMedia: The European Parliament on social media
+backToTop: Scroll back to top of the page
+footer: Footer
+checkEPOnFacebook: Check out the European Parliament on Facebook
+checkEPOnTwitter: Check out the European Parliament on X
+checkEPOnYouTube: Check out the European Parliament on YouTube
+checkEPOnInstagram: Check out the European Parliament on Instagram
+legalNoticeLabel: Legal notice
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/en/
+privacyPolicyLabel: Privacy policy
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/en/
+sitemap: Sitemap
+sitemapURL: https://common.europarl.europa.eu/en/sitemap
+contactUs: Contact us
+contactUsURL: https://www.europarl.europa.eu/portal/en/contact
+copyright: © European Parliament 2025
+accessibilityLabel: Accessibility
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/en/accessibility
+clickHere: Click here
+epLogoAltText: European Parliament Logo
+filterEPLOsA11y: Filter the list of EPLOs by country
+all: All
+selectCountry: Select a country
+checkTheEvents: Check the events
+goToEventsForCountry: Go to the page with the lisf of events in [Country Title]
+goToWebsite: Go to the website
+epWebsite: European Parliament Website
+europeanParliament:
+  - European
+  - Parliament
+opensInNewWindow: opens in a new window
+skipToLanguageMenu: Skip to language selection menu
+skipToMainContent: Skip to  main content
+waiShortcut: shortcut menu

@@ -1,0 +1,36 @@
+switchLanguage: Byt menyspråk
+infoLinks: Användbara länkar
+epOnSocialMedia: Europaparlamentet i sociala medier
+backToTop: Gå till toppen av sidan
+footer: Sidfot
+checkEPOnFacebook: Kolla in Europaparlamentet på Facebook
+checkEPOnTwitter: Besök Europaparlamentet på X
+checkEPOnYouTube: Kolla in Europaparlamentet på YouTube
+checkEPOnInstagram: Kolla in Europaparlamentet på Instagram
+legalNoticeLabel: Rättsligt meddelande
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/sv/
+privacyPolicyLabel: Integritetspolicy
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/sv/
+sitemap: Webbplatskarta
+sitemapURL: https://common.europarl.europa.eu/sv/sitemap
+contactUs: Kontakta oss
+contactUsURL: https://www.europarl.europa.eu/portal/sv/contact
+copyright: © Europaparlamentet 2025
+accessibilityLabel: Tillgänglighet
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/sv/accessibility
+clickHere: Klicka här
+epLogoAltText: Europaparlamentets logotyp
+filterEPLOsA11y: Filtrera listan över förbindelsekontor efter land
+all: Alla
+selectCountry: Välj land
+checkTheEvents: Visa evenemang
+goToEventsForCountry: Gå till sidan med evenemang i [land]
+goToWebsite: Gå till webbplatsen
+epWebsite: Europaparlamentets webbplats
+europeanParliament:
+  - Europaparlamentet
+  - ""
+opensInNewWindow: öppnas i ett nytt fönster
+skipToLanguageMenu: Direkt till språkmenyn
+skipToMainContent: Direkt till huvudinnehållet
+waiShortcut: Genvägsmeny

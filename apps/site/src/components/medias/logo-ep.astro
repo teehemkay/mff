@@ -1,0 +1,24 @@
+---
+import { basePath, isHomepage } from '../../js/utils.js';
+
+import EPLogo from './ep-logo.astro';
+
+interface Props {
+  lang: string;
+  currentPage: string;
+}
+
+const { lang, currentPage } = Astro.props;
+---
+
+{
+  isHomepage(currentPage) ? (
+    <EPLogo {lang} />
+  ) : (
+    <a
+      href={`/${basePath}/${lang}/`}
+      class="ep:inline-flex ep:focus:outline ep:focus:outline-2 ep:focus:outline-accent-blue-500 ep:focus:outline-offset-4">
+      <EPLogo {lang} />
+    </a>
+  )
+}

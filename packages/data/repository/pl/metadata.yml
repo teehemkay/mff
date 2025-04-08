@@ -1,0 +1,36 @@
+switchLanguage: Zmień język nawigacji
+infoLinks: Linki do informacji
+epOnSocialMedia: Parlament Europejski w mediach społecznościowych
+backToTop: Przewiń do początku strony
+footer: Stopka
+checkEPOnFacebook: Znajdź Parlament Europejski na Facebooku
+checkEPOnTwitter: Odwiedź kanał Parlamentu Europejskiego na platformie X
+checkEPOnYouTube: Znajdź Parlament Europejski na YouTubie
+checkEPOnInstagram: Znajdź Parlament Europejski na Instagramie
+legalNoticeLabel: Informacja prawna
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/pl/
+privacyPolicyLabel: Polityka ochrony prywatności
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/pl/
+sitemap: Mapa strony
+sitemapURL: https://common.europarl.europa.eu/pl/sitemap
+contactUs: Skontaktuj się z nami
+contactUsURL: https://www.europarl.europa.eu/portal/pl/contact
+copyright: © Parlament Europejski 2025
+accessibilityLabel: Dostęp
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/pl/accessibility
+clickHere: Kliknij tutaj
+epLogoAltText: Logo Parlamentu Europejskiego
+filterEPLOsA11y: Sortuj listę biur kontaktowych PE według kraju
+all: Wszystkie
+selectCountry: Wybierz kraj
+checkTheEvents: Znajdź wydarzenia
+goToEventsForCountry: Przejdź do strony z listą wydarzeń w [nazwa kraju]
+goToWebsite: Przejdź do strony internetowej
+epWebsite: Strona Parlamentu Europejskiego
+europeanParliament:
+  - Parlament
+  - Europejski
+opensInNewWindow: otwiera się w nowym oknie
+skipToLanguageMenu: Przejdź do menu językowego
+skipToMainContent: Przejdź do treści głównej
+waiShortcut: Menu skrótów

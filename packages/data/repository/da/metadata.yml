@@ -1,0 +1,36 @@
+switchLanguage: Skift menusprog
+infoLinks: Links til information
+epOnSocialMedia: Europa-Parlamentet på de sociale medier
+backToTop: Tilbage til toppen af siden
+footer: Sidefod
+checkEPOnFacebook: Besøg Europa-Parlamentet på Facebook
+checkEPOnTwitter: Besøg Europa-Parlamentet på X
+checkEPOnYouTube: Besøg Europa-Parlamentet på YouTube
+checkEPOnInstagram: Besøg Europa-Parlamentet på Instagram
+legalNoticeLabel: Juridisk meddelelse
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/da/
+privacyPolicyLabel: Databeskyttelsespolitik
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/da/
+sitemap: Oversigt
+sitemapURL: https://common.europarl.europa.eu/da/sitemap
+contactUs: Kontakt os
+contactUsURL: https://www.europarl.europa.eu/portal/da/contact
+copyright: © Europa-Parlamentet 2025
+accessibilityLabel: Tilgængelighed
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/da/accessibility
+clickHere: Klik her
+epLogoAltText: Europa-Parlamentets logo
+filterEPLOsA11y: Filtrer liste over EP-forbindelseskontorer pr. land
+all: Alle
+selectCountry: Vælg land
+checkTheEvents: Se arrangementer
+goToEventsForCountry: Gå til side med liste over arrangementer i [Landetitel]
+goToWebsite: Gå til webstedet
+epWebsite: Europa-Parlamentets websted
+europeanParliament:
+  - Europa-Parlamentet
+  - ""
+opensInNewWindow: åbner i nyt vindue
+skipToLanguageMenu: Gå til sprogmenuen
+skipToMainContent: Gå til hovedindholdet
+waiShortcut: Genvejsmenu

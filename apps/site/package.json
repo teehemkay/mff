@@ -1,0 +1,102 @@
+{
+  "name": "@apps/site",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teehemkay/mff/"
+  },
+  "scripts": {
+    "build": "astro build",
+    "clean": "fse remove public",
+    "deliver": "cross-env FORCE_COLOR=1 run-s --print-label build export index",
+    "dev": "astro dev",
+    "export": "fse move dist ../../_site/europe-day",
+    "index": "fse copy resources/index.html ../../_site/index.html",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@atao60/fse-cli": "^0.1.9",
+    "@csstools/postcss-sass": "^5.1.1",
+    "@packages/data": "workspace:^",
+    "@rollup/plugin-yaml": "^4.1.2",
+    "@tailwindcss/postcss": "^4.0.15",
+    "@tailwindcss/vite": "^4.0.15",
+    "astro": "^5.5.4",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-hexrgba": "^2.1.0",
+    "postcss-preset-env": "^10.1.5",
+    "postcss-pxtorem": "^6.1.0",
+    "postcss-scss": "^4.0.9",
+    "postcss-svgo": "^7.0.1",
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^4.0.15",
+    "typescript": "^5.8.2",
+    "xo": "^0.60.0",
+    "yaml": "^2.7.0"
+  },
+  "browserslist": ["defaults", "not IE 11"],
+  "prettier": {
+    "useTabs": false,
+    "arrowParens": "always",
+    "bracketSameLine": true,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "plugins": ["prettier-plugin-astro"],
+    "astroAllowShorthand": true,
+    "overrides": [
+      {
+        "files": "*.astro",
+        "options": {
+          "parser": "astro"
+        }
+      }
+    ]
+  },
+  "xo": {
+    "space": true,
+    "extends": "xo-react",
+    "prettier": true,
+    "envs": ["node", "browser"],
+    "rules": {
+      "capitalized-comments": "off",
+      "import/order": [
+        "error",
+        {
+          "newlines-between": "always-and-inside-groups",
+          "warnOnUnassignedImports": true
+        }
+      ],
+      "func-names": ["error", "as-needed"],
+      "react/function-component-definition": [
+        1,
+        {
+          "namedComponents": "arrow-function",
+          "unnamedComponents": "arrow-function"
+        }
+      ],
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "spaced-comment": [
+        "error",
+        "always",
+        {
+          "exceptions": ["#__PURE__"]
+        }
+      ],
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/no-array-reduce": "off",
+      "unicorn/no-array-callback-reference": "off",
+      "unicorn/no-fn-reference-in-iterator": "off",
+      "unicorn/prefer-object-from-entries": "off"
+    },
+    "ignores": ["build", "public/**", "_site/**"]
+  }
+}

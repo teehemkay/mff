@@ -1,0 +1,286 @@
+Austria:
+  - country: Rakousko
+    city: Vídeň
+    address:
+      - Wipplingerstraße 35
+      - 1010 Wien
+    email: epwien@europarl.europa.eu
+    website: https://vienna.europarl.europa.eu
+Belgium:
+  - country: Belgie
+    city: Bruselu
+    address:
+      - Rue Wiertz 60 - Wiertzstraat 60
+      - B-1047 Bruxelles - B-1047 Brussel
+    email: epbrussels@europarl.europa.eu
+    website: https://brussels.europarl.europa.eu
+Bulgaria:
+  - country: Bulharsko
+    city: Sofie
+    address:
+      - 124 G. S. Rakovski Str.
+      - BG-1000 Sofia
+    email: epsofia@europarl.europa.eu
+    website: https://sofia.europarl.europa.eu/
+Croatia:
+  - country: Chorvatsko
+    city: Záhřeb
+    address:
+      - Bakačeva 3
+      - 10000 Zagreb
+    email: EPZagreb@ep.europa.eu
+    website: https://zagreb.europarl.europa.eu/
+Cyprus:
+  - country: Kypr
+    city: Nicosia
+    address:
+      - 30 Vyronos Avenue
+      - CY-1096 Nicosia
+      - PO BOX 23440
+      - CY-1683 Nicosia
+    email: epnicosia@europarl.europa.eu
+    website: https://nicosia.europarl.europa.eu
+Czechia:
+  - country: Česko
+    city: Praha
+    address:
+      - Národní 10
+      - CZ-110 00 Praha 1
+    email: eppraha@europarl.europa.eu
+    website: https://prague.europarl.europa.eu/cs
+Denmark:
+  - country: Dánsko
+    city: Kodaň
+    address:
+      - Europa-Parlamentet
+      - Europa-Huset
+      - Gothersgade 115
+      - DK-1123 København K
+    email: epkobenhavn@europarl.europa.eu
+    website: https://copenhagen.europarl.europa.eu/
+Estonia:
+  - country: Estonsko
+    city: Tallinn
+    address:
+      - Euroopa Parlamendi
+      - Infobüroo Eestis
+      - Rävala 4
+      - EE-10143 Tallinn
+    email: eptallinn@europarl.europa.eu
+    website: https://tallinn.europarl.europa.eu/
+Finland:
+  - country: Finsko
+    city: Helsinky
+    address:
+      - European Parliament Liaison Office in Finland
+      - Malminkatu 16
+      - FIN - 00100 Helsinki
+      - Finland
+    email: ephelsinki@europarl.europa.eu
+    website: https://helsinki.europarl.europa.eu/
+France:
+  - country: Francie
+    city: Paříž
+    address:
+      - 52, rue de la Victoire
+      - F-75009 Paris
+    email: epparis@europarl.europa.eu
+    website: https://paris.europarl.europa.eu/
+  - country: Francie
+    city: Marseille
+    address:
+      - 2, rue Henri Barbusse
+      - F-13001 Marseille
+    email: epmarseille@europarl.europa.eu
+    website: https://marseille.europarl.europa.eu/
+Germany:
+  - country: Německo
+    city: Mnichov
+    address:
+      - Bob-van-Benthem-Platz 1
+      - D-80469 Munich
+    email: epmuenchen@europarl.europa.eu
+    website: https://munich.europarl.europa.eu
+  - country: Německo
+    city: Berlín
+    address:
+      - Unter den Linden 78
+      - D-10117 Berlin
+    email: epberlin@europarl.europa.eu
+    website: https://berlin.europarl.europa.eu/
+Greece:
+  - country: Řecko
+    city: Atény
+    address:
+      - 8 Leof. Amalias
+      - GR-105 57 Athinai
+    email: epathinai@europarl.europa.eu
+    website: https://athens.europarl.europa.eu
+Hungary:
+  - country: Maďarsko
+    city: Budapešť
+    address:
+      - European Parliament Liaison Office for Hungary
+      - H-1024 Budapest
+      - Lövőház u. 35.
+    email: epbudapest@europarl.europa.eu
+    website: https://budapest.europarl.europa.eu/
+Ireland:
+  - country: Irsko
+    city: Dublin
+    address:
+      - 5 Balfe Street
+      - Dublin D02 Y622
+    email: epdublin@europarl.europa.eu
+    website: https://dublin.europarl.europa.eu
+Italy:
+  - country: Itálie
+    city: Milán
+    address:
+      - Corso Magenta, 59
+      - I-20123 Milano
+    email: epmilano@europarl.europa.eu
+    website: https://milan.europarl.europa.eu
+  - country: Itálie
+    city: Řím
+    address:
+      - Via IV Novembre, 149
+      - I-00187 Roma
+    email: eproma@europarl.europa.eu
+    website: https://rome.europarl.europa.eu
+Latvia:
+  - country: Lotyšsko
+    city: Riga
+    address:
+      - Aspazijas Boulevard 28
+      - LV - 1050 Riga
+    email: epriga@europarl.europa.eu
+    website: https://riga.europarl.europa.eu
+Lithuania:
+  - country: Litva
+    city: Vilnius
+    address:
+      - Gedimino pr. 16 (įėjimas iš Vilniaus g. pusės)
+      - Vilnius LT-01103
+    email: epvilnius@europarl.europa.eu
+    website: https://vilnius.europarl.europa.eu
+Luxembourg:
+  - country: Lucembursko
+    city: Lucemburku
+    address:
+      - Plateau de Kirchberg
+      - Bât ADENAUER
+      - L-2929 Luxembourg
+    email: epluxembourg@europarl.europa.eu
+    website: https://luxembourg.europarl.europa.eu
+Malta:
+  - country: Malta
+    city: Valletta
+    address:
+      - Europe House
+      - 254 St. Paul Street
+      - Valletta VLT 1215
+    email: epvalletta@europarl.europa.eu
+    website: https://valletta.europarl.europa.eu
+Netherlands:
+  - country: Nizozemí
+    city: Haag
+    address:
+      - Korte Vijverberg, 6
+      - NL-2513 AB Den Haag
+    email: epdenhaag@europarl.europa.eu
+    website: https://the-hague.europarl.europa.eu
+Poland:
+  - country: Polsko
+    city: Vratislav
+    address:
+      - ul. Widok 10
+      - 50-052 WROCŁAW
+    email: epwroclaw@europarl.europa.eu
+    website: https://wroclaw.europarl.europa.eu
+  - country: Polsko
+    city: Varšava
+    address:
+      - Biuro Informacyjne Parlamentu Europejskiego w Polsce
+      - ul. Jasna 14/16 a
+      - 00-041 Warszawa
+    email: epwarszawa@europarl.europa.eu
+    website: https://warsaw.europarl.europa.eu
+Portugal:
+  - country: Portugalsko
+    city: Lisabon
+    address:
+      - Centro Europeu Jean Monnet
+      - Largo Jean Monnet, 1-6
+      - P-1269-070 Lisboa
+    email: eplisboa@europarl.europa.eu
+    website: https://lisbon.europarl.europa.eu
+Romania:
+  - country: Rumunsko
+    city: Bukurešť
+    address:
+      - Strada Vasile Lascăr, nr. 31, et 1 Sector 2
+      - 020492 Bucureşti,
+      - România
+    email: epbucarest@europarl.europa.eu
+    website: https://bucharest.europarl.europa.eu
+Slovakia:
+  - country: Slovensko
+    city: Bratislava
+    address:
+      - Európsky parlament
+      - Kancelária na Slovensku
+      - Palisády 29
+      - SK-811 06 Bratislava
+    email: epbratislava@europarl.europa.eu
+    website: https://bratislava.europarl.europa.eu
+Slovenia:
+  - country: Slovinsko
+    city: Lublaň
+    address:
+      - Dunajska cesta 20
+      - SL-1000 Ljubljana
+    email: epljubljana@europarl.europa.eu
+    website: https://ljubljana.europarl.europa.eu
+Spain:
+  - country: Španělsko
+    city: Barcelona
+    address:
+      - Passeig de Gràcia, 90
+      - 1ª planta
+      - E-08008 Barcelona
+    email: epbarcelona@europarl.europa.eu
+    website: https://barcelona.europarl.europa.eu
+  - country: Španělsko
+    city: Madrid
+    address:
+      - Paseo de la Castellana, 46
+      - E-28046 Madrid
+    email: epmadrid@europarl.europa.eu
+    website: https://madrid.europarl.europa.eu
+Sweden:
+  - country: Švédsko
+    city: Stockholm
+    address:
+      - Vasagatan 7, 5 tr.
+      - 111 20 Stockholm
+    email: epstockholm@ep.europa.eu
+    website: https://stockholm.europarl.europa.eu
+United Kingdom:
+  - country: Spojené Království
+    city: Londýn
+    address:
+      - Europe House
+      - 32 Smith Square
+      - London SW1P 3EU
+    email: eplondon@europarl.europa.eu
+    website: https://london.europarl.europa.eu
+United States:
+  - country: Spojené státy
+    city: Washington
+    address:
+      - European Parliament Liaison Office with US Congress
+      - 2175 K Street, NW, Suite 600
+      - Washington, DC 20037, USA
+    email: epwashington@europarl.europa.eu
+    website: https://washington.europarl.europa.eu

@@ -1,0 +1,25 @@
+---
+interface Props {
+  coloricon: string;
+  hovercoloricon: string;
+}
+
+const { coloricon, hovercoloricon } = Astro.props;
+---
+
+
+<span class="ep-icon ep:block ep:w-[24px] ep:shrink-0">
+  <svg
+      role="presentation"
+      aria-hidden="true"
+      focusable="false"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24">
+    <g>
+      <g>
+        <rect style="fill:none" width="24" height="24"/>
+      </g>
+      <path class="{coloricon} {hovercoloricon}" d="M16,5.01v-1h-2v1h-4v-1h-2v1h-3.99v15h15.99V5.01h-4ZM8,7.01v1h2v-1h4v1h2v-1h2v2H6.02v-2h1.99ZM6.02,18.01v-7h11.99v7H6.02Z"/>
+    </g>
+  </svg>
+</span>

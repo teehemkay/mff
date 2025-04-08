@@ -1,0 +1,94 @@
+---
+interface Props {
+  lang: string;
+  currentPage: string;
+}
+
+import { languageCodes, xAccount } from '@packages/data/constants';
+
+import '../styles/tailwind.css';
+
+import '../scss/index-nojs.scss';
+import '../scss/index.scss';
+
+import {
+  basePath,
+  kAssetsDir,
+  metadata,
+  propsKey,
+  props,
+} from '../js/utils.js';
+
+const { lang, currentPage } = Astro.props;
+const { epWebsite, epLogoAltText } = metadata(lang);
+
+const { metaTitle, metaDescription } = props(propsKey(currentPage), lang);
+
+const sharingImage =
+  'https://www.europarl.europa.eu/portal/img/meta-facebook.jpg';
+---
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{metaTitle}</title>
+  <meta name="description" content={metaDescription} />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href={`/${basePath}/${lang}/`} />
+
+  {
+    languageCodes
+      .filter((code) => code !== lang)
+      .map((code) => <link rel="alternate" href={`/${basePath}/${code}/`} />)
+  }
+
+  <meta property="og:title" content={metaTitle} />
+  <meta property="og:description" content={metaDescription} />
+  <meta property="og:url" content={`/${basePath}/${lang}/`} />
+  <meta property="og:site_name" content={epWebsite} />
+  <meta property="og:locale" content={lang} />
+  <meta property="og:image" content={sharingImage} />
+  <meta property="og:image:alt" content={epLogoAltText} />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:title" content={metaTitle} />
+  <meta name="twitter:site" content={xAccount(lang)} />
+  <meta name="twitter:description" content={metaDescription} />
+  <meta name="twitter:image" content={sharingImage} />
+  <meta name="twitter:image:alt" content={epLogoAltText} />
+  <meta name="twitter:image:width" content="1200" />
+  <meta name="twitter:image:hight" content="1200" />
+
+  <link
+    rel="icon"
+    href={`${kAssetsDir}img/favicons/favicon.ico`}
+    sizes="32x32"
+  />
+  <link
+    rel="icon"
+    href={`${kAssetsDir}img/favicons/favicon.svg`}
+    type="image/svg+xml"
+  />
+  <link
+    rel="apple-touch-icon"
+    href={`${kAssetsDir}img/favicons/apple-touch-icon.png`}
+  />
+  <link
+    rel="manifest"
+    href={`${kAssetsDir}img/favicons/manifest.webmanifest`}
+  />
+
+  <noscript>
+    <link href={`${kAssetsDir}css/index-nojs.css`} rel="stylesheet" />
+  </noscript>
+
+  <script is:inline type="module" src={`${kAssetsDir}js/menu.js`}></script>
+
+  <script
+    is:inline
+    defer=""
+    data-tracker-name="ATInternet"
+    data-value="https://www.europarl.europa.eu/website/webanalytics/ati-europeday.js"
+    src="https://www.europarl.europa.eu/website/privacy-policy/privacy-policy.js"
+  ></script>
+</head>

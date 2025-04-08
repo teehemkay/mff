@@ -1,0 +1,11 @@
+<svg role="presentation" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <g>
+    <g>
+      <rect style="fill:none" width="24" height="24"/>
+    </g>
+    <g>
+      <path style="fill:#0c4da2" d="m12,2C6.48,2,2,6.47,2,12s4.48,10,10,10,10-4.48,10-10S17.53,2,12,2Zm0,18c-4.41,0-8-3.59-8-8S7.59,4,12,4s8,3.59,8,8-3.59,8-8,8Z"/>
+      <polygon style="fill:#0c4da2" points="13.01 11 13.01 6 11.01 6 11.01 11 6.01 11 6.01 13 11.01 13 11.01 18 13.01 18 13.01 13 18.01 13 18.01 11 13.01 11"/>
+    </g>
+  </g>
+</svg>

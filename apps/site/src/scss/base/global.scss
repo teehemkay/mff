@@ -1,0 +1,141 @@
+// Accept the variable from the parent file
+$font-path: '/assets/fonts' !default;
+
+@font-face {
+  font-family: 'europeavar';
+  src: url("#{$font-path}//europeaweb-latin-only-with-lang-selector.woff2") format('woff2');
+  font-weight: 200 900;
+  font-display: swap;
+  /* unicode-range: U+0020-007E, U+00A0-0148, U+014A-017E, U+018F, U+0192,
+    U+019D, U+01A0-01A1, U+01AF-01B0, U+01CD-01DC, U+01E6-01E7,
+    U+01EA-01EB, U+01FA-01FF, U+0218-021B, U+0232-0233, U+0237, U+0259,
+    U+0272, U+02B0, U+02B3, U+02C6-02C7, U+02D8-02DD, U+02E1-02E2,
+    U+0300-0304, U+0306-030C, U+031B, U+0323-0324, U+0326-0328, U+032E,
+    U+0331, U+0335-0338, U+058F, U+1D43, U+1D47-1D49, U+1D50, U+1D52,
+    U+1D57, U+1E02-1E03, U+1E0A-1E0F, U+1E1E-1E21, U+1E24-1E25,
+    U+1E2A-1E2B, U+1E36-1E3B, U+1E40-1E49, U+1E56-1E57, U+1E5A-1E63,
+    U+1E6A-1E6F, U+1E80-1E85, U+1E8E-1E8F, U+1E92-1E93, U+1E97, U+1E9E,
+    U+1EA0-1EF9, U+2000-200D, U+2010, U+2012-2016, U+2018-201A,
+    U+201C-201E, U+2020-2022, U+2025-2026, U+202F-2030, U+2032-2033,
+    U+2039-203A, U+203C, U+2044, U+2052, U+205F, U+2070-2071, U+2074-2079,
+    U+207F-2089, U+208D-208E, U+20A1, U+20A3-20A4, U+20A7, U+20A9-20AE,
+    U+20B1-20B2, U+20B4-20B5, U+20B8-20B9, U+20BC-20BD, U+20BF, U+2113,
+    U+2116-2117, U+2122, U+2126, U+212E, U+2153-2154, U+215B-215E,
+    U+2190-2199, U+2202, U+2206, U+220F, U+2211-2212, U+2215, U+2219-221A,
+    U+221E, U+222B, U+2248, U+2260, U+2264-2265, U+2605-2606, U+3000,
+    U+A7F8, U+E001-E004, U+FB01-FB02; */
+  /* Additional Bulgarian + Greek characters from the language selector */
+  /* U+03B5, U+03BB, U+03B7, U+03BD, U+03B9, U+03BA, U+03AC, U+0431, U+044A, U+043B, U+0433, U+0430, U+0440, U+0441, U+043A, U+0438 */
+
+  /* All included characters:
+
+  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[$$^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžƏƒƝǍǎǏǐǑǒǓǔǕǖǗǘǙǚǛǜǝǦǧǨǩǪǫǬǭǮǯǰǱǲǳǴǵǶǷǸǹǺǻǼǽǾǿȘșȚțȲȳȷɉɲʰʳˆˇ˘˙˚˛˜˝˞˟̵̶̷̸̧̨̛̣̤̦̮̱̀́̂̃̄̆̇̈̉̊̋̌ՏḂḃḊḋḞḟḢḣḤḥḪḫḶḷḸḹḺḻḼḽḾḿṀṁṂṃṄṅṆṇṖṗṘṙṚṛṜṝṞṟṠṡṢṣṬṭṮṯṰṱẀẁẂẃẄẅẎẏẐẑẗẞẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹ ‐‒–—―‖‗''‚""„†‡- ‥…‰‹›※⁀⁰ⁱ⁴⁵⁶⁷⁸⁹ⁿ₀₁₂₃₄₅₆₇₈₉₍₎₡₣₤₧₩₪₫₭₮₱₲₴₵₸₹₼₽₿ℓℕ™Ω℮⅓⅔⅛⅜⅝⅞←↑→↓↔↕↖↗↘↙∂∆∏∑−∙√∞∫≈≠≤≥★☆　ꟸﬁﬂεληνικαςбългарски
+
+  */
+}
+
+@font-face {
+  font-family: 'europeavar';
+  src: url("#{$font-path}//europeaweb-cyrillic-greek-nolangselector.woff2") format('woff2');
+  font-weight: 200 900;
+  font-display: swap;
+  unicode-range: U+0370-03AB, U+03AD-03B4, U+03B6, U+03B8, U+03BC, U+03BE-03FF,
+  U+0400-042F, U+0432, U+0434-0437, U+0439, U+043C-043F, U+0442-0449,
+  U+044B-04FF;
+  /* The unicode-range doesn't include characters used in a language selector:ελληνικάбългарски */
+
+  /* All included characters:
+
+  ͰͱͲͳʹ͵Ͷͷͺͻͼͽ;Ϳ΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδζθλμξοπρςστυφχψωϊϋόύώϏϐϑϒϓϔϕϖϗϘϙϚϛϜϝϞϟϠϡϢϣϤϥϦϧϨϩϪϫϬϭϮϯϰϱϲϳϴϵ϶ϷϸϹϺϻϼϽϾϿЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯавдежзймнопстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂҃҄҅҆҇҈҉ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎӏӐӑӒӓӔӕӖӗӘәӚӛӜӝӞӟӠӡӢӣӤӥӦӧӨөӪӫӬӭӮӯӰӱӲӳӴӵӶӷӸӹӺӻӼӽӾӿ
+
+  */
+}
+
+
+/* Custom Components */
+
+/* === All Params for the font settings var === */
+/* wght = weight / wdth = condensed or extended / ital = Italic style / opsz = Optical sizing  / GRAD = weight of stroke */
+/*font-variation-settings: 'wght' var(--text-wght), 'wdth' var(--text-wdth), 'opsz' var(--text-opsz), 'GRAD' var(--text-GRAD), 'ital' var(--text-axis);*/
+
+
+:root {
+  --text-wght: 400;
+  --text-opsz: 80;
+}
+html {
+  font-family: 'europeavar', sans-serif;
+  font-variation-settings: 'wght' var(--text-wght), 'opsz' var(--text-opsz);
+  background-color: #FAFCFD;
+}
+
+/*color of item-txt selected*/
+::selection {
+    background: #b3d4fc;
+}
+
+*,
+*:before,
+*:after{
+  box-sizing:border-box
+}
+
+html{
+  font-family: 'europeavar', sans-serif;
+  font-variation-settings: 'wght' var(--text-wght), 'opsz' var(--text-opsz);
+  background-color: #FAFCFD;
+}
+
+html, body{
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+fieldset{
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+button{
+  cursor: pointer;
+}
+
+/* remove the outline in firefox */
+::-moz-focus-inner {
+    border: 0;
+}
+
+.sticky-element{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.hyphens-auto{
+  -webkit-hyphenate-character: "–";
+  hyphenate-character: "–";
+  hyphens: auto;
+}
+
+/* // Define different types of effects here // */
+.fx--fadeInSlideUp {
+  animation-name: fadeInSlideUp;
+  animation-duration: .5s;
+}
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0x);
+  }
+}

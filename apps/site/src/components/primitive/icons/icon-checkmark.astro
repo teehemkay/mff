@@ -1,0 +1,27 @@
+---
+interface Props {
+  coloricon?: string;
+  hovercoloricon?: string;
+}
+---
+
+<span class="ep-icon ep:block ep:w-[24px] ep:shrink-0 ep:fill-blue-500">
+  <svg
+    role="presentation"
+    aria-hidden="true"
+    focusable="false"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24">
+    <g>
+      <g>
+        <g>
+          <rect style="fill:none" width="24" height="24"></rect>
+        </g>
+        <polygon
+          class="{coloricon} {hovercoloricon}"
+          points="18.57 5.85 9.15 15.27 5.4 11.52 3.98 12.93 9.15 18.1 9.99 17.26 10.57 16.68 19.98 7.27 18.57 5.85"
+        ></polygon>
+      </g>
+    </g>
+  </svg>
+</span>

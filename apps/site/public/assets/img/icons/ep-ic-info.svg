@@ -1,0 +1,12 @@
+<svg role="presentation" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <g>
+    <g>
+      <rect style="fill:none" width="24" height="24"/>
+    </g>
+    <g>
+      <path style="fill:#0c4da2" d="M12.02,4.02c4.41,0,8,3.59,8,8s-3.59,8-8,8-8-3.59-8-8S7.61,4.02,12.02,4.02M12.02,2.02C6.5,2.02,2.02,6.49,2.02,12.02s4.48,10,10,10,10-4.48,10-10S17.55,2.02,12.02,2.02h0Z"/>
+      <rect style="fill:#0c4da2" x="11.02" y="10.03" width="2" height="8"/>
+      <rect style="fill:#0c4da2" x="11.02" y="6.03" width="2" height="2"/>
+    </g>
+  </g>
+</svg>

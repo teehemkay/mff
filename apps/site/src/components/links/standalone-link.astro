@@ -1,0 +1,35 @@
+---
+export interface Props {
+  description: string;
+  label: string;
+  href: string;
+  target?: string;
+  rel?: string;
+}
+
+const {
+    label,
+    href,
+    target,
+    rel,
+    description,
+} = Astro.props;
+
+---
+
+<ep-standalone-link data-component="standalone-link">
+  <a href={href} {target} {rel} class="ep:[&_.label]:mr-2xs ep:flex ep:max-w-max ep:items-center ep:underline ep:decoration-1 ep:underline-offset-2 ep:hover:underline ep:text-blue-500 ep:[&>*]:text-blue-500 ep:hover:text-blue-800 ep:[&>*]:hover:text-blue-800 ep:hover:[&_.icon>svg_polygon]:fill-blue-800 ep:hover:[&_.icon>svg_path]:fill-blue-800 ep:focus:outline ep:focus:outline-2 ep:focus:outline-accent-blue-500 ep:focus:outline-offset-4 visited:ep-text-purple-500 [&>_.label]:visited:ep-text-purple-500">
+    <span class="label ep:text-heading-xl ep:font-epsemiboldvar ep:text-blue-500 ep:[&>*]:text-blue-500">{label}</span>
+    <span class="icon ep:block ep:w-[24px] ep:shrink-0 ep:mx-0">
+        <svg role="presentation" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <g>
+            <g>
+              <rect style="fill:none" width="24" height="24"></rect>
+            </g>
+            <polygon class="ep:fill-blue-500 ep:hover:text-blue-800" points="14.33 6.33 12.92 7.75 16.16 10.99 3.99 10.99 3.99 12.99 16.16 12.99 12.91 16.24 14.33 17.65 19.99 11.99 14.33 6.33"></polygon>
+          </g>
+        </svg>
+    </span>
+  </a>
+</ep-standalone-link>
+<p>{description}</p>

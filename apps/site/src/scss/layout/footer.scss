@@ -1,0 +1,77 @@
+@use "../helpers/mixins";
+@use "../helpers/variables";
+
+/* --------------------------------- */
+/* FOOTER
+------------------------------------ */
+
+.navFooter{
+  ul{
+    li{
+      a{
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -4px;
+          background-color: variables.$grey-darker;
+          width: 0;
+          height: 1px;
+          transform-origin: center;
+          @include mixins.transition(.3s);
+        }
+        &:hover, &:focus{
+          &:after{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.socialFooter{
+  ul{
+    li{
+      a{
+        width: 36px;
+        height: 36px;
+        span{
+          img{
+            width: 18px;
+            height: 18px;
+          }
+        }
+        &.facebook{
+          border-color: #3b5998;
+        }
+        &.twitter{
+          border-color: #1DA1F2;
+        }
+        &.instagram{
+          padding: 1px;
+          background: linear-gradient(to right, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45);
+          &:focus{
+            background: none;
+          }
+        }
+        &.youtube{
+          border-color: #FF0000;
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------- */
+/* COOKIES BANNER
+------------------------------------ */
+body[data-jsactive]{
+  #cookie-policy{
+    &.epjs_cookiepolicy{
+        font-size: 62.5% !important;
+    }
+  }
+}

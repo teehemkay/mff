@@ -1,0 +1,33 @@
+---
+import { kAssetsDir, kIndex, props } from '../js/utils';
+
+interface Props {
+  lang: string;
+  title: string;
+}
+
+const { lang, title } = Astro.props;
+
+const { campaignAltImg } = props(kIndex, lang);
+---
+
+<div
+  class="header ep:flex ep:flex-col ep:xl:flex-row ep:xl:flex-nowrap ep:bg-blue-500"
+  id="mainContent">
+  <div
+    class="ep:flex ep:flex-col ep:justify-center ep:px-8 ep:py-12 ep:xl:w-2/5 ep:xxl:w-2/6 ep:w-full ep:max-w-6xl ep:mx-auto">
+    <hgroup class="ep:flex ep:flex-col">
+      <h1
+        class="ep:text-white ep:text-[2rem] ep:s:text-[2.813rem] ep:s:leading-[4rem] ep:xl:text-heading-3xl ep:xl:leading-11 ep:font-epsemiboldvar">
+        {title}
+      </h1>
+    </hgroup>
+  </div>
+  <div
+    class="ep:xl:h-auto ep:xl:h-auto ep:bg-no-repeat ep:bg-blue-500 ep:xl:w-3/5 ep:xxl:w-4/6 ep:pr-8">
+    <img
+      alt={campaignAltImg}
+      src={`${kAssetsDir}img/2025-europe-day-banner-${lang}.svg`}
+    />
+  </div>
+</div>

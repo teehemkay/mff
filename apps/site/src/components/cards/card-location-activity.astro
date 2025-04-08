@@ -1,0 +1,98 @@
+---
+import SecondaryLink from '../links/secondary-link.astro';
+
+export interface Props {
+  city: string;
+  date: string;
+  description: string;
+  href: string;
+  label: string;
+  lang: string;
+  rel?: string;
+  target?: string;
+  time: string;
+}
+
+const { lang } = Astro.props;
+const { city, date, description, href, label, time, rel, target } = Astro.props;
+
+const linkProps = { label, lang, href, target, rel };
+---
+
+<!-- CARD -->
+<div
+  class="ep:bg-white ep:flex ep:flex-col ep:justify-between ep:w-full ep:gap-y-2">
+  <div>
+    <h3
+      class="ep:text-heading-xl ep:leading-heading-xl ep:mb-4 ep:text-grey-900 ep:font-epsemiboldvar">
+      {city}
+    </h3>
+    <ul class="ep:[&>li]:flex">
+      <li class="ep:mb-2">
+        <span class="ep:icon ep:block ep:w-[24px] ep:shrink-0">
+          <svg
+            role="presentation"
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24">
+            <g>
+              <g>
+                <rect style="fill:none" width="24" height="24"></rect>
+              </g>
+              <path
+                class="ep:fill-grey-600"
+                d="M16,5.01v-1h-2v1h-4v-1h-2v1h-3.99v15h15.99V5.01h-4ZM8,7.01v1h2v-1h4v1h2v-1h2v2H6.02v-2h1.99ZM6.02,18.01v-7h11.99v7H6.02Z"
+              ></path>
+            </g>
+          </svg>
+        </span>
+        <span class="ep:text-grey-600 ep:ml-2xs">{date}</span>
+      </li>
+      <li>
+        <span class="ep:icon ep:block ep:w-[24px] ep:shrink-0">
+          <svg
+            role="presentation"
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24">
+            <g>
+              <g>
+                <rect style="fill:none" width="24" height="24"></rect>
+              </g>
+              <g>
+                <path
+                  class="ep:fill-grey-600"
+                  d="M12.01,6c3.31,0,6,2.69,6,6s-2.69,6-6,6-6-2.69-6-6,2.69-6,6-6M12.01,4c-4.42,0-8,3.58-8,8s3.58,8,8,8,8-3.58,8-8-3.58-8-8-8h0Z"
+                ></path>
+                <polygon
+                  class="ep:fill-grey-600"
+                  points="15.93 14 11 13.99 11 8 13 8 13 11.99 15.94 12 15.93 14"
+                ></polygon>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <span class="ep:text-grey-600 ep:ml-2xs">{time}</span>
+      </li>
+    </ul>
+  </div>
+  <p>
+    {description}
+  </p>
+  <!-- element -->
+  <SecondaryLink
+    {...linkProps}
+    sizefont="ep:text-heading-m ep:leading-heading-m"
+    weightfont="ep:font-epsemiboldvar"
+    txtcolor="ep:text-blue-500"
+    bgcolor=""
+    bordercolor="ep:border-blue-500"
+    hover="ep:hover:bg-white ep:hover:text-blue-800 ep:hover:[&>span>svg_polygon]:fill-blue-800 ep:hover:[&>span>svg_path]:fill-blue-800"
+    coloricon=""
+    focus="ep:focus:outline ep:focus:outline-2 ep:focus:outline-accent-blue-500 ep:focus:outline-offset-4"
+    active="ep:active:bg-accent-blue-500 ep:active:text-white ep:active:border-accent-blue-500 ep:active:[&>span>svg_polygon]:fill-white ep:active:[&>span>svg_path]:fill-white"
+    accessibilitytxt=""
+  />
+</div>

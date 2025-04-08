@@ -1,0 +1,81 @@
+{
+  "name": "@packages/data",
+  "description": "YAML data",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teehemkay/europe-day/"
+  },
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./constants": "./constants.js"
+  },
+  "author": "webmaster@europarl.europa.eu",
+  "license": "ISC",
+  "scripts": {
+    "import": "./cli.js"
+  },
+  "devDependencies": {
+    "@packages/etl": "workspace:^",
+    "debug": "^4.3.7",
+    "fs-extra": "^11.2.0",
+    "prettier": "^3.4.1",
+    "typescript": "^5.8.2",
+    "xo": "^0.60.0",
+    "yaml": "^2.6.1"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
+  "prettier": {
+    "useTabs": false,
+    "arrowParens": "always",
+    "bracketSameLine": true,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "xo": {
+    "space": true,
+    "prettier": true,
+    "envs": [
+      "node",
+      "browser"
+    ],
+    "rules": {
+      "capitalized-comments": "off",
+      "import/order": [
+        "error",
+        {
+          "newlines-between": "always-and-inside-groups",
+          "warnOnUnassignedImports": true
+        }
+      ],
+      "func-names": [
+        "error",
+        "as-needed"
+      ],
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "spaced-comment": [
+        "error",
+        "always",
+        {
+          "exceptions": [
+            "#__PURE__"
+          ]
+        }
+      ],
+      "unicorn/no-array-reduce": "off",
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/prefer-object-from-entries": "off"
+    },
+    "ignores": [
+      "public/**",
+      "_site/**"
+    ]
+  }
+}

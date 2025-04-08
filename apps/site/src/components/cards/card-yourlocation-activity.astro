@@ -1,0 +1,96 @@
+---
+import { metadata, substituteWith } from '../../js/utils';
+
+interface Props {
+  lang: string;
+  country: string;
+  description?: string;
+  city: string;
+  address: string[];
+  email: string;
+  website: string;
+}
+
+const { lang } = Astro.props;
+const { checkTheEvents, goToEventsForCountry } = metadata(lang);
+const { country, description, city, address, email, website } = Astro.props;
+---
+
+<!-- CARD -->
+<div
+  class="ep:bg-white ep:flex ep:flex-col ep:justify-between ep:w-full ep:gap-y-2">
+  <div>
+    <h3
+      class="ep:text-heading-xl ep:leading-heading-xl ep:mb-2xs ep:text-grey-900 ep:font-epsemiboldvar">
+      {country}, {city}
+    </h3>
+    <p>{description}</p>
+    <address class="ep:mb-2xs ep:[&>*]:block ep:not-italic">
+      {address.map((line) => <span>{line}</span>)}
+    </address>
+    <ul class="ep:flex ep:flex-col ep:gap-x-l ep:[&>li]:flex ep:mb-xs">
+      <li>
+        <ep-standalone-link data-component="link">
+          <a
+            href=`mailto:${email}`
+            class="ep:flex ep:max-w-max ep:items-center ep:underline ep:decoration-1 ep:underline-offset-2 ep:hover:underline ep:text-blue-500 ep:[&>*]:text-blue-500 ep:hover:text-blue-800 ep:[&>*]:hover:text-blue-800 ep:hover:[&_.icon>svg_polygon]:fill-blue-800 ep:hover:[&_.icon>svg_path]:fill-blue-800 ep:focus:outline ep:focus:outline-2 ep:focus:outline-accent-blue-500 ep:focus:outline-offset-4 visited:ep-text-purple-500 [&>_.label]:visited:ep-text-purple-500">
+            <span class="ep:icon ep:block ep:w-[24px] ep:shrink-0">
+              <svg
+                role="presentation"
+                aria-hidden="true"
+                focusable="false"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24">
+                <g>
+                  <g>
+                    <rect style="fill:none" width="24" height="24"></rect>
+                  </g>
+                  <path
+                    class="ep:fill-blue-500"
+                    d="M3.99,6v12h16V6H3.99ZM16.57,8l-4.59,4.59-4.59-4.59h9.17ZM5.99,16v-6.59l6,6,6-6v6.59H5.99Z"
+                  ></path>
+                </g>
+              </svg>
+            </span>
+            <span class="ep:ml-3xs ep:whitespace-pre-wrap ep:break-all"
+              >{email}</span
+            >
+          </a>
+        </ep-standalone-link>
+      </li>
+    </ul>
+  </div>
+  <!-- element -->
+  <ep-standalone-link data-component="link">
+    <a
+      href={website}
+      class="ep:[&_.label]:mr-2xs ep:flex ep:max-w-max ep:items-center ep:underline ep:decoration-1 ep:underline-offset-2 ep:hover:underline ep:text-blue-500 ep:[&>*]:text-blue-500 ep:hover:text-blue-800 ep:[&>*]:hover:text-blue-800 ep:hover:[&_.icon>svg_polygon]:fill-blue-800 ep:hover:[&_.icon>svg_path]:fill-blue-800 ep:focus:outline ep:focus:outline-2 ep:focus:outline-accent-blue-500 ep:focus:outline-offset-4 visited:ep-text-purple-500 [&>_.label]:visited:ep-text-purple-500">
+      <span
+        class="label ep:text-heading-s ep:font-epsemiboldvar ep:text-blue-500 ep:[&>*]:text-blue-500"
+        >{checkTheEvents}</span
+      >
+
+      <span class="ep:sr-only">
+        {substituteWith(goToEventsForCountry, `${city}, ${country}`)}
+      </span>
+      <span class="icon ep:block ep:w-[24px] ep:shrink-0 ep:mx-0">
+        <svg
+          role="presentation"
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24">
+          <g>
+            <g>
+              <rect style="fill:none" width="24" height="24"></rect>
+            </g>
+            <polygon
+              class="ep:fill-blue-500 ep:hover:text-blue-800"
+              points="14.33 6.33 12.92 7.75 16.16 10.99 3.99 10.99 3.99 12.99 16.16 12.99 12.91 16.24 14.33 17.65 19.99 11.99 14.33 6.33"
+            ></polygon>
+          </g>
+        </svg>
+      </span>
+    </a>
+  </ep-standalone-link>
+</div>

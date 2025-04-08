@@ -1,0 +1,34 @@
+---
+interface Props {
+  accessibilitytxt: string;
+  ariacurrent: string;
+  bgcolor: string;
+  colorfont: string;
+  coloricon: string;
+  current: string;
+  hiddenlabel: string;
+  hoverbgcolor: string;
+  hovercoloricon: string;
+  hovertxtcolor: string;
+  href: string;
+  hreflang: string;
+  icon?: string;
+  iconl: string;
+  iconr: string;
+  label: string;
+  lang: string;
+  rel: string;
+  role: string;
+  sizefont: string;
+  spacingico: string;
+  span: boolean;
+  target: string;
+  weightfont: string;
+}
+
+const props = Astro.props;
+
+import DefaultLinkLang from '../links/default-link-lang.astro';
+---
+
+<li><DefaultLinkLang {...props} /></li>
