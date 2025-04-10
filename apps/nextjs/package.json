@@ -1,0 +1,108 @@
+{
+  "name": "@apps/site",
+  "description": "MFF Website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teehemkay/mff"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "assets:build:css": "pnpm --filter @apps/prototypes run css",
+    "assets:ensure:css": "fse ensureDir _site/assets/css",
+    "assets:harvest:css": "fse copy ../prototypes/_site/assets/css/ ./_site/assets/css/",
+    "assets:harvest:fonts": "fse copy ../prototypes/public/assets/fonts/ ./public/assets/fonts/",
+    "assets:harvest:img": "fse copy ../prototypes/public/assets/img/ ./public/assets/img/",
+    "build": "run-s build:public build:next",
+    "build:next": "next build",
+    "build:public": "run-s --print-name clean assets:ensure:* assets:build:* assets:harvest:*",
+    "clean": "fse remove _site",
+    "data": "scripts/import.js",
+    "deliver": "run-s --print-name build export",
+    "dev": "run-s --print-name build:public dev:next",
+    "dev:next": "next dev",
+    "export": "fse copy out/ ../../_site/",
+    "preview": "serve --listen 3000 out",
+    "resources:publish": "fse copy resources/ _site/"
+  },
+  "author": "webmaster@europarl.europa.eu",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^15.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@atao60/fse-cli": "^0.1.9",
+    "@packages/data": "workspace:^",
+    "eslint": "8.57.1",
+    "eslint-config-next": "^15.0.3",
+    "eslint-config-xo-nextjs": "^6.3.0",
+    "eslint-config-xo-react": "^0.27.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "npm-run-all2": "^7.0.1",
+    "serve": "^14.2.4",
+    "tailwindcss": "^3.4.15",
+    "typescript": "5.7.2",
+    "xo": "^0.59.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "package.json": "xo --fix",
+    "gulpfile.js": "xo --fix",
+    "src/**/*.js": "xo --fix",
+    "app/**/*.js": "xo --fix"
+  },
+  "prettier": {
+    "useTabs": false,
+    "arrowParens": "always",
+    "bracketSameLine": true,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "xo": {
+    "space": true,
+    "prettier": true,
+    "extends": "xo-nextjs",
+    "envs": ["node", "browser"],
+    "rules": {
+      "capitalized-comments": "off",
+      "import/order": [
+        "error",
+        {
+          "newlines-between": "always-and-inside-groups",
+          "warnOnUnassignedImports": true
+        }
+      ],
+      "func-names": ["error", "as-needed"],
+      "react/function-component-definition": [
+        1,
+        {
+          "namedComponents": "arrow-function",
+          "unnamedComponents": "arrow-function"
+        }
+      ],
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "spaced-comment": [
+        "error",
+        "always",
+        {
+          "exceptions": ["#__PURE__"]
+        }
+      ],
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/no-array-reduce": "off",
+      "unicorn/no-array-callback-reference": "off",
+      "unicorn/no-fn-reference-in-iterator": "off",
+      "unicorn/prefer-object-from-entries": "off"
+    },
+    "ignores": ["build/**", "out/**", "public/**", "_site/**"]
+  }
+}
