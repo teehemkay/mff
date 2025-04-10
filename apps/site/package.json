@@ -10,10 +10,18 @@
     "url": "https://github.com/teehemkay/mff/"
   },
   "scripts": {
+    "asset": "",
+    "assets:build:css": "pnpm --filter @apps/prototypes run css",
+    "assets:ensure:css": "fse ensureDir public/assets/css",
+    "assets:harvest:css": "fse copy ../prototypes/_site/assets/css/ ./public/assets/css/",
+    "assets:harvest:fonts": "fse copy ../prototypes/public/assets/fonts/ ./public/assets/fonts/",
+    "assets:harvest:img": "fse copy ../prototypes/public/assets/img/ ./public/assets/img/",
     "build": "astro build",
-    "clean": "fse remove public",
+    "build:public": "run-s --print-name assets:ensure:* assets:build:* assets:harvest:*",
+    "clean": "fse remove _site",
     "deliver": "cross-env FORCE_COLOR=1 run-s --print-label build export index",
-    "dev": "astro dev",
+    "dev": "run-s --print-name build:public dev:astro",
+    "dev:astro": "astro dev",
     "export": "fse move dist ../../_site/europe-day",
     "index": "fse copy resources/index.html ../../_site/index.html",
     "preview": "astro preview"
@@ -62,7 +70,6 @@
   },
   "xo": {
     "space": true,
-    "extends": "xo-react",
     "prettier": true,
     "envs": ["node", "browser"],
     "rules": {
