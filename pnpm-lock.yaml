@@ -154,7 +154,7 @@ importers:
         version: 4.0.17
       '@tailwindcss/vite':
         specifier: ^4.0.15
-        version: 4.1.3(vite@6.2.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1))
+        version: 4.1.3(vite@6.2.6(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1))
       astro:
         specifier: ^5.5.4
         version: 5.6.1(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.38.0)(sass@1.86.0)(terser@5.39.0)(typescript@5.8.2)(yaml@2.7.1)
@@ -1840,23 +1840,23 @@ packages:
   '@sec-ant/readable-stream@0.4.1':
     resolution: {integrity: sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==}
 
-  '@shikijs/core@3.2.1':
-    resolution: {integrity: sha512-FhsdxMWYu/C11sFisEp7FMGBtX/OSSbnXZDMBhGuUDBNTdsoZlMSgQv5f90rwvzWAdWIW6VobD+G3IrazxA6dQ==}
+  '@shikijs/core@3.2.2':
+    resolution: {integrity: sha512-yvlSKVMLjddAGBa2Yu+vUZxuu3sClOWW1AG+UtJkvejYuGM5BVL35s6Ijiwb75O9QdEx6IkMxinHZSi8ZyrBaA==}
 
-  '@shikijs/engine-javascript@3.2.1':
-    resolution: {integrity: sha512-eMdcUzN3FMQYxOmRf2rmU8frikzoSHbQDFH2hIuXsrMO+IBOCI9BeeRkCiBkcLDHeRKbOCtYMJK3D6U32ooU9Q==}
+  '@shikijs/engine-javascript@3.2.2':
+    resolution: {integrity: sha512-tlDKfhWpF4jKLUyVAnmL+ggIC+0VyteNsUpBzh1iwWLZu4i+PelIRr0TNur6pRRo5UZIv3ss/PLMuwahg9S2hg==}
 
-  '@shikijs/engine-oniguruma@3.2.1':
-    resolution: {integrity: sha512-wZZAkayEn6qu2+YjenEoFqj0OyQI64EWsNR6/71d1EkG4sxEOFooowKivsWPpaWNBu3sxAG+zPz5kzBL/SsreQ==}
+  '@shikijs/engine-oniguruma@3.2.2':
+    resolution: {integrity: sha512-vyXRnWVCSvokwbaUD/8uPn6Gqsf5Hv7XwcW4AgiU4Z2qwy19sdr6VGzMdheKKN58tJOOe5MIKiNb901bgcUXYQ==}
 
-  '@shikijs/langs@3.2.1':
-    resolution: {integrity: sha512-If0iDHYRSGbihiA8+7uRsgb1er1Yj11pwpX1c6HLYnizDsKAw5iaT3JXj5ZpaimXSWky/IhxTm7C6nkiYVym+A==}
+  '@shikijs/langs@3.2.2':
+    resolution: {integrity: sha512-NY0Urg2dV9ETt3JIOWoMPuoDNwte3geLZ4M1nrPHbkDS8dWMpKcEwlqiEIGqtwZNmt5gKyWpR26ln2Bg2ecPgw==}
 
-  '@shikijs/themes@3.2.1':
-    resolution: {integrity: sha512-k5DKJUT8IldBvAm8WcrDT5+7GA7se6lLksR+2E3SvyqGTyFMzU2F9Gb7rmD+t+Pga1MKrYFxDIeyWjMZWM6uBQ==}
+  '@shikijs/themes@3.2.2':
+    resolution: {integrity: sha512-Zuq4lgAxVKkb0FFdhHSdDkALuRpsj1so1JdihjKNQfgM78EHxV2JhO10qPsMrm01FkE3mDRTdF68wfmsqjt6HA==}
 
-  '@shikijs/types@3.2.1':
-    resolution: {integrity: sha512-/NTWAk4KE2M8uac0RhOsIhYQf4pdU0OywQuYDGIGAJ6Mjunxl2cGiuLkvu4HLCMn+OTTLRWkjZITp+aYJv60yA==}
+  '@shikijs/types@3.2.2':
+    resolution: {integrity: sha512-a5TiHk7EH5Lso8sHcLHbVNNhWKP0Wi3yVnXnu73g86n3WoDgEra7n3KszyeCGuyoagspQ2fzvy4cpSc8pKhb0A==}
 
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
@@ -6527,8 +6527,8 @@ packages:
   shellwords@0.1.1:
     resolution: {integrity: sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==}
 
-  shiki@3.2.1:
-    resolution: {integrity: sha512-VML/2o1/KGYkEf/stJJ+s9Ypn7jUKQPomGLGYso4JJFMFxVDyPNsjsI3MB3KLjlMOeH44gyaPdXC6rik2WXvUQ==}
+  shiki@3.2.2:
+    resolution: {integrity: sha512-0qWBkM2t/0NXPRcVgtLhtHv6Ak3Q5yI4K/ggMqcgLRKm4+pCs3namgZlhlat/7u2CuqNtlShNs9lENOG6n7UaQ==}
 
   shx@0.4.0:
     resolution: {integrity: sha512-Z0KixSIlGPpijKgcH6oCMCbltPImvaKy0sGH8AkLRXw1KyzpKtaCTizP2xen+hNDqVF4xxgvA0KXSb9o4Q6hnA==}
@@ -7346,8 +7346,8 @@ packages:
     resolution: {integrity: sha512-rC2VRfAVVCGEgjnxHUnpIVh3AGuk62rP3tqVrn+yab0YH7UULisC085+NYH+mnqf3Wx4SpSi1RQMwudL89N03g==}
     engines: {node: '>=10.13.0'}
 
-  vite@6.2.5:
-    resolution: {integrity: sha512-j023J/hCAa4pRIUH6J9HemwYfjB5llR2Ps0CWeikOtdR8+pAURAk0DoJC5/mm9kd+UgdnIy7d6HE4EAvlYhPhA==}
+  vite@6.2.6:
+    resolution: {integrity: sha512-9xpjNl3kR4rVDZgPNdTL0/c6ao4km69a/2ihNQbcANz8RuCOK3hQBmLSJf3bRKVQjVMda+YvizNE8AwvogcPbw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -7619,7 +7619,7 @@ snapshots:
       remark-parse: 11.0.0
       remark-rehype: 11.1.2
       remark-smartypants: 3.0.2
-      shiki: 3.2.1
+      shiki: 3.2.2
       smol-toml: 1.3.1
       unified: 11.0.5
       unist-util-remove-position: 5.0.0
@@ -9072,33 +9072,33 @@ snapshots:
 
   '@sec-ant/readable-stream@0.4.1': {}
 
-  '@shikijs/core@3.2.1':
+  '@shikijs/core@3.2.2':
     dependencies:
-      '@shikijs/types': 3.2.1
+      '@shikijs/types': 3.2.2
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.4
       hast-util-to-html: 9.0.5
 
-  '@shikijs/engine-javascript@3.2.1':
+  '@shikijs/engine-javascript@3.2.2':
     dependencies:
-      '@shikijs/types': 3.2.1
+      '@shikijs/types': 3.2.2
       '@shikijs/vscode-textmate': 10.0.2
       oniguruma-to-es: 4.1.0
 
-  '@shikijs/engine-oniguruma@3.2.1':
+  '@shikijs/engine-oniguruma@3.2.2':
     dependencies:
-      '@shikijs/types': 3.2.1
+      '@shikijs/types': 3.2.2
       '@shikijs/vscode-textmate': 10.0.2
 
-  '@shikijs/langs@3.2.1':
+  '@shikijs/langs@3.2.2':
     dependencies:
-      '@shikijs/types': 3.2.1
+      '@shikijs/types': 3.2.2
 
-  '@shikijs/themes@3.2.1':
+  '@shikijs/themes@3.2.2':
     dependencies:
-      '@shikijs/types': 3.2.1
+      '@shikijs/types': 3.2.2
 
-  '@shikijs/types@3.2.1':
+  '@shikijs/types@3.2.2':
     dependencies:
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.4
@@ -9236,12 +9236,12 @@ snapshots:
       postcss: 8.5.3
       tailwindcss: 4.0.17
 
-  '@tailwindcss/vite@4.1.3(vite@6.2.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1))':
+  '@tailwindcss/vite@4.1.3(vite@6.2.6(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1))':
     dependencies:
       '@tailwindcss/node': 4.1.3
       '@tailwindcss/oxide': 4.1.3
       tailwindcss: 4.1.3
-      vite: 6.2.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1)
+      vite: 6.2.6(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1)
 
   '@trysound/sax@0.2.0': {}
 
@@ -9782,7 +9782,7 @@ snapshots:
       prompts: 2.4.2
       rehype: 13.0.2
       semver: 7.7.1
-      shiki: 3.2.1
+      shiki: 3.2.2
       tinyexec: 0.3.2
       tinyglobby: 0.2.12
       tsconfck: 3.1.5(typescript@5.8.2)
@@ -9790,8 +9790,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.15.0
       vfile: 6.0.3
-      vite: 6.2.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1)
-      vitefu: 1.0.6(vite@6.2.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1))
+      vite: 6.2.6(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1)
+      vitefu: 1.0.6(vite@6.2.6(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.1
@@ -14602,14 +14602,14 @@ snapshots:
 
   shellwords@0.1.1: {}
 
-  shiki@3.2.1:
+  shiki@3.2.2:
     dependencies:
-      '@shikijs/core': 3.2.1
-      '@shikijs/engine-javascript': 3.2.1
-      '@shikijs/engine-oniguruma': 3.2.1
-      '@shikijs/langs': 3.2.1
-      '@shikijs/themes': 3.2.1
-      '@shikijs/types': 3.2.1
+      '@shikijs/core': 3.2.2
+      '@shikijs/engine-javascript': 3.2.2
+      '@shikijs/engine-oniguruma': 3.2.2
+      '@shikijs/langs': 3.2.2
+      '@shikijs/themes': 3.2.2
+      '@shikijs/types': 3.2.2
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.4
 
@@ -15439,7 +15439,7 @@ snapshots:
       replace-ext: 2.0.0
       teex: 1.0.1
 
-  vite@6.2.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1):
+  vite@6.2.6(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1):
     dependencies:
       esbuild: 0.25.2
       postcss: 8.5.3
@@ -15453,9 +15453,9 @@ snapshots:
       terser: 5.39.0
       yaml: 2.7.1
 
-  vitefu@1.0.6(vite@6.2.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1)):
+  vitefu@1.0.6(vite@6.2.6(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1)):
     optionalDependencies:
-      vite: 6.2.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1)
+      vite: 6.2.6(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.1)
 
   watchpack@2.4.2:
     dependencies:
