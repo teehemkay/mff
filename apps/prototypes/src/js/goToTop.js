@@ -16,10 +16,7 @@ const scrollTo = (scrollPosition, focusOn) => () => {
   const scrollRatio = 10;
   // Always move by at least 1 pixel to avoid asymptotic proximity to SCROLLPOSITION
   // but never actually reaching it.
-  const scrollAmount =
-    delta < 0
-      ? Math.floor(delta / scrollRatio)
-      : Math.ceil(delta / scrollRatio);
+  const scrollAmount = delta < 0 ? Math.floor(delta / scrollRatio) : Math.ceil(delta / scrollRatio);
 
   // Use requestAnimationFrame for smooth scrolling
   // https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
@@ -31,13 +28,11 @@ const scrollTo = (scrollPosition, focusOn) => () => {
     focusOn.focus();
   }
 };
-
 const topOfPage = (scrollPosition, focusOn) => {
   // SMOOTH SCROLL TOP OF THE PAGE
 
   // Set a variable for our button element.
   const scrollToTopButton = document.querySelector('.js-top');
-
   if (!scrollToTopButton) {
     return;
   }
@@ -49,7 +44,6 @@ const topOfPage = (scrollPosition, focusOn) => {
     // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
     scrollToTopButton.className = y > 860 ? 'top-link show' : 'top-link hide';
   };
-
   window.addEventListener('scroll', scrollFunc);
 
   // When the button is clicked, run our Scrollto function above!
@@ -58,13 +52,10 @@ const topOfPage = (scrollPosition, focusOn) => {
     scrollTo(scrollPosition, focusOn)();
   });
 };
-
 const runJs = () => {
   const kNav = document.querySelector('#mainContent');
   kNav.setAttribute('tabindex', '-1');
   const kScrollTop = kNav.offsetTop;
-
   topOfPage(kScrollTop, kNav);
 };
-
-window.addEventListener('DOMContentLoaded', runJs);
+window.addEventListener('DOMContentLoaded', runJs);//# sourceMappingURL=goToTop.js.map

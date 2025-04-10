@@ -1,27 +1,2 @@
-<!-- <script src="../assets/js/menu.js"></script> -->
-<script src="../assets/js/goToTop.js"></script>
-<script>
-  // dropdown menu content in desktop
-  const contenuElement = document.getElementById("contenu");
-  const erMenuElement = document.getElementById("er-menu");
-
-  // Définissez aria-expanded à "false" par défaut pour les deux éléments
-  /*erMenuElement.setAttribute("aria-expanded", "false");
-  contenuElement.setAttribute("aria-expanded", "false");*/
-
-  // Ajoutez la classe "hidden" à l'élément "contenu" par défaut
-  contenuElement.classList.add("hidden");
-
-  const mediaQuery = window.matchMedia("(max-width: 1080px)");
-
-  function handleMediaQueryChange(event) {
-    erMenuElement.setAttribute("aria-expanded", event.matches ? "true" : "false");
-    contenuElement.classList.toggle("hidden", event.matches ? "true" : "false");
-  }
-
-  mediaQuery.addListener(handleMediaQueryChange);
-
-  // Déclenchement initial pour appliquer les états par défaut
-  handleMediaQueryChange(mediaQuery);
-
-</script>
+<script src="/assets/js/goToTop.js"></script>
+<script src="/assets/js/mff-menu.js"></script>
