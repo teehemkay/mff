@@ -23,7 +23,7 @@ Here is the refined plan for migrating =homepage.html= to Astro:
         *   =public/js/menu-mobile.js= (containing the "Mobile menu" code)
         *   =public/js/dropdown-desktop.js= (containing the "dropdown menu content in desktop" code)
     *   Copy the respective JavaScript code into these new files.
-    *   Note the existing =<script src=...> paths in =scripts.html= (e.g., =../assets/js/goToTop.js=).
+    *   Note the existing =<script src=...> paths in =scripts.html= (e.g., =/assets/js/go-to-top.js=).
 
 3.  *Asset Path Review:* Mentally (or actually) list all asset paths starting with =../assets/= found in /all/ identified HTML fragments. Prepare to change them to start with =/assets/=.
 
@@ -59,7 +59,7 @@ Here is the refined plan for migrating =homepage.html= to Astro:
             <Footer />
 
             {/* Common Scripts from scripts.html */}
-            <script src="/assets/js/goToTop.js"></script> {/* Adjusted path */}
+            <script src="/assets/js/go-to-top.js"></script> {/* Adjusted path */}
             <script src="/js/menu-desktop.js"></script>
             <script src="/js/menu-mobile.js"></script>
             <script src="/js/dropdown-desktop.js"></script>
@@ -231,7 +231,7 @@ Okay, applying the refined plan, here is the code for the necessary Astro files 
 │   │   ├── fonts/
 │   │   ├── img/
 │   │   └── js/
-│   │       └── goToTop.js
+│   │       └── go-to-top.js
 │   └── js/
 │       ├── menu-desktop.js
 │       ├── menu-mobile.js
@@ -1538,11 +1538,11 @@ Okay, applying the refined plan, here is the code for the necessary Astro files 
         <Footer />
 
         {/* Common Scripts */}
-        {/* Assume goToTop.js is correctly placed in public/assets/js */}
-        <script src="/assets/js/goToTop.js"></script>
-        <script src="/js/menu-desktop.js"></script>
-        <script src="/js/menu-mobile.js"></script>
-        <script src="/js/dropdown-desktop.js"></script>
+        {/* Assume go-to-top.js is correctly placed in public/assets/js */}
+        <script src="/assets/js/go-to-top.js"></script>
+        <script src="/assets/js/menu-desktop.js"></script>
+        <script src="/assets/js/menu-mobile.js"></script>
+        <script src="/assets/js/dropdown-desktop.js"></script>
         {/* Add other common script references here if identified */}
     </body>
     </html>
@@ -1722,3 +1722,4 @@ Okay, applying the refined plan, here is the code for the necessary Astro files 
     </BaseLayout>
     #+end_src
 
+In Astro file ONLY use ~{​/​* ​*​​​​/}~ style comments. NEVER ~/* */~.
