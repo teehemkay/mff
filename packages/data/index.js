@@ -1,5 +1,4 @@
 import path from 'node:path';
-import process from 'node:process';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
@@ -7,7 +6,6 @@ import yaml from 'yaml';
 
 import {
   kIndex,
-  kLocalEvents,
   kLanguages,
   kMetadata,
   kCountries,
@@ -17,9 +15,7 @@ import {
 export const __filename = fileURLToPath(import.meta.url);
 export const __dirname = path.dirname(__filename);
 
-export const siteUrl = 'https://www.europarl.europa.eu/europe-day';
-
-export const pageNames = [kIndex, kLocalEvents];
+export const siteUrl = 'https://eubudget.europarl.europa.eu/';
 
 export const lvContainer = () =>
   Object.keys(languages).reduce((acc, lang) => {
@@ -104,4 +100,4 @@ export const langForLang = getData(kLanguages);
 export const contentForLang = (pageName, lang) => getData(pageName)(lang);
 export const countriesForLang = getData(kCountries);
 
-export { kIndex, kLocalEvents, kLanguages, kMetadata } from './constants.js';
+export { kIndex, kLanguages, kMetadata } from './constants.js';

@@ -1,5 +1,5 @@
 ---
-import { languageCodes, xAccount } from '@ee24/data/constants';
+import { languageCodes, xAccount } from '@packages/data/constants';
 
 import { kAssetsDir, meta, content } from '../js/utils.js';
 
@@ -122,21 +122,19 @@ const sharingImageX =
 <script is:inline type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite", // Corrected type potentially
+    "@type": "WebSite",
     "url": "https://www.elections.europa.eu",
     "potentialAction": {
-      // Example search action
       "@type": "SearchAction",
-      "target": "https://www.elections.europa.eu/search?q={search_term_string}",
+      "target": "https://eubudget.europarl.europa.eu/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     },
     "publisher": {
-      // Example publisher
       "@type": "Organization",
       "name": "European Parliament",
       "logo": {
         "@type": "ImageObject",
-        "url": "/assets/img/ep-logo.png" // Adjusted path
+        "url": "/assets/img/ep-logo.png"
       }
     }
   }

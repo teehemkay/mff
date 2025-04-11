@@ -1,5 +1,3 @@
-import { pageLabelsForLang } from '@ee24/data';
-
 import {
   kIndex,
   kMetadata,
@@ -9,9 +7,8 @@ import {
   kOurPosition,
   kByCountry,
   kCountries,
-  pageLabelKeys,
   languageCodes,
-} from '@ee24/data/constants';
+} from '@packages/data/constants';
 
 // TODO: why is import.meta.env.BASE_URL crashing astro
 // Cannot split a chunk that has already been edited (0:7 – "import.meta")
@@ -36,9 +33,6 @@ export const pair = /* @__NO_SIDE_EFFECTs__ */ (arr1, arr2) => {
   return Array.from({ length: minLength }, (_, i) => [arr1[i], arr2[i]]);
 };
 
-export const pageLabels = /* @__NO_SIDE_EFFECTs__ */ (lang) =>
-  pageLabelsForLang({ pageLabelKeys, lang });
-
 export const getStaticPaths = /* @__NO_SIDE_EFFECTs__ */ () => {
   const slugs = [
     {
@@ -53,7 +47,7 @@ export const getStaticPaths = /* @__NO_SIDE_EFFECTs__ */ () => {
   for (const lang of languageCodes) {
     slugs.push({
       params: { slug: lang },
-      props: { lang, currentPage: page },
+      props: { lang, currentPage: kIndex },
     });
 
     for (const page of pageNames) {
@@ -67,15 +61,11 @@ export const getStaticPaths = /* @__NO_SIDE_EFFECTs__ */ () => {
   return slugs;
 };
 
+export { languageCodes } from '@packages/data/constants';
+
 export {
   languages,
   pageLabelsForLang,
-  pageDataForLang as content,
+  contentForLang as content,
   metadataForLang as meta,
-} from '@ee24/data';
-
-export {
-  pageLabelKeys,
-  pageLabelKeysMapping,
-  languageCodes,
-} from '@ee24/data/constants';
+} from '@packages/data';

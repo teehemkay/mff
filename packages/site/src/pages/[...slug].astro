@@ -1,0 +1,21 @@
+---
+interface Props {
+  lang: string;
+  currentPage: string;
+}
+
+import { kIndex, kWhyItMatters, kByCountry } from '../js/utils.js';
+
+import Layout from '../layouts/BaseLayout.astro';
+import MainIndex from '../components/MainIndex.astro';
+import MainWhyItMattes from '../components/MainWhyItMatters.astro';
+import MainByCountry from '../components/MainByCountry.astro';
+
+const { lang, currentPage } = Astro.props;
+
+const props = { lang, currentPage };
+
+export { getStaticPaths } from '../js/utils.js';
+---
+
+<Layout {...props} />
