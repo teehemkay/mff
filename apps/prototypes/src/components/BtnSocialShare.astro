@@ -1,0 +1,148 @@
+---
+// Consider making ID dynamic if this component is reused on the same page
+const shareId = "share-topic-1"; // Example ID
+const dynamicTitleLabel = "dynamictitlelabel"; // Make prop if dynamic title needed
+// Example URL, should be dynamic based on current page
+const currentUrl = Astro.url.href;
+const encodedUrl = encodeURIComponent(currentUrl);
+const shareText = encodeURIComponent("Discover European stories..."); // Make prop if dynamic
+const via = "Europarl_EN"; // Make prop if dynamic
+---
+<!-- BTN - SOCIAL SHARE -->
+<div class="expand-social-share expand-container flex flex-col relative">
+    <div class="mb-3">
+        {/* Point button to unique ID and use dynamic title */}
+        <button
+            class="expand-button items-center text-lg2 cursor-pointer border-0 flex text-blue-default underline hover:decoration-2 focus:decoration-2 focus:outline focus:outline-offset-2 focus:outline-2"
+            aria-label={`Share on social media - ${dynamicTitleLabel}`}
+            aria-expanded="false"
+            data-target={shareId}
+            aria-controls={shareId}
+        >
+            <svg x="0px" y="0px" viewBox="0 0 20.59 26.52" class="global-share-icon fill-blue-default w-5 h-5 mr-1" focusable="false" aria-hidden="true">
+                <g transform="translate(-6891.308 1800)">
+                    <circle class="st0" cx="6895.09" cy="-1786.24" r="3.5"></circle>
+                    <circle class="st0" cx="6907.09" cy="-1780.24" r="3.5"></circle>
+                    <circle class="st0" cx="6907.09" cy="-1793.24" r="3.5"></circle>
+                    <rect x="6900.88" y="-1788.38" transform="matrix(0.454 -0.891 0.891 0.454 5356.8716 5175.8408)" width="1.41" height="10.86"></rect>
+                    <rect x="6896.16" y="-1790.83" transform="matrix(0.891 -0.454 0.454 0.891 1564.9807 2938.2065)" width="10.86" height="1.41"></rect>
+                </g>
+            </svg>
+            <span class="text-lg">Share</span>
+        </button>
+    </div>
+    <div class="block">
+        {/* Use unique ID */}
+        <ul id={shareId} class="social-list expand-container-content block hidden pt-4"> {/* Start hidden */}
+            <li>
+                <a href={`https://www.facebook.com/share.php?u=${encodedUrl}`} target="_blank">
+                    <span class="hidden">Share on facebook</span>
+                    <svg class="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="34" height="34">
+                       {/* SVG paths */}
+                        <path class="back" d="M22.5,38.59a17,17,0,1,0-17-17,17,17,0,0,0,17,17" transform="translate(-5.5 -4.59)"></path>
+                        <path class="icon" d="M19.9,31.62H24v-10h2.73l.36-3.47H24V16.37c0-.9.08-1.39,1.36-1.39h1.7V11.52H24.33c-3.27,0-4.43,1.68-4.43,4.51V18.1h-2v3.47h2Z" transform="translate(-5.5 -4.59)"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href={`https://twitter.com/intent/tweet?text=${shareText}&url=${encodedUrl}&via=${via}`} target="_blank">
+                    <span class="hidden">Share on X</span>
+                    <svg class="twitter w-[32px] h-[32px] p-[5px]" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 17.21 15.09" width="17.21" height="15.09">
+                       {/* SVG paths */}
+                        <g><path class="icon" d="M16.84-0.24l-1.05,1.13l-1.93,2.07c-0.75,0.81-1.51,1.62-2.26,2.42c-0.21,0.23-0.43,0.45-0.64,0.67 c-0.06,0.06-0.08,0.11-0.02,0.19c0.37,0.51,0.74,1.03,1.11,1.55c0.36,0.5,0.72,0.99,1.07,1.49c0.41,0.58,0.82,1.17,1.24,1.75 c0.48,0.67,0.97,1.34,1.45,2.01c0.29,0.4,0.56,0.8,0.84,1.21c0.19,0.27,0.39,0.55,0.58,0.82c0.02,0.03,0.03,0.07,0.04,0.11 c-0.04,0.02-0.08,0.03-0.12,0.04c-0.22,0-0.44,0-0.66,0c-1.68,0-3.35,0-5.03,0c-0.14,0.01-0.28-0.06-0.36-0.18 c-0.43-0.61-0.86-1.21-1.29-1.81c-0.35-0.49-0.71-0.97-1.05-1.46s-0.7-1.01-1.06-1.51c-0.04-0.06-0.1-0.1-0.14-0.16 c-0.18-0.26-0.17-0.25-0.38-0.03c-0.3,0.33-0.61,0.65-0.92,0.97c-0.29,0.31-0.58,0.62-0.87,0.93l-1.93,2.08 c-0.34,0.36-0.67,0.72-1.01,1.08c-0.06,0.05-0.13,0.08-0.21,0.09c-0.64,0.01-1.27,0-1.91,0c-0.05-0.01-0.09-0.02-0.13-0.04 c0.01-0.04,0.03-0.08,0.06-0.12c0.77-0.83,1.55-1.66,2.32-2.48c0.94-1,1.89-2.01,2.83-3.01c0.3-0.32,0.61-0.65,0.91-0.98 C6.37,8.57,6.38,8.5,6.35,8.44c0-0.01-0.01-0.01-0.02-0.02C5.89,7.82,5.45,7.2,5.01,6.59C4.59,6,4.17,5.4,3.74,4.8 c-0.37-0.51-0.73-1.02-1.1-1.53c-0.29-0.4-0.57-0.81-0.86-1.22S1.2,1.25,0.91,0.84C0.67,0.51,0.44,0.18,0.2-0.15 C0.14-0.24,0.18-0.27,0.27-0.27c0.11-0.01,0.22,0,0.32,0c1.83,0,3.65,0,5.48,0C6.21-0.29,6.33-0.22,6.4-0.1 c0.22,0.32,0.45,0.62,0.67,0.94c0.24,0.33,0.46,0.67,0.7,1c0.28,0.4,0.58,0.79,0.86,1.19s0.59,0.83,0.88,1.24 c0.09,0.13,0.19,0.24,0.27,0.37s0.13,0.1,0.22,0.01c0.44-0.48,0.89-0.96,1.34-1.44c0.52-0.56,1.05-1.12,1.57-1.68 c0.42-0.45,0.82-0.9,1.24-1.35c0.12-0.13,0.25-0.26,0.39-0.39c0.05-0.04,0.1-0.06,0.16-0.06c0.66,0,1.31,0,1.97,0 C16.73-0.26,16.79-0.25,16.84-0.24 M14.16,13.61c0-0.03-0.01-0.05-0.02-0.08c-0.25-0.35-0.49-0.7-0.74-1.05 c-0.36-0.5-0.73-1-1.09-1.51s-0.69-1-1.05-1.49c-0.29-0.41-0.6-0.82-0.9-1.23c-0.35-0.48-0.68-0.97-1.03-1.46 c-0.5-0.7-1.02-1.4-1.52-2.1c-0.29-0.4-0.57-0.81-0.86-1.22C6.5,2.85,6.05,2.22,5.6,1.59C5.53,1.45,5.39,1.37,5.24,1.37 c-0.6,0.01-1.21,0-1.81,0c-0.04,0-0.09,0.01-0.13,0.02c0.07,0.11,0.13,0.2,0.19,0.29c0.3,0.41,0.6,0.81,0.89,1.22 C4.75,3.4,5.1,3.92,5.47,4.42c0.3,0.42,0.61,0.84,0.91,1.26s0.61,0.85,0.91,1.27s0.59,0.82,0.89,1.24c0.36,0.5,0.72,1,1.07,1.5 c0.3,0.42,0.61,0.84,0.91,1.26c0.44,0.61,0.88,1.22,1.31,1.83c0.17,0.23,0.33,0.47,0.51,0.7c0.05,0.07,0.13,0.11,0.21,0.12 c0.49,0.01,0.98,0.01,1.47,0.01L14.16,13.61"/></g>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodeURIComponent(dynamicTitleLabel)}&summary=${shareText}&source=European Parliament`} target="_blank">
+                    <span class="hidden">Share on LinkedIn</span>
+                    <svg class="linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="34" height="34">
+                       {/* SVG paths */}
+                        <path class="back" d="M22.5,38.6a17,17,0,1,0-17-17,17,17,0,0,0,17,17" transform="translate(-5.5 -4.6)"></path>
+                        <path class="icon" d="M17.2,13.05A1.9,1.9,0,1,1,15.3,15a1.9,1.9,0,0,1,1.9-1.9m-1.64,5.24h3.28V28.82H15.56Z" transform="translate(-5.5 -4.6)"></path>
+                        <path class="icon" d="M20.89,18.29H24v1.44h0a3.45,3.45,0,0,1,3.1-1.7c3.32,0,3.93,2.18,3.93,5v5.78H27.83V23.7c0-1.22,0-2.79-1.7-2.79s-2,1.33-2,2.7v5.21H20.89Z" transform="translate(-5.5 -4.6)"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href={`https://api.whatsapp.com/send?text=${encodedUrl}`} target="_blank">
+                    <span class="hidden">Share on WhatsApp</span>
+                    <svg class="whatsapp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="34" height="34">
+                        {/* SVG paths */}
+                        <path class="back" d="M22.5,38.6a17,17,0,1,0-17-17,17,17,0,0,0,17,17" transform="translate(-5.5 -4.6)"></path>
+                        <path class="icon" d="M13.3,30.59l1.36-5A9.58,9.58,0,1,1,23,30.43a9.74,9.74,0,0,1-4.58-1.17Zm5.31-3.07a7.93,7.93,0,1,0-2.21-2.15l-.8,2.94Zm9.18-4.4c-.06-.1-.22-.16-.46-.28s-1.42-.7-1.64-.78-.38-.12-.54.12-.61.78-.75.94-.28.18-.52.06A6.52,6.52,0,0,1,22,22a7.14,7.14,0,0,1-1.33-1.66.35.35,0,0,1,.1-.49,5.52,5.52,0,0,0,.36-.42,1.33,1.33,0,0,0,.24-.4.42.42,0,0,0,0-.42c-.06-.11-.53-1.29-.73-1.77s-.4-.41-.54-.41h-.46a.88.88,0,0,0-.64.3,2.69,2.69,0,0,0-.84,2,4.66,4.66,0,0,0,1,2.47,10.71,10.71,0,0,0,4.09,3.62,12.43,12.43,0,0,0,1.37.5,3.18,3.18,0,0,0,1.5.1,2.48,2.48,0,0,0,1.62-1.14A2,2,0,0,0,27.79,23.12Z" transform="translate(-5.5 -4.6)"></path>
+                    </svg>
+                </a>
+            </li>
+            <li class="ml-2">
+                {/* JS needed for this button */}
+                <button class="copy-url-button flex items-center text-white-default font-epSemiBold">
+                    <svg viewBox="0 0 34 32.562" class="max-w-[30px] border-0! mr-1" focusable="false" aria-hidden="true">
+                        {/* SVG paths */}
+                        <defs><clipPath id={`clip-${shareId}`}><rect width="22" height="23.351" transform="translate(0 0)" fill="none"></rect></clipPath></defs>
+                        <g transform="translate(6 4)"><g transform="translate(0 0)" clip-path={`url(#clip-${shareId})`}><path d="M17.031,2.653V4.122h2.318v0A2.65,2.65,0,0,1,22,6.771h0V20.7h0a2.65,2.65,0,0,1-2.645,2.647v0H7.62v0A2.65,2.65,0,0,1,4.973,20.7h0V17.58H2.651v0A2.65,2.65,0,0,1,0,14.931H0V2.651H0A2.65,2.65,0,0,1,2.649,0V0H14.38V0a2.65,2.65,0,0,1,2.647,2.645h0ZM15.02,4.122V2.649h0a.652.652,0,0,0-.642-.64v0H2.651v0a.652.652,0,0,0-.64.642h0v12.28h0a.652.652,0,0,0,.642.64v0H4.971V6.773h0A2.65,2.65,0,0,1,7.62,4.126v0h7.4ZM19.988,20.7V6.771h0a.652.652,0,0,0-.642-.64v0H7.618v0a.652.652,0,0,0-.64.642h0V20.7h0a.652.652,0,0,0,.642.64v0H19.351v0a.652.652,0,0,0,.64-.642h0Z" transform="translate(0 0)" fill="#024EA2" fill-rule="evenodd"></path></g></g><rect width="34" height="32.562" fill="none"></rect>
+                    </svg>
+                    <span class="text-blue-default">Copy url</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    {/* JS needed for feedback message */}
+    <div class="copied-txt mt-2" role="status">
+        <span aria-hidden="true" class="fx--fadeOut" hidden>The URL has been copied to your clipboard</span>
+    </div>
+</div>
+
+{/* Add script for copy functionality and expand/collapse within this component if needed */}
+<script define:vars={{ shareId }}>
+ function setupSocialShare(container) {
+    const copyButton = container.querySelector('.copy-url-button');
+    const feedbackSpan = container.querySelector('.copied-txt span');
+
+    if (copyButton && feedbackSpan) {
+        copyButton.addEventListener('click', () => {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                // Show feedback
+                feedbackSpan.hidden = false;
+                feedbackSpan.classList.remove('fx--fadeOut');
+                feedbackSpan.classList.add('fx--fadeIn');
+
+                // Hide feedback after a delay
+                setTimeout(() => {
+                    feedbackSpan.classList.remove('fx--fadeIn');
+                    feedbackSpan.classList.add('fx--fadeOut');
+                    // Optionally set hidden after animation completes
+                    setTimeout(() => { feedbackSpan.hidden = true; }, 500); // Match CSS animation duration
+                }, 2000); // Show for 2 seconds
+            }).catch(err => {
+                console.error('Failed to copy URL: ', err);
+            });
+        });
+    }
+
+    // Expand/collapse logic (simplified, assumes global script handles the main part)
+    // This component only needs to ensure its specific elements work with the global script
+    // If global script isn't sufficient, add specific listener here:
+    const expandButton = container.querySelector('.expand-button');
+    const targetContent = container.querySelector('.expand-container-content'); // Assuming one per component instance
+
+    // Minimalist version relying on global toggleContent function
+    // expandButton?.addEventListener('click', toggleContent); // Need to ensure 'this' context is correct
+
+    // More robust specific version (if needed)
+     if (expandButton && targetContent) {
+         expandButton.addEventListener('click', function() { // Use function for 'this'
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            targetContent.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !isExpanded);
+            // Add aria-label and opacity changes if necessary, mirroring global script
+         });
+     }
+
+ }
+
+ // Run for each instance of the component on the page
+ document.querySelectorAll('.expand-social-share').forEach(setupSocialShare);
+
+</script>
