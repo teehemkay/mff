@@ -12,7 +12,7 @@
     "build": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name clean build:*",
     "build:assets": "fse copy public/ _site/",
     "build:gulp": "gulp",
-    "build:tailwind": "tailwindcss -i ./src/css/tailwind.css -o ./_site/assets/css/tailwind.css",
+    "build:tailwind": "tailwindcss -i ./src/css/tailwind.css -o ./public/assets/css/tailwind.css",
     "clean": "fse remove _site",
     "css": "run-s --print-name gulp:scss build:tailwind",
     "deliver": "run-s --print-name build export:*",

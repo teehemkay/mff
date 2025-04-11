@@ -19,7 +19,7 @@ import {
   fileLogger,
   isProductionBuild,
   log,
-  destFolder,
+  publicFolder,
   showFiles,
   srcFolder,
   watcher,
@@ -27,7 +27,7 @@ import {
 
 const srcJs = srcFolder(`js/**/*.js`);
 
-const destJs = destFolder('assets/js');
+const destJs = publicFolder('assets/js');
 
 export const transpiler = (args = {}) =>
   function transpileJs() {
@@ -61,7 +61,7 @@ export const transpileWatcher = (args = {}) => {
 export const watchTranspiled = transpileWatcher();
 
 export const rollupInput = srcFolder('privacy-policy/js/index.js');
-export const rollupOutput = destFolder(
+export const rollupOutput = publicFolder(
   'assets/privacy-policy/privacy-policy.js'
 );
 
