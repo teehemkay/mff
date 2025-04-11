@@ -24,7 +24,7 @@ export const pageNames = [
   kCountries,
 ];
 
-export const kAssetsDir = '/assets';
+export const kAssetsDir = '/assets/';
 export const range = /* @__NO_SIDE_EFFECTs__ */ (end, start = 0) =>
   Array.from({ length: end - start + 1 }, (_, i) => start + i);
 
