@@ -1,0 +1,105 @@
+{
+  "name": "@packages/site",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teehemkay/mff/"
+  },
+  "scripts": {
+    "asset": "",
+    "assets:build:css": "pnpm --filter @apps/prototypes run css",
+    "assets:ensure:css": "fse ensureDir public/assets/css",
+    "assets:harvest:css": "fse copy ../prototypes/_site/assets/css/ ./public/assets/css/",
+    "assets:harvest:fonts": "fse copy ../prototypes/public/assets/fonts/ ./public/assets/fonts/",
+    "assets:harvest:img": "fse copy ../prototypes/public/assets/img/ ./public/assets/img/",
+    "build": "astro build",
+    "build:public": "run-s --print-name assets:ensure:* assets:build:* assets:harvest:*",
+    "clean": "fse remove _site",
+    "deliver": "cross-env FORCE_COLOR=1 run-s --print-label build export index",
+    "dev": "run-s --print-name build:public dev:astro",
+    "dev:astro": "astro dev",
+    "export": "fse move dist ../../_site/europe-day",
+    "index": "fse copy resources/index.html ../../_site/index.html",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@atao60/fse-cli": "^0.1.9",
+    "@packages/data": "workspace:^",
+    "@packages/etl": "workspace:^",
+    "@rollup/plugin-yaml": "^4.1.2",
+    "@tailwindcss/postcss": "^4.0.15",
+    "@tailwindcss/vite": "^4.0.15",
+    "astro": "^5.5.4",
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^4.0.15",
+    "typescript": "^5.8.2",
+    "xo": "^0.60.0",
+    "yaml": "^2.7.0"
+  },
+  "browserslist": ["defaults", "not IE 11"],
+  "prettier": {
+    "useTabs": false,
+    "arrowParens": "always",
+    "bracketSameLine": true,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "plugins": ["prettier-plugin-astro"],
+    "astroAllowShorthand": true,
+    "overrides": [
+      {
+        "files": "*.astro",
+        "options": {
+          "parser": "astro"
+        }
+      }
+    ]
+  },
+  "xo": {
+    "space": true,
+    "prettier": true,
+    "envs": ["node", "browser"],
+    "rules": {
+      "capitalized-comments": "off",
+      "import/order": [
+        "error",
+        {
+          "newlines-between": "always-and-inside-groups",
+          "warnOnUnassignedImports": true
+        }
+      ],
+      "func-names": ["error", "as-needed"],
+      "react/function-component-definition": [
+        1,
+        {
+          "namedComponents": "arrow-function",
+          "unnamedComponents": "arrow-function"
+        }
+      ],
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "spaced-comment": [
+        "error",
+        "always",
+        {
+          "exceptions": ["#__PURE__"]
+        }
+      ],
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/no-array-reduce": "off",
+      "unicorn/no-array-callback-reference": "off",
+      "unicorn/no-fn-reference-in-iterator": "off",
+      "unicorn/prefer-object-from-entries": "off"
+    },
+    "ignores": ["build", "public/**", "_site/**"]
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.3"
+  }
+}

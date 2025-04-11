@@ -1,0 +1,143 @@
+---
+import { languageCodes, xAccount } from '@ee24/data/constants';
+
+import { kAssetsDir, meta, content } from '../js/utils.js';
+
+interface Props {
+  lang: string;
+  currentPage: string;
+}
+
+const { lang, currentPage } = Astro.props;
+const { epWebsite, epLogoAltText } = meta(lang);
+
+const { metaTitle, metaDescription } = content(currentPage, lang);
+
+const sharingImage =
+  'https://elections.europa.eu/assets/img/sharing/social-media-card_en.png';
+const sharingImageX =
+  'https://elections.europa.eu/assets/img/sharing/x-social-media-card_en.png';
+---
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{metaTitle}</title>
+  <meta name="description" content={metaDescription} />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href={`/${lang}/`} />
+
+  {
+    languageCodes
+      .filter((code) => code !== lang)
+      .map((code) => <link rel="alternate" href={`/${code}/`} />)
+  }
+
+  <meta property="og:title" content={metaTitle} />
+  <meta property="og:description" content={metaDescription} />
+  <meta property="og:url" content={`/${lang}/`} />
+  <meta property="og:site_name" content={epWebsite} />
+  <meta property="og:locale" content={lang} />
+  <meta property="og:image" content={sharingImage} />
+  <meta property="og:image:alt" content={epLogoAltText} />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:title" content={metaTitle} />
+  <meta name="twitter:site" content={xAccount(lang)} />
+  <meta name="twitter:description" content={metaDescription} />
+  <meta name="twitter:image" content={sharingImageX} />
+  <meta name="twitter:image:alt" content={epLogoAltText} />
+  <meta name="twitter:image:width" content="1200" />
+  <meta name="twitter:image:hight" content="1200" />
+  <link rel="icon" href={`${kAssetsDir}img/favicon.ico`} />
+  <link rel="icon" href={`${kAssetsDir}img/favicon.png`} type="image/png" />
+  <link
+    rel="icon"
+    href={`${kAssetsDir}img/favicon-16x16.png`}
+    sizes="16x16"
+    type="image/png"
+  />
+  <link
+    rel="icon"
+    href={`${kAssetsDir}img/favicon-32x32.png`}
+    sizes="32x32"
+    type="image/png"
+  />
+  <link
+    rel="apple-touch-icon"
+    href={`${kAssetsDir}img/apple-touch-icon-57x57.png`}
+    sizes="57x57"
+    type="image/png"
+  />
+  <link
+    rel="apple-touch-icon"
+    href={`${kAssetsDir}img/apple-touch-icon-72x72.png`}
+    sizes="72x72"
+    type="image/png"
+  />
+  <link
+    rel="apple-touch-icon"
+    href={`${kAssetsDir}img/apple-touch-icon-144x144.png`}
+    sizes="144x144"
+    type="image/png"
+  />
+
+  <noscript>
+    <link href=`${kAssetsDir}css/index-nojs.css` rel="stylesheet" />
+  </noscript>
+
+  <link href=`${kAssetsDir}css/tailwind.css` rel="stylesheet" />
+  <link href=`${kAssetsDir}css/index.css` rel="stylesheet" />
+
+  <script
+    is:inline
+    defer=""
+    data-tracker-name="ATInternet"
+    data-value=`${kAssetsDir}privacy-policy/ati-ee24.js`
+    src=`${kAssetsDir}privacy-policy/privacy-policy.js`></script>
+</head>
+
+<link
+  rel="preload"
+  href="/assets/fonts/Europea-Regular.woff2"
+  as="font"
+  type="font/woff2"
+/>
+
+<link
+  rel="preload"
+  href="/assets/fonts/Europea-Bold.woff2"
+  as="font"
+  type="font/woff2"
+/>
+
+<script
+  is:inline
+  type="text/javascript"
+  defer
+  data-tracker-name="ATInternet"
+  data-value="https://www.europarl.europa.eu/website/webanalytics/ati-news.js"
+  src="/assets/privacy-policy/privacy-policy.js"></script>
+
+<script is:inline type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite", // Corrected type potentially
+    "url": "https://www.elections.europa.eu",
+    "potentialAction": {
+      // Example search action
+      "@type": "SearchAction",
+      "target": "https://www.elections.europa.eu/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      // Example publisher
+      "@type": "Organization",
+      "name": "European Parliament",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/assets/img/ep-logo.png" // Adjusted path
+      }
+    }
+  }
+</script>
