@@ -2,6 +2,8 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@tailwindcss/vite';
 import yaml from '@rollup/plugin-yaml';
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://eubduget.europarl.europa.eu',
@@ -9,7 +11,7 @@ export default defineConfig({
   trailingSlash: 'always',
   output: 'static',
   compressHTML: false,
-  integrations: [],
+  integrations: [react()],
   build: {
     format: 'directory',
   },

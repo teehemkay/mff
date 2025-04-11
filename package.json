@@ -11,6 +11,7 @@
     "bundle": "pnpm --filter @packages/build-tools run build:bundle",
     "compress": "pnpm --filter @packages/build-tools run build:compress",
     "clean": "fse remove _site",
+    "data": "pnpm --filter @packages/etl run export",
     "deliver": "run-s --print-name deliver:*",
     "deliver:protos": "pnpm --filter @apps/prototypes run deliver",
     "dev": "pnpm --filter @apps/prototypes run dev",

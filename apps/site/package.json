@@ -41,7 +41,10 @@
     "xo": "^0.60.0",
     "yaml": "^2.7.0"
   },
-  "browserslist": ["defaults", "not IE 11"],
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
   "prettier": {
     "useTabs": false,
     "arrowParens": "always",
@@ -49,7 +52,9 @@
     "bracketSpacing": true,
     "singleQuote": true,
     "trailingComma": "all",
-    "plugins": ["prettier-plugin-astro"],
+    "plugins": [
+      "prettier-plugin-astro"
+    ],
     "astroAllowShorthand": true,
     "overrides": [
       {
@@ -63,7 +68,10 @@
   "xo": {
     "space": true,
     "prettier": true,
-    "envs": ["node", "browser"],
+    "envs": [
+      "node",
+      "browser"
+    ],
     "rules": {
       "capitalized-comments": "off",
       "import/order": [
@@ -73,7 +81,10 @@
           "warnOnUnassignedImports": true
         }
       ],
-      "func-names": ["error", "as-needed"],
+      "func-names": [
+        "error",
+        "as-needed"
+      ],
       "react/function-component-definition": [
         1,
         {
@@ -87,7 +98,9 @@
         "error",
         "always",
         {
-          "exceptions": ["#__PURE__"]
+          "exceptions": [
+            "#__PURE__"
+          ]
         }
       ],
       "unicorn/prevent-abbreviations": "off",
@@ -96,6 +109,13 @@
       "unicorn/no-fn-reference-in-iterator": "off",
       "unicorn/prefer-object-from-entries": "off"
     },
-    "ignores": ["build", "public/**", "_site/**"]
+    "ignores": [
+      "build",
+      "public/**",
+      "_site/**"
+    ]
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.3"
   }
 }
