@@ -17,12 +17,12 @@ import postcssSvgo from 'postcss-svgo';
 import {
   showFiles,
   srcFolder,
-  destFolder,
+  publicFolder,
   watcher,
   fileLogger,
 } from './utils.js';
 
-export const destination = destFolder('assets/css');
+export const destination = publicFolder('assets/css');
 
 export const files = srcFolder('scss/**/*.scss');
 export const sources = srcFolder('scss/*.scss');

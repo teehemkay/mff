@@ -1,0 +1,1703 @@
+The goal is to migrate all the HTML files from a =gulp-include=-based build process to Astro components.
+We started with the =homepage.html= file which has already been migrated.
+
+Here is the refined plan for migrating =homepage.html= to Astro:
+
+* *Migration Plan: =homepage.html= to Astro*
+
+** *Phase 1: Analysis and Preparation*
+
+1.  *Full Include Tree Mapping:*
+    *   Start with =homepage.html=. List its direct includes: =head.html=, =shortcut-wai.html=, =navigation-revamp.html=, =cards.html=, =iframe-video.html= (props: =videoText=), =transcript.html=, =btn-social-share.html=, =cards-updates.html=, =campaign.html=, =links-political-parties.html=, =footer.html=, =scripts.html=.
+    *   Recursively examine each included =.html= file in =./components/= for further =@@include= directives.
+        *   Example: =expand-collapse.html= includes =iframe-video.html= (props: =videoText=), =transcript.html=, =btn-social-share.html=.
+        *   Example: =rtv-banner.html= includes =rmv-form.html=.
+        *   Identify /all/ unique =.html= fragments involved in rendering the final =homepage.html=, noting which ones accept parameters (like =iframe-video.html=, =video.html=, =document-availability.html=).
+    *   /Result:* A definitive list of all HTML fragments to be converted into Astro components.
+
+2.  *JavaScript Extraction from =scripts.html=:*
+    *   Create the directory =public/js/=.
+    *   Identify inline =<script>= blocks within =scripts.html=.
+    *   For each block, create a corresponding =.js= file in =public/assets/js/=. Examples based on comments in =scripts.html=:
+        *   =public/js/menu-desktop.js= (containing the "Desktop menu" code)
+        *   =public/js/menu-mobile.js= (containing the "Mobile menu" code)
+        *   =public/js/dropdown-desktop.js= (containing the "dropdown menu content in desktop" code)
+    *   Copy the respective JavaScript code into these new files.
+    *   Note the existing =<script src=...> paths in =scripts.html= (e.g., =/assets/js/go-to-top.js=).
+
+3.  *Asset Path Review:* Mentally (or actually) list all asset paths starting with =../assets/= found in /all/ identified HTML fragments. Prepare to change them to start with =/assets/=.
+
+** *Phase 2: Astro Component Creation*
+
+4.  *Create Base Layout (=src/layouts/BaseLayout.astro=):*
+    *   Create the file =src/layouts/BaseLayout.astro=.
+    *   Import necessary components for the layout structure /after/ they are created (placeholder imports for now):
+        #+begin_src astro
+        ---
+        // Placeholder imports - will be finalized after components are made
+        import Head from '../components/Head.astro';
+        import ShortcutWai from '../components/ShortcutWai.astro';
+        import NavigationRevamp from '../components/NavigationRevamp.astro';
+        import Footer from '../components/Footer.astro';
+        // Assuming Head component handles title, meta etc.
+        // interface Props { title?: string; description?: string; }
+        // const { title = 'Default Title', description = 'Default description' } = Astro.props;
+        ---
+        <!DOCTYPE html>
+        <html lang="en" class="no-js">
+        <head>
+            {/* Pass props to Head if needed */}
+            <Head />
+        </head>
+        <body>
+            <ShortcutWai />
+            <NavigationRevamp />
+
+            {/* Main page content goes here */}
+            <slot />
+
+            <Footer />
+
+            {/* Common Scripts from scripts.html */}
+            <script src="/assets/js/go-to-top.js"></script> {/* Adjusted path */}
+            <script src="/js/menu-desktop.js"></script>
+            <script src="/js/menu-mobile.js"></script>
+            <script src="/js/dropdown-desktop.js"></script>
+            {/* Add any other common script src tags identified in Step 2 */}
+        </body>
+        </html>
+        #+end_src
+    *   /Note:* The =Head= component might need props for title, meta description, etc., passed from the page using the layout.
+
+5.  *Convert HTML Fragments to Astro Components:*
+    *   For every unique =.html= file identified in Step 1, create a corresponding =.astro= file in =src/components/=. Use PascalCase for naming (e.g., =head.html= -> =Head.astro=, =iframe-video.html= -> =IframeVideo.astro=).
+    *   Copy the HTML content from the =.html= file into the template section of the =.astro= file.
+    *   *Update Asset Paths:* Find all occurrences of =../assets/= and replace them with =/assets/=.
+    *   *Handle Parameters (Props):*
+        *   For components that /receive/ parameters (e.g., =IframeVideo.astro=, =Video.astro=, =DocumentAvailability.astro=):
+            *   Add a =---= frontmatter section.
+            *   Define a TypeScript =interface Props= listing the expected parameters (e.g., =videoText: string;=).
+            *   Use =const { propName } = Astro.props;= to get the props.
+            *   Replace =@@VariableName= in the HTML with Astro expressions: ={variableName}=.
+            #+begin_src astro
+            {/* Example: src/components/IframeVideo.astro */}
+            ---
+            interface Props {
+              videoText: string;
+            }
+            const { videoText } = Astro.props;
+            ---
+            <!-- Iframe - Video -->
+            <div class="figure-video ...">
+              {/* ... iframe container ... */}
+              <div class="figcaption ...">
+                <p class="text-xl ...">{videoText}</p>
+              </div>
+            </div>
+            #+end_src
+    *   *Handle Nested Includes:*
+        *   Identify =@@include('./components/nested.html', { "prop": "value" })= within the component's HTML.
+        *   Add an =import NestedComponent from './NestedComponent.astro';= to the frontmatter.
+        *   Replace the =@@include= directive with the Astro component tag: =<NestedComponent prop="value" />=. If passing variables, use Astro expression syntax: =<NestedComponent prop={localVariable} />=.
+        #+begin_src astro
+        {/* Example: src/components/ExpandCollapse.astro if it included IframeVideo */}
+        ---
+        import IframeVideo from './IframeVideo.astro';
+        import Transcript from './Transcript.astro';
+        import BtnSocialShare from './BtnSocialShare.astro';
+        // Assuming the videoText is fixed within this component's context
+        const specificVideoText = "Invest in what matters";
+        ---
+        {/* ... expand collapse structure ... */}
+        <div id="content-1" class="expand-container-content ...">
+            {/* ... other content ... */}
+            <IframeVideo videoText={specificVideoText} />
+            <Transcript />
+            <BtnSocialShare />
+        </div>
+        {/* ... more list items ... */}
+        #+end_src
+
+** *Phase 3: Page Creation and Integration*
+
+6.  *Create Homepage Astro Page (=src/pages/index.astro=):*
+    *   Create the file =src/pages/index.astro=.
+    *   Use the =BaseLayout= component.
+    *   Import only the components directly included by =homepage.html= /within the main content area/ (i.e., not those already in the layout like head, nav, footer).
+    *   Replicate the structure of the =homepage.html= =<body>= content inside the =<BaseLayout>= tags, replacing =@@include= directives with the corresponding imported Astro components and passing any required props.
+        #+begin_src astro
+        ---
+        import BaseLayout from '../layouts/BaseLayout.astro';
+        import Cards from '../components/Cards.astro';
+        import IframeVideo from '../components/IframeVideo.astro';
+        import Transcript from '../components/Transcript.astro';
+        import BtnSocialShare from '../components/BtnSocialShare.astro';
+        import CardsUpdates from '../components/CardsUpdates.astro';
+        import Campaign from '../components/Campaign.astro';
+        import LinksPoliticalParties from '../components/LinksPoliticalParties.astro';
+        ---
+        <BaseLayout title="Homepage Title" description="Description for homepage">
+
+            {/* Start of content originally between nav and footer */}
+            <main role="main" id="mainContent" class="mb-8">
+                <div id="returnToTop" class="hidden"></div>
+
+                <div class="max-w-5xl mx-auto px-4 mt-54px mb-10">
+                    <h1 class="logo-brand font-epSemiBold text-2.5xl text-black-greydark text-left">The EU's long-term budget from 2028</h1>
+                    <span class="text-brand-title inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2">Invest in what matters</span>
+                </div>
+
+                <div class="htv-page max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4 mb-12">
+                    <p class="max-w-3xl mb-6">The EU's long-term budget drives investments in Europe's future, improving citizens' lives.
+                        It funds common projects and delivers on priorities from digital innovation to border security.
+                    </p>
+                    <p><span class="font-EPGammaBold">Discover the benefits of the EU budget and learn how decisions about it are made.</span></p>
+                </div>
+
+                <Cards />
+
+                <div class="max-w-5xl sm:block block mx-auto justify-between items-center px-4">
+                    {/* Pass the specific prop value */}
+                    <IframeVideo videoText="How the European Parliament supports citizens’ in the next budget term" />
+                    <Transcript />
+                    <div class="share-home">
+                        <BtnSocialShare />
+                    </div>
+                    <hr class="text-[#cccccc] mt-10 mb-16">
+                </div>
+
+                <div class="cards-links-block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mb-16 px-4">
+                    <h2 class="font-EPGammaBold pb-6">Latest updates</h2>
+                    <CardsUpdates />
+                </div>
+
+                <Campaign />
+
+                <div class="epol-block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mb-16 px-4">
+                    <h2 class="font-EPGammaBold pb-6">Related links</h2>
+                    <LinksPoliticalParties />
+                </div>
+
+                <a href="#returnToTop" class="top-link hide js-top" aria-label="Scroll back to top of the page"></a>
+            </main>
+            {/* End of content originally between nav and footer */}
+
+            {/* Homepage specific JS */}
+            <script is:inline>
+                // Copy the JS block from the original homepage.html here
+                // (The part handling '.expand-container' and '.navList li')
+                const containers = document.querySelectorAll('.expand-container');
+                // ... rest of the JS ...
+
+                document.addEventListener("DOMContentLoaded", function () {
+                  // ... nav highlighting code ...
+                });
+            </script>
+
+        </BaseLayout>
+        #+end_src
+    *   Pass appropriate title/description props to =BaseLayout= if implemented.
+
+* Implementation
+
+applying the migration plan, here is the code for the necessary Astro files to migrate =homepage.html=.
+In Astro files ONLY use ~{​/​* ​*​​​​/}~ style comments. NEVER ~/* */~.
+
+** 0. *Assumed Project Structure:*
+
+#+begin_src
+.
+├── public/
+│   └── assets/
+│       ├── css/
+│       ├── fonts/
+│       ├── img/
+│       └── js/
+│           └── go-to-top.js
+│           ├── menu-desktop.js
+│           ├── menu-mobile.js
+│           └── dropdown-desktop.js
+├── src/
+│   ├── components/
+│   │   ├── Head.astro
+│   │   ├── ShortcutWai.astro
+│   │   ├── NavigationRevamp.astro
+│   │   ├── Cards.astro
+│   │   ├── IframeVideo.astro
+│   │   ├── Transcript.astro
+│   │   ├── BtnSocialShare.astro
+│   │   ├── CardsUpdates.astro
+│   │   ├── Campaign.astro
+│   │   ├── LinksPoliticalParties.astro
+│   │   └── Footer.astro
+│   ├── layouts/
+│   │   └── BaseLayout.astro
+│   └── pages/
+│       └── index.astro
+└── astro.config.mjs
+└── package.json
+#+end_src
+
+** *1. Extracted JavaScript Files (Place these in =public/js/=)*
+
+-   *=public/js/menu-desktop.js=*
+    #+begin_src javascript
+    // Desktop menu - custom code
+    const boutons = document.querySelectorAll('[data-button]');
+    const contenus = document.querySelectorAll('[data-content]');
+
+    boutons.forEach(bouton => {
+      bouton.addEventListener('click', () => {
+        const contenuId = bouton.getAttribute('data-controls');
+        const contenu = document.getElementById(contenuId);
+        const isExpanded = bouton.getAttribute('aria-expanded') === 'true';
+
+        // Fermer tous les autres contenus
+        contenus.forEach(contenu => {
+          const boutonAssocie = document.querySelector('[data-controls="' + contenu.id + '"]');
+          if (boutonAssocie !== bouton) {
+            boutonAssocie.setAttribute('aria-expanded', 'false');
+            contenu.classList.add('hidden');
+          }
+        });
+
+        // Ouvrir ou fermer le contenu du bouton cliqué
+        bouton.setAttribute('aria-expanded', !isExpanded);
+        contenu.classList.toggle('hidden');
+      });
+    });
+    //End desktop menu
+    #+end_src
+
+-   *=public/js/menu-mobile.js=*
+    #+begin_src javascript
+    // Mobile menu [Fernando's version]
+    let mainMenuButton = document.getElementById("mainMenuButton");
+    let r = document.getElementById("r");
+    let er = document.getElementById("er");
+    let nr = document.getElementById("nr");
+    let tr = document.getElementById("tr");
+    let navWrapper = document.getElementById("navWrapper");
+
+    let divBack = document.getElementById("divBack");
+    let backButton = document.getElementById("back");
+    let menuTitle = document.getElementById("menuTitle");
+    let divMenuTitle = document.getElementById('divMenuTitle');
+
+    let header = document.getElementById("header");
+    let main = document.getElementById("mainContent");
+
+    var mainList = document.getElementById("mainList");
+    var resultsList = document.getElementById("resultsList");
+    var euResultsList = document.getElementById("euResultsList");
+    var natResultsList = document.getElementById("natResultsList");
+    var toolsList = document.getElementById("toolsList");
+
+    document.body.addEventListener("keydown", closeOnEscape, false); // close nav on ESC
+    mainMenuButton?.addEventListener("click", displayMenu, false); // Use optional chaining
+    r?.addEventListener("click", displayMenu, false);
+    er?.addEventListener("click", displayMenu, false);
+    nr?.addEventListener("click", displayMenu, false);
+    tr?.addEventListener("click", displayMenu, false);
+    backButton?.addEventListener("click", goBack, false);
+
+    let resultsText = "Election Results";
+    let euResultsText = "European Results";
+    let natResultsText = "National Results";
+    let toolsText = "Tools Results";
+
+    let navigHint = " - Submenu. Click or Enter to go to the previous menu."
+    let resultsTextA11yLabel = resultsText + navigHint;
+    let euResultsTextA11yLabel = euResultsText + navigHint;
+    let natResultsTextA11yLabel = natResultsText + navigHint;
+    let toolsTextA11yLabel = toolsText + navigHint;
+
+    function closeOnEscape(e) {
+      // Check if navWrapper exists before accessing attributes
+      if ((e.keyCode == 27) && (navWrapper && navWrapper.hasAttribute("aria-modal"))){
+        mainMenuButton?.click(); // Use optional chaining
+      }
+    }
+
+    function goBack(e) {
+      e.preventDefault();
+      // Add checks for existence of elements before manipulating them
+      if (!e.target || !e.target.attributes["data-from"]) return;
+
+      switch (e.target.attributes["data-from"].value) { // coming From
+        case 'r':
+          if (mainList) {
+              for (let child of mainList.children) {
+                child.classList.remove('none');
+              }
+              mainList.removeAttribute("role"); // ul
+              mainList.lastElementChild?.removeAttribute("role"); // li with optional chaining
+          }
+          if (resultsList) resultsList.classList.add('none');
+
+          let backButtonR = document.getElementById("back");
+          backButtonR?.remove(); // Use optional chaining
+          if (divMenuTitle) divMenuTitle.innerHTML = "";
+
+
+          r?.setAttribute("data-expanded", "false"); // Use optional chaining
+          r?.classList.remove('none');
+          mainMenuButton?.classList.remove("none");
+
+          setTimeout(() => {
+            mainMenuButton?.focus(); // Use optional chaining
+          }, 10);
+
+          mainMenuButton?.setAttribute("aria-label", "Close main navigation menu");
+          mainMenuButton?.setAttribute("data-expanded", "true");
+
+          break; // case r
+
+        case 'er':
+          console.log("click ER back")
+
+          if (resultsList) {
+            for (let child of resultsList.children) {
+                child.classList.remove('none');
+                child.removeAttribute('role');
+            }
+            resultsList.removeAttribute("role")
+          }
+
+          if (euResultsList) euResultsList.removeAttribute("role"); // ul
+
+          er?.setAttribute("data-expanded", "false"); // Use optional chaining
+          er?.classList.remove('none');
+
+          r?.click(); // Use optional chaining
+          break; // case er
+
+        case 'nr':
+          console.log("click NR back")
+          if (resultsList) {
+            for (let child of resultsList.children) {
+                child.classList.remove('none');
+                child.removeAttribute('role');
+            }
+            resultsList.removeAttribute("role")
+          }
+
+          if (natResultsList) {
+            natResultsList.removeAttribute("role"); // ul
+            natResultsList.lastElementChild?.removeAttribute("role"); // li
+          }
+
+          nr?.setAttribute("data-expanded", "false"); // Use optional chaining
+          nr?.classList.remove('none');
+
+          r?.click(); // Use optional chaining
+          break; // case nr
+
+        case 'tr':
+          console.log("click TR back")
+          if(resultsList) {
+            for (let child of resultsList.children) {
+                child.classList.remove('none');
+                child.removeAttribute('role');
+            }
+            resultsList.removeAttribute("role")
+          }
+
+          if(toolsList) {
+            toolsList.removeAttribute("role"); // ul
+            toolsList.lastElementChild?.removeAttribute("role"); // li
+          }
+
+          tr?.setAttribute("data-expanded", "false"); // Use optional chaining
+          tr?.classList.remove('none');
+
+          r?.click(); // Use optional chaining
+          break; // case tr
+      } // sw
+    } // fn
+
+
+    function displayMenu(e) {
+      e.preventDefault();
+
+      // Ensure elements exist before manipulating
+      if (!navWrapper || !main || !header || !mainMenuButton || !mainList || !divMenuTitle || !divBack) return;
+
+      // if the menu is displayed we change and block a few things
+      navWrapper.setAttribute("role", "dialog");
+      navWrapper.setAttribute("aria-modal", "true");
+      navWrapper.setAttribute("aria-label", "Navigation");
+
+      main.classList.add("none");
+      header.setAttribute("role", "presentation");
+
+      switch (e.target.id) {
+        case "mainMenuButton":
+          let currentMainMenuButton = document.getElementById("mainMenuButton"); // Re-fetch in case it was replaced
+
+          if ((!currentMainMenuButton.attributes["data-expanded"]) || (currentMainMenuButton.attributes["data-expanded"].value == "true")) {
+            currentMainMenuButton.setAttribute("data-expanded", "false");
+            currentMainMenuButton.setAttribute("aria-label", "Open main navigation menu (opens in a dialog)");
+            currentMainMenuButton.innerHTML = "Menu"; // Or keep SVG if preferred
+
+            header.removeAttribute("role");
+            document.querySelectorAll('li').forEach(el => el.removeAttribute('role'));
+            document.querySelectorAll('ul').forEach(el => el.removeAttribute('role'));
+            document.querySelectorAll('a[role="button"]').forEach(el => el.setAttribute("data-expanded", "false"));
+
+            mainList.classList.add("none");
+            if (resultsList) resultsList.classList.add('none'); // Add check
+            r?.classList.remove('none');
+            er?.classList.remove('none');
+            nr?.classList.remove('none');
+            tr?.classList.remove('none');
+
+            divMenuTitle.innerHTML = "";
+            divBack.innerHTML = "";
+
+            navWrapper.setAttribute("role", "navigation");
+            navWrapper.removeAttribute("aria-modal");
+            navWrapper.setAttribute("aria-label", "Main navigation");
+
+            main.classList.remove("none");
+
+            setTimeout(() => {
+              currentMainMenuButton.focus();
+              // Simplified iOS/Mac check
+              if (navigator.vendor && navigator.vendor.includes('Apple')) {
+                 console.log("apple");
+                 setTimeout(() => { currentMainMenuButton.blur(); }, 500);
+              } else {
+                 console.log("No apple");
+              }
+            }, 50);
+
+          } else {
+            // Ensure divmainMenuButton exists
+            let divmainMenuButton = document.getElementById('divmainMenuButton');
+            if (!divmainMenuButton) return;
+
+            // Remove old button if exists
+            currentMainMenuButton?.remove();
+
+            // Create and prepend new button
+            let newMainMenuButton = document.createElement("a");
+            newMainMenuButton.setAttribute("data-expanded", "true");
+            newMainMenuButton.setAttribute("id", "mainMenuButton");
+            newMainMenuButton.setAttribute("role", "button");
+            newMainMenuButton.setAttribute("aria-label", "Close main navigation menu");
+            newMainMenuButton.setAttribute("href", "#");
+            newMainMenuButton.innerHTML = "X"; // Or keep original SVG close icon if preferred
+            divmainMenuButton.prepend(newMainMenuButton);
+            newMainMenuButton.addEventListener("click", displayMenu, false);
+
+            // Update global reference
+            mainMenuButton = newMainMenuButton;
+
+            setTimeout(() => {
+              newMainMenuButton.focus();
+            }, 50);
+            mainList.classList.remove("none");
+            document.querySelectorAll('.main').forEach(el => el.classList.remove('none'));
+          }
+          break;
+
+        case "r": // election results
+          if (!r || !resultsList || !divMenuTitle || !divBack) return; // Check required elements
+
+          if (r.attributes["data-expanded"].value == "false") {
+            resultsList.classList.remove('none');
+            r.setAttribute("data-expanded", "true");
+            document.querySelectorAll('.main').forEach(el => el.classList.add('none'));
+
+            divMenuTitle.innerHTML = resultsText;
+
+            let backButtonR = document.getElementById("back");
+            backButtonR?.remove();
+            backButtonR = document.createElement("a");
+            // ... set attributes for backButtonR ...
+             backButtonR.setAttribute("data-expanded", "true");
+            backButtonR.setAttribute("id", "back");
+            backButtonR.setAttribute("role", "button");
+            backButtonR.setAttribute("aria-label", resultsTextA11yLabel);
+            backButtonR.setAttribute("data-from", "r");
+            backButtonR.setAttribute("href", "#");
+            backButtonR.appendChild(document.createTextNode('<')); // Use SVG later if preferred
+            divBack.prepend(backButtonR);
+            backButtonR.addEventListener("click", goBack, false);
+
+            setTimeout(() => { backButtonR.focus(); }, 50);
+
+            mainList.setAttribute("role", "presentation");
+            mainList.lastElementChild?.setAttribute("role", "presentation");
+
+            document.querySelectorAll('.level2').forEach(el => el.classList.remove('none'));
+
+            if (euResultsList) euResultsList.classList.add('none');
+            if (natResultsList) natResultsList.classList.add('none');
+            if (toolsList) toolsList.classList.add('none');
+
+            r.classList.add('none');
+
+            mainMenuButton?.setAttribute("aria-label", "Close main navigation menu");
+            mainMenuButton?.removeAttribute("data-expanded");
+
+          } else {
+            let backButtonInstance = document.getElementById("back");
+            backButtonInstance?.remove();
+            divMenuTitle.innerHTML = "";
+          }
+          break;
+
+        // Cases 'er', 'nr', 'tr' need similar checks for element existence
+        // before accessing attributes or methods.
+        // Simplified example for 'er':
+        case "er":
+           if (!er || !euResultsList || !resultsList || !divMenuTitle || !divBack || !r) return;
+
+           if (er.attributes["data-expanded"].value == "false") {
+               euResultsList.classList.remove('none'); // ul
+
+                document.querySelectorAll('.level2').forEach(function (el) {
+                    if (el == er.parentElement) {
+                        er.parentElement.setAttribute("role", "presentation");
+                    } else {
+                        el.classList.add('none');
+                    }
+                 });
+
+                let backButtonER = document.getElementById("back");
+                backButtonER?.remove();
+                backButtonER = document.createElement("a");
+                // ... set attributes for backButtonER ...
+                 backButtonER.setAttribute("data-expanded", "true");
+                backButtonER.setAttribute("id", "back");
+                backButtonER.setAttribute("role", "button");
+                backButtonER.setAttribute("aria-label", euResultsTextA11yLabel);
+                backButtonER.setAttribute("data-from", "er");
+                backButtonER.setAttribute("href", "#");
+                backButtonER.appendChild(document.createTextNode('<'));
+                divBack.prepend(backButtonER);
+                backButtonER.addEventListener("click", goBack, false);
+
+
+                setTimeout(() => { backButtonER.focus(); }, 50);
+
+                resultsList.setAttribute("role", "presentation");
+                mainList.lastElementChild?.setAttribute("role", "presentation");
+
+                er.classList.add('none');
+                divMenuTitle.innerHTML = euResultsText;
+
+                mainMenuButton?.setAttribute("aria-label", "Close main navigation menu");
+                mainMenuButton?.removeAttribute("data-expanded");
+           } else {
+                er.setAttribute("data-expanded", "false");
+                euResultsList.classList.add('none');
+           }
+           r.setAttribute("data-expanded", "false");
+           break;
+
+         // Implement similar robust checks for 'nr' and 'tr'
+         case "nr":
+             if (!nr || !natResultsList || !resultsList || !divMenuTitle || !divBack || !r) return;
+             // ... rest of nr logic with checks ...
+              if (nr.attributes["data-expanded"].value == "false") {
+                natResultsList.classList.remove('none');
+
+                document.querySelectorAll('.level2').forEach(function (el) {
+                    if (el == nr.parentElement) {
+                        nr.parentElement.setAttribute("role", "presentation");
+                    } else {
+                        el.classList.add('none');
+                    }
+                 });
+
+                let backButtonNR = document.getElementById("back");
+                backButtonNR?.remove();
+                backButtonNR = document.createElement("a");
+                 // ... set attributes for backButtonNR ...
+                 backButtonNR.setAttribute("data-expanded", "true");
+                backButtonNR.setAttribute("id", "back");
+                backButtonNR.setAttribute("role", "button");
+                backButtonNR.setAttribute("aria-label", natResultsTextA11yLabel);
+                backButtonNR.setAttribute("data-from", "nr");
+                backButtonNR.setAttribute("href", "#");
+                backButtonNR.appendChild(document.createTextNode('<'));
+                divBack.prepend(backButtonNR);
+                backButtonNR.addEventListener("click", goBack, false);
+
+                 setTimeout(() => { backButtonNR.focus(); }, 50);
+
+                 resultsList.setAttribute("role", "presentation");
+                 mainList.lastElementChild?.setAttribute("role", "presentation");
+
+                 nr.classList.add('none');
+                 divMenuTitle.innerHTML = natResultsText;
+
+                 mainMenuButton?.setAttribute("aria-label", "Close main navigation menu");
+                 mainMenuButton?.removeAttribute("data-expanded");
+
+              } else {
+                  nr.setAttribute("data-expanded", "false");
+                  natResultsList.classList.add('none');
+              }
+              r.setAttribute("data-expanded", "false");
+             break;
+
+         case "tr":
+            if (!tr || !toolsList || !resultsList || !divMenuTitle || !divBack || !r) return;
+            // ... rest of tr logic with checks ...
+             if (tr.attributes["data-expanded"].value == "false") {
+                toolsList.classList.remove('none');
+
+                 document.querySelectorAll('.level2').forEach(function (el) {
+                    if (el == tr.parentElement) {
+                        tr.parentElement.setAttribute("role", "presentation");
+                    } else {
+                        el.classList.add('none');
+                    }
+                 });
+
+                 let backButtonTR = document.getElementById("back");
+                 backButtonTR?.remove();
+                 backButtonTR = document.createElement("a");
+                 // ... set attributes for backButtonTR ...
+                  backButtonTR.setAttribute("data-expanded", "true");
+                backButtonTR.setAttribute("id", "back");
+                backButtonTR.setAttribute("role", "button");
+                backButtonTR.setAttribute("aria-label", toolsTextA11yLabel); // Use correct label
+                backButtonTR.setAttribute("data-from", "tr");
+                backButtonTR.setAttribute("href", "#");
+                backButtonTR.appendChild(document.createTextNode('<'));
+                divBack.prepend(backButtonTR);
+                backButtonTR.addEventListener("click", goBack, false);
+
+                 setTimeout(() => { backButtonTR.focus(); }, 50);
+
+                 resultsList.setAttribute("role", "presentation");
+                 mainList.lastElementChild?.setAttribute("role", "presentation");
+
+                 tr.classList.add('none');
+                 divMenuTitle.innerHTML = toolsText; // Use correct title
+
+                 mainMenuButton?.setAttribute("aria-label", "Close main navigation menu");
+                 mainMenuButton?.removeAttribute("data-expanded");
+
+             } else {
+                 tr.setAttribute("data-expanded", "false");
+                 toolsList.classList.add('none');
+             }
+             r.setAttribute("data-expanded", "false");
+            break;
+
+      } // switch
+    } // displayMenu function
+
+    // Initial setup check (ensure elements exist before using them)
+    if (!mainMenuButton || !navWrapper || !header || !main || !mainList || !r || !er || !nr || !tr || !divBack || !divMenuTitle) {
+        console.error("One or more essential menu elements not found in the DOM.");
+    }
+    #+end_src
+
+-   *=public/js/dropdown-desktop.js=*
+    #+begin_src javascript
+    // dropdown menu content in desktop
+    const contenuElement = document.getElementById("contenu");
+    const erMenuElement = document.getElementById("er-menu");
+
+    // Ensure elements exist before proceeding
+    if (contenuElement && erMenuElement) {
+      // Définissez aria-expanded à "false" par défaut pour les deux éléments
+      /*erMenuElement.setAttribute("aria-expanded", "false"); // Commented out, seems managed by menu-desktop.js now
+      contenuElement.setAttribute("aria-expanded", "false");*/ // This attribute doesn't belong on the content div
+
+      // Ajoutez la classe "hidden" à l'élément "contenu" par défaut
+      contenuElement.classList.add("hidden"); // This is likely handled by menu-desktop.js initially
+
+      // This media query logic seems redundant if menu-desktop.js handles visibility
+      // based on clicks. It might be intended for initial load based on screen size,
+      // or for resizing behavior independent of clicks. Review its necessity.
+      // If kept, ensure it doesn't conflict with menu-desktop.js state.
+
+      /* // Potential redundancy, consider removing or adapting
+      const mediaQuery = window.matchMedia("(max-width: 1080px)");
+
+      function handleMediaQueryChange(event) {
+        // This might conflict with the click handler setting aria-expanded
+        erMenuElement.setAttribute("aria-expanded", event.matches ? "true" : "false");
+        // This might conflict with the click handler adding/removing 'hidden'
+        contenuElement.classList.toggle("hidden", event.matches ? "true" : "false");
+      }
+
+      mediaQuery.addListener(handleMediaQueryChange);
+
+      // Déclenchement initial pour appliquer les états par défaut
+      handleMediaQueryChange(mediaQuery);
+      */
+
+    } else {
+        console.warn("Dropdown elements ('contenu' or 'er-menu') not found.");
+    }
+    #+end_src
+    *(Note: Added checks for element existence in JS and noted potential redundancy in =dropdown-desktop.js=)/
+
+---
+
+** *2. Astro Components (Place these in =src/components/=)*
+
+-   *=src/components/Head.astro=*
+    #+begin_src astro
+    ---
+    // Define props if needed, e.g., for title, description
+    interface Props {
+        title?: string;
+        description?: string;
+        // Add other props like canonicalUrl, alternates etc. if they need to be dynamic
+    }
+    const {
+        title = "European Elections 2024", // Default title
+        description = "This 9th May Europe comes to you, wherever you are. Discover the 2021 programme, tell us what Europe means to you and get involved in building a better future together." // Default description
+    } = Astro.props;
+
+    // Construct canonical URL and alternates dynamically if needed, or keep static if appropriate
+    const canonicalUrl = "https://www.elections.europa.eu/en/"; // Example base
+    const pagePath = "homepage"; // Example path segment for homepage
+    const lang = "en"; // Example language
+    ---
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content={description} />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="language" content="en" />
+    <meta name="planet" content="ambassador-school" />
+    <meta http-equiv="last-modified" content="20/06/2023" /> {/* Consider making dynamic */}
+
+    <meta name="robots" content="index, follow, noodp, noydir, notranslate, noarchive" />
+
+    <meta itemprop="name" content={title} /> {/* Use prop */}
+    <meta itemprop="image" content="/assets/img/ep-logo.png" /> {/* Adjusted path */}
+
+    <link rel="canonical" href={`${canonicalUrl}${lang}/${pagePath}`} /> {/* Example dynamic URL */}
+
+    {/* Keep alternates static for now, or generate dynamically if needed */}
+    <link rel="alternate" hreflang="bg" href="https://www.elections.europa.eu/bg/how-elections-work" />
+    <link rel="alternate" hreflang="es" href="https://www.elections.europa.eu/es/how-elections-work" />
+    {/* ... other alternates ... */}
+     <link rel="alternate" hreflang="en" href="https://www.elections.europa.eu/en/how-elections-work" />
+    {/* ... other alternates ... */}
+     <link rel="alternate" hreflang="sv" href="https://www.elections.europa.eu/sv/how-elections-work" />
+
+
+    <link rel="icon" href="/assets/img/favicon.ico" /> {/* Adjusted path */}
+    <link rel="icon" href="/assets/img/favicon.png" /> {/* Adjusted path */}
+    <link rel="icon" type="image/jpg" href="/assets/img/favicon-128.jpg" sizes="128x128" /> {/* Adjusted path */}
+    <link rel="icon" type="image/jpg" href="/assets/img/favicon-152.jpg" sizes="152x152" /> {/* Adjusted path */}
+    <link rel="icon" type="image/jpg" href="/assets/img/favicon-167.jpg" sizes="167x167" /> {/* Adjusted path */}
+    <link rel="icon" type="image/jpg" href="/assets/img/favicon-180.jpg" sizes="180x180" /> {/* Adjusted path */}
+    <link rel="icon" type="image/jpg" href="/assets/img/favicon-192.jpg" sizes="192x192" /> {/* Adjusted path */}
+    <link rel="icon" type="image/jpg" href="/assets/img/favicon-196.jpg" sizes="196x196" /> {/* Adjusted path */}
+
+    <title>{title}</title> {/* Use prop */}
+
+    {/* OG and Twitter tags - use props or keep static */}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/assets/img/ep-logo.png" /> {/* Example image, adjust path */}
+    <meta property="og:type" content="government" />
+    <meta property="og:url" content={`${canonicalUrl}${lang}/${pagePath}`} />
+    <meta property="og:site_name" content="European Parliament" />
+
+    <meta property="twitter:card" content="summary" /> {/* Example type */}
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:image" content="/assets/img/ep-logo.png" /> {/* Example image, adjust path */}
+    <meta property="twitter:description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+    {/* Custom styles for this template */}
+    <link href="/assets/css/tailwind.css" rel="stylesheet" /> {/* Adjusted path */}
+    <link href="/assets/css/index.css" rel="stylesheet" /> {/* Adjusted path */}
+    <link rel="preload" href="/assets/fonts/Europea-Regular.woff2" as="font" type="font/woff2" /> {/* Adjusted path */}
+    <link rel="preload" href="/assets/fonts/Europea-Bold.woff2" as="font" type="font/woff2" /> {/* Adjusted path */}
+    <noscript>
+      <link href="/assets/css/index-nojs.css" rel="stylesheet" /> {/* Adjusted path */}
+    </noscript>
+
+    {/* ATInternet script - ensure privacy-policy.js is correctly placed and referenced */}
+    <script type="text/javascript" defer data-tracker-name="ATInternet" data-value="https://www.europarl.europa.eu/website/webanalytics/ati-news.js" src="/assets/privacy-policy/privacy-policy.js"></script> {/* Adjusted path */}
+    <script type="application/ld+json">
+      {{
+        "@context": "https://schema.org",
+        "@type": "WebSite", // Corrected type potentially
+        "url": "https://www.elections.europa.eu",
+        "potentialAction": {{ // Example search action
+            "@type": "SearchAction",
+            "target": "https://www.elections.europa.eu/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }},
+        "publisher": {{ // Example publisher
+            "@type": "Organization",
+            "name": "European Parliament",
+            "logo": {{
+                "@type": "ImageObject",
+                "url": "/assets/img/ep-logo.png" // Adjusted path
+            }}
+        }}
+      }}
+    </script>
+    #+end_src
+
+-   *=src/components/ShortcutWai.astro=*
+    #+begin_src astro
+    <!-- Shortcut for Screen-readers -->
+    <nav aria-label="Shortcut menu">
+        <ul class="wai-nav">
+            <li>
+                <a href="#lang-menu" class="skip-main">Skip to language menu</a>
+            </li>
+            <li>
+                <a href="#mainContent" class="skip-main">Skip to main content</a>
+            </li>
+        </ul>
+    </nav>
+    #+end_src
+
+-   *=src/components/NavigationRevamp.astro=* (Adjust paths)
+    #+begin_src astro
+    <!-- When we are on mobile device view, the header needs a role="presentation" that Fernando asked to add -->
+    <!-- <header class="min-h-[72px] shadow-md" role="presentation"> -->
+    <header class="min-h-[72px] shadow-md pl-1 pr-1" id="header">
+      <div
+        class="lg:max-w-6xl lg:mx-auto relative flex flex-wrap items-center justify-between py-2"
+      >
+        <div class="logo flex-1 mx-2 sm:mx-0 my-2">
+          <a href="#">
+            <img
+                    src="/assets/img/logos/logo-ep-en.svg" /* Adjusted path */
+                    alt="European Parliament logo"
+                    class="w-full max-w-[150px] h-[40px]"
+            />
+          </a>
+        </div>
+        <div class="flex items-center ml-auto justify-end pb-0">
+          <div class="desktop-menu flex justify-end">
+            <nav role="navigation" aria-label="Main menu" class="default-menu">
+              <div class="desktop-menu-display">
+                <ul class="navList lg:mr-1">
+                  {/* Class 'current' and aria-current handled by JS on homepage */}
+                  <li>
+                    <a href="homepage.html">Home</a>
+                  </li>
+                  <li><a href="why-it-matters.html">Why it matters</a></li>
+                  <li><a href="how-it-works.html">How it works</a></li>
+                  <li><a href="our-role.html">Our Role</a></li>
+                  <li><a href="our-position.html">Our Position</a></li>
+                  <li><a href="by-country.html">By country</a></li>
+
+                  <li class="hidden"> {/* Keep hidden as per original */}
+                    <div class="relative">
+                      <button
+                        id="er-menu"
+                        class="er-menu"
+                        data-button
+                        aria-expanded="false"
+                        data-controls="contenu"
+                        aria-controls="contenu"
+                      >
+                        <span class="inline-block pt-0.5 mr-2"
+                          >Election results</span
+                        >
+                        <svg
+                          class="inline-block w-[15px] h-[9px]"
+                          viewBox="0 0 21.741 12.602"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <path
+                            id="Arrow"
+                            d="M0,.055,9.8,9.442,14.545,4.9,19.666,0"
+                            transform="translate(1.037 1.083)"
+                            fill="none"
+                            stroke="#024ea2"
+                            stroke-width="3"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+            </nav>
+          </div>
+
+          {/* Mobile menu */}
+          <div class="mobile-menu flex justify-end">
+             {/* JS interacts with these elements */}
+            <div
+              id="navWrapper"
+              class="navWrapper"
+              role="navigation"
+              aria-label="Main navigation"
+            >
+              <div class="divNavigation" id="divNavigation">
+                <div id="divBack" class="divBack">
+                  {/* Back button added dynamically by JS */}
+                </div>
+                <div id="divMenuTitle" class="divMenuTitle" aria-hidden="true">
+                  {/* Title added dynamically by JS */}
+                </div>
+                <div id="divmainMenuButton" class="divmainMenuButton">
+                  {/* Main menu button potentially replaced by JS */}
+                  <a
+                    id="mainMenuButton"
+                    data-expanded="false"
+                    role="button"
+                    href="#"
+                    aria-label="Open main navigation menu (opens in a dialog)">
+                    <span class="mr-3">Menu</span>
+                    <svg class="inline-block w-[15px] h-[9px]" viewBox="0 0 21.741 12.602" aria-hidden="true" focusable="false">
+                      <path id="Arrow" d="M0,.055,9.8,9.442,14.545,4.9,19.666,0" transform="translate(1.037 1.083)" fill="none" stroke="#024ea2" stroke-width="3"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <ul
+                id="mainList"
+                class="main-menu flex flex-wrap items-center mx-3 my-2 none" /* Initially hidden by JS */
+              >
+                {/* Mobile menu items - JS handles visibility and interactions */}
+                <li class="level1 main">
+                  {/* Current state handled by JS */}
+                  <a href="homepage.html">Homepage</a>
+                </li>
+                <li class="level1 main"><a href="why-it-matters.html">Why it matters</a></li>
+                <li class="level1 main"><a href="how-it-works.html">How it works</a></li>
+                <li class="level1 main"><a href="our-role.html">Our Role</a></li>
+                <li class="level1 main"><a href="our-position.html">Our Position</a></li>
+                <li class="level1 main"><a href="by-country.html">By country</a></li>
+                <li class="level1 button hidden"> {/* Keep hidden as per original */}
+                  <a class="" id="r" data-expanded="false" role="button" href="#">
+                    <span class="mr-3 pointer-events-none">Election Results</span>
+                    <svg
+                      class="inline-block w-[15px] h-[9px]"
+                      viewBox="0 0 21.741 12.602"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path id="Arrow" d="M0,.055,9.8,9.442,14.545,4.9,19.666,0" transform="translate(1.037 1.083)" fill="none" stroke="#024ea2" stroke-width="3" />
+                    </svg>
+                  </a>
+                  <ul id="resultsList" class="none">
+                     {/* ... nested mobile menu structure ... */}
+                     <li class="level2"><a href="#">Results overview</a></li>
+                     <li class="level2 button">
+                       <a id="er" data-expanded="false" role="button" href="#">
+                         <span class="mr-3 pointer-events-none">European Results</span>
+                         <svg class="inline-block w-[15px] h-[9px]" viewBox="0 0 21.741 12.602" aria-hidden="true" focusable="false">
+                           <path id="Arrow" d="M0,.055,9.8,9.442,14.545,4.9,19.666,0" transform="translate(1.037 1.083)" fill="none" stroke="#024ea2" stroke-width="3" />
+                         </svg>
+                       </a>
+                       <ul id="euResultsList" class="none">
+                         <li><a href="#">Election Results</a></li>
+                         {/* ... */}
+                       </ul>
+                     </li>
+                     {/* ... other nested mobile menu items ... */}
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Lang menu dropdown */}
+          <nav
+            role="navigation"
+            aria-label="language menu"
+            class="lang-nav flex justify-end"
+          >
+            <div class="expand-collapse border-[LightGray] border-1 rounded-lg"> {/* This class name might be generic, ensure JS targets correctly */}
+              <button
+                id="lang-menu"
+                class="nav-button flex items-center rounded-md border border-1 border-solid border-black-greymiddle focus:outline focus:outline-2 focus:outline-blue-focus px-2.5 py-1 mr-4"
+                aria-expanded="false"
+                data-button /* Target for menu-desktop.js */
+                data-controls="lang-list"
+                aria-controls="lang-list"
+              >
+                <span class="inline-block text-base pt-0.5 mr-3">
+                  EN <span class="sr-only">- English</span>
+                </span>
+                <svg class="inline-block w-[15px] h-[9px]" viewBox="0 0 21.741 12.602" aria-hidden="true" focusable="false">
+                  <path id="Arrow" d="M0,.055,9.8,9.442,14.545,4.9,19.666,0" transform="translate(1.037 1.083)" fill="none" stroke="#024ea2" stroke-width="3"/>
+                </svg>
+              </button>
+            </div>
+          </nav>
+        </div>
+
+        {/* Desktop content - controlled by menu-desktop.js */}
+        <div
+          id="contenu"
+          class="submenu-content hidden" /* Initially hidden */
+          data-content /* Target for menu-desktop.js */
+          aria-labelledby="er-menu"
+        >
+          <div class="menu-inner-wrapper max-w-[1000px] mx-auto">
+             {/* ... content for desktop dropdown ... */}
+             <div class="column">
+                <span class="sub-nav-heading">Overview</span>
+                <ul class="sub-nav">
+                   <li><a class="header_links" href="/en/">Results overview</a></li>
+                </ul>
+                {/* ... */}
+             </div>
+             <div class="column ml-auto!">
+                <span class="sub-nav-heading">National results</span>
+                <ul class="column_countries sub-nav">
+                    <li><a class="header_links" href="/en/national-results-overview/">All countries</a></li>
+                    {/* ... */}
+                </ul>
+             </div>
+          </div>
+        </div>
+
+        {/* Lang content - controlled by menu-desktop.js */}
+        <div
+          id="lang-list"
+          class="submenu-content hidden" /* Initially hidden */
+          data-content /* Target for menu-desktop.js */
+          aria-labelledby="lang-menu"
+        >
+          <ul class="lang-content block px-6 mx-auto max-w-[1100px]">
+            {/* Language links - adjust hrefs if needed */}
+            <li><a lang="bg" hreflang="bg" href="/bg/">BG - Български</a></li> {/* Example adjusted path */}
+            <li><a lang="es" hreflang="es" href="/es/">ES - Español</a></li>
+            {/* ... */}
+            <li><a lang="en" hreflang="en" href="/en/" class="current" aria-current="true">EN - English</a></li>
+            {/* ... */}
+            <li><a lang="sv" hreflang="sv" href="/sv/">SV - Svenska</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    #+end_src
+
+-   *=src/components/Cards.astro=*
+    #+begin_src astro
+    ---
+    // No props or nested includes needed based on the provided snippet
+    ---
+    <!-- CARDS -->
+    <ul class="elections-block lg:grid lg:grid-cols-2 md:block sm:block block max-w-5xl mx-auto mb-10 px-4">
+        {/* Pledge to vote block commented out */}
+        <li class="lg:mr-5 mb-6">
+            <h2 class="text-2-xl font-EPGammaBold flex items-center py-2">
+                <a href="#" class="block decoration-blue-default"> {/* Link placeholder */}
+                    <span class="inline mr-2">Why it matters</span><span class="inline-block min-w[25px]"><svg focusable="false" aria-hidden="true" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="25" class="fill-blue-default"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                </a>
+            </h2>
+            <p class="text-lg">Under stand why the EU long-term budget matters and how it allows EU countries to achieve more together than if they acted alone.</p>
+        </li>
+        <li class="mb-6">
+            <h2 class="text-2-xl font-EPGammaBold flex items-center py-2">
+                <a href="#" class="block decoration-blue-default"> {/* Link placeholder */}
+                    <span class="inline mr-2">How it works</span><span class="inline-block min-w[25px]"><svg focusable="false" aria-hidden="true" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="25" class="fill-blue-default"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                </a>
+            </h2>
+            <p class="text-lg">Discover how the EU's long-term budget is funded, its overall size, what the money is spent on, and more.</p>
+        </li>
+        <li class="mb-6">
+            <h2 class="text-2-xl font-EPGammaBold flex items-center py-2">
+                <a href="#" class="block decoration-blue-default"> {/* Link placeholder */}
+                    <span class="inline mr-2">The European Parliament’s role</span><span class="inline-block min-w[25px]"><svg focusable="false" aria-hidden="true" class="fill-blue-default" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="25"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                </a>
+            </h2>
+            <p class="text-lg">Find out more about the European Parliament's role in the long-term budget of the European Union.</p>
+        </li>
+        <li class="mb-6">
+            <h2 class="text-2-xl font-EPGammaBold flex items-center py-2">
+                <a href="#" class="block decoration-blue-default"> {/* Link placeholder */}
+                    <span class="inline mr-2">The European Parliament’s position</span><span class="inline-block min-w[25px]"><svg focusable="false" aria-hidden="true" class="fill-blue-default" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="25"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                </a>
+            </h2>
+            <p class="text-lg">Read about the European Parliament's key demands and priorities in the negotiations on the EU's next long-term budget.</p>
+        </li>
+        <li class="mb-6">
+            <h2 class="text-2-xl font-EPGammaBold flex items-center py-2">
+                <a href="#" class="block decoration-blue-default"> {/* Link placeholder */}
+                    <span class="inline mr-2">The impact in your country</span><span class="inline-block min-w[25px]"><svg focusable="false" aria-hidden="true" class="fill-blue-default" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="25"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                </a>
+            </h2>
+            <p class="text-lg">Discover how the EU budget is tailored to benefit you and your country.</p>
+        </li>
+    </ul>
+    #+end_src
+
+-   *=src/components/IframeVideo.astro=*
+    #+begin_src astro
+    ---
+    interface Props {
+      videoText: string;
+    }
+    const { videoText } = Astro.props;
+    ---
+    <!-- Iframe - Video -->
+    <div class="figure-video my-6 mx-0" role="button" tabindex="0" aria-label={`Click to play - Video - ${videoText}`}> {/* Dynamic label */}
+
+        <div class="iframe-container landscape">
+            <div class="thumbnail-video-wrapper absolute top-0 left-0 m-0 w-full h-full z-10">
+                <div class="link-image h-full">
+                    <div class="thumbnail-video h-full relative">
+                        <div class="wrapper-picture relative h-full">
+                            <div class="player-ico">
+                                <div class="arrow"></div>
+                            </div>
+                            {/* Adjusted path */}
+                            <span class="background bg-center bg-no-repeat block absolute inset-0" style="background-image:url(/assets/img/video05_placeholder.jpg)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* Placeholder for actual iframe to be loaded by JS or interaction */}
+        </div>
+
+        <div class="figcaption relative block w-full">
+            <p class="text-xl font-EPGammaBold block cursor-text text-black-default mt-8">{videoText}</p> {/* Use prop */}
+        </div>
+
+    </div>
+    #+end_src
+
+-   *=src/components/Transcript.astro=* (Needs unique IDs if used multiple times on one page, or JS needs smarter targeting)
+    #+begin_src astro
+    ---
+    // Consider making ID dynamic if this component is reused on the same page
+    const transcriptId = "transcript-1"; // Example ID
+    const initialState = "collapsed"; // Default state
+    const videoTitle = "title of the video displayed here"; // Example title, make prop if dynamic
+    ---
+    <!-- Transcript -->
+    {/* Pass unique ID and initial state */}
+    <div class="expand-container mb-3" data-initial-state={initialState}>
+        {/* Point button to the unique ID */}
+        <button
+            class="transcript-btn expand-button pb-1"
+            data-target={transcriptId}
+            aria-expanded={initialState === 'expanded'}
+            aria-controls={transcriptId}
+            aria-label={`Transcript - ${videoTitle}`}
+        >
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 10 9">
+                <rect class="vert" height="8" x="4.5" y="0.5" width="0.8"></rect>
+                <rect width="8" y="4" x="1" height="0.8"></rect>
+            </svg>
+            <span class="text-lg text-blue-default underline">Transcript <span class="sr-only">- {videoTitle}</span></span>
+        </button>
+        {/* Use unique ID */}
+        <div id={transcriptId} class={`expand-container-content ${initialState === 'collapsed' ? 'hidden' : ''}`}>
+            <div itemprop="text" class="mt-6">
+                <p>What is the EU doing for me?</p>
+                <p>A lot!</p>
+                <p>First, it opens up opportunities.</p>
+                <p>You’re free to live, work and travel across 27 countries in the world’s biggest single market. The EU fights for fairness, acting to tackle the energy crisis and ensure adequate minimum wages. It protects us as citizens and consumers: making sure our food is safe, our air is clean and our online environment secure. It also guarantees our rights, promoting gender equality and work-life balance, improving conditions for parents, carers and women in the workplace. The EU is a global power: supporting democracy, protecting the environment, securing trade deals, promoting peace, progress and security. Democracy in action European Parliament</p>
+                {/* Removed empty <p></p> */}
+            </div>
+        </div>
+    </div>
+    #+end_src
+
+-   *=src/components/BtnSocialShare.astro=* (Needs unique IDs if used multiple times on one page)
+    #+begin_src astro
+    ---
+    // Consider making ID dynamic if this component is reused on the same page
+    const shareId = "share-topic-1"; // Example ID
+    const dynamicTitleLabel = "dynamictitlelabel"; // Make prop if dynamic title needed
+    // Example URL, should be dynamic based on current page
+    const currentUrl = Astro.url.href;
+    const encodedUrl = encodeURIComponent(currentUrl);
+    const shareText = encodeURIComponent("Discover European stories..."); // Make prop if dynamic
+    const via = "Europarl_EN"; // Make prop if dynamic
+    ---
+    <!-- BTN - SOCIAL SHARE -->
+    <div class="expand-social-share expand-container flex flex-col relative">
+        <div class="mb-3">
+            {/* Point button to unique ID and use dynamic title */}
+            <button
+                class="expand-button items-center text-lg2 cursor-pointer border-0 flex text-blue-default underline hover:decoration-2 focus:decoration-2 focus:outline focus:outline-offset-2 focus:outline-2"
+                aria-label={`Share on social media - ${dynamicTitleLabel}`}
+                aria-expanded="false"
+                data-target={shareId}
+                aria-controls={shareId}
+            >
+                <svg x="0px" y="0px" viewBox="0 0 20.59 26.52" class="global-share-icon fill-blue-default w-5 h-5 mr-1" focusable="false" aria-hidden="true">
+                    <g transform="translate(-6891.308 1800)">
+                        <circle class="st0" cx="6895.09" cy="-1786.24" r="3.5"></circle>
+                        <circle class="st0" cx="6907.09" cy="-1780.24" r="3.5"></circle>
+                        <circle class="st0" cx="6907.09" cy="-1793.24" r="3.5"></circle>
+                        <rect x="6900.88" y="-1788.38" transform="matrix(0.454 -0.891 0.891 0.454 5356.8716 5175.8408)" width="1.41" height="10.86"></rect>
+                        <rect x="6896.16" y="-1790.83" transform="matrix(0.891 -0.454 0.454 0.891 1564.9807 2938.2065)" width="10.86" height="1.41"></rect>
+                    </g>
+                </svg>
+                <span class="text-lg">Share</span>
+            </button>
+        </div>
+        <div class="block">
+            {/* Use unique ID */}
+            <ul id={shareId} class="social-list expand-container-content block hidden pt-4"> {/* Start hidden */}
+                <li>
+                    <a href={`https://www.facebook.com/share.php?u=${encodedUrl}`} target="_blank">
+                        <span class="hidden">Share on facebook</span>
+                        <svg class="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="34" height="34">
+                           {/* SVG paths */}
+                            <path class="back" d="M22.5,38.59a17,17,0,1,0-17-17,17,17,0,0,0,17,17" transform="translate(-5.5 -4.59)"></path>
+                            <path class="icon" d="M19.9,31.62H24v-10h2.73l.36-3.47H24V16.37c0-.9.08-1.39,1.36-1.39h1.7V11.52H24.33c-3.27,0-4.43,1.68-4.43,4.51V18.1h-2v3.47h2Z" transform="translate(-5.5 -4.59)"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href={`https://twitter.com/intent/tweet?text=${shareText}&url=${encodedUrl}&via=${via}`} target="_blank">
+                        <span class="hidden">Share on X</span>
+                        <svg class="twitter w-[32px] h-[32px] p-[5px]" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 17.21 15.09" width="17.21" height="15.09">
+                           {/* SVG paths */}
+                            <g><path class="icon" d="M16.84-0.24l-1.05,1.13l-1.93,2.07c-0.75,0.81-1.51,1.62-2.26,2.42c-0.21,0.23-0.43,0.45-0.64,0.67 c-0.06,0.06-0.08,0.11-0.02,0.19c0.37,0.51,0.74,1.03,1.11,1.55c0.36,0.5,0.72,0.99,1.07,1.49c0.41,0.58,0.82,1.17,1.24,1.75 c0.48,0.67,0.97,1.34,1.45,2.01c0.29,0.4,0.56,0.8,0.84,1.21c0.19,0.27,0.39,0.55,0.58,0.82c0.02,0.03,0.03,0.07,0.04,0.11 c-0.04,0.02-0.08,0.03-0.12,0.04c-0.22,0-0.44,0-0.66,0c-1.68,0-3.35,0-5.03,0c-0.14,0.01-0.28-0.06-0.36-0.18 c-0.43-0.61-0.86-1.21-1.29-1.81c-0.35-0.49-0.71-0.97-1.05-1.46s-0.7-1.01-1.06-1.51c-0.04-0.06-0.1-0.1-0.14-0.16 c-0.18-0.26-0.17-0.25-0.38-0.03c-0.3,0.33-0.61,0.65-0.92,0.97c-0.29,0.31-0.58,0.62-0.87,0.93l-1.93,2.08 c-0.34,0.36-0.67,0.72-1.01,1.08c-0.06,0.05-0.13,0.08-0.21,0.09c-0.64,0.01-1.27,0-1.91,0c-0.05-0.01-0.09-0.02-0.13-0.04 c0.01-0.04,0.03-0.08,0.06-0.12c0.77-0.83,1.55-1.66,2.32-2.48c0.94-1,1.89-2.01,2.83-3.01c0.3-0.32,0.61-0.65,0.91-0.98 C6.37,8.57,6.38,8.5,6.35,8.44c0-0.01-0.01-0.01-0.02-0.02C5.89,7.82,5.45,7.2,5.01,6.59C4.59,6,4.17,5.4,3.74,4.8 c-0.37-0.51-0.73-1.02-1.1-1.53c-0.29-0.4-0.57-0.81-0.86-1.22S1.2,1.25,0.91,0.84C0.67,0.51,0.44,0.18,0.2-0.15 C0.14-0.24,0.18-0.27,0.27-0.27c0.11-0.01,0.22,0,0.32,0c1.83,0,3.65,0,5.48,0C6.21-0.29,6.33-0.22,6.4-0.1 c0.22,0.32,0.45,0.62,0.67,0.94c0.24,0.33,0.46,0.67,0.7,1c0.28,0.4,0.58,0.79,0.86,1.19s0.59,0.83,0.88,1.24 c0.09,0.13,0.19,0.24,0.27,0.37s0.13,0.1,0.22,0.01c0.44-0.48,0.89-0.96,1.34-1.44c0.52-0.56,1.05-1.12,1.57-1.68 c0.42-0.45,0.82-0.9,1.24-1.35c0.12-0.13,0.25-0.26,0.39-0.39c0.05-0.04,0.1-0.06,0.16-0.06c0.66,0,1.31,0,1.97,0 C16.73-0.26,16.79-0.25,16.84-0.24 M14.16,13.61c0-0.03-0.01-0.05-0.02-0.08c-0.25-0.35-0.49-0.7-0.74-1.05 c-0.36-0.5-0.73-1-1.09-1.51s-0.69-1-1.05-1.49c-0.29-0.41-0.6-0.82-0.9-1.23c-0.35-0.48-0.68-0.97-1.03-1.46 c-0.5-0.7-1.02-1.4-1.52-2.1c-0.29-0.4-0.57-0.81-0.86-1.22C6.5,2.85,6.05,2.22,5.6,1.59C5.53,1.45,5.39,1.37,5.24,1.37 c-0.6,0.01-1.21,0-1.81,0c-0.04,0-0.09,0.01-0.13,0.02c0.07,0.11,0.13,0.2,0.19,0.29c0.3,0.41,0.6,0.81,0.89,1.22 C4.75,3.4,5.1,3.92,5.47,4.42c0.3,0.42,0.61,0.84,0.91,1.26s0.61,0.85,0.91,1.27s0.59,0.82,0.89,1.24c0.36,0.5,0.72,1,1.07,1.5 c0.3,0.42,0.61,0.84,0.91,1.26c0.44,0.61,0.88,1.22,1.31,1.83c0.17,0.23,0.33,0.47,0.51,0.7c0.05,0.07,0.13,0.11,0.21,0.12 c0.49,0.01,0.98,0.01,1.47,0.01L14.16,13.61"/></g>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodeURIComponent(dynamicTitleLabel)}&summary=${shareText}&source=European Parliament`} target="_blank">
+                        <span class="hidden">Share on LinkedIn</span>
+                        <svg class="linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="34" height="34">
+                           {/* SVG paths */}
+                            <path class="back" d="M22.5,38.6a17,17,0,1,0-17-17,17,17,0,0,0,17,17" transform="translate(-5.5 -4.6)"></path>
+                            <path class="icon" d="M17.2,13.05A1.9,1.9,0,1,1,15.3,15a1.9,1.9,0,0,1,1.9-1.9m-1.64,5.24h3.28V28.82H15.56Z" transform="translate(-5.5 -4.6)"></path>
+                            <path class="icon" d="M20.89,18.29H24v1.44h0a3.45,3.45,0,0,1,3.1-1.7c3.32,0,3.93,2.18,3.93,5v5.78H27.83V23.7c0-1.22,0-2.79-1.7-2.79s-2,1.33-2,2.7v5.21H20.89Z" transform="translate(-5.5 -4.6)"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href={`https://api.whatsapp.com/send?text=${encodedUrl}`} target="_blank">
+                        <span class="hidden">Share on WhatsApp</span>
+                        <svg class="whatsapp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="34" height="34">
+                            {/* SVG paths */}
+                            <path class="back" d="M22.5,38.6a17,17,0,1,0-17-17,17,17,0,0,0,17,17" transform="translate(-5.5 -4.6)"></path>
+                            <path class="icon" d="M13.3,30.59l1.36-5A9.58,9.58,0,1,1,23,30.43a9.74,9.74,0,0,1-4.58-1.17Zm5.31-3.07a7.93,7.93,0,1,0-2.21-2.15l-.8,2.94Zm9.18-4.4c-.06-.1-.22-.16-.46-.28s-1.42-.7-1.64-.78-.38-.12-.54.12-.61.78-.75.94-.28.18-.52.06A6.52,6.52,0,0,1,22,22a7.14,7.14,0,0,1-1.33-1.66.35.35,0,0,1,.1-.49,5.52,5.52,0,0,0,.36-.42,1.33,1.33,0,0,0,.24-.4.42.42,0,0,0,0-.42c-.06-.11-.53-1.29-.73-1.77s-.4-.41-.54-.41h-.46a.88.88,0,0,0-.64.3,2.69,2.69,0,0,0-.84,2,4.66,4.66,0,0,0,1,2.47,10.71,10.71,0,0,0,4.09,3.62,12.43,12.43,0,0,0,1.37.5,3.18,3.18,0,0,0,1.5.1,2.48,2.48,0,0,0,1.62-1.14A2,2,0,0,0,27.79,23.12Z" transform="translate(-5.5 -4.6)"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="ml-2">
+                    {/* JS needed for this button */}
+                    <button class="copy-url-button flex items-center text-white-default font-epSemiBold">
+                        <svg viewBox="0 0 34 32.562" class="max-w-[30px] border-0! mr-1" focusable="false" aria-hidden="true">
+                            {/* SVG paths */}
+                            <defs><clipPath id={`clip-${shareId}`}><rect width="22" height="23.351" transform="translate(0 0)" fill="none"></rect></clipPath></defs>
+                            <g transform="translate(6 4)"><g transform="translate(0 0)" clip-path={`url(#clip-${shareId})`}><path d="M17.031,2.653V4.122h2.318v0A2.65,2.65,0,0,1,22,6.771h0V20.7h0a2.65,2.65,0,0,1-2.645,2.647v0H7.62v0A2.65,2.65,0,0,1,4.973,20.7h0V17.58H2.651v0A2.65,2.65,0,0,1,0,14.931H0V2.651H0A2.65,2.65,0,0,1,2.649,0V0H14.38V0a2.65,2.65,0,0,1,2.647,2.645h0ZM15.02,4.122V2.649h0a.652.652,0,0,0-.642-.64v0H2.651v0a.652.652,0,0,0-.64.642h0v12.28h0a.652.652,0,0,0,.642.64v0H4.971V6.773h0A2.65,2.65,0,0,1,7.62,4.126v0h7.4ZM19.988,20.7V6.771h0a.652.652,0,0,0-.642-.64v0H7.618v0a.652.652,0,0,0-.64.642h0V20.7h0a.652.652,0,0,0,.642.64v0H19.351v0a.652.652,0,0,0,.64-.642h0Z" transform="translate(0 0)" fill="#024EA2" fill-rule="evenodd"></path></g></g><rect width="34" height="32.562" fill="none"></rect>
+                        </svg>
+                        <span class="text-blue-default">Copy url</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        {/* JS needed for feedback message */}
+        <div class="copied-txt mt-2" role="status">
+            <span aria-hidden="true" class="fx--fadeOut" hidden>The URL has been copied to your clipboard</span>
+        </div>
+    </div>
+
+    {/* Add script for copy functionality and expand/collapse within this component if needed */}
+    <script define:vars={{ shareId }}>
+     function setupSocialShare(container) {
+        const copyButton = container.querySelector('.copy-url-button');
+        const feedbackSpan = container.querySelector('.copied-txt span');
+
+        if (copyButton && feedbackSpan) {
+            copyButton.addEventListener('click', () => {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    // Show feedback
+                    feedbackSpan.hidden = false;
+                    feedbackSpan.classList.remove('fx--fadeOut');
+                    feedbackSpan.classList.add('fx--fadeIn');
+
+                    // Hide feedback after a delay
+                    setTimeout(() => {
+                        feedbackSpan.classList.remove('fx--fadeIn');
+                        feedbackSpan.classList.add('fx--fadeOut');
+                        // Optionally set hidden after animation completes
+                        setTimeout(() => { feedbackSpan.hidden = true; }, 500); // Match CSS animation duration
+                    }, 2000); // Show for 2 seconds
+                }).catch(err => {
+                    console.error('Failed to copy URL: ', err);
+                });
+            });
+        }
+
+        // Expand/collapse logic (simplified, assumes global script handles the main part)
+        // This component only needs to ensure its specific elements work with the global script
+        // If global script isn't sufficient, add specific listener here:
+        const expandButton = container.querySelector('.expand-button');
+        const targetContent = container.querySelector('.expand-container-content'); // Assuming one per component instance
+
+        // Minimalist version relying on global toggleContent function
+        // expandButton?.addEventListener('click', toggleContent); // Need to ensure 'this' context is correct
+
+        // More robust specific version (if needed)
+         if (expandButton && targetContent) {
+             expandButton.addEventListener('click', function() { // Use function for 'this'
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                targetContent.classList.toggle('hidden');
+                this.setAttribute('aria-expanded', !isExpanded);
+                // Add aria-label and opacity changes if necessary, mirroring global script
+             });
+         }
+
+     }
+
+     // Run for each instance of the component on the page
+     document.querySelectorAll('.expand-social-share').forEach(setupSocialShare);
+
+    </script>
+    #+end_src
+
+-   *=src/components/CardsUpdates.astro=*
+    #+begin_src astro
+    ---
+    // No props or nested includes needed
+    ---
+    <!-- CARDS -->
+    <ul class="elections-block lg:grid lg:grid-cols-3 md:block sm:block block max-w-5xl mx-auto">
+        {/* Pledge to vote block commented out */}
+        <li class="lg:mr-5 mb-6">
+            <h2 class="!text-2lg font-EPGammaBold flex items-center py-2">
+                <a href="#" class="block decoration-blue-default"> {/* Link placeholder */}
+                    <span class="inline mr-2">Press releases</span>
+                </a>
+            </h2>
+            <p class="text-lg">Read the latest press releases on the EU long-term budget</p>
+        </li>
+        <li class="lg:mr-5 mb-6">
+            <h2 class="!text-2lg font-EPGammaBold flex items-center py-2">
+                <a href="#" class="block decoration-blue-default"> {/* Link placeholder */}
+                    <span class="inline mr-2">In-depth articles</span>
+                </a>
+            </h2>
+            <p class="text-lg">Read the latest policy briefings and studies on the EU's long-term budget</p>
+        </li>
+        <li class="mb-6">
+            <h2 class="!text-2lg font-EPGammaBold flex items-center py-2">
+                <a href="#" class="block decoration-blue-default"> {/* Link placeholder */}
+                    <span class="inline mr-2">Press kit</span>
+                </a>
+            </h2>
+            <p class="text-lg">For journalists: The press tool kit provides specific information and contacts to help you cover the EU's long-term budget</p>
+        </li>
+    </ul>
+    #+end_src
+
+-   *=src/components/Campaign.astro=* (Adjust path)
+    #+begin_src astro
+    ---
+    // No props or nested includes needed
+    ---
+    <!-- CAMPAIGN block -->
+    <div class="block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mt-0 mb-16 px-4">
+            <div class="campaign-block border border-2 border-[LightGray] p-16">
+                {/* Adjusted path */}
+                <img src="/assets/img/logos/mff_en.svg" alt="realities we can't ignore" class="w-full max-w-[450px]" />
+                <a href="#" class="flex items-center decoration-blue-default !no-underline mt-6"> {/* Link placeholder */}
+                    <span class="text-2xl font-EPGammaBold text-black-default hover:!underline focus:!underline inline mr-2">Campaign material</span><span class="inline-block min-w[25px]"><svg focusable="false" aria-hidden="true" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="50" class="fill-black-default"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                </a>
+            </div>
+    </div>
+    #+end_src
+
+-   *=src/components/LinksPoliticalParties.astro=*
+    #+begin_src astro
+    ---
+    // No props or nested includes needed
+    ---
+    <!-- LINKS - POLITICAL PARTIES -->
+    <ul>
+        <li class="mb-4">
+            <a href="#" class="text-lg" target="_blank">Latest public opinion surveys - Eurobarometer</a> {/* Link placeholder */}
+        </li>
+        <li class="mb-4">
+            <a href="#" class="text-lg" target="_blank">Factsheet on how the EU works: financing the EU</a> {/* Link placeholder */}
+        </li>
+        <li class="mb-4">
+            <a href="#" class="text-lg" target="_blank">European Commission's website on the EU’s long-term budget</a> {/* Link placeholder */}
+        </li>
+        <li class="mb-4">
+            <a href="#" class="text-lg" target="_blank">Council of the EU's website on the EU’s long-term budget</a> {/* Link placeholder */}
+        </li>
+    </ul>
+    #+end_src
+
+-   *=src/components/Footer.astro=* (Adjust paths)
+    #+begin_src astro
+    ---
+    // No props or nested includes needed
+    ---
+    <footer class="footer max-w-5xl mx-auto px-4 py-8">
+      <nav
+        class="navFooter py-4 text-left block md:!flex md:!items-center"
+        aria-label="Information links"
+      >
+        <a href="#" class="md:mr-5"> {/* Link placeholder */}
+          <img
+          src="/assets/img/logos/logo-ep-en.svg" /* Adjusted path */
+          alt="European Parliament logo"
+          class="w-full min-w-[150px] max-w-[150px] -mt-3"
+          />
+        </a>
+        <ul class="footerLinks block md:flex md:flex-wrap mt-8 md:mt-0">
+          <li class="md:pb-0 mx-4 pb-3">
+            <a rel="noreferrer" href="legal-notice.html">Legal notice</a> {/* Link placeholder */}
+          </li>
+          <li class="md:pb-0 mx-4 pb-3">
+            <a rel="noreferrer" href="privacy-policy.html">Privacy policy</a> {/* Link placeholder */}
+          </li>
+          <li class="md:pb-0 mx-4 pb-3">
+            <a rel="noreferrer" href="accessibility.html">Accessibility</a> {/* Link placeholder */}
+          </li>
+          <li class="md:pb-0 mx-4 pb-3">
+            <a rel="noreferrer" href="easy-to-read.html">Easy-to-read</a> {/* Link placeholder */}
+          </li>
+          <li class="md:pb-0 mx-4 pb-3">
+            <a
+              href="https://europa.eu/european-union/contact_en"
+              target="_blank"
+              rel="noopener noreferrer">Contact us</a>
+          </li>
+          <li class="md:pb-0 mx-4 pb-3">
+            <a rel="noreferrer" href="sitemap.html">Sitemap</a> {/* Link placeholder */}
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    #+end_src
+
+---
+
+** *3. Base Layout (Place in =src/layouts/=)*
+
+-   *=src/layouts/BaseLayout.astro=*
+    #+begin_src astro
+    ---
+    import Head from '../components/Head.astro';
+    import ShortcutWai from '../components/ShortcutWai.astro';
+    import NavigationRevamp from '../components/NavigationRevamp.astro';
+    import Footer from '../components/Footer.astro';
+
+    interface Props {
+        title?: string;
+        description?: string;
+    }
+
+    const { title, description } = Astro.props;
+    ---
+    <!DOCTYPE html>
+    <html lang="en" class="no-js">
+    <head>
+        <Head title={title} description={description} />
+    </head>
+    <body>
+        <ShortcutWai />
+        <NavigationRevamp />
+
+        {/* Main page content goes here */}
+        <slot />
+
+        <Footer />
+
+        {/* Common Scripts */}
+        {/* Assume go-to-top.js is correctly placed in public/assets/js */}
+        <script src="/assets/js/go-to-top.js"></script>
+        <script src="/assets/js/menu-desktop.js"></script>
+        <script src="/assets/js/menu-mobile.js"></script>
+        <script src="/assets/js/dropdown-desktop.js"></script>
+        {/* Add other common script references here if identified */}
+    </body>
+    </html>
+    #+end_src
+
+---
+
+** *4. Homepage Page (Place in =src/pages/=)*
+
+-   *=src/pages/index.astro=*
+    #+begin_src astro
+    ---
+    import BaseLayout from '../layouts/BaseLayout.astro';
+    import Cards from '../components/Cards.astro';
+    import IframeVideo from '../components/IframeVideo.astro';
+    import Transcript from '../components/Transcript.astro';
+    import BtnSocialShare from '../components/BtnSocialShare.astro';
+    import CardsUpdates from '../components/CardsUpdates.astro';
+    import Campaign from '../components/Campaign.astro';
+    import LinksPoliticalParties from '../components/LinksPoliticalParties.astro';
+
+    const pageTitle = "The EU's long-term budget from 2028"; // Example title
+    const pageDescription = "Discover the benefits of the EU budget and learn how decisions about it are made."; // Example description
+    ---
+    <BaseLayout title={pageTitle} description={pageDescription}>
+
+        <main role="main" id="mainContent" class="mb-8">
+            <div id="returnToTop" class="hidden"></div>
+
+            <div class="max-w-5xl mx-auto px-4 mt-54px mb-10">
+                <h1 class="logo-brand font-epSemiBold text-2.5xl text-black-greydark text-left">{pageTitle}</h1>
+                <span class="text-brand-title inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2">Invest in what matters</span>
+            </div>
+
+            <div class="htv-page max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4 mb-12">
+                <p class="max-w-3xl mb-6">The EU's long-term budget drives investments in Europe's future, improving citizens' lives.
+                    It funds common projects and delivers on priorities from digital innovation to border security.
+                </p>
+                <p><span class="font-EPGammaBold">{pageDescription}</span></p>
+            </div>
+
+            <Cards />
+
+            <div class="max-w-5xl sm:block block mx-auto justify-between items-center px-4">
+                <IframeVideo videoText="How the European Parliament supports citizens’ in the next budget term" />
+                {/* Ensure Transcript and BtnSocialShare IDs are unique if reused */}
+                <Transcript />
+                <div class="share-home">
+                    <BtnSocialShare />
+                </div>
+                <hr class="text-[#cccccc] mt-10 mb-16">
+            </div>
+
+            <div class="cards-links-block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mb-16 px-4">
+                <h2 class="font-EPGammaBold pb-6">Latest updates</h2>
+                <CardsUpdates />
+            </div>
+
+            <Campaign />
+
+            <div class="epol-block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mb-16 px-4">
+                <h2 class="font-EPGammaBold pb-6">Related links</h2>
+                <LinksPoliticalParties />
+            </div>
+
+            <a href="#returnToTop" class="top-link hide js-top" aria-label="Scroll back to top of the page"></a>
+        </main>
+
+        {/* Homepage specific JS */}
+        <script is:inline>
+            // Expand/Collapse component logic (specific to this page instance)
+            const expandContainers = document.querySelectorAll('#mainContent .expand-container'); // Scope to main content
+
+            function toggleContent() {
+                // 'this' refers to the button clicked
+                const targetId = this.dataset.target;
+                const target = document.getElementById(targetId);
+                if (!target) return;
+                const container = this.closest('.expand-container'); // Find parent container
+                if (!container) return;
+
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+                target.classList.toggle('hidden');
+                this.setAttribute('aria-expanded', !isExpanded);
+
+                if (!isExpanded) {
+                    this.setAttribute('aria-label', 'Collapse Content'); // Update label
+                    container.dataset.initialState = 'expanded'; // Update state if needed
+                    target.style.opacity = '0';
+                    target.style.transition = 'opacity 0.3s ease-out'; // Add transition
+                    setTimeout(() => {
+                        target.style.opacity = '1';
+                    }, 10);
+                } else {
+                    this.setAttribute('aria-label', 'Expand Content'); // Update label
+                    container.dataset.initialState = 'collapsed'; // Update state if needed
+                     target.style.opacity = '1';
+                     target.style.transition = 'opacity 0.3s ease-out'; // Add transition
+                     setTimeout(() => {
+                         target.style.opacity = '0';
+                         // Optionally hide after transition: setTimeout(() => { target.classList.add('hidden'); }, 300);
+                    }, 10);
+                     // If not using opacity transition, just toggle hidden:
+                     // target.classList.add('hidden');
+                }
+            }
+
+
+            expandContainers.forEach((container) => {
+                const buttonExpand = container.querySelector('.expand-button');
+                if (!buttonExpand) return;
+                const targetId = buttonExpand.dataset.target;
+                const target = document.getElementById(targetId);
+                if (!target) return;
+
+                const initialState = container.dataset.initialState || 'collapsed'; // Default to collapsed
+
+                if (initialState === 'expanded') {
+                    target.classList.remove('hidden');
+                    buttonExpand.setAttribute('aria-expanded', 'true');
+                    buttonExpand.setAttribute('aria-label', 'Collapse Content');
+                } else {
+                    target.classList.add('hidden');
+                    buttonExpand.setAttribute('aria-expanded', 'false');
+                    buttonExpand.setAttribute('aria-label', 'Expand Content');
+                     container.dataset.initialState = 'collapsed'; // Ensure state is set
+                }
+
+                buttonExpand.addEventListener('click', toggleContent);
+            });
+
+
+            // Nav highlighting logic (specific to this page instance)
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuItems = document.querySelectorAll(".navList li"); // Target desktop menu
+                const mobileMenuItems = document.querySelectorAll("#mainList li.level1"); // Target mobile menu
+
+                // Reset all desktop items
+                menuItems.forEach(item => {
+                    item.classList.remove("current");
+                    const link = item.querySelector("a");
+                    if (link) link.removeAttribute("aria-current");
+                });
+
+                // Reset all mobile items
+                 mobileMenuItems.forEach(item => {
+                    const link = item.querySelector("a");
+                    if (link) {
+                         link.classList.remove("current"); // Assuming mobile uses class on <a>
+                         link.removeAttribute("aria-current");
+                    }
+                 });
+
+
+                // Highlight the correct item (Home = index 0)
+                const targetIndex = 0;
+
+                // Apply to desktop
+                if (menuItems[targetIndex]) {
+                    menuItems[targetIndex].classList.add("current");
+                    const link = menuItems[targetIndex].querySelector("a");
+                    if (link) link.setAttribute("aria-current", "page");
+                }
+
+                 // Apply to mobile (adjust selector/class if needed)
+                 if (mobileMenuItems[targetIndex]) {
+                    const link = mobileMenuItems[targetIndex].querySelector("a");
+                     if (link) {
+                         link.classList.add("current"); // Or apply class to <li> if structure requires
+                         link.setAttribute("aria-current", "page");
+                     }
+                 }
+            });
+        </script>
+
+    </BaseLayout>
+    #+end_src
+
