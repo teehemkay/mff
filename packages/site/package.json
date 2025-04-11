@@ -78,6 +78,7 @@
     "envs": ["node", "browser"],
     "rules": {
       "capitalized-comments": "off",
+      "func-names": ["error", "as-needed"],
       "import/order": [
         "error",
         {
@@ -85,7 +86,6 @@
           "warnOnUnassignedImports": true
         }
       ],
-      "func-names": ["error", "as-needed"],
       "react/function-component-definition": [
         1,
         {
@@ -102,11 +102,11 @@
           "exceptions": ["#__PURE__"]
         }
       ],
-      "unicorn/prevent-abbreviations": "off",
-      "unicorn/no-array-reduce": "off",
       "unicorn/no-array-callback-reference": "off",
+      "unicorn/no-array-reduce": "off",
       "unicorn/no-fn-reference-in-iterator": "off",
-      "unicorn/prefer-object-from-entries": "off"
+      "unicorn/prefer-object-from-entries": "off",
+      "unicorn/prevent-abbreviations": "off"
     },
     "ignores": ["build", "public/**", "_site/**"]
   }
