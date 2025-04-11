@@ -1,0 +1,145 @@
+---
+// src/pages/why-it-matters.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import IframeVideo from '../components/IframeVideo.astro';
+import Transcript from '../components/Transcript.astro';
+import BtnSocialShare from '../components/BtnSocialShare.astro';
+
+const pageTitle = "Why it matters";
+const pageDescription = "Understand the significance of the EU's long-term budget and its impact on citizens.";
+
+// Placeholder data for expand items - replace with actual content
+const expandItems = [
+  {
+    idSuffix: 'item-1',
+    title: 'What European election rules are common to all Member States?',
+    videoText: 'Video for common election rules',
+    shareLabel: 'Common European election rules',
+    content: `<p>Some rules are common across the EU, ensuring a degree of consistency...</p>` // Add actual content
+  },
+  {
+    idSuffix: 'item-2',
+    title: 'How are seats in the European Parliament allocated?',
+    videoText: 'Video for seat allocation',
+    shareLabel: 'Seat allocation in Parliament',
+    content: `<p>Seat allocation is based on the principle of degressive proportionality...</p>` // Add actual content
+  },
+  // Add more items as needed following this structure
+];
+---
+<BaseLayout title={pageTitle} description={pageDescription}>
+
+    <main role="main" id="mainContent" class="mb-8">
+        <div id="returnToTop" class="hidden"></div>
+
+        <div class="max-w-5xl mx-auto px-4 mt-54px mb-10">
+            <h1 class="logo-brand font-epSemiBold text-2.5xl text-black-greydark text-left">{pageTitle}</h1>
+            <span class="text-brand-title inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2">Budget explained</span>
+        </div>
+
+        <div class="htv-page max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4 mb-12">
+            <p class="max-w-3xl mb-6">The EU's long-term budget, also known as the Multiannual Financial Framework (MFF), is a key tool for implementing the Union's political priorities. It provides financial certainty and supports projects that benefit citizens across Europe.</p>
+            <p><span class="font-EPGammaBold">{pageDescription}</span></p>
+        </div>
+
+        {/* Top Level Video/Transcript/Share */}
+        <div class="max-w-5xl sm:block block mx-auto justify-between items-center px-4 mb-10">
+            <IframeVideo videoText="What is the EU long-term budget and how does it affect your everyday life?" />
+            <Transcript
+                idSuffix="main"
+                videoTitle="What is the EU long-term budget..."
+                initialState="collapsed"
+            />
+            <div class="share-home mt-4"> {/* Added mt-4 for spacing */}
+                <BtnSocialShare
+                    idSuffix="main"
+                    dynamicTitleLabel="Why it matters main video"
+                    initialState="collapsed"
+                />
+            </div>
+            <hr class="text-[#cccccc] mt-10 mb-16">
+        </div>
+
+        {/* Expandable List Section */}
+        <div class="max-w-5xl mx-auto px-4 mb-16">
+             <h2 class="font-EPGammaBold text-xl mb-6">Key Aspects of the EU Budget</h2>
+             <ul class="list-none p-0 m-0"> {/* Simple list structure */}
+                {expandItems.map((item) => (
+                    <li class="mb-8 border-b border-[#cccccc] pb-8 last:border-b-0"> {/* Added border for separation */}
+                        <h3 class="font-epSemiBold text-lg mb-4">{item.title}</h3>
+                        {/* Item Content */}
+                        <div class="prose max-w-none mb-6" set:html={item.content} />
+
+                        {/* Nested Video/Transcript/Share */}
+                        <div class="nested-media-section">
+                             <IframeVideo videoText={item.videoText} />
+                             <Transcript
+                                 idSuffix={item.idSuffix}
+                                 videoTitle={item.videoText}
+                                 initialState="collapsed"
+                             />
+                             <div class="share-nested mt-4"> {/* Added mt-4 */}
+                                 <BtnSocialShare
+                                     idSuffix={item.idSuffix}
+                                     dynamicTitleLabel={item.shareLabel}
+                                     initialState="collapsed"
+                                 />
+                             </div>
+                        </div>
+                    </li>
+                ))}
+             </ul>
+        </div>
+
+
+        <a href="#returnToTop" class="top-link hide js-top" aria-label="Scroll back to top of the page"></a>
+    </main>
+
+    {/* Page specific JS - Nav highlighting ONLY */}
+    <script is:inline>
+        // Nav highlighting logic (specific to this page instance)
+        function highlightNav() {
+            const menuItems = document.querySelectorAll(".navList li"); // Target desktop menu
+            const mobileMenuItems = document.querySelectorAll("#mainList li.level1.main"); // Target mobile menu main items
+
+            // Reset all desktop items
+            menuItems.forEach(item => {
+                item.classList.remove("current");
+                const link = item.querySelector("a");
+                if (link) link.removeAttribute("aria-current");
+            });
+
+            // Reset all mobile items
+             mobileMenuItems.forEach(item => {
+                const link = item.querySelector("a");
+                if (link) {
+                     link.classList.remove("current"); // Assuming mobile uses class on <a>
+                     link.removeAttribute("aria-current");
+                }
+             });
+
+            // Highlight the correct item (Why it matters = index 1)
+            const targetIndex = 1; // <--- Set correct index for this page
+
+            // Apply to desktop
+            if (menuItems[targetIndex]) {
+                menuItems[targetIndex].classList.add("current");
+                const link = menuItems[targetIndex].querySelector("a");
+                if (link) link.setAttribute("aria-current", "page");
+            }
+
+             // Apply to mobile (adjust selector/class if needed)
+             if (mobileMenuItems[targetIndex]) {
+                const link = mobileMenuItems[targetIndex].querySelector("a");
+                 if (link) {
+                     link.classList.add("current"); // Or apply class to <li> if structure requires
+                     link.setAttribute("aria-current", "page");
+                 }
+             }
+        }
+        // Run on initial load and after Astro page transitions
+        document.addEventListener('astro:page-load', highlightNav);
+        highlightNav(); // Run immediately for initial load
+    </script>
+
+</BaseLayout>
