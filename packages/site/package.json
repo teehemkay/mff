@@ -26,6 +26,11 @@
     "index": "fse copy resources/index.html ../../_site/index.html",
     "preview": "astro preview"
   },
+  "dependencies": {
+    "@astrojs/react": "^4.2.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
   "devDependencies": {
     "@atao60/fse-cli": "^0.1.9",
     "@packages/data": "workspace:^",
@@ -33,7 +38,12 @@
     "@rollup/plugin-yaml": "^4.1.2",
     "@tailwindcss/postcss": "^4.0.15",
     "@tailwindcss/vite": "^4.0.15",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.2",
     "astro": "^5.5.4",
+    "eslint-config-xo-react": "^0.27.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.33.5",
@@ -62,6 +72,7 @@
     ]
   },
   "xo": {
+    "extends": "xo-react",
     "space": true,
     "prettier": true,
     "envs": ["node", "browser"],
@@ -98,8 +109,5 @@
       "unicorn/prefer-object-from-entries": "off"
     },
     "ignores": ["build", "public/**", "_site/**"]
-  },
-  "dependencies": {
-    "@astrojs/react": "^4.2.3"
   }
 }
