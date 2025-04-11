@@ -1,75 +1,45 @@
-metaTitle: Découvrez la Journée de l’Europe 2025 avec le Parlement européen !
-metaDescription: Découvrez le programme de l’édition 2025, participez à la
-  Journée de l’Europe et contribuez à la démocratie européenne !
-title: Journée de l’Europe 2025
-campaignImg: 2025-europe-day-banner-fr.png
-campaignAltImg: VENEZ DÉCOUVRIR LA DÉMOCRATIE EN ACTION - VISITEZ LE PARLEMENT EUROPÉEN
-whatIsED: Découvrez le cœur battant de la démocratie européenne !
-edDescription: >
-  <p>Le 9 mai, l&#39;Union européenne commémore la déclaration Schuman et
-  célèbre ses réalisations dans l&#39;unité et la paix. </p>
-
-  <p>Le Parlement européen vous invite à participer à des événements dans toute
-  l&#39;Europe pour célébrer la démocratie européenne. </p>
-
-  <p>Rejoignez-nous à Strasbourg le dimanche 4 mai et à Bruxelles le samedi 10
-  mai et dans tous les états membres !</p>
-activity1Title: Strasbourg
-activity1Date: Dimanche 4 Mai
-activity1Time: De 10:00 à 18:00
-TEMPactivity1Description: Explore how EU legislation affects your life and find
-  out how you can influence common future decisions. Meet the European political
-  groups, visit the Hemicycle, discover our info stands, and take part in
-  activities (last entrance 17:30). Programme coming soon!
-activity1Description: Explorez comment les lois européennes influent sur votre
-  vie quotidienne et découvrez comment vous pouvez prendre part aux décisions en
-  cours et à venir ! Rencontrez les groupes politiques européens, visitez
-  l'hémicycle, découvrez de nombreux stands d'information et prenez part à de
-  nombreuses activités! (dernière entrée 17h30).
-activity1ButtonLabel: Programme détaillé à venir
-TEMPactivity1ButtonLabel: Programme de Strasbourg
-activity1ButtonA11y: ""
-activity1ButtonURL: ""
-activity2Title: Bruxelles
-activity2Date: Samedi 10 mai
-activity2Time: De 10:00 à 18:00
-TEMPactivity2Description: Explore how EU legislation affects your life and find
-  out how you can influence common future decisions. Meet the European political
-  groups, visit the Hemicycle, discover our info stands, and take part in
-  activities (last entrance 17:30). Programme coming soon!
-activity2Description: Explorez comment les lois européennes influent sur votre
-  vie quotidienne et découvrez comment vous pouvez prendre part aux décisions en
-  cours et à venir ! Rencontrez les groupes politiques européens, visitez
-  l'hémicycle, découvrez de nombreux stands d'information et prenez part à de
-  nombreuses activités! (dernière entrée 17h30).
-activity2ButtonLabel: Programme détaillé à venir
-TEMPactivity2ButtonLabel: Programme pour Bruxelles
-activity2ButtonA11y: ""
-activity2ButtonURL: ""
-activity3Title: Luxembourg
-activity3Date: Vendredi 9 mai
-activity3Time: De 10:00 à 18:00
-TEMPactivity3Description: Europe Day celebrations return to Luxembourg! Come and
-  see just how diverse Europe is at the Europa Experience, an interactive, free
-  way to learn about the European Union! On the 9th of May, enjoy a whole host
-  of special activities at our visitors' centre, which will be commemorating its
-  first anniversary! Programme coming soon!
-activity3Description: La Journée de l'Europe est de retour au Luxembourg ! Venez
-  découvrir la diversité de l'Europe dans l'espace Europa Experience, une
-  manière interactive et gratuite pour en apprendre plus sur l'Union européenne
-  ! Le 9 mai prochain, découvrez des activités spécifiques dans notre centre de
-  visite qui fêtera son 1er anniversaire !
-activity3ButtonLabel: Programme détaillé à venir
-TEMPactivity3ButtonLabel: Programme pour Luxembourg
-activity3ButtonA11y: ""
-activity3ButtonURL: ""
-localeventsTitle: Autres localisations
-localeventsUrl: https://www.europarl.europa.eu/europe-day/fr/local-events/
-localeventsDescription: Rejoignez un événement de la Journée de l'Europe proche
-  de vous et comprenez le rôle du Parlement européen
-edInstitutionsTitle: Célébrez la Journée de l'Europe dans les autres institutions européennes
-edInstitutionsTitleShort: Europe Day at the European institutions
-edInstitutionsUrl: https://europeday.europa.eu/index_fr
-edInstitutionsDescription: Découvrez comment le 9 mai est célébré dans
-  l'ensemble des institutions européennes, apprenez-en davantage sur l'ensemble
-  des activités et venez participer à une offre complète d'animations.
+metaTitle: ""
+metaDescription: ""
+homeH1: ""
+homeSubtitle: ""
+homeIntroText: ""
+homeCardLinkLabel:
+  - ""
+  - ""
+  - ""
+  - ""
+homeCardLinkURL:
+  - /fr/why-it-matters/
+  - /fr/how-it-works/
+  - /fr/our-role/
+  - /fr/by-country/
+homeCardText:
+  - ""
+  - ""
+  - ""
+  - ""
+homeVideoTitle: ""
+homeVideoURL: ""
+homeNewsTitle: ""
+homeNewsCardTitle:
+  - ""
+  - ""
+  - ""
+homeNewsCardText:
+  - ""
+  - ""
+  - ""
+homeCampaignTitle: ""
+homeCampaignLinkLabel: ""
+homeCampaignLinkURL: ""
+homeRelatedLinksTitle: ""
+homeRelatedLinkLabel:
+  - ""
+  - ""
+  - ""
+  - ""
+homeRelatedLinkURL:
+  - https://www.europarl.europa.eu/at-your-service/fr/be-heard/eurobarometer
+  - https://www.europarl.europa.eu/factsheets/fr/section/188/financing
+  - https://commission.europa.eu/strategy-and-policy/eu-budget/long-term-eu-budget_fr
+  - https://www.consilium.europa.eu/fr/policies/eu-long-term-budget/

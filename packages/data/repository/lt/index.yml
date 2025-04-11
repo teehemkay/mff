@@ -1,72 +1,45 @@
-metaTitle: Švęskite 2025 m. Europos dieną kartu su Europos Parlamentu
-metaDescription: Susipažinkite su 2025 m. programa, dalyvaukite Europos dienos
-  ir Europos demokratijos renginiuose
-title: 2025 m. Europos diena
-campaignImg: 2025-europe-day-banner-lt.png
-campaignAltImg: KVIEČIAME PAMATYTI VEIKIANČIĄ DEMOKRATIJĄ - APSILANKYKITE EUROPOS PARLAMENTE
-whatIsED: Susipažinkite su Europos demokratijos širdimi!
-edDescription: >
-  <p>On 9 May, the European Union celebrates its achievements of unity and
-  long-term peace, commemorating the Schuman Declaration in 1950.  </p>
-
-  <p>The European Parliament invites you to join engaging events all around
-  Europe and celebrate European democracy.</p>
-
-  <p>Join us in Strasbourg (Sunday 4 May), Brussels (Saturday 10 May) or in the
-  Member States.</p>
-activity1Title: Strasbūras
-activity1Date: Sunday, 4 May
-activity1Time: 10.00 – 18.00 val.
-TEMPactivity1Description: Explore how EU legislation affects your life and find
-  out how you can influence common future decisions. Meet the European political
-  groups, visit the Hemicycle, discover our info stands, and take part in
-  activities (last entrance 17:30). Programme coming soon!
-activity1Description: Explore how EU legislation affects your life and find out
-  how you can influence common future decisions. Meet the European political
-  groups, visit the Hemicycle, discover our info stands, and take part in
-  activities (last entrance 17:30).
-activity1ButtonLabel: Programa bus paskelbta netrukus
-TEMPactivity1ButtonLabel: Strasbūro renginių programa
-activity1ButtonA11y: ""
-activity1ButtonURL: ""
-activity2Title: Briuselis
-activity2Date: Saturday, 10 May
-activity2Time: 10.00 – 18.00 val.
-TEMPactivity2Description: Explore how EU legislation affects your life and find
-  out how you can influence common future decisions. Meet the European political
-  groups, visit the Hemicycle, discover our info stands, and take part in
-  activities (last entrance 17:30). Programme coming soon!
-activity2Description: Explore how EU legislation affects your life and find out
-  how you can influence common future decisions. Meet the European political
-  groups, visit the Hemicycle, discover our info stands, and take part in
-  activities (last entrance 17:30).
-activity2ButtonLabel: Programa bus paskelbta netrukus
-TEMPactivity2ButtonLabel: Briuselio renginių programa
-activity2ButtonA11y: ""
-activity2ButtonURL: ""
-activity3Title: Liuksemburgas
-activity3Date: Friday, 9 May
-activity3Time: 10.00 – 18.00 val.
-TEMPactivity3Description: Europe Day celebrations return to Luxembourg! Come and
-  see just how diverse Europe is at the Europa Experience, an interactive, free
-  way to learn about the European Union! On the 9th of May, enjoy a whole host
-  of special activities at our visitors' centre, which will be commemorating its
-  first anniversary! Programme coming soon!
-activity3Description: Europe Day celebrations return to Luxembourg! Come and see
-  just how diverse Europe is at the Europa Experience, an interactive, free way
-  to learn about the European Union! On the 9th of May, enjoy a whole host of
-  special activities at our visitors' centre, which will be commemorating its
-  first anniversary!
-activity3ButtonLabel: Programa bus paskelbta netrukus
-TEMPactivity3ButtonLabel: Renginių Liuksemburge programa (prancūzų kalba)
-activity3ButtonA11y: ""
-activity3ButtonURL: ""
-localeventsTitle: Other locations
-localeventsUrl: https://www.europarl.europa.eu/europe-day/lt/local-events/
-localeventsDescription: Join a Europe Day event near you and learn about the European Parliament's work
-edInstitutionsTitle: Celebrating Europe Day across the European institutions
-edInstitutionsTitleShort: Europe Day at the European institutions
-edInstitutionsUrl: https://europeday.europa.eu/index_lt
-edInstitutionsDescription: Discover how the 9 May is marked across the European
-  Union institutions, learn more about what's happening and get involved with
-  the wide range of activities on offer.
+metaTitle: ""
+metaDescription: ""
+homeH1: ""
+homeSubtitle: ""
+homeIntroText: ""
+homeCardLinkLabel:
+  - ""
+  - ""
+  - ""
+  - ""
+homeCardLinkURL:
+  - /lt/why-it-matters/
+  - /lt/how-it-works/
+  - /lt/our-role/
+  - /lt/by-country/
+homeCardText:
+  - ""
+  - ""
+  - ""
+  - ""
+homeVideoTitle: ""
+homeVideoURL: ""
+homeNewsTitle: ""
+homeNewsCardTitle:
+  - ""
+  - ""
+  - ""
+homeNewsCardText:
+  - ""
+  - ""
+  - ""
+homeCampaignTitle: ""
+homeCampaignLinkLabel: ""
+homeCampaignLinkURL: ""
+homeRelatedLinksTitle: ""
+homeRelatedLinkLabel:
+  - ""
+  - ""
+  - ""
+  - ""
+homeRelatedLinkURL:
+  - https://www.europarl.europa.eu/at-your-service/lt/be-heard/eurobarometer
+  - https://www.europarl.europa.eu/factsheets/lt/section/188/financing
+  - https://commission.europa.eu/strategy-and-policy/eu-budget/long-term-eu-budget_lt
+  - https://www.consilium.europa.eu/lt/policies/eu-long-term-budget/

@@ -1,77 +1,45 @@
-metaTitle: Entdecke den Europatag 2025 mit dem Europäischen Parlament
-metaDescription: Erfahre mehr über das Programm für 2025 und werde Teil des
-  Europatags und der europäischen Demokratie
-title: Europatag 2025
-campaignImg: 2025-europe-day-banner-de.png
-campaignAltImg: KOMMEN UND ERLEBEN SIE DEMOKRATIE IN AKTION - BESUCHEN SIE DAS
-  EUROPÄISCHE PARLAMENT
-whatIsED: Entdecke das Herz der europäischen Demokratie!
-edDescription: >
-  <p>Am 9. Mai feiert die Europäische Union ihre großen Errungenschaften:
-  Einheit und anhaltenden Frieden. Dabei wird der Unterzeichnung der
-  Schuman-Erklärung von 1950 gedacht.  </p>
-
-  <p>Das Europäische Parlament lädt Sie ein, an spannenden Veranstaltungen in
-  ganz Europa teilzunehmen und die europäische Demokratie zu feiern.</p>
-
-  <p>Begleiten Sie uns in Straßburg (Sonntag, 4. Mai), Brüssel (Samstag, 10.
-  Mai) oder in den Mitgliedstaaten! </p>
-activity1Title: Straßburg
-activity1Date: Sonntag, 4. Mai
-activity1Time: 10.00–18.00 Uhr
-TEMPactivity1Description: Explore how EU legislation affects your life and find
-  out how you can influence common future decisions. Meet the European political
-  groups, visit the Hemicycle, discover our info stands, and take part in
-  activities (last entrance 17:30). Programme coming soon!
-activity1Description: Erfahren Sie mehr darüber, wie sich europäische Gesetze
-  auf Ihr Leben auswirken und finden Sie heraus, wie Sie an künftigen
-  Entscheidungen mitwirken können. Treffen Sie die europäischen Fraktionen,
-  besuchen Sie das Plenarsaal, entdecken Sie unsere Informationsstände und
-  nehmen Sie an Aktivitäten teil (letzter Einlass um 17:30 Uhr).
-activity1ButtonLabel: Programm folgt in Kürze
-TEMPactivity1ButtonLabel: Programm für Straßburg
-activity1ButtonA11y: ""
-activity1ButtonURL: ""
-activity2Title: Brüssel
-activity2Date: Samstag, 10. Mai
-activity2Time: 10.00–18.00 Uhr
-TEMPactivity2Description: Explore how EU legislation affects your life and find
-  out how you can influence common future decisions. Meet the European political
-  groups, visit the Hemicycle, discover our info stands, and take part in
-  activities (last entrance 17:30). Programme coming soon!
-activity2Description: Erfahren Sie mehr darüber, wie sich europäische Gesetze
-  auf Ihr Leben auswirken und finden Sie heraus, wie Sie an künftigen
-  Entscheidungen mitwirken können. Treffen Sie die europäischen Fraktionen,
-  besuchen Sie das Plenarsaal, entdecken Sie unsere Informationsstände und
-  nehmen Sie an Aktivitäten teil (letzter Einlass um 17:30 Uhr).
-activity2ButtonLabel: Programm folgt in Kürze
-TEMPactivity2ButtonLabel: Programm für Brüssel
-activity2ButtonA11y: ""
-activity2ButtonURL: ""
-activity3Title: Luxemburg
-activity3Date: Freitag, 9. Mai
-activity3Time: 10.00–18.00 Uhr
-TEMPactivity3Description: Die Feierlichkeiten zum Europatag kehren nach
-  Luxemburg zurück! Kommen Sie und entdecken Sie, wie vielfältig Europa ist,
-  beim Europa-Erlebnis – eine interaktive, kostenlose Möglichkeit, mehr über die
-  Europäische Union zu erfahren! Am 9. Mai erwartet Sie eine Vielzahl besonderer
-  Aktivitäten in unserem Besucherzentrum, das sein einjähriges Jubiläum feiert!
-activity3Description: Die Feierlichkeiten zum Europatag kehren nach Luxemburg
-  zurück! Kommen Sie und entdecken Sie, wie vielfältig Europa ist, beim
-  Europa-Erlebnis – eine interaktive, kostenlose Möglichkeit, mehr über die
-  Europäische Union zu erfahren! Am 9. Mai erwartet Sie eine Vielzahl besonderer
-  Aktivitäten in unserem Besucherzentrum, das sein einjähriges Jubiläum feiert!
-activity3ButtonLabel: Programm folgt in Kürze
-TEMPactivity3ButtonLabel: Programm für Luxemburg (auf Französisch)
-activity3ButtonA11y: ""
-activity3ButtonURL: ""
-localeventsTitle: Der Europatag in Ihrer Nähe
-localeventsUrl: https://www.europarl.europa.eu/europe-day/de/local-events/
-localeventsDescription: Nehmen Sie an einer Veranstaltung zum Europatag in Ihrer
-  Nähe teil und erfahren Sie mehr über die Arbeit des Europäischen Parlaments
-edInstitutionsTitle: Den Europatag in den Europäischen Institutionen feiern
-edInstitutionsTitleShort: Europatag in den Europäischen Institutionen
-edInstitutionsUrl: https://europeday.europa.eu/index_de
-edInstitutionsDescription: Erfahren Sie, wie der 9. Mai in den Institutionen der
-  Europäischen Union gefeiert wird, lernen Sie mehr über die geplanten
-  Aktivitäten und beteiligen Sie sich an den vielfältigen Angeboten.
+metaTitle: ""
+metaDescription: ""
+homeH1: ""
+homeSubtitle: ""
+homeIntroText: ""
+homeCardLinkLabel:
+  - ""
+  - ""
+  - ""
+  - ""
+homeCardLinkURL:
+  - /de/why-it-matters/
+  - /de/how-it-works/
+  - /de/our-role/
+  - /de/by-country/
+homeCardText:
+  - ""
+  - ""
+  - ""
+  - ""
+homeVideoTitle: ""
+homeVideoURL: ""
+homeNewsTitle: ""
+homeNewsCardTitle:
+  - ""
+  - ""
+  - ""
+homeNewsCardText:
+  - ""
+  - ""
+  - ""
+homeCampaignTitle: ""
+homeCampaignLinkLabel: ""
+homeCampaignLinkURL: ""
+homeRelatedLinksTitle: ""
+homeRelatedLinkLabel:
+  - ""
+  - ""
+  - ""
+  - ""
+homeRelatedLinkURL:
+  - https://www.europarl.europa.eu/at-your-service/de/be-heard/eurobarometer
+  - https://www.europarl.europa.eu/factsheets/de/section/188/financing
+  - https://commission.europa.eu/strategy-and-policy/eu-budget/long-term-eu-budget_de
+  - https://www.consilium.europa.eu/de/policies/eu-long-term-budget/

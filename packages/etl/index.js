@@ -1,11 +1,9 @@
 import path from 'node:path';
 
 import { exportContent, contentFile } from './lib/content.js';
-import { exportLocalEvents, localEventsFile } from './lib/local-events.js';
 
 export const files = {
   content: contentFile,
-  localEvents: localEventsFile,
 };
 
 export const defaults = {
@@ -30,10 +28,6 @@ export const write = {
   content() {
     exportContent(...withDefaultParams(files.content));
   },
-
-  localEvents() {
-    exportLocalEvents(...withDefaultParams(files.localEvents));
-  },
 };
 
 export const exportAll = (
@@ -43,8 +37,6 @@ export const exportAll = (
   const withParams = makeArgs(to, startPath(from));
 
   exportContent(...withParams(files.content));
-  exportLocalEvents(...withParams(files.localEvents));
 };
 
 export { exportContent } from './lib/content.js';
-export { exportLocalEvents } from './lib/local-events.js';
