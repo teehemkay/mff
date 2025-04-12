@@ -25,7 +25,7 @@
     "watch:public": "onchange 'public/**' -- pnpm build:assets",
     "watch:prototypes": "gulp watchPrototypes",
     "watch:scss": "gulp watchScss",
-    "watch:tailwind": "pnpm build:tailwind --watch"
+    "watch:tailwind": "pnpm assets:tailwind --watch"
   },
   "keywords": [],
   "author": "webmaster@europarl.europa.eu",
