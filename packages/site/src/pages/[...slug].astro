@@ -18,4 +18,6 @@ const props = { lang, currentPage };
 export { getStaticPaths } from '../js/utils.js';
 ---
 
-<Layout {...props} />
+<Layout {...props}>
+  <MainIndex {...props} />
+</Layout>
