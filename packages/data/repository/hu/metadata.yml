@@ -61,3 +61,5 @@ loading: Betöltés
 loadingPleaseWait: Betöltés. Kérjük, várjon!
 kb: kB
 mb: MB
+openMenuMobile: A fő navigációs menü megnyitása (párbeszédablakban nyílik meg)
+closeMenuMobile: A fő navigációs menü bezárása

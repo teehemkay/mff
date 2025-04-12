@@ -61,3 +61,5 @@ loading: Načítání
 loadingPleaseWait: Načítání. Počkejte prosím.
 kb: kB
 mb: MB
+openMenuMobile: Otevřít hlavní navigační menu (otevře se v dialogovém okně)
+closeMenuMobile: Zavřít hlavní navigační menu

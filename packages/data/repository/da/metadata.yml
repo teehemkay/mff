@@ -61,3 +61,5 @@ loading: Indlæsning
 loadingPleaseWait: Indlæser. Vent venligst.
 kb: kB
 mb: MB
+openMenuMobile: Åbn hovednavigationsmenu (åbner i en dialog)
+closeMenuMobile: Luk hovednavigationsmenu

@@ -61,3 +61,5 @@ loading: Carregamento
 loadingPleaseWait: A carregar. Por favor, aguarda.
 kb: kB
 mb: MB
+openMenuMobile: Abrir menu de navegação principal (abre-se numa nova janela)
+closeMenuMobile: Fechar menu de navegação principal

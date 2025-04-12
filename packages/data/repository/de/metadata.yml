@@ -61,3 +61,5 @@ loading: Laden
 loadingPleaseWait: Laden. Bitte warten.
 kb: kB
 mb: MB
+openMenuMobile: Hauptnavigationsmenü öffnen (wird in einem Dialogfeld geöffnet)
+closeMenuMobile: Hauptnavigationsmenü schließen
