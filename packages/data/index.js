@@ -7,10 +7,10 @@ import yaml from 'yaml';
 import {
   kIndex,
   kLanguages,
+  kLanguageCodes,
   kMetadata,
   kCountries,
-  kCountriesByLangFile,
-  pageLabelKeys,
+  kPageLabelKeys,
 } from './constants.js';
 
 export const __filename = fileURLToPath(import.meta.url);
@@ -53,10 +53,8 @@ export const loadData = (dataType, lang = '') => {
   }
 };
 
-export const languages = loadData(kLanguages);
-
 export const lvContainer = () =>
-  Object.keys(languages).reduce((acc, lang) => {
+  kLanguageCodes.reduce((acc, lang) => {
     acc[lang] = {};
     return acc;
   }, {});
@@ -87,6 +85,8 @@ export const getData = (dataType) => (lang) =>
 
 export const zip = (xs, ys) => xs.map((x, idx) => ({ ...x, ...ys[idx] }));
 
+export const kLanguageLabels = loadData(kLanguages);
+
 export const contentForPage = (pageName, lang) => getData(pageName)(lang);
 
 export const countries = getData(kCountries);
@@ -94,7 +94,7 @@ export const metadata = getData(kMetadata);
 
 export const pageLabels = (lang) => {
   const data = metadata(lang);
-  return pageLabelKeys.map(([key, property]) => ({
+  return kPageLabelKeys.map(([key, property]) => ({
     key,
     label: data[property],
   }));

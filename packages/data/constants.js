@@ -25,7 +25,7 @@ export const xAccount = (countryOrLanguage) => {
     : `Europarl_${key.toUpperCase()}`;
 };
 
-export const pageLabelKeys = [
+export const kPageLabelKeys = [
   [kIndex, 'pageLabelHome'],
   [kWhyItMatters, 'pageLabelWhyItMatters'],
   [kHowItWorks, 'pageLabelHowItWorks'],
@@ -34,6 +34,6 @@ export const pageLabelKeys = [
   [kByCountry, 'pageLabelByCountry'],
 ];
 
-export const pageLabelKeysMapping = new Map(pageLabelKeys);
+export const kPageLabelKeysMapping = new Map(kPageLabelKeys);
 
 export * from '@packages/etl/constants';

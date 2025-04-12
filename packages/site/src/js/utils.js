@@ -30,6 +30,9 @@ export const pair = /* @__NO_SIDE_EFFECTs__ */ (arr1, arr2) => {
   return Array.from({ length: minLength }, (_, i) => [arr1[i], arr2[i]]);
 };
 
+export const makeHref = ({ currentPage, lang }) =>
+  currentPage === kIndex ? `/${lang}/` : `/${lang}/${currentPage}/`;
+
 export const getStaticPaths = /* @__NO_SIDE_EFFECTs__ */ () => {
   const slugs = [
     {
@@ -49,7 +52,7 @@ export const getStaticPaths = /* @__NO_SIDE_EFFECTs__ */ () => {
 
     for (const page of pageNames) {
       slugs.push({
-        params: { slug: lang },
+        params: { slug: `${lang}/${page}` },
         props: { lang, currentPage: page },
       });
     }

@@ -1,6 +1,4 @@
 ---
-import { languages, metadata, pageLabels } from '@packages/data';
-
 import Head from '../components/Head.astro';
 import ShortcutWai from '../components/ShortcutWai.astro';
 import Navigation from '../components/Navigation.astro';
@@ -12,25 +10,6 @@ interface Props {
 }
 
 const { lang, currentPage } = Astro.props;
-
-const { mainNav, menu, openMenu, closeMenu, epLogoAltText } = metadata(lang);
-
-const pageMenuProps = { mainNav, menu, openMenu, closeMenu };
-
-const languageMenuProps = {
-  lang,
-  languages,
-  switchLanguage: metadata(lang).switchLanguage,
-};
-
-const props = {
-  lang,
-  currentPage,
-  languages,
-  epLogoAltText,
-  pageLabels: pageLabels(lang),
-  headerProps: { pageMenuProps, languageMenuProps },
-};
 ---
 
 <!doctype html>

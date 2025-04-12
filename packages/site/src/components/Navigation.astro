@@ -1,6 +1,8 @@
 ---
-import { metadata, pageLabels } from '@packages/data';
+import { kLanguageLabels, metadata, pageLabels } from '@packages/data';
 import { kAssetsDir } from '@packages/data/constants';
+
+import { makeHref } from '../js/utils.js';
 
 interface Props {
   lang: string;
@@ -9,8 +11,15 @@ interface Props {
 
 const { lang, currentPage } = Astro.props;
 
-const { epLogoAltText, mainNav, openMenu, closeMenu, menu, switchLanguage } =
-  metadata(lang);
+const {
+  epLogoAltText,
+  mainNav,
+  openMenu,
+  openMenuMobile,
+  closeMenu,
+  menu,
+  switchLanguage,
+} = metadata(lang);
 ---
 
 <!-- When we are on mobile device view, the header needs a role="presentation" that Fernando asked to add --><!-- <header class="min-h-[72px] shadow-md" role="presentation"> -->
@@ -35,7 +44,7 @@ const { epLogoAltText, mainNav, openMenu, closeMenu, menu, switchLanguage } =
                 pageLabels(lang).map(({ key, label }) => (
                   <li class={currentPage === key ? 'current' : ''}>
                     <a
-                      aria-current={currentPage === key}
+                      aria-current={currentPage === key ? 'page' : null}
                       href={`/${lang}/${key}/`}>
                       {label}
                     </a>
@@ -56,12 +65,6 @@ const { epLogoAltText, mainNav, openMenu, closeMenu, menu, switchLanguage } =
           role="navigation"
           aria-label={mainNav}>
           <div class="divNavigation" id="divNavigation">
-            <div id="divBack" class="divBack">
-              {/* Back button added dynamically by JS */}
-            </div>
-            <div id="divMenuTitle" class="divMenuTitle" aria-hidden="true">
-              {/* Title added dynamically by JS */}
-            </div>
             <div id="divmainMenuButton" class="divmainMenuButton">
               {/* Main menu button potentially replaced by JS */}
               <a
@@ -69,8 +72,8 @@ const { epLogoAltText, mainNav, openMenu, closeMenu, menu, switchLanguage } =
                 data-expanded="false"
                 role="button"
                 href=""
-                aria-label="Open main navigation menu (opens in a dialog)">
-                <span class="mr-3">Menu</span>
+                aria-label={openMenuMobile}>
+                <span class="mr-3">{menu}</span>
                 <svg
                   class="inline-block w-[15px] h-[9px]"
                   viewBox="0 0 21.741 12.602"
@@ -92,23 +95,18 @@ const { epLogoAltText, mainNav, openMenu, closeMenu, menu, switchLanguage } =
             id="mainList"
             class="main-menu flex flex-wrap items-center mx-3 my-2 none">
             {/* Mobile menu items - JS handles visibility and interactions */}
-            <li class="level1 main">
-              {/* Current state handled by JS */}
-              <a href="homepage.html">Homepage</a>
-            </li>
-            <li class="level1 main">
-              <a href="why-it-matters.html">Why it matters</a>
-            </li>
-            <li class="level1 main">
-              <a href="how-it-works.html">How it works</a>
-            </li>
-            <li class="level1 main"><a href="our-role.html">Our Role</a></li>
-            <li class="level1 main">
-              <a href="our-position.html">Our Position</a>
-            </li>
-            <li class="level1 main">
-              <a href="by-country.html">By country</a>
-            </li>
+            {
+              pageLabels(lang).map(({ key, label }) => (
+                <li
+                  class={`level1 main ${currentPage === key ? ' current' : ''}`}>
+                  <a
+                    aria-current={currentPage === key ? 'page' : null}
+                    href={`/${lang}/${key}/`}>
+                    {label}
+                  </a>
+                </li>
+              ))
+            }
           </ul>
         </div>
       </div>
@@ -116,7 +114,7 @@ const { epLogoAltText, mainNav, openMenu, closeMenu, menu, switchLanguage } =
       {/* Lang menu dropdown */}
       <nav
         role="navigation"
-        aria-label="language menu"
+        aria-label={switchLanguage}
         class="lang-nav flex justify-end">
         <div class="expand-collapse border-[LightGray] border-1 rounded-lg">
           {/* This class name might be generic, ensure JS targets correctly */}
@@ -125,10 +123,10 @@ const { epLogoAltText, mainNav, openMenu, closeMenu, menu, switchLanguage } =
             class="nav-button flex items-center rounded-md border border-1 border-solid border-black-greymiddle focus:outline focus:outline-2 focus:outline-blue-focus px-2.5 py-1 mr-4"
             aria-expanded="false"
             data-button
-            data-controls="lang-list"
             aria-controls="lang-list">
             <span class="inline-block text-base pt-0.5 mr-3">
-              EN <span class="sr-only">- English</span>
+              {lang.toUpperCase()}
+              <span class="sr-only">- {kLanguageLabels[lang]}</span>
             </span>
             <svg
               class="inline-block w-[15px] h-[9px]"
@@ -148,59 +146,26 @@ const { epLogoAltText, mainNav, openMenu, closeMenu, menu, switchLanguage } =
       </nav>
     </div>
 
-    {/* Desktop content - controlled by menu-desktop.js */}
-
-    {/* Lang content - controlled by menu-desktop.js */}
     <div
       id="lang-list"
       class="submenu-content hidden"
       data-content
       aria-labelledby="lang-menu">
       <ul class="lang-content block px-6 mx-auto max-w-[1100px]">
-        <li><a lang="bg" hreflang="bg" href="../bg/">BG - Български</a></li>
-        <li><a lang="es" hreflang="es" href="../es/">ES - Español</a></li>
-        <li><a lang="cs" hreflang="cs" href="../cs/">CS - Čeština</a></li>
-        <li><a lang="da" hreflang="da" href="../da/">DA - Dansk</a></li>
-        <li><a lang="de" hreflang="de" href="../de/">DE - Deutsch</a></li>
-        <li>
-          <a lang="et" hreflang="et" href="../et/">ET - Eesti keel</a>
-        </li>
-        <li><a lang="el" hreflang="el" href="../el/">EL - Ελληνικά</a></li>
-        <li>
-          <a
-            lang="en"
-            hreflang="en"
-            href="../en/"
-            class="current"
-            aria-current="true">EN - English</a
-          >
-        </li>
-        <li><a lang="fr" hreflang="fr" href="../fr/">FR - Français</a></li>
-        <li><a lang="ga" hreflang="ga" href="../ga/">GA - Gaeilge</a></li>
-        <li><a lang="hr" hreflang="hr" href="../hr/">HR - Hrvatski</a></li>
-        <li><a lang="it" hreflang="it" href="../it/">IT - Italiano</a></li>
-        <li>
-          <a lang="lv" hreflang="lv" href="../lv/">LV - Latviešu valoda</a>
-        </li>
-        <li>
-          <a lang="lt" hreflang="lt" href="../lt/">LT - Lietuvių kalba</a>
-        </li>
-        <li><a lang="hu" hreflang="hu" href="../hu/">HU - Magyar</a></li>
-        <li><a lang="mt" hreflang="mt" href="../mt/">MT - Malti</a></li>
-        <li>
-          <a lang="nl" hreflang="nl" href="../nl/">NL - Nederlands</a>
-        </li>
-        <li><a lang="pl" hreflang="pl" href="../pl/">PL - Polski</a></li>
-        <li><a lang="pt" hreflang="pt" href="../pt/">PT - Português</a></li>
-        <li><a lang="ro" hreflang="ro" href="../ro/">RO - Română</a></li>
-        <li>
-          <a lang="sk" hreflang="sk" href="../sk/">SK - Slovenčina</a>
-        </li>
-        <li>
-          <a lang="sl" hreflang="sl" href="../sl/">SL - Slovenščina</a>
-        </li>
-        <li><a lang="fi" hreflang="fi" href="../fi/">FI - Suomi</a></li>
-        <li><a lang="sv" hreflang="sv" href="../sv/">SV - Svenska</a></li>
+        {
+          Object.entries(kLanguageLabels).map(([id, label]) => (
+            <li>
+              <a
+                class={id === lang ? 'current' : ''}
+                lang={id}
+                hreflang={id}
+                href={makeHref({ currentPage, lang: id })}
+                aria-current={id === lang || null}>
+                {`${id.toUpperCase()} - ${label}`}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>
