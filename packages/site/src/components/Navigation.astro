@@ -59,20 +59,19 @@ const {
       {/* Mobile menu */}
       <div class="mobile-menu flex justify-end">
         {/* JS interacts with these elements */}
-        <div
+        <nav
           id="navWrapper"
-          class="navWrapper"
           role="navigation"
-          aria-label={mainNav}>
+          aria-label={mainNav}
+          class="navWrapper">
           <div class="divNavigation" id="divNavigation">
             <div id="divmainMenuButton" class="divmainMenuButton">
               {/* Main menu button potentially replaced by JS */}
-              <a
+              <button
                 id="mainMenuButton"
-                data-expanded="false"
-                role="button"
-                href=""
-                aria-label={openMenuMobile}>
+                aria-expanded="false"
+                data-button
+                aria-controls="mainList">
                 <span class="mr-3">{menu}</span>
                 <svg
                   class="inline-block w-[15px] h-[9px]"
@@ -87,65 +86,70 @@ const {
                     stroke="#024ea2"
                     stroke-width="3"></path>
                 </svg>
-              </a>
+              </button>
             </div>
           </div>
+        </nav>
 
-          <ul
-            id="mainList"
-            class="main-menu flex flex-wrap items-center mx-3 my-2 none">
-            {/* Mobile menu items - JS handles visibility and interactions */}
+        {/* Lang menu dropdown */}
+        <nav
+          role="navigation"
+          aria-label={switchLanguage}
+          class="lang-nav flex justify-end">
+          <div class="expand-collapse border-[LightGray] border-1 rounded-lg">
             {
-              pageLabels(lang).map(({ key, label }) => (
-                <li
-                  class={`level1 main ${currentPage === key ? ' current' : ''}`}>
-                  <a
-                    aria-current={currentPage === key ? 'page' : null}
-                    href={`/${lang}/${key}/`}>
-                    {label}
-                  </a>
-                </li>
-              ))
+              /* This class name might be generic, ensure JS targets correctly */
             }
-          </ul>
-        </div>
+            <button
+              id="lang-menu"
+              class="nav-button flex items-center rounded-md border border-1 border-solid border-black-greymiddle focus:outline focus:outline-2 focus:outline-blue-focus px-2.5 py-1 mr-4"
+              aria-expanded="false"
+              data-button
+              aria-controls="lang-list">
+              <span class="inline-block text-base pt-0.5 mr-3">
+                {lang.toUpperCase()}
+                <span class="sr-only">- {kLanguageLabels[lang]}</span>
+              </span>
+              <svg
+                class="inline-block w-[15px] h-[9px]"
+                viewBox="0 0 21.741 12.602"
+                aria-hidden="true"
+                focusable="false">
+                <path
+                  id="Arrow"
+                  d="M0,.055,9.8,9.442,14.545,4.9,19.666,0"
+                  transform="translate(1.037 1.083)"
+                  fill="none"
+                  stroke="#024ea2"
+                  stroke-width="3"></path>
+              </svg>
+            </button>
+          </div>
+        </nav>
       </div>
-
-      {/* Lang menu dropdown */}
-      <nav
-        role="navigation"
-        aria-label={switchLanguage}
-        class="lang-nav flex justify-end">
-        <div class="expand-collapse border-[LightGray] border-1 rounded-lg">
-          {/* This class name might be generic, ensure JS targets correctly */}
-          <button
-            id="lang-menu"
-            class="nav-button flex items-center rounded-md border border-1 border-solid border-black-greymiddle focus:outline focus:outline-2 focus:outline-blue-focus px-2.5 py-1 mr-4"
-            aria-expanded="false"
-            data-button
-            aria-controls="lang-list">
-            <span class="inline-block text-base pt-0.5 mr-3">
-              {lang.toUpperCase()}
-              <span class="sr-only">- {kLanguageLabels[lang]}</span>
-            </span>
-            <svg
-              class="inline-block w-[15px] h-[9px]"
-              viewBox="0 0 21.741 12.602"
-              aria-hidden="true"
-              focusable="false">
-              <path
-                id="Arrow"
-                d="M0,.055,9.8,9.442,14.545,4.9,19.666,0"
-                transform="translate(1.037 1.083)"
-                fill="none"
-                stroke="#024ea2"
-                stroke-width="3"></path>
-            </svg>
-          </button>
-        </div>
-      </nav>
     </div>
 
+    <div
+      id="mainList"
+      class="submenu-content hidden"
+      data-content
+      aria-labelledby="mainMenuButton">
+      <ul class="lang-content block px-6 mx-auto max-w-[1100px]">
+        {/* Mobile menu items - JS handles visibility and interactions */}
+        {
+          pageLabels(lang).map(({ key, label }) => (
+            <li>
+              <a
+                class={currentPage === key ? ' current' : ''}
+                aria-current={currentPage === key ? 'page' : null}
+                href={makeHref({ currentPage: key, lang })}>
+                {label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
     <div
       id="lang-list"
       class="submenu-content hidden"

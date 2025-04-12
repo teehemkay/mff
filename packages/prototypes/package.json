@@ -22,7 +22,7 @@
     "preview": "serve --listen 8080 _site",
     "serve": "live-server --mount=/:_site --watch=_site --no-browser",
     "watch": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name --parallel watch:*",
-    "watch:public": "onchange 'public/**' -- pnpm build:assets",
+    "watch:public": "onchange 'public/**' -- pnpm assets:public",
     "watch:prototypes": "gulp watchPrototypes",
     "watch:scss": "gulp watchScss",
     "watch:tailwind": "pnpm assets:tailwind --watch"
