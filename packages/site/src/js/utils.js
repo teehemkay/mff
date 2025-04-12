@@ -1,13 +1,12 @@
 import {
   kIndex,
-  kMetadata,
   kWhyItMatters,
   kHowItWorks,
   kOurRole,
   kOurPosition,
   kByCountry,
   kCountries,
-  languageCodes,
+  kLanguageCodes,
 } from '@packages/data/constants';
 
 // TODO: why is import.meta.env.BASE_URL crashing astro
@@ -15,7 +14,6 @@ import {
 
 export const pageNames = [
   kIndex,
-  kMetadata,
   kWhyItMatters,
   kHowItWorks,
   kOurRole,
@@ -24,7 +22,6 @@ export const pageNames = [
   kCountries,
 ];
 
-export const kAssetsDir = '/assets/';
 export const range = /* @__NO_SIDE_EFFECTs__ */ (end, start = 0) =>
   Array.from({ length: end - start + 1 }, (_, i) => start + i);
 
@@ -44,7 +41,7 @@ export const getStaticPaths = /* @__NO_SIDE_EFFECTs__ */ () => {
     },
   ];
 
-  for (const lang of languageCodes) {
+  for (const lang of kLanguageCodes) {
     slugs.push({
       params: { slug: lang },
       props: { lang, currentPage: kIndex },
@@ -60,12 +57,3 @@ export const getStaticPaths = /* @__NO_SIDE_EFFECTs__ */ () => {
 
   return slugs;
 };
-
-export { languageCodes } from '@packages/data/constants';
-
-export {
-  languages,
-  pageLabelsForLang,
-  contentForLang as content,
-  metadataForLang as meta,
-} from '@packages/data';

@@ -10,18 +10,13 @@ import {
   kMetadata,
   kCountries,
   kCountriesByLangFile,
+  pageLabelKeys,
 } from './constants.js';
 
 export const __filename = fileURLToPath(import.meta.url);
 export const __dirname = path.dirname(__filename);
 
 export const siteUrl = 'https://eubudget.europarl.europa.eu/';
-
-export const lvContainer = () =>
-  Object.keys(languages).reduce((acc, lang) => {
-    acc[lang] = {};
-    return acc;
-  }, {});
 
 export const canonicalHref = (lang, currentPage) =>
   currentPage === kIndex
@@ -58,6 +53,16 @@ export const loadData = (dataType, lang = '') => {
   }
 };
 
+export const languages = loadData(kLanguages);
+
+export const lvContainer = () =>
+  Object.keys(languages).reduce((acc, lang) => {
+    acc[lang] = {};
+    return acc;
+  }, {});
+
+export const __DATA__ = lvContainer();
+
 export const getDataByLangAndType = ({ dataType, lang }) => {
   try {
     const ct = __DATA__[lang][dataType];
@@ -80,24 +85,17 @@ export const getDataByLangAndType = ({ dataType, lang }) => {
 export const getData = (dataType) => (lang) =>
   getDataByLangAndType({ dataType, lang });
 
-export const pageLabelsForLang = ({ pageLabelKeys, lang }) => {
-  const metadata = metadataForLang(lang);
-  return pageLabelKeys.map(([key, property]) => ({
-    key,
-    label: metadata[property],
-  }));
-};
-
 export const zip = (xs, ys) => xs.map((x, idx) => ({ ...x, ...ys[idx] }));
 
-export const languages = loadData(kLanguages);
-export const countriesByLang = loadData(kCountriesByLangFile);
+export const contentForPage = (pageName, lang) => getData(pageName)(lang);
 
-export const __DATA__ = lvContainer();
+export const countries = getData(kCountries);
+export const metadata = getData(kMetadata);
 
-export const metadataForLang = getData(kMetadata);
-export const langForLang = getData(kLanguages);
-export const contentForLang = (pageName, lang) => getData(pageName)(lang);
-export const countriesForLang = getData(kCountries);
-
-export { kIndex, kLanguages, kMetadata } from './constants.js';
+export const pageLabels = (lang) => {
+  const data = metadata(lang);
+  return pageLabelKeys.map(([key, property]) => ({
+    key,
+    label: data[property],
+  }));
+};

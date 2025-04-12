@@ -3,10 +3,10 @@ interface Props {
   lang: string;
 }
 
-import { meta } from '../js/utils.js';
+import { metadata } from '@packages/data';
 
 const { lang } = Astro.props;
-const { skipToLanguageMenu, skipToMainContent } = meta(lang);
+const { skipToLanguageMenu, skipToMainContent } = metadata(lang);
 ---
 
 <!-- Shortcut for Screen-readers -->

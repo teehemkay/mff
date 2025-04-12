@@ -1,3 +1,14 @@
+---
+import { pageLabels } from '@packages/data';
+
+interface Props {
+  lang: string;
+  currentPage: string;
+}
+
+const { lang, currentPage } = Astro.props;
+---
+
 <!-- When we are on mobile device view, the header needs a role="presentation" that Fernando asked to add --><!-- <header class="min-h-[72px] shadow-md" role="presentation"> -->
 <header class="min-h-[72px] shadow-md pl-1 pr-1" id="header">
   <div
@@ -16,15 +27,17 @@
         <nav role="navigation" aria-label="Main menu" class="default-menu">
           <div class="desktop-menu-display">
             <ul class="navList lg:mr-1">
-              {/* Class 'current' and aria-current handled by JS on homepage */}
-              <li>
-                <a href="homepage.html">Home</a>
-              </li>
-              <li><a href="why-it-matters.html">Why it matters</a></li>
-              <li><a href="how-it-works.html">How it works</a></li>
-              <li><a href="our-role.html">Our Role</a></li>
-              <li><a href="our-position.html">Our Position</a></li>
-              <li><a href="by-country.html">By country</a></li>
+              {
+                pageLabels(lang).map(({ key, label }) => (
+                  <li class={currentPage === key ? 'current' : ''}>
+                    <a
+                      aria-current={currentPage === key}
+                      href={`/${lang}/${key}/`}>
+                      {label}
+                    </a>
+                  </li>
+                ))
+              }
             </ul>
           </div>
         </nav>

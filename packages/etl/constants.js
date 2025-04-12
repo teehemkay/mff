@@ -9,7 +9,7 @@ export const kCountries = 'countries';
 export const kCountriesByLangFile = 'countries-by-lang';
 export const kLanguages = 'languages';
 
-export const languageCodes = [
+export const kLanguageCodes = [
   'en',
   'bg',
   'hr',

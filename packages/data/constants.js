@@ -1,4 +1,13 @@
-export * from '@packages/etl/constants';
+import {
+  kIndex,
+  kWhyItMatters,
+  kHowItWorks,
+  kOurRole,
+  kOurPosition,
+  kByCountry,
+} from '@packages/etl/constants';
+
+export const kAssetsDir = '/assets/';
 
 export const xExceptions = new Map([
   ['cs', 'cz'],
@@ -15,3 +24,16 @@ export const xAccount = (countryOrLanguage) => {
     ? `Europarl_${xExceptions.get(key).toUpperCase()}`
     : `Europarl_${key.toUpperCase()}`;
 };
+
+export const pageLabelKeys = [
+  [kIndex, 'pageLabelHome'],
+  [kWhyItMatters, 'pageLabelWhyItMatters'],
+  [kHowItWorks, 'pageLabelHowItWorks'],
+  [kOurRole, 'pageLabelOurRole'],
+  [kOurPosition, 'pageLabelOurPosition'],
+  [kByCountry, 'pageLabelByCountry'],
+];
+
+export const pageLabelKeysMapping = new Map(pageLabelKeys);
+
+export * from '@packages/etl/constants';
