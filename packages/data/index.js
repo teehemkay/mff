@@ -89,7 +89,7 @@ export const kLanguageLabels = loadData(kLanguages);
 
 export const contentForPage = (pageName, lang) => getData(pageName)(lang);
 
-export const countries = getData(kCountries);
+export const countryNames = getData(kCountries);
 export const metadata = getData(kMetadata);
 
 export const pageLabels = (lang) => {
