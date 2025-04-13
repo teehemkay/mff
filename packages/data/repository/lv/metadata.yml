@@ -23,14 +23,30 @@ checkEPOnInstagram: Apmeklē Eiropas Parlamenta Instagram lapu
 checkEPOnPinterest: Apmeklē Eiropas Parlamenta Pinterest lapu
 checkEPOnSnapchat: Apmeklē Eiropas Parlamenta Snapchat lapu
 checkEPOnReddit: Apmeklē Eiropas Parlamenta reddit lapu
-legalNoticeLabel: Juridisks paziņojums
-legalNoticeURL: https://www.europarl.europa.eu/legal-notice/lv/
-privacyPolicyLabel: Privātuma politika
-privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/lv/
-sitemap: Vietnes karte
-sitemapURL: https://common.europarl.europa.eu/lv/sitemap
-contactUs: Kontaktinformācija
-contactUsURL: https://www.europarl.europa.eu/portal/lv/contact
+legalNoticeLabel:
+  - Juridisks paziņojums
+  - Juridisks paziņojums
+legalNoticeURL:
+  - https://www.europarl.europa.eu/legal-notice/lv/
+  - https://www.europarl.europa.eu/legal-notice/lv/
+privacyPolicyLabel:
+  - Privātuma politika
+  - Privātuma politika
+privacyPolicyURL:
+  - https://www.europarl.europa.eu/privacy-policy/lv/
+  - https://www.europarl.europa.eu/privacy-policy/lv/
+sitemap:
+  - Vietnes karte
+  - Vietnes karte
+sitemapURL:
+  - https://common.europarl.europa.eu/lv/sitemap
+  - https://common.europarl.europa.eu/lv/sitemap
+contactUs:
+  - Kontaktinformācija
+  - Sazinies ar mums
+contactUsURL:
+  - https://www.europarl.europa.eu/portal/lv/contact
+  - https://www.europarl.europa.eu/portal/lv/contact
 clickHere: Noklikšķini šeit
 shareOnFacebook: Dalies ar šo lapu “Facebook”
 shareOnTwitter: ""
@@ -39,8 +55,12 @@ shareOnWhatsApp: Dalies ar šo lapu “WhatsApp”
 socialMediaCardUrl: ""
 all: Visi
 selectCountry: Atlasīt valsti
-accessibilityLabel: Pieejamība
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/lv/accessibility
+accessibilityLabel:
+  - Pieejamība
+  - Pieejamība
+accessibilityLabelURL:
+  - https://www.europarl.europa.eu/portal/lv/accessibility
+  - https://www.europarl.europa.eu/portal/lv/accessibility
 goToWebsite: "Doties uz tīmekļa vietni:"
 shareOnLabel: Dalies
 facebookLabel: Facebook
@@ -63,3 +83,4 @@ kb: kB
 mb: MB
 openMenuMobile: Atvērt galveno navigācijas izvēlni (atveras dialoglodziņā)
 closeMenuMobile: Aizvērt galveno navigācijas izvēlni
+copyright: © Eiropas Parlaments, 2025

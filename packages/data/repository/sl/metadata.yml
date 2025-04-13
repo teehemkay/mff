@@ -23,14 +23,30 @@ checkEPOnInstagram: Oglej si račun Evropskega parlamenta na Instagramu
 checkEPOnPinterest: Oglej si račun Evropskega parlamenta na Pinterestu
 checkEPOnSnapchat: Oglej si račun Evropskega parlamenta na Snapchatu
 checkEPOnReddit: Oglej si račun Evropskega parlamenta na Redditu
-legalNoticeLabel: Pravno obvestilo
-legalNoticeURL: https://www.europarl.europa.eu/legal-notice/sl/
-privacyPolicyLabel: Politika varstva osebnih podatkov
-privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/sl/
-sitemap: Kazalo strani
-sitemapURL: https://common.europarl.europa.eu/sl/sitemap
-contactUs: Kontakti
-contactUsURL: https://www.europarl.europa.eu/portal/sl/contact
+legalNoticeLabel:
+  - Pravno obvestilo
+  - Pravno obvestilo
+legalNoticeURL:
+  - https://www.europarl.europa.eu/legal-notice/sl/
+  - https://www.europarl.europa.eu/legal-notice/sl/
+privacyPolicyLabel:
+  - Politika varstva osebnih podatkov
+  - Varstvo osebnih podatkov
+privacyPolicyURL:
+  - https://www.europarl.europa.eu/privacy-policy/sl/
+  - https://www.europarl.europa.eu/privacy-policy/sl/
+sitemap:
+  - Kazalo strani
+  - Kazalo strani
+sitemapURL:
+  - https://common.europarl.europa.eu/sl/sitemap
+  - https://common.europarl.europa.eu/sl/sitemap
+contactUs:
+  - Kontakti
+  - Kontakt
+contactUsURL:
+  - https://www.europarl.europa.eu/portal/sl/contact
+  - https://www.europarl.europa.eu/portal/sl/contact
 clickHere: Klikni tukaj
 shareOnFacebook: Deli to stran na Facebooku
 shareOnTwitter: ""
@@ -39,8 +55,12 @@ shareOnWhatsApp: Deli to stran na WhatsAppu
 socialMediaCardUrl: ""
 all: Vsa
 selectCountry: Izberi državo
-accessibilityLabel: Dostopnost
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/sl/accessibility
+accessibilityLabel:
+  - Dostopnost
+  - Dostopnost
+accessibilityLabelURL:
+  - https://www.europarl.europa.eu/portal/sl/accessibility
+  - https://www.europarl.europa.eu/portal/sl/accessibility
 goToWebsite: "Pojdi na spletno mesto:"
 shareOnLabel: Objavi na
 facebookLabel: Facebook
@@ -63,3 +83,4 @@ kb: kB
 mb: MB
 openMenuMobile: Odpri glavni meni (odpre se pogovorno okno)
 closeMenuMobile: Zapri glavni meni
+copyright: © Evropski parlament 2025

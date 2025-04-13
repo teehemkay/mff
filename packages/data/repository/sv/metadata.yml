@@ -23,14 +23,30 @@ checkEPOnInstagram: Kolla in Europaparlamentet på Instagram
 checkEPOnPinterest: Kolla in Europaparlamentet på Pinterest
 checkEPOnSnapchat: Kolla in Europaparlamentet på Snapchat
 checkEPOnReddit: Kolla in Europaparlamentet på reddit
-legalNoticeLabel: Rättsligt meddelande
-legalNoticeURL: https://www.europarl.europa.eu/legal-notice/sv/
-privacyPolicyLabel: Integritetspolicy
-privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/sv/
-sitemap: Webbplatskarta
-sitemapURL: https://common.europarl.europa.eu/sv/sitemap
-contactUs: Kontakt
-contactUsURL: https://www.europarl.europa.eu/portal/sv/contact
+legalNoticeLabel:
+  - Rättsligt meddelande
+  - Rättsligt meddelande
+legalNoticeURL:
+  - https://www.europarl.europa.eu/legal-notice/sv/
+  - https://www.europarl.europa.eu/legal-notice/sv/
+privacyPolicyLabel:
+  - Integritetspolicy
+  - Integritetspolicy
+privacyPolicyURL:
+  - https://www.europarl.europa.eu/privacy-policy/sv/
+  - https://www.europarl.europa.eu/privacy-policy/sv/
+sitemap:
+  - Webbplatskarta
+  - Webbplatskarta
+sitemapURL:
+  - https://common.europarl.europa.eu/sv/sitemap
+  - https://common.europarl.europa.eu/sv/sitemap
+contactUs:
+  - Kontakt
+  - Kontakta oss
+contactUsURL:
+  - https://www.europarl.europa.eu/portal/sv/contact
+  - https://www.europarl.europa.eu/portal/sv/contact
 clickHere: Klicka här
 shareOnFacebook: Dela den här sidan på Facebook
 shareOnTwitter: ""
@@ -39,8 +55,12 @@ shareOnWhatsApp: Dela den här sidan på WhatsApp
 socialMediaCardUrl: ""
 all: Alla
 selectCountry: Välj land
-accessibilityLabel: Tillgänglighet
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/sv/accessibility
+accessibilityLabel:
+  - Tillgänglighet
+  - Tillgänglighet
+accessibilityLabelURL:
+  - https://www.europarl.europa.eu/portal/sv/accessibility
+  - https://www.europarl.europa.eu/portal/sv/accessibility
 goToWebsite: "Gå till hemsidan:"
 shareOnLabel: Dela på
 facebookLabel: Facebook
@@ -63,3 +83,4 @@ kb: kB
 mb: MB
 openMenuMobile: Öppna huvudnavigeringsmenyn (öppnas i en dialogruta)
 closeMenuMobile: Stäng huvudnavigeringsmenyn
+copyright: © Europaparlamentet 2025

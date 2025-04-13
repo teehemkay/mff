@@ -23,14 +23,30 @@ checkEPOnInstagram: Euroopa Parlament Instagramis
 checkEPOnPinterest: Euroopa Parlament Pinterestis
 checkEPOnSnapchat: Euroopa Parlament Snapchatis
 checkEPOnReddit: Euroopa Parlament Redditis
-legalNoticeLabel: Õigusalane teave
-legalNoticeURL: https://www.europarl.europa.eu/legal-notice/et/
-privacyPolicyLabel: Isikuandmete kaitse põhimõtted
-privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/et/
-sitemap: Sisukaart
-sitemapURL: https://common.europarl.europa.eu/et/sitemap
-contactUs: Kontakt
-contactUsURL: https://www.europarl.europa.eu/portal/et/contact
+legalNoticeLabel:
+  - Õigusalane teave
+  - Õigusalane teave
+legalNoticeURL:
+  - https://www.europarl.europa.eu/legal-notice/et/
+  - https://www.europarl.europa.eu/legal-notice/et/
+privacyPolicyLabel:
+  - Isikuandmete kaitse põhimõtted
+  - Privaatsuspoliitika
+privacyPolicyURL:
+  - https://www.europarl.europa.eu/privacy-policy/et/
+  - https://www.europarl.europa.eu/privacy-policy/et/
+sitemap:
+  - Sisukaart
+  - Sisukaart
+sitemapURL:
+  - https://common.europarl.europa.eu/et/sitemap
+  - https://common.europarl.europa.eu/et/sitemap
+contactUs:
+  - Kontakt
+  - Kontakt
+contactUsURL:
+  - https://www.europarl.europa.eu/portal/et/contact
+  - https://www.europarl.europa.eu/portal/et/contact
 clickHere: Klõpsa siia
 shareOnFacebook: Jaga Facebookis
 shareOnTwitter: ""
@@ -39,8 +55,12 @@ shareOnWhatsApp: Jaga WhatsAppis
 socialMediaCardUrl: ""
 all: Kõik
 selectCountry: Vali riik
-accessibilityLabel: Juurdepääsetavus
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/et/accessibility
+accessibilityLabel:
+  - Juurdepääsetavus
+  - Juurdepääsetavus
+accessibilityLabelURL:
+  - https://www.europarl.europa.eu/portal/et/accessibility
+  - https://www.europarl.europa.eu/portal/et/accessibility
 goToWebsite: "Mine veebilehele:"
 shareOnLabel: Jaga
 facebookLabel: Facebook
@@ -63,3 +83,4 @@ kb: kB
 mb: MB
 openMenuMobile: Ava peanavigeerimismenüü (avab dialoogiakna)
 closeMenuMobile: Sulge peanavigeerimismenüü
+copyright: © Euroopa Parlament 2025

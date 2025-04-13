@@ -23,14 +23,30 @@ checkEPOnInstagram: Besøg Europa-Parlamentet på Instagram
 checkEPOnPinterest: Besøg Europa-Parlamentet på Pinterest
 checkEPOnSnapchat: Besøg Europa-Parlamentet på Snapchat
 checkEPOnReddit: Besøg Europa-Parlamentet på reddit
-legalNoticeLabel: Juridisk meddelelse
-legalNoticeURL: https://www.europarl.europa.eu/legal-notice/da/
-privacyPolicyLabel: Politik for databeskyttelse
-privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/da/
-sitemap: Oversigt
-sitemapURL: https://common.europarl.europa.eu/da/sitemap
-contactUs: Kontakt
-contactUsURL: https://www.europarl.europa.eu/portal/da/contact
+legalNoticeLabel:
+  - Juridisk meddelelse
+  - Juridisk meddelelse
+legalNoticeURL:
+  - https://www.europarl.europa.eu/legal-notice/da/
+  - https://www.europarl.europa.eu/legal-notice/da/
+privacyPolicyLabel:
+  - Politik for databeskyttelse
+  - Databeskyttelsespolitik
+privacyPolicyURL:
+  - https://www.europarl.europa.eu/privacy-policy/da/
+  - https://www.europarl.europa.eu/privacy-policy/da/
+sitemap:
+  - Oversigt
+  - Oversigt
+sitemapURL:
+  - https://common.europarl.europa.eu/da/sitemap
+  - https://common.europarl.europa.eu/da/sitemap
+contactUs:
+  - Kontakt
+  - Kontakt os
+contactUsURL:
+  - https://www.europarl.europa.eu/portal/da/contact
+  - https://www.europarl.europa.eu/portal/da/contact
 clickHere: Klik her
 shareOnFacebook: Del denne side på Facebook
 shareOnTwitter: ""
@@ -39,8 +55,12 @@ shareOnWhatsApp: Del denne side på WhatsApp
 socialMediaCardUrl: ""
 all: Alle
 selectCountry: Vælg land
-accessibilityLabel: Tilgængelighed
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/da/accessibility
+accessibilityLabel:
+  - Tilgængelighed
+  - Tilgængelighed
+accessibilityLabelURL:
+  - https://www.europarl.europa.eu/portal/da/accessibility
+  - https://www.europarl.europa.eu/portal/da/accessibility
 goToWebsite: "Gå til hjemmesiden:"
 shareOnLabel: Del på
 facebookLabel: Facebook
@@ -63,3 +83,4 @@ kb: kB
 mb: MB
 openMenuMobile: Åbn hovednavigationsmenu (åbner i en dialog)
 closeMenuMobile: Luk hovednavigationsmenu
+copyright: © Europa-Parlamentet 2025

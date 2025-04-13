@@ -23,14 +23,30 @@ checkEPOnInstagram: Segui il Parlamento europeo su Instagram
 checkEPOnPinterest: Segui il Parlamento europeo su Pinterest
 checkEPOnSnapchat: Segui il Parlamento europeo su Snapchat
 checkEPOnReddit: Segui il Parlamento europeo su reddit
-legalNoticeLabel: Avvertenze legali
-legalNoticeURL: https://www.europarl.europa.eu/legal-notice/it/
-privacyPolicyLabel: Politica in materia di trattamento dei dati personali
-privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/it/
-sitemap: Mappa del sito
-sitemapURL: https://common.europarl.europa.eu/it/sitemap
-contactUs: Contatti
-contactUsURL: https://www.europarl.europa.eu/portal/it/contact
+legalNoticeLabel:
+  - Avvertenze legali
+  - Avvertenze legali
+legalNoticeURL:
+  - https://www.europarl.europa.eu/legal-notice/it/
+  - https://www.europarl.europa.eu/legal-notice/it/
+privacyPolicyLabel:
+  - Politica in materia di trattamento dei dati personali
+  - Informativa sulla privacy
+privacyPolicyURL:
+  - https://www.europarl.europa.eu/privacy-policy/it/
+  - https://www.europarl.europa.eu/privacy-policy/it/
+sitemap:
+  - Mappa del sito
+  - Mappa del sito
+sitemapURL:
+  - https://common.europarl.europa.eu/it/sitemap
+  - https://common.europarl.europa.eu/it/sitemap
+contactUs:
+  - Contatti
+  - Per contattarci
+contactUsURL:
+  - https://www.europarl.europa.eu/portal/it/contact
+  - https://www.europarl.europa.eu/portal/it/contact
 clickHere: Clicca qui
 shareOnFacebook: Condividi questa pagina su Facebook
 shareOnTwitter: ""
@@ -39,8 +55,12 @@ shareOnWhatsApp: Condividi questa pagina su WhatsApp
 socialMediaCardUrl: ""
 all: Tutti
 selectCountry: Seleziona un paese
-accessibilityLabel: Accessibilità
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/it/accessibility
+accessibilityLabel:
+  - Accessibilità
+  - Accessibilità
+accessibilityLabelURL:
+  - https://www.europarl.europa.eu/portal/it/accessibility
+  - https://www.europarl.europa.eu/portal/it/accessibility
 goToWebsite: "Vai al sito:"
 shareOnLabel: Condividi su
 facebookLabel: Facebook
@@ -63,3 +83,4 @@ kb: kB
 mb: MB
 openMenuMobile: Aprire il menu principale di navigazione (si apre in un dialogo)
 closeMenuMobile: Chiudere il menu principale di navigazione
+copyright: © Parlamento europeo 2025

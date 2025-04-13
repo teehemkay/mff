@@ -23,14 +23,30 @@ checkEPOnInstagram: Az Európai Parlament az Instagramon
 checkEPOnPinterest: Az Európai Parlament a Pinteresten
 checkEPOnSnapchat: Az Európai Parlament a Snapchat felületén
 checkEPOnReddit: Az Európai Parlament a Reddit felületén
-legalNoticeLabel: Jogi nyilatkozat
-legalNoticeURL: https://www.europarl.europa.eu/legal-notice/hu/
-privacyPolicyLabel: Adatvédelmi szabályzat
-privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/hu/
-sitemap: Oldaltérkép
-sitemapURL: https://common.europarl.europa.eu/hu/sitemap
-contactUs: Kapcsolat
-contactUsURL: https://www.europarl.europa.eu/portal/hu/contact
+legalNoticeLabel:
+  - Jogi nyilatkozat
+  - Jogi nyilatkozat
+legalNoticeURL:
+  - https://www.europarl.europa.eu/legal-notice/hu/
+  - https://www.europarl.europa.eu/legal-notice/hu/
+privacyPolicyLabel:
+  - Adatvédelmi szabályzat
+  - Adatvédelmi szabályzat
+privacyPolicyURL:
+  - https://www.europarl.europa.eu/privacy-policy/hu/
+  - https://www.europarl.europa.eu/privacy-policy/hu/
+sitemap:
+  - Oldaltérkép
+  - Oldaltérkép
+sitemapURL:
+  - https://common.europarl.europa.eu/hu/sitemap
+  - https://common.europarl.europa.eu/hu/sitemap
+contactUs:
+  - Kapcsolat
+  - Kapcsolatfelvétel
+contactUsURL:
+  - https://www.europarl.europa.eu/portal/hu/contact
+  - https://www.europarl.europa.eu/portal/hu/contact
 clickHere: kattintson ide
 shareOnFacebook: Megosztás a Facebookon
 shareOnTwitter: ""
@@ -39,8 +55,12 @@ shareOnWhatsApp: Megosztás a WhatsAppon
 socialMediaCardUrl: ""
 all: Mind
 selectCountry: Ország kiválasztása
-accessibilityLabel: Kisegítő lehetőségek
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/hu/accessibility
+accessibilityLabel:
+  - Kisegítő lehetőségek
+  - Kisegítő lehetőségek
+accessibilityLabelURL:
+  - https://www.europarl.europa.eu/portal/hu/accessibility
+  - https://www.europarl.europa.eu/portal/hu/accessibility
 goToWebsite: "Tovább a weboldalra:"
 shareOnLabel: Megosztás a következőn
 facebookLabel: Facebook
@@ -63,3 +83,4 @@ kb: kB
 mb: MB
 openMenuMobile: A fő navigációs menü megnyitása (párbeszédablakban nyílik meg)
 closeMenuMobile: A fő navigációs menü bezárása
+copyright: © Európai Parlament, 2025

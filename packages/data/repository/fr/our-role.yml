@@ -11,3 +11,6 @@ faqAnswer:
 faqAnswerMeta:
   - ""
   - ""
+faqExpanded:
+  - "false"
+  - "false"

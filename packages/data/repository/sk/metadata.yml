@@ -23,14 +23,30 @@ checkEPOnInstagram: Pozrieť si Európsky parlament na Instagrame
 checkEPOnPinterest: Pozrieť si Európsky parlament na Pintereste
 checkEPOnSnapchat: Pozrieť si Európsky parlament na Snapchate
 checkEPOnReddit: Pozrieť si Európsky parlament na Reddite
-legalNoticeLabel: Právne oznámenie
-legalNoticeURL: https://www.europarl.europa.eu/legal-notice/sk/
-privacyPolicyLabel: Politika ochrany súkromia
-privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/sk/
-sitemap: Mapa stránky
-sitemapURL: https://common.europarl.europa.eu/sk/sitemap
-contactUs: Kontakt
-contactUsURL: https://www.europarl.europa.eu/portal/sk/contact
+legalNoticeLabel:
+  - Právne oznámenie
+  - Právne oznámenie
+legalNoticeURL:
+  - https://www.europarl.europa.eu/legal-notice/sk/
+  - https://www.europarl.europa.eu/legal-notice/sk/
+privacyPolicyLabel:
+  - Politika ochrany súkromia
+  - Politika ochrany súkromia
+privacyPolicyURL:
+  - https://www.europarl.europa.eu/privacy-policy/sk/
+  - https://www.europarl.europa.eu/privacy-policy/sk/
+sitemap:
+  - Mapa stránky
+  - Mapa stránky
+sitemapURL:
+  - https://common.europarl.europa.eu/sk/sitemap
+  - https://common.europarl.europa.eu/sk/sitemap
+contactUs:
+  - Kontakt
+  - Obráťte sa na nás
+contactUsURL:
+  - https://www.europarl.europa.eu/portal/sk/contact
+  - https://www.europarl.europa.eu/portal/sk/contact
 clickHere: Kliknite sem
 shareOnFacebook: Zdieľať túto stránku na Facebooku
 shareOnTwitter: ""
@@ -39,8 +55,12 @@ shareOnWhatsApp: Zdieľať túto stránku na WhatsAppe
 socialMediaCardUrl: ""
 all: Všetky tlačové správy
 selectCountry: Zvoľte krajinu
-accessibilityLabel: Prístupnosť
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/sk/accessibility
+accessibilityLabel:
+  - Prístupnosť
+  - prístupnosť
+accessibilityLabelURL:
+  - https://www.europarl.europa.eu/portal/sk/accessibility
+  - https://www.europarl.europa.eu/portal/sk/accessibility
 goToWebsite: "Choďte na webovú stránku:"
 shareOnLabel: Informujte ďalších
 facebookLabel: Facebook
@@ -63,3 +83,4 @@ kb: kB
 mb: MB
 openMenuMobile: Otvoriť hlavné menu prehliadania (otvorí sa v novom dialógovom okne)
 closeMenuMobile: Zatvoriť hlavné menu prehliadania
+copyright: © Európsky parlament 2025
