@@ -1,23 +1,36 @@
 ---
-interface Props {
-  lang: string;
-  currentPage: string;
-}
-
-import { kIndex, kWhyItMatters, kByCountry } from '../js/utils.js';
+import { kIndex, kWhyItMatters, kByCountry } from '@packages/data/constants';
 
 import Layout from '../layouts/BaseLayout.astro';
 import MainIndex from '../components/MainIndex.astro';
 import MainWhyItMattes from '../components/MainWhyItMatters.astro';
 import MainByCountry from '../components/MainByCountry.astro';
+import MainWhyItMatters from '../components/MainWhyItMatters.astro';
+
+interface Props {
+  lang: string;
+  currentPage: string;
+}
 
 const { lang, currentPage } = Astro.props;
 
 const props = { lang, currentPage };
 
 export { getStaticPaths } from '../js/utils.js';
+
+const selectPage = () => {
+  switch (currentPage) {
+    case kIndex:
+      return MainIndex;
+
+    case kWhyItMatters:
+      return MainWhyItMatters;
+  }
+};
+
+const Page = selectPage();
 ---
 
 <Layout {...props}>
-  <MainIndex {...props} />
+  <Page {...props} />
 </Layout>

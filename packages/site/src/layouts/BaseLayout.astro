@@ -24,7 +24,12 @@ const { lang, currentPage } = Astro.props;
     {/* Main page content goes here */}
     <slot />
 
-    <Footer />
+    <a
+      href="#returnToTop"
+      class="top-link hide js-top"
+      aria-label="Scroll back to top of the page"></a>
+
+    <Footer {lang} />
 
     {/* Common Scripts */}
     <script is:inline src="/assets/js/go-to-top.js"></script>

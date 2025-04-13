@@ -1,18 +1,20 @@
 ---
-// No props or nested includes needed
+export interface CardProps {
+  links: string[][];
+}
 ---
-<!-- LINKS - POLITICAL PARTIES -->
+
 <ul>
-    <li class="mb-4">
-        <a href="#" class="text-lg" target="_blank">Latest public opinion surveys - Eurobarometer</a> {/* Link placeholder */}
-    </li>
-    <li class="mb-4">
-        <a href="#" class="text-lg" target="_blank">Factsheet on how the EU works: financing the EU</a> {/* Link placeholder */}
-    </li>
-    <li class="mb-4">
-        <a href="#" class="text-lg" target="_blank">European Commission's website on the EU’s long-term budget</a> {/* Link placeholder */}
-    </li>
-    <li class="mb-4">
-        <a href="#" class="text-lg" target="_blank">Council of the EU's website on the EU’s long-term budget</a> {/* Link placeholder */}
-    </li>
+  {
+    Astro.props.links.map(([label, url]) => (
+      <li class="mb-4">
+        <a
+          href={url}
+          class="text-lg"
+          target={url.includes('europarl.europa.eu') ? null : '_blank'}>
+          {label}
+        </a>
+      </li>
+    ))
+  }
 </ul>

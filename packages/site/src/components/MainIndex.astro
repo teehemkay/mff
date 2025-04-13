@@ -1,11 +1,15 @@
 ---
-import Cards from '../components/Cards.astro';
-import IframeVideo from '../components/IframeVideo.astro';
-import Transcript from '../components/Transcript.astro';
-import BtnSocialShare from '../components/BtnSocialShare.astro';
-import CardsUpdates from '../components/CardsUpdates.astro';
-import Campaign from '../components/Campaign.astro';
-import LinksPoliticalParties from '../components/LinksPoliticalParties.astro';
+import { contentForPage } from '@packages/data';
+
+import { zip } from '../js/utils.js';
+
+import Cards from './Cards.astro';
+import IframeVideo from './IframeVideo.astro';
+import Transcript from './Transcript.astro';
+import BtnSocialShare from './BtnSocialShare.astro';
+import CardsUpdates from './CardsUpdates.astro';
+import Campaign from './Campaign.astro';
+import LinksPoliticalParties from './LinksPoliticalParties.astro';
 
 interface Props {
   lang: string;
@@ -14,9 +18,34 @@ interface Props {
 
 const { lang, currentPage } = Astro.props;
 
-const title = "The EU's long-term budget from 2028";
-const description =
-  'Discover the benefits of the EU budget and learn how decisions about it are made.';
+const {
+  homeH1,
+  homeSubtitle,
+  homeIntroText,
+  homeCardLinkLabel,
+  homeCardLinkURL,
+  homeCardText,
+  homeNewsTitle,
+  homeNewsCardTitle,
+  homeNewsCardText,
+  homeRelatedLinksTitle,
+  homeRelatedLinkLabel,
+  homeRelatedLinkURL,
+  homeCampaignTitle,
+  homeCampaignLinkLabel,
+  homeCampaignLinkURL,
+} = contentForPage(currentPage, lang);
+
+const cards = zip(homeCardLinkLabel, homeCardLinkURL, homeCardText);
+const updates = zip(homeNewsCardTitle, homeNewsCardText);
+const links = zip(homeRelatedLinkLabel, homeRelatedLinkURL);
+
+const campaignProps = {
+  lang,
+  altText: homeCampaignTitle,
+  url: homeCampaignLinkURL,
+  label: homeCampaignLinkLabel,
+};
 ---
 
 <main role="main" id="mainContent" class="mb-8">
@@ -25,25 +54,20 @@ const description =
   <div class="max-w-5xl mx-auto px-4 mt-54px mb-10">
     <h1
       class="logo-brand font-epSemiBold text-2.5xl text-black-greydark text-left">
-      {title}
+      {homeH1}
     </h1>
     <span
       class="text-brand-title inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2"
-      >Invest in what matters</span
+      >{homeSubtitle}</span
     >
   </div>
 
   <div
-    class="htv-page max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4 mb-12">
-    <p class="max-w-3xl mb-6">
-      The EU's long-term budget drives investments in Europe's future, improving
-      citizens' lives. It funds common projects and delivers on priorities from
-      digital innovation to border security.
-    </p>
-    <p><span class="font-EPGammaBold">{description}</span></p>
-  </div>
+    set:html={homeIntroText}
+    class="htv-page max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4 mb-12"
+  />
 
-  <Cards />
+  <Cards {cards} />
 
   <div
     class="max-w-5xl sm:block block mx-auto justify-between items-center px-4">
@@ -60,127 +84,15 @@ const description =
 
   <div
     class="cards-links-block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mb-16 px-4">
-    <h2 class="font-EPGammaBold pb-6">Latest updates</h2>
-    <CardsUpdates />
+    <h2 class="font-EPGammaBold pb-6">{homeNewsTitle}</h2>
+    <CardsUpdates {updates} />
   </div>
 
-  <Campaign />
+  <Campaign {...campaignProps} />
 
   <div
     class="epol-block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mb-16 px-4">
-    <h2 class="font-EPGammaBold pb-6">Related links</h2>
-    <LinksPoliticalParties />
+    <h2 class="font-EPGammaBold pb-6">{homeRelatedLinksTitle}</h2>
+    <LinksPoliticalParties {links} />
   </div>
-
-  <a
-    href="#returnToTop"
-    class="top-link hide js-top"
-    aria-label="Scroll back to top of the page"></a>
 </main>
-
-{/* Homepage specific JS */}
-<script is:inline>
-  // Expand/Collapse component logic (specific to this page instance)
-  const expandContainers = document.querySelectorAll(
-    '#mainContent .expand-container',
-  ); // Scope to main content
-
-  function toggleContent() {
-    // 'this' refers to the button clicked
-    const targetId = this.dataset.target;
-    const target = document.getElementById(targetId);
-    if (!target) return;
-    const container = this.closest('.expand-container'); // Find parent container
-    if (!container) return;
-
-    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-
-    target.classList.toggle('hidden');
-    this.setAttribute('aria-expanded', !isExpanded);
-
-    if (!isExpanded) {
-      this.setAttribute('aria-label', 'Collapse Content'); // Update label
-      container.dataset.initialState = 'expanded'; // Update state if needed
-      target.style.opacity = '0';
-      target.style.transition = 'opacity 0.3s ease-out'; // Add transition
-      setTimeout(() => {
-        target.style.opacity = '1';
-      }, 10);
-    } else {
-      this.setAttribute('aria-label', 'Expand Content'); // Update label
-      container.dataset.initialState = 'collapsed'; // Update state if needed
-      target.style.opacity = '1';
-      target.style.transition = 'opacity 0.3s ease-out'; // Add transition
-      setTimeout(() => {
-        target.style.opacity = '0';
-        // Optionally hide after transition: setTimeout(() => { target.classList.add('hidden'); }, 300);
-      }, 10);
-      // If not using opacity transition, just toggle hidden:
-      // target.classList.add('hidden');
-    }
-  }
-
-  expandContainers.forEach((container) => {
-    const buttonExpand = container.querySelector('.expand-button');
-    if (!buttonExpand) return;
-    const targetId = buttonExpand.dataset.target;
-    const target = document.getElementById(targetId);
-    if (!target) return;
-
-    const initialState = container.dataset.initialState || 'collapsed'; // Default to collapsed
-
-    if (initialState === 'expanded') {
-      target.classList.remove('hidden');
-      buttonExpand.setAttribute('aria-expanded', 'true');
-      buttonExpand.setAttribute('aria-label', 'Collapse Content');
-    } else {
-      target.classList.add('hidden');
-      buttonExpand.setAttribute('aria-expanded', 'false');
-      buttonExpand.setAttribute('aria-label', 'Expand Content');
-      container.dataset.initialState = 'collapsed'; // Ensure state is set
-    }
-
-    buttonExpand.addEventListener('click', toggleContent);
-  });
-
-  // Nav highlighting logic (specific to this page instance)
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuItems = document.querySelectorAll('.navList li'); // Target desktop menu
-    const mobileMenuItems = document.querySelectorAll('#mainList li.level1'); // Target mobile menu
-
-    // Reset all desktop items
-    menuItems.forEach((item) => {
-      item.classList.remove('current');
-      const link = item.querySelector('a');
-      if (link) link.removeAttribute('aria-current');
-    });
-
-    // Reset all mobile items
-    mobileMenuItems.forEach((item) => {
-      const link = item.querySelector('a');
-      if (link) {
-        link.classList.remove('current'); // Assuming mobile uses class on <a>
-        link.removeAttribute('aria-current');
-      }
-    });
-
-    // Highlight the correct item (Home = index 0)
-    const targetIndex = 0;
-
-    // Apply to desktop
-    if (menuItems[targetIndex]) {
-      menuItems[targetIndex].classList.add('current');
-      const link = menuItems[targetIndex].querySelector('a');
-      if (link) link.setAttribute('aria-current', 'page');
-    }
-
-    // Apply to mobile (adjust selector/class if needed)
-    if (mobileMenuItems[targetIndex]) {
-      const link = mobileMenuItems[targetIndex].querySelector('a');
-      if (link) {
-        link.classList.add('current'); // Or apply class to <li> if structure requires
-        link.setAttribute('aria-current', 'page');
-      }
-    }
-  });
-</script>

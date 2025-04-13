@@ -1,34 +1,54 @@
 ---
+interface Props {
+  ariaControls: string;
+  ariaExpanded: boolean;
+  l10nExpand: string;
+  l10nCollapse: string;
+  videoTitle: string;
+  transcript: string;
+}
+
 // Consider making ID dynamic if this component is reused on the same page
-const transcriptId = "transcript-1"; // Example ID
-const initialState = "collapsed"; // Default state
-const videoTitle = "title of the video displayed here"; // Example title, make prop if dynamic
+const transcriptId = 'transcript-1'; // Example ID
+const initialState = 'collapsed'; // Default state
+const videoTitle = 'title of the video displayed here'; // Example title, make prop if dynamic
 ---
-<!-- Transcript -->
-{/* Pass unique ID and initial state */}
+
 <div class="expand-container mb-3" data-initial-state={initialState}>
-    {/* Point button to the unique ID */}
-    <button
-        class="transcript-btn expand-button pb-1"
-        data-target={transcriptId}
-        aria-expanded={initialState === 'expanded'}
-        aria-controls={transcriptId}
-        aria-label={`Transcript - ${videoTitle}`}
+  <button
+    class="transcript-btn expand-button pb-1"
+    data-l10n-collapse="Collapse content"
+    data-l10n-expand="Expand content"
+    aria-expanded={initialState === 'expanded'}
+    aria-controls={transcriptId}
+    aria-label={`Transcript - ${videoTitle}`}>
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 10 9">
+      <rect class="vert" height="8" x="4.5" y="0.5" width="0.8"></rect>
+      <rect width="8" y="4" x="1" height="0.8"></rect>
+    </svg>
+    <span class="text-lg text-blue-default underline"
+      >Transcript <span class="sr-only">- {videoTitle}</span></span
     >
-        <svg aria-hidden="true" focusable="false" viewBox="0 0 10 9">
-            <rect class="vert" height="8" x="4.5" y="0.5" width="0.8"></rect>
-            <rect width="8" y="4" x="1" height="0.8"></rect>
-        </svg>
-        <span class="text-lg text-blue-default underline">Transcript <span class="sr-only">- {videoTitle}</span></span>
-    </button>
-    {/* Use unique ID */}
-    <div id={transcriptId} class={`expand-container-content ${initialState === 'collapsed' ? 'hidden' : ''}`}>
-        <div itemprop="text" class="mt-6">
-            <p>What is the EU doing for me?</p>
-            <p>A lot!</p>
-            <p>First, it opens up opportunities.</p>
-            <p>You’re free to live, work and travel across 27 countries in the world’s biggest single market. The EU fights for fairness, acting to tackle the energy crisis and ensure adequate minimum wages. It protects us as citizens and consumers: making sure our food is safe, our air is clean and our online environment secure. It also guarantees our rights, promoting gender equality and work-life balance, improving conditions for parents, carers and women in the workplace. The EU is a global power: supporting democracy, protecting the environment, securing trade deals, promoting peace, progress and security. Democracy in action European Parliament</p>
-            {/* Removed empty <p></p> */}
-        </div>
+  </button>
+  <div
+    id={transcriptId}
+    class={`expand-container-content ${initialState === 'collapsed' ? 'hidden' : ''}`}>
+    <div itemprop="text" class="mt-6">
+      <p>What is the EU doing for me?</p>
+      <p>A lot!</p>
+      <p>First, it opens up opportunities.</p>
+      <p>
+        You’re free to live, work and travel across 27 countries in the world’s
+        biggest single market. The EU fights for fairness, acting to tackle the
+        energy crisis and ensure adequate minimum wages. It protects us as
+        citizens and consumers: making sure our food is safe, our air is clean
+        and our online environment secure. It also guarantees our rights,
+        promoting gender equality and work-life balance, improving conditions
+        for parents, carers and women in the workplace. The EU is a global
+        power: supporting democracy, protecting the environment, securing trade
+        deals, promoting peace, progress and security. Democracy in action
+        European Parliament
+      </p>
     </div>
+  </div>
 </div>

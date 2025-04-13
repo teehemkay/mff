@@ -33,6 +33,20 @@ export const pair = /* @__NO_SIDE_EFFECTs__ */ (arr1, arr2) => {
 export const makeHref = ({ currentPage, lang }) =>
   currentPage === kIndex ? `/${lang}/` : `/${lang}/${currentPage}/`;
 
+export const zip = (...arrays) =>
+  arrays[0].map((_, index) => arrays.map((array) => array[index]));
+
+// uses map creates the array of objects
+// reduce builds each object by accumulating properties from the corresponding values
+export const zipObjects = (props, values) => {
+  return values[0].map((_, index) =>
+    props.reduce((obj, prop, propIndex) => {
+      obj[prop] = values[propIndex][index];
+      return obj;
+    }, {}),
+  );
+};
+
 export const getStaticPaths = /* @__NO_SIDE_EFFECTs__ */ () => {
   const slugs = [
     {
