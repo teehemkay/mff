@@ -2,7 +2,7 @@
 import { kIndex, kByCountry } from '@packages/data/constants';
 
 import Layout from '../layouts/BaseLayout.astro';
-import MainIndex from '../components/MainIndex.astro';
+import MainHomepage from '../components/MainHomepage.astro';
 import MainFAQs from '../components/MainFAQs.astro';
 import MainByCountry from '../components/MainByCountry.astro';
 
@@ -20,7 +20,7 @@ export { getStaticPaths } from '../js/utils.js';
 const selectPage = () => {
   switch (currentPage) {
     case kIndex:
-      return MainIndex;
+      return MainHomepage;
 
     case kByCountry:
       return MainByCountry;

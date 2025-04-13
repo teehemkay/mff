@@ -9,7 +9,6 @@ import Transcript from './Transcript.astro';
 import BtnSocialShare from './BtnSocialShare.astro';
 import CardsUpdates from './CardsUpdates.astro';
 import Campaign from './Campaign.astro';
-import LinksPoliticalParties from './LinksPoliticalParties.astro';
 
 interface Props {
   lang: string;
@@ -74,7 +73,6 @@ const campaignProps = {
     <IframeVideo
       videoText="How the European Parliament supports citizens’ in the next budget term"
     />
-    {/* Ensure Transcript and BtnSocialShare IDs are unique if reused */}
     <Transcript />
     <div class="share-home">
       <BtnSocialShare />
@@ -93,6 +91,19 @@ const campaignProps = {
   <div
     class="epol-block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mb-16 px-4">
     <h2 class="font-EPGammaBold pb-6">{homeRelatedLinksTitle}</h2>
-    <LinksPoliticalParties {links} />
+    <ul>
+      {
+        links.map(([label, url]) => (
+          <li class="mb-4">
+            <a
+              href={url}
+              class="text-lg"
+              target={url.includes('europarl.europa.eu') ? null : '_blank'}>
+              {label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </main>
