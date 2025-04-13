@@ -23,30 +23,14 @@ checkEPOnInstagram: Европейският парламент в Instagram
 checkEPOnPinterest: Европейският парламент в Pinterest
 checkEPOnSnapchat: Европейският парламент в Snapchat
 checkEPOnReddit: Европейският парламент в reddit
-legalNoticeLabel:
-  - Правна информация
-  - Правна информация
-legalNoticeURL:
-  - https://www.europarl.europa.eu/legal-notice/bg/
-  - https://www.europarl.europa.eu/legal-notice/bg/
-privacyPolicyLabel:
-  - Политика за поверителност на личните данни
-  - Политика за поверителност
-privacyPolicyURL:
-  - https://www.europarl.europa.eu/privacy-policy/bg/
-  - https://www.europarl.europa.eu/privacy-policy/bg/
-sitemap:
-  - Карта на сайта
-  - Карта на сайта
-sitemapURL:
-  - https://common.europarl.europa.eu/bg/sitemap
-  - https://common.europarl.europa.eu/bg/sitemap
-contactUs:
-  - Контакти
-  - Свържете се с нас
-contactUsURL:
-  - https://www.europarl.europa.eu/portal/bg/contact
-  - https://www.europarl.europa.eu/portal/bg/contact
+legalNoticeLabel: Правна информация
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/bg/
+privacyPolicyLabel: Политика за поверителност на личните данни
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/bg/
+sitemap: Карта на сайта
+sitemapURL: https://common.europarl.europa.eu/bg/sitemap
+contactUs: Контакти
+contactUsURL: https://www.europarl.europa.eu/portal/bg/contact
 clickHere: Натиснете тук
 shareOnFacebook: Споделете тази страница във Facebook
 shareOnTwitter: ""
@@ -55,12 +39,8 @@ shareOnWhatsApp: Споделете тази страница в WhatsApp
 socialMediaCardUrl: ""
 all: Всички
 selectCountry: Изберете държава
-accessibilityLabel:
-  - Достъпност
-  - Достъпност
-accessibilityLabelURL:
-  - https://www.europarl.europa.eu/portal/bg/accessibility
-  - https://www.europarl.europa.eu/portal/bg/accessibility
+accessibilityLabel: Достъпност
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/bg/accessibility
 goToWebsite: "Идете на уебсайта:"
 shareOnLabel: Споделете във
 facebookLabel: Facebook
@@ -83,4 +63,3 @@ kb: kB
 mb: MB
 openMenuMobile: Отворете основното меню за навигация (отваря диалоговия прозорец)
 closeMenuMobile: Затворете основното меню за навигация
-copyright: © Европейски парламент 2025 г.

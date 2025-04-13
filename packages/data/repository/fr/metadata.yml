@@ -23,30 +23,14 @@ checkEPOnInstagram: Visitez le compte Instagram du Parlement européen
 checkEPOnPinterest: Visitez la galerie Pinterest du Parlement européen
 checkEPOnSnapchat: Visitez le profil Snapchat du Parlement européen
 checkEPOnReddit: Visitez le profil Reddit du Parlement européen
-legalNoticeLabel:
-  - Mentions légales
-  - Mentions légales
-legalNoticeURL:
-  - https://www.europarl.europa.eu/legal-notice/ga/
-  - https://www.europarl.europa.eu/legal-notice/fr/
-privacyPolicyLabel:
-  - Politique de confidentialité
-  - Politique de confidentialité
-privacyPolicyURL:
-  - https://www.europarl.europa.eu/privacy-policy/ga/
-  - https://www.europarl.europa.eu/privacy-policy/fr/
-sitemap:
-  - Plan du site
-  - Plan du site
-sitemapURL:
-  - https://common.europarl.europa.eu/ga/sitemap
-  - https://common.europarl.europa.eu/fr/sitemap
-contactUs:
-  - Contact
-  - Contact
-contactUsURL:
-  - https://www.europarl.europa.eu/portal/ga/contact
-  - https://www.europarl.europa.eu/portal/fr/contact
+legalNoticeLabel: Mentions légales
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/ga/
+privacyPolicyLabel: Politique de confidentialité
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/ga/
+sitemap: Plan du site
+sitemapURL: https://common.europarl.europa.eu/ga/sitemap
+contactUs: Contact
+contactUsURL: https://www.europarl.europa.eu/portal/ga/contact
 clickHere: Cliquez ici
 shareOnFacebook: Partager sur Facebook
 shareOnTwitter: ""
@@ -55,12 +39,8 @@ shareOnWhatsApp: Partager sur WhatsApp
 socialMediaCardUrl: ""
 all: Tous
 selectCountry: Sélectionner un pays
-accessibilityLabel:
-  - Accessibilité
-  - Accessibilité
-accessibilityLabelURL:
-  - https://www.europarl.europa.eu/portal/ga/accessibility
-  - https://www.europarl.europa.eu/portal/fr/accessibility
+accessibilityLabel: Accessibilité
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/ga/accessibility
 goToWebsite: "Allez sur le site :"
 shareOnLabel: Partager sur
 facebookLabel: Facebook
@@ -83,4 +63,3 @@ kb: kB
 mb: MB
 openMenuMobile: Ouvrir le menu de navigation principal (s’ouvre dans une nouvelle fenêtre)
 closeMenuMobile: Fermer le menu de navigation principal
-copyright: © Parlement européen 2025

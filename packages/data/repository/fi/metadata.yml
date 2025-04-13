@@ -23,30 +23,14 @@ checkEPOnInstagram: Seuraa Euroopan parlamenttia Instagramissa
 checkEPOnPinterest: Seuraa Euroopan parlamenttia Pinterestissä
 checkEPOnSnapchat: Seuraa Euroopan parlamenttia Snapchatissa
 checkEPOnReddit: Seuraa Euroopan parlamenttia Redditissä
-legalNoticeLabel:
-  - Oikeudellinen huomautus
-  - Oikeudellinen huomautus
-legalNoticeURL:
-  - https://www.europarl.europa.eu/legal-notice/fi/
-  - https://www.europarl.europa.eu/legal-notice/fi/
-privacyPolicyLabel:
-  - Tietosuojapolitiikka
-  - Tietosuojakäytäntö
-privacyPolicyURL:
-  - https://www.europarl.europa.eu/privacy-policy/fi/
-  - https://www.europarl.europa.eu/privacy-policy/fi/
-sitemap:
-  - Sivustokartta
-  - Sivustokartta
-sitemapURL:
-  - https://common.europarl.europa.eu/fi/sitemap
-  - https://common.europarl.europa.eu/fi/sitemap
-contactUs:
-  - Yhteystiedot
-  - Yhteystiedot
-contactUsURL:
-  - https://www.europarl.europa.eu/portal/fi/contact
-  - https://www.europarl.europa.eu/portal/fi/contact
+legalNoticeLabel: Oikeudellinen huomautus
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/fi/
+privacyPolicyLabel: Tietosuojapolitiikka
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/fi/
+sitemap: Sivustokartta
+sitemapURL: https://common.europarl.europa.eu/fi/sitemap
+contactUs: Yhteystiedot
+contactUsURL: https://www.europarl.europa.eu/portal/fi/contact
 clickHere: Klikkaa tästä
 shareOnFacebook: Jaa tämä sivu Facebookissa
 shareOnTwitter: ""
@@ -55,12 +39,8 @@ shareOnWhatsApp: Jaa tämä sivu WhatsAppissa
 socialMediaCardUrl: ""
 all: Kaikki
 selectCountry: Valitse maa
-accessibilityLabel:
-  - Esteettömyys
-  - Esteettömyys
-accessibilityLabelURL:
-  - https://www.europarl.europa.eu/portal/fi/accessibility
-  - https://www.europarl.europa.eu/portal/fi/accessibility
+accessibilityLabel: Esteettömyys
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/fi/accessibility
 goToWebsite: "Siirry verkkosivulle:"
 shareOnLabel: Jaa
 facebookLabel: Facebook
@@ -83,4 +63,3 @@ kb: kB
 mb: MB
 openMenuMobile: Avaa päävalikko (avautuu valintaikkunana)
 closeMenuMobile: Sulje päävalikko
-copyright: © Euroopan parlamentti 2025

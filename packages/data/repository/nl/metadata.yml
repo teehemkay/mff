@@ -23,30 +23,14 @@ checkEPOnInstagram: Ontdek het Europees Parlement op Instagram
 checkEPOnPinterest: Ontdek het Europees Parlement op Pinterest
 checkEPOnSnapchat: Ontdek het Europees Parlement op Snapchat
 checkEPOnReddit: Ontdek het Europees Parlement op reddit
-legalNoticeLabel:
-  - Juridische mededeling
-  - Juridische mededeling
-legalNoticeURL:
-  - https://www.europarl.europa.eu/legal-notice/nl/
-  - https://www.europarl.europa.eu/legal-notice/nl/
-privacyPolicyLabel:
-  - Privacybeleid
-  - Privacybeleid
-privacyPolicyURL:
-  - https://www.europarl.europa.eu/privacy-policy/nl/
-  - https://www.europarl.europa.eu/privacy-policy/nl/
-sitemap:
-  - Sitemap
-  - Sitemap
-sitemapURL:
-  - https://common.europarl.europa.eu/nl/sitemap
-  - https://common.europarl.europa.eu/nl/sitemap
-contactUs:
-  - Contact
-  - Neem contact met ons op
-contactUsURL:
-  - https://www.europarl.europa.eu/portal/nl/contact
-  - https://www.europarl.europa.eu/portal/nl/contact
+legalNoticeLabel: Juridische mededeling
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/nl/
+privacyPolicyLabel: Privacybeleid
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/nl/
+sitemap: Sitemap
+sitemapURL: https://common.europarl.europa.eu/nl/sitemap
+contactUs: Contact
+contactUsURL: https://www.europarl.europa.eu/portal/nl/contact
 clickHere: Klik hier
 shareOnFacebook: Deze pagina delen op Facebook
 shareOnTwitter: ""
@@ -55,12 +39,8 @@ shareOnWhatsApp: Deze pagina delen via WhatsApp
 socialMediaCardUrl: ""
 all: Alle
 selectCountry: Selecteer een land
-accessibilityLabel:
-  - Toegankelijkheid
-  - Toegankelijkheid
-accessibilityLabelURL:
-  - https://www.europarl.europa.eu/portal/nl/accessibility
-  - https://www.europarl.europa.eu/portal/nl/accessibility
+accessibilityLabel: Toegankelijkheid
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/nl/accessibility
 goToWebsite: "Ga naar de website:"
 shareOnLabel: Delen op
 facebookLabel: Facebook
@@ -83,4 +63,3 @@ kb: kB
 mb: MB
 openMenuMobile: Open hoofdnavigatiemenu (opent in een dialoogvenster)
 closeMenuMobile: Sluit hoofdnavigatiemenu
-copyright: © Europees Parlement 2025

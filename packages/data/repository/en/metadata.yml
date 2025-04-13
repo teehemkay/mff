@@ -23,30 +23,14 @@ checkEPOnInstagram: Check out the European Parliament on Instagram
 checkEPOnPinterest: Check out the European Parliament on Pinterest
 checkEPOnSnapchat: Check out the European Parliament on Snapchat
 checkEPOnReddit: Check out the European Parliament on reddit
-legalNoticeLabel:
-  - Legal notice
-  - Legal notice
-legalNoticeURL:
-  - https://www.europarl.europa.eu/legal-notice/en/
-  - https://www.europarl.europa.eu/legal-notice/en/
-privacyPolicyLabel:
-  - Privacy policy
-  - Privacy policy
-privacyPolicyURL:
-  - https://www.europarl.europa.eu/privacy-policy/en/
-  - https://www.europarl.europa.eu/privacy-policy/en/
-sitemap:
-  - Sitemap
-  - Sitemap
-sitemapURL:
-  - https://common.europarl.europa.eu/en/sitemap
-  - https://common.europarl.europa.eu/en/sitemap
-contactUs:
-  - Contact
-  - Contact us
-contactUsURL:
-  - https://www.europarl.europa.eu/portal/en/contact
-  - https://www.europarl.europa.eu/portal/en/contact
+legalNoticeLabel: Legal notice
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/en/
+privacyPolicyLabel: Privacy policy
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/en/
+sitemap: Sitemap
+sitemapURL: https://common.europarl.europa.eu/en/sitemap
+contactUs: Contact
+contactUsURL: https://www.europarl.europa.eu/portal/en/contact
 clickHere: Click here
 shareOnFacebook: Share this page on Facebook
 shareOnTwitter: Share this page on X
@@ -55,12 +39,8 @@ shareOnWhatsApp: Share the page on WhatsApp
 socialMediaCardUrl: ""
 all: All
 selectCountry: Select a country
-accessibilityLabel:
-  - Accessibility
-  - Accessibility
-accessibilityLabelURL:
-  - https://www.europarl.europa.eu/portal/en/accessibility
-  - https://www.europarl.europa.eu/portal/en/accessibility
+accessibilityLabel: Accessibility
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/en/accessibility
 goToWebsite: "Go to the website:"
 shareOnLabel: Share on
 facebookLabel: Facebook
@@ -83,4 +63,3 @@ kb: kB
 mb: MB
 openMenuMobile: Open main navigation menu (opens in a dialog)
 closeMenuMobile: Close main navigation menu
-copyright: © European Parliament 2025

@@ -23,30 +23,14 @@ checkEPOnInstagram: Urmăriți Parlamentul European pe Instagram
 checkEPOnPinterest: Urmăriți Parlamentul European pe Pinterest
 checkEPOnSnapchat: Urmăriți Parlamentul European pe Snapchat
 checkEPOnReddit: Urmăriți Parlamentul European pe reddit
-legalNoticeLabel:
-  - Notă juridică
-  - Notă juridică
-legalNoticeURL:
-  - https://www.europarl.europa.eu/legal-notice/ro/
-  - https://www.europarl.europa.eu/legal-notice/ro/
-privacyPolicyLabel:
-  - Politica de confidențialitate
-  - Politica de confidențialitate
-privacyPolicyURL:
-  - https://www.europarl.europa.eu/privacy-policy/ro/
-  - https://www.europarl.europa.eu/privacy-policy/ro/
-sitemap:
-  - Harta site-ului
-  - Harta site-ului
-sitemapURL:
-  - https://common.europarl.europa.eu/ro/sitemap
-  - https://common.europarl.europa.eu/ro/sitemap
-contactUs:
-  - Contact
-  - Contactați-ne
-contactUsURL:
-  - https://www.europarl.europa.eu/portal/ro/contact
-  - https://www.europarl.europa.eu/portal/ro/contact
+legalNoticeLabel: Notă juridică
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/ro/
+privacyPolicyLabel: Politica de confidențialitate
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/ro/
+sitemap: Harta site-ului
+sitemapURL: https://common.europarl.europa.eu/ro/sitemap
+contactUs: Contact
+contactUsURL: https://www.europarl.europa.eu/portal/ro/contact
 clickHere: Faceți clic aici
 shareOnFacebook: Distribuiți această pagină pe Facebook
 shareOnTwitter: ""
@@ -55,12 +39,8 @@ shareOnWhatsApp: Distribuiți această pagină pe WhatsApp
 socialMediaCardUrl: ""
 all: Toate
 selectCountry: Selectați țara
-accessibilityLabel:
-  - Accesibilitate
-  - Accesibilitate
-accessibilityLabelURL:
-  - https://www.europarl.europa.eu/portal/ro/accessibility
-  - https://www.europarl.europa.eu/portal/ro/accessibility
+accessibilityLabel: Accesibilitate
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/ro/accessibility
 goToWebsite: "Mergi la website:"
 shareOnLabel: Recomandaţi pe
 facebookLabel: Facebook
@@ -83,4 +63,3 @@ kb: kB
 mb: MB
 openMenuMobile: Deschide meniul principal de navigare (se deschide într-o fereastră nouă)
 closeMenuMobile: Închide meniul principal de navigare
-copyright: © Parlamentul European 2025

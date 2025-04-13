@@ -23,30 +23,14 @@ checkEPOnInstagram: Το Ευρωπαϊκό Κοινοβούλιο στο Instag
 checkEPOnPinterest: Το Ευρωπαϊκό Κοινοβούλιο στο Pinterest
 checkEPOnSnapchat: Το Ευρωπαϊκό Κοινοβούλιο στο Snapchat
 checkEPOnReddit: Το Ευρωπαϊκό Κοινοβούλιο στο reddit
-legalNoticeLabel:
-  - Ανακοίνωση νομικού περιεχομένου
-  - Ανακοίνωση νομικού περιεχομένου
-legalNoticeURL:
-  - https://www.europarl.europa.eu/legal-notice/el/
-  - https://www.europarl.europa.eu/legal-notice/el/
-privacyPolicyLabel:
-  - Πολιτική προστασίας απορρήτου
-  - Πολιτική απορρήτου
-privacyPolicyURL:
-  - https://www.europarl.europa.eu/privacy-policy/el/
-  - https://www.europarl.europa.eu/privacy-policy/el/
-sitemap:
-  - Χάρτης ιστότοπου
-  - Χάρτης ιστότοπου
-sitemapURL:
-  - https://common.europarl.europa.eu/el/sitemap
-  - https://common.europarl.europa.eu/el/sitemap
-contactUs:
-  - Επικοινωνία
-  - Επικοινωνία
-contactUsURL:
-  - https://www.europarl.europa.eu/portal/el/contact
-  - https://www.europarl.europa.eu/portal/el/contact
+legalNoticeLabel: Ανακοίνωση νομικού περιεχομένου
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/el/
+privacyPolicyLabel: Πολιτική προστασίας απορρήτου
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/el/
+sitemap: Χάρτης ιστότοπου
+sitemapURL: https://common.europarl.europa.eu/el/sitemap
+contactUs: Επικοινωνία
+contactUsURL: https://www.europarl.europa.eu/portal/el/contact
 clickHere: Πατήστε εδώ
 shareOnFacebook: Κοινοποίηση στο Facebook
 shareOnTwitter: ""
@@ -55,12 +39,8 @@ shareOnWhatsApp: Κοινοποίηση στο WhatsApp
 socialMediaCardUrl: ""
 all: Όλα
 selectCountry: Επιλέξτε χώρα
-accessibilityLabel:
-  - Προσβασιμότητα
-  - Προσβασιμότητα
-accessibilityLabelURL:
-  - https://www.europarl.europa.eu/portal/el/accessibility
-  - https://www.europarl.europa.eu/portal/el/accessibility
+accessibilityLabel: Προσβασιμότητα
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/el/accessibility
 goToWebsite: "Μεταβείτε στον ιστότοπο:"
 shareOnLabel: Κοινοποίηση στο
 facebookLabel: Facebook
@@ -83,4 +63,3 @@ kb: kB
 mb: MB
 openMenuMobile: Άνοιγμα του κύριου μενού πλοήγησης (ανοίγει σε πλαίσιο διαλόγου)
 closeMenuMobile: Κλείσιμο του κύριου μενού πλοήγησης
-copyright: © Ευρωπαϊκό Κοινοβούλιο 2025

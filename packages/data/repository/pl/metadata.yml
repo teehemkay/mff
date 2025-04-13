@@ -23,30 +23,14 @@ checkEPOnInstagram: Znajdź Parlament Europejski na Instagramie
 checkEPOnPinterest: Znajdź Parlament Europejski na Pinterest
 checkEPOnSnapchat: Znajdź Parlament Europejski na Snapchacie
 checkEPOnReddit: Znajdź Parlament Europejski w serwisie reddit
-legalNoticeLabel:
-  - Informacja prawna
-  - Informacja prawna
-legalNoticeURL:
-  - https://www.europarl.europa.eu/legal-notice/pl/
-  - https://www.europarl.europa.eu/legal-notice/pl/
-privacyPolicyLabel:
-  - Polityka ochrony prywatności
-  - Polityka ochrony prywatności
-privacyPolicyURL:
-  - https://www.europarl.europa.eu/privacy-policy/pl/
-  - https://www.europarl.europa.eu/privacy-policy/pl/
-sitemap:
-  - Mapa strony
-  - Mapa strony
-sitemapURL:
-  - https://common.europarl.europa.eu/pl/sitemap
-  - https://common.europarl.europa.eu/pl/sitemap
-contactUs:
-  - Kontakt
-  - Skontaktuj się z nami
-contactUsURL:
-  - https://www.europarl.europa.eu/portal/pl/contact
-  - https://www.europarl.europa.eu/portal/pl/contact
+legalNoticeLabel: Informacja prawna
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/pl/
+privacyPolicyLabel: Polityka ochrony prywatności
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/pl/
+sitemap: Mapa strony
+sitemapURL: https://common.europarl.europa.eu/pl/sitemap
+contactUs: Kontakt
+contactUsURL: https://www.europarl.europa.eu/portal/pl/contact
 clickHere: Kliknij tutaj
 shareOnFacebook: Udostępnij tę stronę na Facebooku
 shareOnTwitter: ""
@@ -55,12 +39,8 @@ shareOnWhatsApp: Udostępnij tę stronę na WhatsAppie
 socialMediaCardUrl: ""
 all: Wszystkie
 selectCountry: Wybierz kraj
-accessibilityLabel:
-  - Dostęp
-  - Dostęp
-accessibilityLabelURL:
-  - https://www.europarl.europa.eu/portal/pl/accessibility
-  - https://www.europarl.europa.eu/portal/pl/accessibility
+accessibilityLabel: Dostęp
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/pl/accessibility
 goToWebsite: "Odwiedź stronę:"
 shareOnLabel: Udostępnij
 facebookLabel: Facebook
@@ -83,4 +63,3 @@ kb: kB
 mb: MB
 openMenuMobile: Otwórz główne menu nawigacji (otwiera się w oknie dialogowym)
 closeMenuMobile: Zamknij główne menu nawigacji
-copyright: © Parlament Europejski 2025

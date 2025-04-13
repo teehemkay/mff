@@ -23,30 +23,14 @@ checkEPOnInstagram: Ara l-Parlament Ewropew fuq Instagram
 checkEPOnPinterest: Ara l-Parlament Ewropew fuq Pinterest
 checkEPOnSnapchat: Ara l-Parlament Ewropew fuq Snapchat
 checkEPOnReddit: Ara l-Parlament Ewropew fuq reddit
-legalNoticeLabel:
-  - Avviż legali
-  - Avviż legali
-legalNoticeURL:
-  - https://www.europarl.europa.eu/legal-notice/mt/
-  - https://www.europarl.europa.eu/legal-notice/mt/
-privacyPolicyLabel:
-  - Politika dwar il-privatezza
-  - Politika tal-privatezza
-privacyPolicyURL:
-  - https://www.europarl.europa.eu/privacy-policy/mt/
-  - https://www.europarl.europa.eu/privacy-policy/mt/
-sitemap:
-  - Sitemap
-  - Sitemap
-sitemapURL:
-  - https://common.europarl.europa.eu/mt/sitemap
-  - https://common.europarl.europa.eu/mt/sitemap
-contactUs:
-  - Kuntatt
-  - Kuntatt
-contactUsURL:
-  - https://www.europarl.europa.eu/portal/mt/contact
-  - https://www.europarl.europa.eu/portal/mt/contact
+legalNoticeLabel: Avviż legali
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/mt/
+privacyPolicyLabel: Politika dwar il-privatezza
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/mt/
+sitemap: Sitemap
+sitemapURL: https://common.europarl.europa.eu/mt/sitemap
+contactUs: Kuntatt
+contactUsURL: https://www.europarl.europa.eu/portal/mt/contact
 clickHere: Agħfas hawn
 shareOnFacebook: Aqsam din il-paġna fuq Facebook
 shareOnTwitter: ""
@@ -55,12 +39,8 @@ shareOnWhatsApp: Aqsam il-paġna fuq WhatsApp
 socialMediaCardUrl: ""
 all: Kollha
 selectCountry: Agħżel pajjiż
-accessibilityLabel:
-  - Aċċess
-  - Aċċess
-accessibilityLabelURL:
-  - https://www.europarl.europa.eu/portal/mt/accessibility
-  - https://www.europarl.europa.eu/portal/mt/accessibility
+accessibilityLabel: Aċċess
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/mt/accessibility
 goToWebsite: "Żur is-sit web:"
 shareOnLabel: Aqsam
 facebookLabel: Facebook
@@ -83,4 +63,3 @@ kb: kB
 mb: MB
 openMenuMobile: Iftaħ il-menu prinċipali tan-navigazzjoni (jinfetaħ f’kaxxa tad-djalogu)
 closeMenuMobile: Agħlaq il-menu prinċipali tan-navigazzjoni
-copyright: © Parlament Ewropew 2025

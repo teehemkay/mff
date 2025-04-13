@@ -23,30 +23,14 @@ checkEPOnInstagram: Apsilankykite Europos Parlamento paskyroje tinkle „Instagr
 checkEPOnPinterest: Apsilankykite Europos Parlamento paskyroje platformoje „Pinterest“
 checkEPOnSnapchat: Apsilankykite Europos Parlamento paskyroje programėlėje „Snapchat“
 checkEPOnReddit: Apsilankykite Europos Parlamento paskyroje platformoje „reddit“
-legalNoticeLabel:
-  - Teisinis pranešimas
-  - Teisinis pranešimas
-legalNoticeURL:
-  - https://www.europarl.europa.eu/legal-notice/lt/
-  - https://www.europarl.europa.eu/legal-notice/lt/
-privacyPolicyLabel:
-  - Privatumo politika
-  - Privatumo politika
-privacyPolicyURL:
-  - https://www.europarl.europa.eu/privacy-policy/lt/
-  - https://www.europarl.europa.eu/privacy-policy/lt/
-sitemap:
-  - Svetainės struktūra
-  - Svetainės struktūra
-sitemapURL:
-  - https://common.europarl.europa.eu/lt/sitemap
-  - https://common.europarl.europa.eu/lt/sitemap
-contactUs:
-  - Kontaktai
-  - Susisiekite su mumis
-contactUsURL:
-  - https://www.europarl.europa.eu/portal/lt/contact
-  - https://www.europarl.europa.eu/portal/lt/contact
+legalNoticeLabel: Teisinis pranešimas
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/lt/
+privacyPolicyLabel: Privatumo politika
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/lt/
+sitemap: Svetainės struktūra
+sitemapURL: https://common.europarl.europa.eu/lt/sitemap
+contactUs: Kontaktai
+contactUsURL: https://www.europarl.europa.eu/portal/lt/contact
 clickHere: Spauskite čia
 shareOnFacebook: Dalytis šiuo puslapiu tinkle „Facebook“
 shareOnTwitter: ""
@@ -55,12 +39,8 @@ shareOnWhatsApp: Dalytis šiuo puslapiu per programėlę „WhatsApp“
 socialMediaCardUrl: ""
 all: Visi
 selectCountry: Pasirinkti šalį
-accessibilityLabel:
-  - Prieiga
-  - Prieiga
-accessibilityLabelURL:
-  - https://www.europarl.europa.eu/portal/lt/accessibility
-  - https://www.europarl.europa.eu/portal/lt/accessibility
+accessibilityLabel: Prieiga
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/lt/accessibility
 goToWebsite: Įeiti į interneto puslapį
 shareOnLabel: Dalintis
 facebookLabel: Facebook
@@ -83,4 +63,3 @@ kb: kB
 mb: MB
 openMenuMobile: Atverti pagrindinį naršymo meniu (atidaromas dialogo lange)
 closeMenuMobile: Užverti pagrindinį naršymo meniu
-copyright: © Europos Parlamentas, 2025

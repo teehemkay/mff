@@ -23,30 +23,14 @@ checkEPOnInstagram: Europski parlament na Instagramu
 checkEPOnPinterest: Europski parlament na Pinterestu
 checkEPOnSnapchat: Europski parlament na Snapchatu
 checkEPOnReddit: Europski parlament na redditu
-legalNoticeLabel:
-  - Pravna obavijest
-  - Pravna obavijest
-legalNoticeURL:
-  - https://www.europarl.europa.eu/legal-notice/hr/
-  - https://www.europarl.europa.eu/legal-notice/hr/
-privacyPolicyLabel:
-  - Politika zaštite privatnosti
-  - Politika zaštite privatnosti
-privacyPolicyURL:
-  - https://www.europarl.europa.eu/privacy-policy/hr/
-  - https://www.europarl.europa.eu/privacy-policy/hr/
-sitemap:
-  - Mapa internetskih stranica
-  - Mapa internetskih stranica
-sitemapURL:
-  - https://common.europarl.europa.eu/hr/sitemap
-  - https://common.europarl.europa.eu/hr/sitemap
-contactUs:
-  - Kontakt
-  - Kontaktirajte nas
-contactUsURL:
-  - https://www.europarl.europa.eu/portal/hr/contact
-  - https://www.europarl.europa.eu/portal/hr/contact
+legalNoticeLabel: Pravna obavijest
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/hr/
+privacyPolicyLabel: Politika zaštite privatnosti
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/hr/
+sitemap: Mapa internetskih stranica
+sitemapURL: https://common.europarl.europa.eu/hr/sitemap
+contactUs: Kontakt
+contactUsURL: https://www.europarl.europa.eu/portal/hr/contact
 clickHere: Kliknite ovdje
 shareOnFacebook: Podijelite ovu stranicu na Facebooku
 shareOnTwitter: ""
@@ -55,12 +39,8 @@ shareOnWhatsApp: Podijelite ovu stranicu na WhatsAppu
 socialMediaCardUrl: ""
 all: Svi
 selectCountry: Odaberite zemlju
-accessibilityLabel:
-  - Pristupačnost
-  - Pristupačnost
-accessibilityLabelURL:
-  - https://www.europarl.europa.eu/portal/hr/accessibility
-  - https://www.europarl.europa.eu/portal/hr/accessibility
+accessibilityLabel: Pristupačnost
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/hr/accessibility
 goToWebsite: "Idi na internetsku stranicu:"
 shareOnLabel: Podijelite na
 facebookLabel: Facebooku
@@ -83,4 +63,3 @@ kb: kB
 mb: MB
 openMenuMobile: Otvoriti glavni navigacijski izbornik (otvoren u dijaloškom okviru)
 closeMenuMobile: Zatvoriti glavni navigacijski izbornik
-copyright: © Europski parlament, 2025.

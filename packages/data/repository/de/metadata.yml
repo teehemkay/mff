@@ -23,30 +23,14 @@ checkEPOnInstagram: Das Europäische Parlament auf Instagram
 checkEPOnPinterest: Das Europäische Parlament auf Pinterest
 checkEPOnSnapchat: Das Europäische Parlament auf Snapchat
 checkEPOnReddit: Das Europäische Parlament auf Reddit
-legalNoticeLabel:
-  - Rechtlicher Hinweis
-  - Rechtlicher Hinweis
-legalNoticeURL:
-  - https://www.europarl.europa.eu/legal-notice/de/
-  - https://www.europarl.europa.eu/legal-notice/de/
-privacyPolicyLabel:
-  - Datenschutzbestimmungen
-  - Datenschutzbestimmungen
-privacyPolicyURL:
-  - https://www.europarl.europa.eu/privacy-policy/de/
-  - https://www.europarl.europa.eu/privacy-policy/de/
-sitemap:
-  - Seitenübersicht
-  - Seitenübersicht
-sitemapURL:
-  - https://common.europarl.europa.eu/de/sitemap
-  - https://common.europarl.europa.eu/de/sitemap
-contactUs:
-  - Kontakt
-  - Kontakt
-contactUsURL:
-  - https://www.europarl.europa.eu/portal/de/contact
-  - https://www.europarl.europa.eu/portal/de/contact
+legalNoticeLabel: Rechtlicher Hinweis
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/de/
+privacyPolicyLabel: Datenschutzbestimmungen
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/de/
+sitemap: Seitenübersicht
+sitemapURL: https://common.europarl.europa.eu/de/sitemap
+contactUs: Kontakt
+contactUsURL: https://www.europarl.europa.eu/portal/de/contact
 clickHere: Hier klicken
 shareOnFacebook: Diese Seite auf Facebook teilen
 shareOnTwitter: ""
@@ -55,12 +39,8 @@ shareOnWhatsApp: Diese Seite auf WhatsApp teilen
 socialMediaCardUrl: ""
 all: Alle
 selectCountry: Land auswählen
-accessibilityLabel:
-  - Zugänglichkeit
-  - Zugänglichkeit
-accessibilityLabelURL:
-  - https://www.europarl.europa.eu/portal/de/accessibility
-  - https://www.europarl.europa.eu/portal/de/accessibility
+accessibilityLabel: Zugänglichkeit
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/de/accessibility
 goToWebsite: "Gehe zur Website:"
 shareOnLabel: Teilen auf
 facebookLabel: Facebook
@@ -83,4 +63,3 @@ kb: kB
 mb: MB
 openMenuMobile: Hauptnavigationsmenü öffnen (wird in einem Dialogfeld geöffnet)
 closeMenuMobile: Hauptnavigationsmenü schließen
-copyright: © Europäisches Parlament, 2025

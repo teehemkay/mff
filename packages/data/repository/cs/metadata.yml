@@ -23,30 +23,14 @@ checkEPOnInstagram: Evropský parlament na Instagramu
 checkEPOnPinterest: Evropský parlament na Pinterestu
 checkEPOnSnapchat: Evropský parlament na Snapchatu
 checkEPOnReddit: Evropský parlament na Redditu
-legalNoticeLabel:
-  - Právní upozornění
-  - Právní upozornění
-legalNoticeURL:
-  - https://www.europarl.europa.eu/legal-notice/cs/
-  - https://www.europarl.europa.eu/legal-notice/cs/
-privacyPolicyLabel:
-  - Zásady ochrany soukromí
-  - Ochrana soukromí
-privacyPolicyURL:
-  - https://www.europarl.europa.eu/privacy-policy/cs/
-  - https://www.europarl.europa.eu/privacy-policy/cs/
-sitemap:
-  - Mapa stránek
-  - Mapa stránek
-sitemapURL:
-  - https://common.europarl.europa.eu/cs/sitemap
-  - https://common.europarl.europa.eu/cs/sitemap
-contactUs:
-  - Kontakt
-  - Kontakt
-contactUsURL:
-  - https://www.europarl.europa.eu/portal/cs/contact
-  - https://www.europarl.europa.eu/portal/cs/contact
+legalNoticeLabel: Právní upozornění
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/cs/
+privacyPolicyLabel: Zásady ochrany soukromí
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/cs/
+sitemap: Mapa stránek
+sitemapURL: https://common.europarl.europa.eu/cs/sitemap
+contactUs: Kontakt
+contactUsURL: https://www.europarl.europa.eu/portal/cs/contact
 clickHere: Klikněte sem
 shareOnFacebook: Sdílet tuto stránku na Facebooku
 shareOnTwitter: ""
@@ -55,12 +39,8 @@ shareOnWhatsApp: Sdílet tuto stránku na Whatsappu
 socialMediaCardUrl: ""
 all: Vše
 selectCountry: Vyberte zemi
-accessibilityLabel:
-  - Dostupnost
-  - Dostupnost
-accessibilityLabelURL:
-  - https://www.europarl.europa.eu/portal/cs/accessibility
-  - https://www.europarl.europa.eu/portal/cs/accessibility
+accessibilityLabel: Dostupnost
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/cs/accessibility
 goToWebsite: "Přejít na webovou stránku:"
 shareOnLabel: Sdílet na
 facebookLabel: Facebook
@@ -83,4 +63,3 @@ kb: kB
 mb: MB
 openMenuMobile: Otevřít hlavní navigační menu (otevře se v dialogovém okně)
 closeMenuMobile: Zavřít hlavní navigační menu
-copyright: © Evropský parlament 2025

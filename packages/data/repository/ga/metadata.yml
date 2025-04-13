@@ -23,30 +23,14 @@ checkEPOnInstagram: Féach Parlaimint na hEorpa ar Instagram
 checkEPOnPinterest: Féach Parlaimint na hEorpa ar Pinterest
 checkEPOnSnapchat: Féach Parlaimint na hEorpa ar Snapchat
 checkEPOnReddit: Féach Parlaimint na hEorpa ar reddit
-legalNoticeLabel:
-  - Fógra dlíthiúil
-  - Fógra dlíthiúil
-legalNoticeURL:
-  - https://www.europarl.europa.eu/legal-notice/fr/
-  - https://www.europarl.europa.eu/legal-notice/ga/
-privacyPolicyLabel:
-  - Beartas príobháideachais
-  - Beartas príobháideachais
-privacyPolicyURL:
-  - https://www.europarl.europa.eu/privacy-policy/fr/
-  - https://www.europarl.europa.eu/privacy-policy/ga/
-sitemap:
-  - Mapa suímh
-  - Mapa suímh
-sitemapURL:
-  - https://common.europarl.europa.eu/fr/sitemap
-  - https://common.europarl.europa.eu/ga/sitemap
-contactUs:
-  - Teagmháil
-  - Déan teagmháil linn
-contactUsURL:
-  - https://www.europarl.europa.eu/portal/fr/contact
-  - https://www.europarl.europa.eu/portal/ga/contact
+legalNoticeLabel: Fógra dlíthiúil
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/fr/
+privacyPolicyLabel: Beartas príobháideachais
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/fr/
+sitemap: Mapa suímh
+sitemapURL: https://common.europarl.europa.eu/fr/sitemap
+contactUs: Teagmháil
+contactUsURL: https://www.europarl.europa.eu/portal/fr/contact
 clickHere: Cliceáil anseo
 shareOnFacebook: Roinn an leathanach seo ar Facebook
 shareOnTwitter: ""
@@ -55,12 +39,8 @@ shareOnWhatsApp: Roinn an leathanach seo ar Whatsapp
 socialMediaCardUrl: ""
 all: Gach rud
 selectCountry: Roghnaigh tír
-accessibilityLabel:
-  - Inrochtaineacht
-  - Inrochtaineacht
-accessibilityLabelURL:
-  - https://www.europarl.europa.eu/portal/fr/accessibility
-  - https://www.europarl.europa.eu/portal/ga/accessibility
+accessibilityLabel: Inrochtaineacht
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/fr/accessibility
 goToWebsite: "Téigh go dtí an suíomh gréasáin:"
 shareOnLabel: Páirtigh
 facebookLabel: Facebook
@@ -83,4 +63,3 @@ kb: kB
 mb: MB
 openMenuMobile: Oscail an roghchlár nascleanúna príomha (osclaítear i mbosca dialóige é)
 closeMenuMobile: Dún an roghchlár nascleanúna príomha
-copyright: © Parlaimint na hEorpa 2025
