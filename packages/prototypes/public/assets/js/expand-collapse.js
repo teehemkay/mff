@@ -11,28 +11,37 @@ const toggleContent = (event) => {
   if (!target) {
     return;
   }
+
   const isExpanded = button.getAttribute('aria-expanded') === 'true';
+  const expandLabel = button.dataset.l10nExpand;
+  const collapseLabel = button.dataset.l10nCollapse;
 
   button.setAttribute('aria-expanded', !isExpanded);
   target.classList.toggle('hidden');
 
   if (isExpanded) {
-    button.setAttribute('aria-label', button.dataset.l10nExpand); // Update label
+    if (expandLabel) {
+      button.setAttribute('aria-label', expandLabel); // Update label
+    }
+
     target.style.opacity = '1';
     target.style.transition = 'opacity 0.3s ease-out'; // Add transition
+
     setTimeout(() => {
       target.style.opacity = '0';
-      // Optionally hide after transition: setTimeout(() => { target.classList.add('hidden'); }, 300);
+      target.removeAttribute('style');
     }, 10);
-    // If not using opacity transition, just toggle hidden:
-    // target.classList.add('hidden');
   } else {
-    button.setAttribute('aria-label', button.dataset.l10nCollapse); // Update label
-    container.dataset.initialState = 'expanded'; // Update state if needed
+    if (collapseLabel) {
+      button.setAttribute('aria-label', collapseLabel); // Update label
+    }
+
     target.style.opacity = '0';
     target.style.transition = 'opacity 0.3s ease-out'; // Add transition
+
     setTimeout(() => {
       target.style.opacity = '1';
+      target.removeAttribute('style');
     }, 10);
   }
 };
@@ -45,18 +54,27 @@ expandContainers.forEach((container) => {
 
   const targetId = button.getAttribute('aria-controls');
   const target = document.querySelector(`#${targetId}`);
+
   if (!target) {
     return;
   }
 
-  const isExpanded = button.getAttribute('aria-expanded') === 'true'; // Default to false
+  const isExpanded = button.getAttribute('aria-expanded') === 'true';
+  const expandLabel = button.dataset.l10nExpand;
+  const collapseLabel = button.dataset.l10nCollapse;
 
   if (isExpanded) {
     target.classList.remove('hidden');
-    button.setAttribute('aria-label', button.dataset.l10nCollapse);
+
+    if (collapseLabel) {
+      button.setAttribute('aria-label', collapseLabel); // Update label
+    }
   } else {
     target.classList.add('hidden');
-    button.setAttribute('aria-label', button.dataset.l10nCollapse);
+
+    if (expandLabel) {
+      button.setAttribute('aria-label', expandLabel); // Update label
+    }
   }
 
   button.addEventListener('click', toggleContent);

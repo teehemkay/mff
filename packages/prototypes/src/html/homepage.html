@@ -78,54 +78,6 @@
 	@@include('./components/scripts.html')
 
 	<script>
-		/* ********* EXPAND / COLLAPSE COMPONENT ******** */
-		const containers = document.querySelectorAll('.expand-container');
-
-		containers.forEach((container) => {
-			const buttonExpand = container.querySelector('.expand-button');
-			const targetId = buttonExpand.dataset.target;
-			const target = document.getElementById(targetId);
-			const isExpanded =
-					buttonExpand.getAttribute('aria-expanded') === 'true';
-
-			if (container.dataset.initialState === 'expanded') {
-				target.classList.remove('hidden');
-				buttonExpand.setAttribute('aria-expanded', 'true');
-				buttonExpand.setAttribute('aria-label', 'Collapse Content');
-			} else {
-				target.classList.add('hidden');
-				buttonExpand.setAttribute('aria-expanded', 'false');
-				buttonExpand.setAttribute('aria-label', 'Expand Content');
-				container.dataset.initialState = 'collapsed'; // Ajout de cette ligne
-			}
-
-			buttonExpand.addEventListener('click', toggleContent);
-		});
-
-		function toggleContent() {
-			const targetId = this.dataset.target;
-			const target = document.getElementById(targetId);
-			const isExpanded = this.getAttribute('aria-expanded') === 'true';
-
-			target.classList.toggle('hidden');
-			this.setAttribute('aria-expanded', !isExpanded);
-
-			if (!isExpanded) {
-				this.setAttribute('aria-label', 'Collapse Content');
-				this.parentNode.parentNode.dataset.initialState = 'expanded';
-				target.style.opacity = '0';
-				setTimeout(() => {
-					target.style.opacity = '1';
-				}, 10);
-			} else {
-				this.setAttribute('aria-label', 'Expand Content');
-				this.parentNode.parentNode.dataset.initialState = 'collapsed';
-				target.style.opacity = '1';
-				setTimeout(() => {
-					target.style.opacity = '0';
-				}, 10);
-			}
-		}
 
 		document.addEventListener("DOMContentLoaded", function () {
 			const menuItems = document.querySelectorAll(".navList li");
