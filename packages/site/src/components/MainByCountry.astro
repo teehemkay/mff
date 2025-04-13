@@ -1,146 +1,59 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Countries from '../components/Countries.astro';
+import { countryNames, contentForPage } from '@packages/data';
+import { kIndex } from '@packages/etl/constants';
 
-const pageTitle = "The added value of the EU’s long term budget";
-const pageDescription = "The EU’s long term budget is a catalyst for change, creating jobs and turning key projects into reality. It strengthens border security, develops infrastructure, supports farmers, and promotes digital transformation. Explore the impact of the budget on your region and daily life.";
+import Header from './Header.astro';
+
+interface Props {
+  lang: string;
+  currentPage: string;
+}
+
+const { lang, currentPage } = Astro.props;
+
+const { homeH1: title, homeSubtitle: subtitle } = contentForPage(kIndex, lang);
+
+const props = contentForPage(currentPage, lang);
+const { pageH1: h1, pageChapo: chapo } = props;
+
+const headerProps = { title, subtitle, h1, chapo };
 ---
-<BaseLayout title={pageTitle} description={pageDescription}>
 
-    <main role="main" id="mainContent" class="mb-8">
-
-        <div class="htv-page">
-
-            <div class="max-w-5xl mx-auto px-4 mt-54px mb-27px">
-                <span class="block font-EPGammaBold text-2lg text-black-default text-left">
-                    The EU's long-term budget from 2028
+<main role="main" id="mainContent" class="mb-8">
+  <Header {...headerProps} />
+  <div
+    class="max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto mb-16 px-4">
+    <ul class="columns-1 sm:columns-2 lg:columns-3 gap-8 p-4">
+      {
+        Object.entries(countryNames(lang)).map(([code, country]) => (
+          <li class="break-inside-avoid border-b border-b-1 border-[LightGray] py-6">
+            <a
+              href={props[`${code}Url`]}
+              class="flex items-center !no-underline hover:!underline focus:!underline">
+              <>
+                <span class="font-epSemiBold text-[1.781rem] leading-normal inline mr-3">
+                  {country}
                 </span>
-                <span class="text-brand-title-page inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2 mb-12">Invest in what matters</span>
-                <h1 class="font-EPGammaBold text-2.5xl text-black-greydark text-left">
-                    {pageTitle}
-                </h1>
-                <p class="max-w-3xl text-[1.4rem] text-black-grey my-5">
-                    {pageDescription}
-                </p>
-                {/* <p class="inline-block bg-black-greylighter px-1.5 py-1">Last update on 07/12/2023</p> */}
-            </div>
-
-            <div class="max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto mb-16 px-4"> {/* Added px-4 for consistency */}
-                <Countries />
-            </div>
-
-        </div>
-
-    </main>
-
-    {/* Page specific JS */}
-    <script is:inline>
-        // Expand/Collapse component logic (specific to this page instance)
-        // Note: This assumes the expand/collapse elements are NOT present on this page.
-        // If they were, this script would need to be adjusted or potentially removed
-        // if the global script handles it sufficiently.
-        const expandContainers = document.querySelectorAll('#mainContent .expand-container'); // Scope to main content
-
-        function toggleContent() {
-            // 'this' refers to the button clicked
-            const targetId = this.dataset.target;
-            const target = document.getElementById(targetId);
-            if (!target) return;
-            const container = this.closest('.expand-container'); // Find parent container
-            if (!container) return;
-
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-
-            target.classList.toggle('hidden');
-            this.setAttribute('aria-expanded', !isExpanded);
-
-            if (!isExpanded) {
-                this.setAttribute('aria-label', 'Collapse Content'); // Update label
-                container.dataset.initialState = 'expanded'; // Update state if needed
-                target.style.opacity = '0';
-                target.style.transition = 'opacity 0.3s ease-out'; // Add transition
-                setTimeout(() => {
-                    target.style.opacity = '1';
-                }, 10);
-            } else {
-                this.setAttribute('aria-label', 'Expand Content'); // Update label
-                container.dataset.initialState = 'collapsed'; // Update state if needed
-                 target.style.opacity = '1';
-                 target.style.transition = 'opacity 0.3s ease-out'; // Add transition
-                 setTimeout(() => {
-                     target.style.opacity = '0';
-                     // Optionally hide after transition: setTimeout(() => { target.classList.add('hidden'); }, 300);
-                }, 10);
-                 // If not using opacity transition, just toggle hidden:
-                 // target.classList.add('hidden');
-            }
-        }
-
-        expandContainers.forEach((container) => {
-            const buttonExpand = container.querySelector('.expand-button');
-            if (!buttonExpand) return;
-            const targetId = buttonExpand.dataset.target;
-            const target = document.getElementById(targetId);
-            if (!target) return;
-
-            const initialState = container.dataset.initialState || 'collapsed'; // Default to collapsed
-
-            if (initialState === 'expanded') {
-                target.classList.remove('hidden');
-                buttonExpand.setAttribute('aria-expanded', 'true');
-                buttonExpand.setAttribute('aria-label', 'Collapse Content');
-            } else {
-                target.classList.add('hidden');
-                buttonExpand.setAttribute('aria-expanded', 'false');
-                buttonExpand.setAttribute('aria-label', 'Expand Content');
-                 container.dataset.initialState = 'collapsed'; // Ensure state is set
-            }
-
-            buttonExpand.addEventListener('click', toggleContent);
-        });
-
-
-        // Nav highlighting logic (specific to this page instance)
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuItems = document.querySelectorAll(".navList li"); // Target desktop menu
-            const mobileMenuItems = document.querySelectorAll("#mainList li.level1"); // Target mobile menu
-
-            // Reset all desktop items
-            menuItems.forEach(item => {
-                item.classList.remove("current");
-                const link = item.querySelector("a");
-                if (link) link.removeAttribute("aria-current");
-            });
-
-            // Reset all mobile items
-             mobileMenuItems.forEach(item => {
-                const link = item.querySelector("a");
-                if (link) {
-                     link.classList.remove("current"); // Assuming mobile uses class on <a>
-                     link.removeAttribute("aria-current");
-                }
-             });
-
-
-            // Highlight the correct item (By country = index 5)
-            const targetIndex = 5;
-
-            // Apply to desktop
-            if (menuItems[targetIndex]) {
-                menuItems[targetIndex].classList.add("current");
-                const link = menuItems[targetIndex].querySelector("a");
-                if (link) link.setAttribute("aria-current", "page");
-            }
-
-             // Apply to mobile (adjust selector/class if needed)
-             if (mobileMenuItems[targetIndex]) {
-                const link = mobileMenuItems[targetIndex].querySelector("a");
-                 if (link) {
-                     link.classList.add("current"); // Or apply class to <li> if structure requires
-                     link.setAttribute("aria-current", "page");
-                 }
-             }
-        });
-    </script>
-
-</BaseLayout>
+                <span class="inline-block min-w[25px]">
+                  <svg
+                    focusable="false"
+                    aria-hidden="true"
+                    class="fill-blue-default"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25">
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</main>

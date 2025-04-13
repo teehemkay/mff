@@ -1,11 +1,10 @@
 ---
-import { kIndex, kWhyItMatters, kByCountry } from '@packages/data/constants';
+import { kIndex, kByCountry } from '@packages/data/constants';
 
 import Layout from '../layouts/BaseLayout.astro';
 import MainIndex from '../components/MainIndex.astro';
-import MainWhyItMattes from '../components/MainWhyItMatters.astro';
+import MainFAQs from '../components/MainFAQs.astro';
 import MainByCountry from '../components/MainByCountry.astro';
-import MainWhyItMatters from '../components/MainWhyItMatters.astro';
 
 interface Props {
   lang: string;
@@ -23,8 +22,11 @@ const selectPage = () => {
     case kIndex:
       return MainIndex;
 
-    case kWhyItMatters:
-      return MainWhyItMatters;
+    case kByCountry:
+      return MainByCountry;
+
+    default:
+      return MainFAQs;
   }
 };
 
