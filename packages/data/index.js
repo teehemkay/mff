@@ -1,6 +1,6 @@
 import path from 'node:path';
+import process from 'node:process';
 import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
 
 import yaml from 'yaml';
 
@@ -12,9 +12,6 @@ import {
   kCountries,
   kPageLabelKeys,
 } from './constants.js';
-
-export const __filename = fileURLToPath(import.meta.url);
-export const __dirname = path.dirname(__filename);
 
 export const siteUrl = 'https://eubudget.europarl.europa.eu/';
 
@@ -38,7 +35,7 @@ export const loadYaml = (path) => yaml.parse(readFileSync(path, 'utf8'));
 // export const __dirname = path.dirname(__filename);
 //  path.join(__dirname, 'repository', lang, `${dataType}.yml`);
 export const dataFilename = (dataType, lang) =>
-  path.join(__dirname, 'repository', lang, `${dataType}.yml`);
+  path.join(process.cwd(), '../data/repository', lang, `${dataType}.yml`);
 
 // Load (the linguistic version of) a data file
 export const loadData = (dataType, lang = '') => {
