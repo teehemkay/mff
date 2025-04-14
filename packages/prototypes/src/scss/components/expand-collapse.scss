@@ -326,6 +326,13 @@ EXPAND / COLLAPSE
        margin-top: 1rem;
      }
    }
+  ol {
+    li {
+      list-style: decimal;
+      list-style-position: inside;
+      display: list-item;
+    }
+  }
    li {
      list-style: disc;
      list-style-position: inside;
