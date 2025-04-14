@@ -19,7 +19,6 @@ export const pageNames = [
   kOurRole,
   kOurPosition,
   kByCountry,
-  kCountries,
 ];
 
 export const range = /* @__NO_SIDE_EFFECTs__ */ (end, start = 0) =>
