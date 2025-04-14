@@ -124,11 +124,11 @@ const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
       class="submenu-content hidden"
       data-content
       aria-labelledby="mainMenuButton">
-      <ul class="lang-content block px-6 mx-auto max-w-[1100px]">
+      <ul class="block px-6 mx-auto max-w-[1100px]">
         {/* Mobile menu items - JS handles visibility and interactions */}
         {
           pageLabels(lang).map(({ key, label }) => (
-            <li>
+            <li class="mb-2">
               <a
                 class={currentPage === key ? ' current' : ''}
                 aria-current={currentPage === key ? 'page' : null}
