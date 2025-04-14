@@ -5,7 +5,7 @@ import { kIndex } from '@packages/etl/constants';
 import { zip } from '../js/utils.js';
 
 import Header from './Header.astro';
-import BtnSocialShare from './BtnSocialShare.astro';
+import ShareWidget from './ShareWidget.astro';
 
 interface Props {
   lang: string;
@@ -27,6 +27,7 @@ const {
 
 const headerProps = { title, subtitle, h1, chapo };
 const faqs = zip(faQuestion, faqAnswer, faqAnswerMeta, faqExpanded);
+const shareWidgetProps = { lang, currentPage, title: faQuestion };
 ---
 
 <main role="main" id="mainContent" class="mb-8">
@@ -37,7 +38,7 @@ const faqs = zip(faQuestion, faqAnswer, faqAnswerMeta, faqExpanded);
     <ul
       class="expand-collapse max-w-5xl w-full [&>li]:border-b-2 [&>li]:border-black-greylight [&>li:last-of-type]:border-none">
       {
-        faqs.map(([question, answer, meta, expanded], index) => (
+        faqs.map(([question, answer, expanded], index) => (
           <li
             class="expand-container pt-36px mb-6"
             itemscope
@@ -73,7 +74,7 @@ const faqs = zip(faQuestion, faqAnswer, faqAnswerMeta, faqExpanded);
               </ul>
               */}
 
-              <BtnSocialShare />
+              <ShareWidget {shareWidgetProps} {index} />
             </div>
           </li>
         ))

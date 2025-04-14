@@ -7,6 +7,7 @@ import {
   kByCountry,
 } from '@packages/etl/constants';
 
+export const kBaseURL = 'https://eubudget.europarl.europa.eu/';
 export const kAssetsDir = '/assets/';
 
 export const xExceptions = new Map([
