@@ -16,12 +16,13 @@
     "assets:harvest": "fse copy ../prototypes/_site/assets ./public/assets",
     "astro:build": "astro build",
     "astro:dev": "astro dev",
-    "build": "run-s --print-name clean assets astro:build",
+    "build": "run-s --print-name clean assets:harvest astro:build",
     "clean": "fse remove _site",
     "deliver": "cross-env FORCE_COLOR=1 run-s --print-label build export",
-    "dev": "run-s --print-name clean assets:harvest astro:dev",
-    "export": "fse move dist ../../_site",
-    "preview": "astro preview"
+    "dev": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name clean assets:harvest --parallel watch:harvest astro:dev",
+    "export": "fse copy dist/ ../../_site",
+    "preview": "astro preview",
+    "watch:harvest": "onchange '../prototypes/assets/**' -- pnpm assets:harvest"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.3",
@@ -41,6 +42,7 @@
     "eslint-config-xo-react": "^0.27.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
+    "onchange": "^7.1.0",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.33.5",
