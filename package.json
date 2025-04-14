@@ -14,9 +14,10 @@
     "data": "pnpm --filter @packages/etl run export",
     "deliver": "run-s --print-name deliver:*",
     "deliver:protos": "pnpm --filter @packages/prototypes run deliver",
+    "deliver:site": "pnpm --filter @packages/site run deliver",
     "dev": "pnpm --filter @packages/prototypes run dev",
     "preview": "serve --listen 3000 _site",
-    "site": "cross-env NODE_ENV=production run-s --print-name clean deliver bundle"
+    "site": "cross-env NODE_ENV=production run-s --print-name clean data deliver bundle"
   },
   "author": "webmaster@europarl.europa.eu",
   "license": "ISC",
