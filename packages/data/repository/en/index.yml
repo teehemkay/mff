@@ -16,11 +16,13 @@ homeCardLinkLabel:
   - Why it matters
   - How it works
   - The European Parliament’s role
+  - The European Parliament’s position
   - The impact in your country
 homeCardLinkURL:
   - /en/why-it-matters/
   - /en/how-it-works/
   - /en/our-role/
+  - /en/our-position/
   - /en/by-country/
 homeCardText:
   - Understand why the EU long-term budget matters and how it allows EU
@@ -29,6 +31,8 @@ homeCardText:
     money is spent on, and more.
   - Find out more about the European Parliament's role in the long-term budget
     of the European Union.
+  - Read about the European Parliament's key demands and priorities in the
+    negotiations on the EU's next long-term budget.
   - Discover how the EU budget is tailored to benefit you and your country.
 homeVideoTitle: ""
 homeVideoURL: ""

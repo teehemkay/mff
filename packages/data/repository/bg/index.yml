@@ -8,12 +8,15 @@ homeCardLinkLabel:
   - ""
   - ""
   - ""
+  - ""
 homeCardLinkURL:
   - /bg/why-it-matters/
   - /bg/how-it-works/
   - /bg/our-role/
+  - /bg/our-position/
   - /bg/by-country/
 homeCardText:
+  - ""
   - ""
   - ""
   - ""

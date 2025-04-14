@@ -15,5 +15,5 @@ faqAnswerMeta:
   - Lorem ipsum
   - Lorem ipsum
 faqExpanded:
-  - "true"
+  - text
   - "false"
