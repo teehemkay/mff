@@ -4,9 +4,6 @@ import { contentForPage } from '@packages/data';
 import { zip } from '../js/utils.js';
 
 import Cards from './Cards.astro';
-import IframeVideo from './IframeVideo.astro';
-import Transcript from './Transcript.astro';
-import BtnSocialShare from './BtnSocialShare.astro';
 import CardsUpdates from './CardsUpdates.astro';
 import Campaign from './Campaign.astro';
 
@@ -68,17 +65,7 @@ const campaignProps = {
 
   <Cards {cards} />
 
-  <div
-    class="max-w-5xl sm:block block mx-auto justify-between items-center px-4">
-    <IframeVideo
-      videoText="How the European Parliament supports citizens’ in the next budget term"
-    />
-    <Transcript />
-    <div class="share-home">
-      <BtnSocialShare />
-    </div>
-    <hr class="text-[#cccccc] mt-10 mb-16" />
-  </div>
+  {/* <Video /> */}
 
   <div
     class="cards-links-block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mb-16 px-4">
