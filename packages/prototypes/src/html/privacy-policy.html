@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" itemscope itemtype="https://schema.org/FAQPage">
+	<head>
+		@@include('./components/head.html')
+	</head>
+
+	<body>
+	@@include('./components/shortcut-wai.html')
+
+	<!-- NAVIGATION -->
+	@@include('./components/navigation-revamp.html')
+
+	<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+	<!-- CONTENT -->
+	<main role="main" id="mainContent" class="mb-8">
+
+		<div class="legal-page">
+
+			<div class="max-w-5xl mx-auto px-4 mt-14">
+			<span class="block font-EPGammaBold text-2lg text-black-default text-left mb-8">
+				The EU's long-term budget from 2028
+			</span>
+				<h1 class="font-EPGammaBold text-2.5xl text-black-greydark text-left">
+					Privacy policy
+				</h1>
+			</div>
+
+		<div class="max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4">
+			<p class="text-lg mr-5 lg:mb-0 md:mb-3 sm:mb-3 mb-3">This privacy policy applies to the Europarl websites (“europarl.europa.eu”). It informs you of what information we might collect about you, how we might use it and how you can request access to it. The European Parliament also publishes websites outside “europarl.europa.eu”. This privacy policy does not apply to them.</p>
+			<!-- <a href="#" class="inline-block min-w-[130px] text-center text-sm no-underline font-bold uppercase text-blue-default border-blue-default border border-2 hover:text-black-default hover:underline hover:border-2 hover:border-black-default focus:underline focus:border-black-default focus:outline-black-default focus:outline-offset-1 focus:outline-3 pt-2 pb-1 px-4">Easy to read <span class="sr-only">version</span></a> -->
+
+			@@include('./components/card-privacy-policy.html')
+
+		</div>
+
+		</div>
+
+	</main>
+
+	<!-- // ------------------------ END MAIN AREA -------------------------- // -->
+
+	<!-- // ------------------------ START FOOTER AREA ------------------------- // -->
+
+	@@include('./components/footer.html')
+
+	<!-- // ------------------------ END FOOTER AREA ------------------------- // -->
+
+
+	<!-- JS files -->
+	@@include('./components/scripts.html')
+
+<script>
+		// Menu component
+		window.addEventListener('DOMContentLoaded', () => {
+
+		// Inject the current menu state in JS (only for html prototyping as the main nav is included globally
+		// Trouver l'élément <ul> par sa classe
+		const navul = document.querySelector('ul.footerLinks');
+		const navli = navul.querySelector('li:nth-child(2)');
+		const navlilink = navli.querySelector('a');
+
+		// Ajouter la classe "current" à la balise <a>
+		navlilink.classList.add('current');
+
+		// Ajouter l'attribut "aria-current" avec la valeur "page" à la balise <a>
+		navlilink.setAttribute('aria-current', 'page');
+
+	});
+
+
+		document.addEventListener("DOMContentLoaded", function () {
+		const menuItems = document.querySelectorAll(".navList li");
+
+		// Retirer "current" de tous les <li> et aria-current des <a>
+		menuItems.forEach(item => {
+		item.classList.remove("current");
+		const link = item.querySelector("a");
+		if (link) link.removeAttribute("aria-current");
+	});
+
+		// Définir quel <li> doit avoir la classe "current" (ex: le 5e élément)
+		const targetIndex = -1; // Index -1 = aucun élément
+
+		if (menuItems[targetIndex]) {
+		menuItems[targetIndex].classList.add("current");
+		const link = menuItems[targetIndex].querySelector("a");
+		if (link) link.setAttribute("aria-current", "page");
+	}
+	});
+</script>
+
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" itemscope itemtype="https://schema.org/FAQPage">
+	<head>
+		@@include('./components/head.html')
+	</head>
+
+	<body>
+	@@include('./components/shortcut-wai.html')
+
+	<!-- NAVIGATION -->
+	@@include('./components/navigation-revamp.html')
+
+	<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+	<!-- CONTENT -->
+	<main role="main" id="mainContent" class="mb-8">
+
+		<div class="htv-page">
+
+			<div class="max-w-5xl mx-auto px-4 mt-54px mb-27px">
+			<span class="block font-EPGammaBold text-2lg text-black-default text-left">
+				The EU's long-term budget from 2028
+			</span>
+				<span class="text-brand-title-page inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2 mb-12">Invest in what matters</span>
+				<h1 class="font-EPGammaBold text-2.5xl text-black-greydark text-left">
+					The added value of the EU’s long term budget
+				</h1>
+				<p class="max-w-3xl text-[1.4rem] text-black-grey my-5">
+					The EU’s long term budget is a catalyst for change, creating jobs and turning key projects into reality.
+					It strengthens border security, develops infrastructure, supports farmers, and promotes digital transformation. Explore the impact of the budget on your region and daily life.
+				</p>
+
+				<!-- <p class="inline-block bg-black-greylighter px-1.5 py-1">Last update on 07/12/2023</p> -->
+			</div>
+
+			<div class="max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto mb-16">
+
+				@@include('./components/countries.html')
+
+			</div>
+
+		</div>
+
+	</main>
+
+	<!-- // ------------------------ END MAIN AREA -------------------------- // -->
+
+	<!-- // ------------------------ START FOOTER AREA ------------------------- // -->
+
+	@@include('./components/footer.html')
+
+	<!-- // ------------------------ END FOOTER AREA ------------------------- // -->
+
+
+	<!-- JS files -->
+	@@include('./components/scripts.html')
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const menuItems = document.querySelectorAll(".navList li");
+
+			// Retirer "current" de tous les <li> et aria-current des <a>
+			menuItems.forEach(item => {
+				item.classList.remove("current");
+				const link = item.querySelector("a");
+				if (link) link.removeAttribute("aria-current");
+			});
+
+			// Définir quel <li> doit avoir la classe "current" (ex: le 5e élément)
+			const targetIndex = 5; // Index 5 = 6e élément
+
+			if (menuItems[targetIndex]) {
+				menuItems[targetIndex].classList.add("current");
+				const link = menuItems[targetIndex].querySelector("a");
+				if (link) link.setAttribute("aria-current", "page");
+			}
+		});
+	</script>
+
+	</body>
+</html>

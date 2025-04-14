@@ -1,3 +1,14 @@
+pageLabelHome: Hem
+pageLabelWhyItMatters: ""
+pageLabelHowItWorks: ""
+pageLabelOurRole: ""
+pageLabelOurPosition: ""
+pageLabelByCountry: ""
+clickToPlayVideo: Klicka för att spela videon
+mainNav: Huvudmeny
+openMenu: Öppna meny
+closeMenu: Stäng meny
+menu: Meny
 switchLanguage: Byt menyspråk
 infoLinks: Användbara länkar
 epOnSocialMedia: Europaparlamentet i sociala medier
@@ -5,32 +16,50 @@ backToTop: Gå till toppen av sidan
 footer: Sidfot
 checkEPOnFacebook: Kolla in Europaparlamentet på Facebook
 checkEPOnTwitter: Besök Europaparlamentet på X
+checkEPOnFlickr: Kolla in Europaparlamentet på Flickr
+checkEPOnLinkedIn: Kolla in Europaparlamentet på LinkedIn
 checkEPOnYouTube: Kolla in Europaparlamentet på YouTube
 checkEPOnInstagram: Kolla in Europaparlamentet på Instagram
+checkEPOnPinterest: Kolla in Europaparlamentet på Pinterest
+checkEPOnSnapchat: Kolla in Europaparlamentet på Snapchat
+checkEPOnReddit: Kolla in Europaparlamentet på reddit
 legalNoticeLabel: Rättsligt meddelande
 legalNoticeURL: https://www.europarl.europa.eu/legal-notice/sv/
 privacyPolicyLabel: Integritetspolicy
 privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/sv/
 sitemap: Webbplatskarta
 sitemapURL: https://common.europarl.europa.eu/sv/sitemap
-contactUs: Kontakta oss
+contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/sv/contact
-copyright: © Europaparlamentet 2025
-accessibilityLabel: Tillgänglighet
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/sv/accessibility
 clickHere: Klicka här
-epLogoAltText: Europaparlamentets logotyp
-filterEPLOsA11y: Filtrera listan över förbindelsekontor efter land
+shareOnFacebook: Dela den här sidan på Facebook
+shareOnTwitter: ""
+shareOnLinkedIn: Dela den här sidan på LinkedIn
+shareOnWhatsApp: Dela den här sidan på WhatsApp
+socialMediaCardUrl: ""
 all: Alla
 selectCountry: Välj land
-checkTheEvents: Visa evenemang
-goToEventsForCountry: Gå till sidan med evenemang i [land]
-goToWebsite: Gå till webbplatsen
-epWebsite: Europaparlamentets webbplats
-europeanParliament:
-  - Europaparlamentet
-  - ""
-opensInNewWindow: öppnas i ett nytt fönster
+accessibilityLabel: Tillgänglighet
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/sv/accessibility
+goToWebsite: "Gå till hemsidan:"
+shareOnLabel: Dela på
+facebookLabel: Facebook
+twitterLabel: ""
+shareLabel: Dela
+goToPage: Gå till sidan
+epLogoAltText: Europaparlamentets logotyp
 skipToLanguageMenu: Direkt till språkmenyn
 skipToMainContent: Direkt till huvudinnehållet
+epWebsite: Europaparlamentets webbplats
+onTwitter: ""
+onFacebook: på Facebook
+onLinkedIn: på Linkedin
+onWhatsApp: på WhatsApp
 waiShortcut: Genvägsmeny
+opensInNewWindow: öppnas i ett nytt fönster
+loading: Laddar
+loadingPleaseWait: Laddar. Vänligen vänta.
+kb: kB
+mb: MB
+openMenuMobile: Öppna huvudnavigeringsmenyn (öppnas i en dialogruta)
+closeMenuMobile: Stäng huvudnavigeringsmenyn

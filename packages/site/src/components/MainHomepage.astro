@@ -1,0 +1,109 @@
+---
+import { contentForPage } from '@packages/data';
+
+import { zip } from '../js/utils.js';
+
+import Cards from './Cards.astro';
+import IframeVideo from './IframeVideo.astro';
+import Transcript from './Transcript.astro';
+import BtnSocialShare from './BtnSocialShare.astro';
+import CardsUpdates from './CardsUpdates.astro';
+import Campaign from './Campaign.astro';
+
+interface Props {
+  lang: string;
+  currentPage: string;
+}
+
+const { lang, currentPage } = Astro.props;
+
+const {
+  homeH1,
+  homeSubtitle,
+  homeIntroText,
+  homeCardLinkLabel,
+  homeCardLinkURL,
+  homeCardText,
+  homeNewsTitle,
+  homeNewsCardTitle,
+  homeNewsCardText,
+  homeRelatedLinksTitle,
+  homeRelatedLinkLabel,
+  homeRelatedLinkURL,
+  homeCampaignTitle,
+  homeCampaignLinkLabel,
+  homeCampaignLinkURL,
+} = contentForPage(currentPage, lang);
+
+const cards = zip(homeCardLinkLabel, homeCardLinkURL, homeCardText);
+const updates = zip(homeNewsCardTitle, homeNewsCardText);
+const links = zip(homeRelatedLinkLabel, homeRelatedLinkURL);
+
+const campaignProps = {
+  lang,
+  altText: homeCampaignTitle,
+  url: homeCampaignLinkURL,
+  label: homeCampaignLinkLabel,
+};
+---
+
+<main role="main" id="mainContent" class="mb-8">
+  <div id="returnToTop" class="hidden"></div>
+
+  <div class="max-w-5xl mx-auto px-4 mt-54px mb-10">
+    <h1
+      class="logo-brand font-epSemiBold text-2.5xl text-black-greydark text-left">
+      {homeH1}
+    </h1>
+    <span
+      class="text-brand-title inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2"
+      >{homeSubtitle}</span
+    >
+  </div>
+
+  <div
+    set:html={homeIntroText}
+    class="htv-page max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4 mb-12"
+  />
+
+  <Cards {cards} />
+
+  <div
+    class="max-w-5xl sm:block block mx-auto justify-between items-center px-4">
+    <IframeVideo
+      videoText="How the European Parliament supports citizens’ in the next budget term"
+    />
+    <Transcript />
+    <div class="share-home">
+      <BtnSocialShare />
+    </div>
+    <hr class="text-[#cccccc] mt-10 mb-16" />
+  </div>
+
+  <div
+    class="cards-links-block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mb-16 px-4">
+    <h2 class="font-EPGammaBold pb-6">{homeNewsTitle}</h2>
+    <CardsUpdates {updates} />
+  </div>
+
+  <Campaign {...campaignProps} />
+
+  <div
+    class="epol-block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mb-16 px-4">
+    <h2 class="font-EPGammaBold pb-6">{homeRelatedLinksTitle}</h2>
+    <ul>
+      {
+        links.map(([label, url]) => (
+          <li class="mb-4">
+            <a
+              href={url}
+              class="text-lg"
+              target={url.includes('europarl.europa.eu') ? null : '_blank'}>
+              {label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</main>

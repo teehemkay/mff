@@ -1,3 +1,14 @@
+pageLabelHome: Αρχική
+pageLabelWhyItMatters: ""
+pageLabelHowItWorks: ""
+pageLabelOurRole: ""
+pageLabelOurPosition: ""
+pageLabelByCountry: ""
+clickToPlayVideo: Κάντε κλικ για να δείτε το βίντεο
+mainNav: Μενού πλοήγησης
+openMenu: Άνοιγμα μενού
+closeMenu: Κλείσιμο μενού
+menu: Μενού
 switchLanguage: Αλλαγή γλώσσας πλοήγησης
 infoLinks: Ενημερωτικοί σύνδεσμοι
 epOnSocialMedia: Το Ευρωπαϊκό Κοινοβούλιο στα μέσα κοινωνικής δικτύωσης
@@ -5,32 +16,50 @@ backToTop: Επιστροφή στην αρχή της σελίδας
 footer: Υποσέλιδο
 checkEPOnFacebook: Το Ευρωπαϊκό Κοινοβούλιο στο Facebook
 checkEPOnTwitter: Επισκεφτείτε το Ευρωπαϊκό Κοινοβούλιο στο X
+checkEPOnFlickr: Το Ευρωπαϊκό Κοινοβούλιο στο Flickr
+checkEPOnLinkedIn: Το Ευρωπαϊκό Κοινοβούλιο στο Linkedin
 checkEPOnYouTube: Το Ευρωπαϊκό Κοινοβούλιο στο YouTube
 checkEPOnInstagram: Το Ευρωπαϊκό Κοινοβούλιο στο Instagram
+checkEPOnPinterest: Το Ευρωπαϊκό Κοινοβούλιο στο Pinterest
+checkEPOnSnapchat: Το Ευρωπαϊκό Κοινοβούλιο στο Snapchat
+checkEPOnReddit: Το Ευρωπαϊκό Κοινοβούλιο στο reddit
 legalNoticeLabel: Ανακοίνωση νομικού περιεχομένου
 legalNoticeURL: https://www.europarl.europa.eu/legal-notice/el/
-privacyPolicyLabel: Πολιτική απορρήτου
+privacyPolicyLabel: Πολιτική προστασίας απορρήτου
 privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/el/
 sitemap: Χάρτης ιστότοπου
 sitemapURL: https://common.europarl.europa.eu/el/sitemap
 contactUs: Επικοινωνία
 contactUsURL: https://www.europarl.europa.eu/portal/el/contact
-copyright: © Ευρωπαϊκό Κοινοβούλιο 2025
-accessibilityLabel: Προσβασιμότητα
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/el/accessibility
 clickHere: Πατήστε εδώ
-epLogoAltText: Λογότυπο του Ευρωπαϊκού Κοινοβουλίου
-filterEPLOsA11y: Γραφεία συνδέσμου του Ευρωπαϊκού Κοινοβουλίου ανά χώρα
+shareOnFacebook: Κοινοποίηση στο Facebook
+shareOnTwitter: ""
+shareOnLinkedIn: Κοινοποίηση στο Linkedin
+shareOnWhatsApp: Κοινοποίηση στο WhatsApp
+socialMediaCardUrl: ""
 all: Όλα
 selectCountry: Επιλέξτε χώρα
-checkTheEvents: Δείτε τις εκδηλώσεις
-goToEventsForCountry: Επισκεφθείτε τη σελίδα με τις εκδηλώσεις στην [Χώρα]
-goToWebsite: Μετάβαση στην ιστοθέση
-epWebsite: Ιστότοπος του Ευρωπαϊκού Κοινοβουλίου
-europeanParliament:
-  - Ευρωπαϊκό
-  - Κοινοβούλιο
-opensInNewWindow: Ανοίγει σε νέο παράθυρο
+accessibilityLabel: Προσβασιμότητα
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/el/accessibility
+goToWebsite: "Μεταβείτε στον ιστότοπο:"
+shareOnLabel: Κοινοποίηση στο
+facebookLabel: Facebook
+twitterLabel: ""
+shareLabel: Κοινοποίηση
+goToPage: Μετάβαση στη σελίδα
+epLogoAltText: Λογότυπο του Ευρωπαϊκού Κοινοβουλίου
 skipToLanguageMenu: Μετάβαση στο μενού γλωσσών
 skipToMainContent: Μετάβαση στο κυρίως περιεχόμενο
+epWebsite: Ιστότοπος του Ευρωπαϊκού Κοινοβουλίου
+onTwitter: ""
+onFacebook: στο Facebook
+onLinkedIn: στο LinkedIn
+onWhatsApp: στο WhatsApp
 waiShortcut: Μενού συντόμευσης
+opensInNewWindow: Ανοίγει σε νέο παράθυρο
+loading: Φόρτωση
+loadingPleaseWait: Φόρτωση. Παρακαλώ περιμένετε.
+kb: kB
+mb: MB
+openMenuMobile: Άνοιγμα του κύριου μενού πλοήγησης (ανοίγει σε πλαίσιο διαλόγου)
+closeMenuMobile: Κλείσιμο του κύριου μενού πλοήγησης

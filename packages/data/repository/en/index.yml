@@ -1,71 +1,58 @@
-metaTitle: Discover Europe Day 2025 with the European Parliament
-metaDescription: Discover the 2025 programme, be part of Europe Day and European democracy
-title: Europe Day 2025
-campaignImg: 2025-europe-day-banner-en.png
-campaignAltImg: COME AND SEE DEMOCRACY IN ACTION - VISIT THE EUROPEAN PARLIAMENT
-whatIsED: Discover the heart of European democracy!
-edDescription: >
-  <p>On 9 May, the European Union celebrates its achievements of unity and
-  long-term peace, commemorating the Schuman Declaration in 1950.  </p>
+metaTitle: "EU long-term budget: all you need to know"
+metaDescription: Find out why the EU long-term budget matters, how it works and
+  the role of the European Parliament.
+homeH1: The EU's long-term budget from 2028
+homeSubtitle: Invest in what matters
+homeIntroText: >
+  <p>The EU&#39;s long-term budget drives investments in Europe&#39;s future,
+  improving citizens&#39; lives.
 
-  <p>The European Parliament invites you to join engaging events all around
-  Europe and celebrate European democracy.</p>
+  It funds common projects and delivers on priorities from digital innovation to
+  border security.</p>
 
-  <p>Join us in Strasbourg (Sunday 4 May), Brussels (Saturday 10 May) or in the
-  Member States.</p>
-activity1Title: Strasbourg
-activity1Date: Sunday, 4 May
-activity1Time: 10:00 - 18:00 (UTC +2)
-TEMPactivity1Description: Explore how EU legislation affects your life and find
-  out how you can influence common future decisions. Meet the European political
-  groups, visit the Hemicycle, discover our info stands, and take part in
-  activities (last entrance 17:30). Programme coming soon!
-activity1Description: Explore how EU legislation affects your life and find out
-  how you can influence common future decisions. Meet the European political
-  groups, visit the Hemicycle, discover our info stands, and take part in
-  activities (last entrance 17:30).
-activity1ButtonLabel: Programme coming soon
-TEMPactivity1ButtonLabel: Programme for Strasbourg
-activity1ButtonA11y: ""
-activity1ButtonURL: ""
-activity2Title: Brussels
-activity2Date: Saturday, 10 May
-activity2Time: 10:00 - 18:00 (UTC +2)
-TEMPactivity2Description: Explore how EU legislation affects your life and find
-  out how you can influence common future decisions. Meet the European political
-  groups, visit the Hemicycle, discover our info stands, and take part in
-  activities (last entrance 17:30). Programme coming soon!
-activity2Description: Explore how EU legislation affects your life and find out
-  how you can influence common future decisions. Meet the European political
-  groups, visit the Hemicycle, discover our info stands, and take part in
-  activities (last entrance 17:30).
-activity2ButtonLabel: Programme coming soon
-TEMPactivity2ButtonLabel: Programme for Brussels
-activity2ButtonA11y: ""
-activity2ButtonURL: ""
-activity3Title: Luxembourg
-activity3Date: Friday, 9 May
-activity3Time: 10:00 - 18:00 (UTC +2)
-TEMPactivity3Description: Europe Day celebrations return to Luxembourg! Come and
-  see just how diverse Europe is at the Europa Experience, an interactive, free
-  way to learn about the European Union! On the 9th of May, enjoy a whole host
-  of special activities at our visitors' centre, which will be commemorating its
-  first anniversary! Programme coming soon!
-activity3Description: Europe Day celebrations return to Luxembourg! Come and see
-  just how diverse Europe is at the Europa Experience, an interactive, free way
-  to learn about the European Union! On the 9th of May, enjoy a whole host of
-  special activities at our visitors' centre, which will be commemorating its
-  first anniversary!
-activity3ButtonLabel: Programme coming soon
-TEMPactivity3ButtonLabel: Programme for Luxembourg (in French)
-activity3ButtonA11y: ""
-activity3ButtonURL: ""
-localeventsTitle: Other locations
-localeventsUrl: https://www.europarl.europa.eu/europe-day/en/local-events/
-localeventsDescription: Join a Europe Day event near you and learn about the European Parliament's work
-edInstitutionsTitle: Celebrating Europe Day across the European institutions
-edInstitutionsTitleShort: Europe Day at the European institutions
-edInstitutionsUrl: https://europeday.europa.eu/index_en
-edInstitutionsDescription: Discover how the 9 May is marked across the European
-  Union institutions, learn more about what's happening and get involved with
-  the wide range of activities on offer.
+  <p><em>Discover the benefits of the EU budget and learn how decisions about it
+  are made.</em></p>
+homeCardLinkLabel:
+  - Why it matters
+  - How it works
+  - The European Parliament’s role
+  - The impact in your country
+homeCardLinkURL:
+  - /en/why-it-matters/
+  - /en/how-it-works/
+  - /en/our-role/
+  - /en/by-country/
+homeCardText:
+  - Understand why the EU long-term budget matters and how it allows EU
+    countries to achieve more together than if they acted alone.
+  - Discover how the EU's long-term budget is funded, its overall size, what the
+    money is spent on, and more.
+  - Find out more about the European Parliament's role in the long-term budget
+    of the European Union.
+  - Discover how the EU budget is tailored to benefit you and your country.
+homeVideoTitle: ""
+homeVideoURL: ""
+homeNewsTitle: Latest updates
+homeNewsCardTitle:
+  - Press releases
+  - In-depth articles
+  - Press kit
+homeNewsCardText:
+  - Read the latest press releases on the EU long-term budget
+  - Read the latest policy briefings and studies on the EU's long-term budget
+  - "For journalists: The press tool kit provides specific information and
+    contacts to help you cover the EU's long-term budget"
+homeCampaignTitle: Invest in what matters
+homeCampaignLinkLabel: Campaign material
+homeCampaignLinkURL: ""
+homeRelatedLinksTitle: Related links
+homeRelatedLinkLabel:
+  - Latest public opinion surveys - Eurobarometer
+  - "Factsheet on how the EU works: financing the EU"
+  - European Commission's website on the EU’s long-term budget
+  - Council of the EU's website on the EU’s long-term budget
+homeRelatedLinkURL:
+  - https://www.europarl.europa.eu/at-your-service/en/be-heard/eurobarometer
+  - https://www.europarl.europa.eu/factsheets/en/section/188/financing
+  - https://commission.europa.eu/strategy-and-policy/eu-budget/long-term-eu-budget_en
+  - https://www.consilium.europa.eu/en/policies/eu-long-term-budget/

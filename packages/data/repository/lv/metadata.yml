@@ -1,3 +1,14 @@
+pageLabelHome: Mājas lapa
+pageLabelWhyItMatters: ""
+pageLabelHowItWorks: ""
+pageLabelOurRole: ""
+pageLabelOurPosition: ""
+pageLabelByCountry: ""
+clickToPlayVideo: Spied šeit, lai skatītos video
+mainNav: Galvenā navigācijas izvēlne
+openMenu: Atvērt izvēlni
+closeMenu: Aizvērt izvēlni
+menu: Izvēlne
 switchLanguage: Mainīt navigācijas valodu
 infoLinks: Informācijas saites
 epOnSocialMedia: Eiropas Parlaments sociālajos plašsaziņas līdzekļos
@@ -5,32 +16,50 @@ backToTop: Atgriezties uz lapas sākumu
 footer: Kājene
 checkEPOnFacebook: Apmeklē Eiropas Parlamenta Facebook lapu
 checkEPOnTwitter: Seko līdzi Eiropas Parlamentam platformā X
+checkEPOnFlickr: Apmeklē Eiropas Parlamenta Flickr lapu
+checkEPOnLinkedIn: Apmeklē Eiropas Parlamenta LinkedIn lapu
 checkEPOnYouTube: Apmeklē Eiropas Parlamenta YouTube lapu
 checkEPOnInstagram: Apmeklē Eiropas Parlamenta Instagram lapu
+checkEPOnPinterest: Apmeklē Eiropas Parlamenta Pinterest lapu
+checkEPOnSnapchat: Apmeklē Eiropas Parlamenta Snapchat lapu
+checkEPOnReddit: Apmeklē Eiropas Parlamenta reddit lapu
 legalNoticeLabel: Juridisks paziņojums
 legalNoticeURL: https://www.europarl.europa.eu/legal-notice/lv/
 privacyPolicyLabel: Privātuma politika
 privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/lv/
 sitemap: Vietnes karte
 sitemapURL: https://common.europarl.europa.eu/lv/sitemap
-contactUs: Sazinies ar mums
+contactUs: Kontaktinformācija
 contactUsURL: https://www.europarl.europa.eu/portal/lv/contact
-copyright: © Eiropas Parlaments, 2025
-accessibilityLabel: Pieejamība
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/lv/accessibility
 clickHere: Noklikšķini šeit
-epLogoAltText: Eiropas Parlamenta logotips
-filterEPLOsA11y: Filtrēt EPLO sarakstu pēc valsts
+shareOnFacebook: Dalies ar šo lapu “Facebook”
+shareOnTwitter: ""
+shareOnLinkedIn: Dalies ar šo lapu “LinkedIn”
+shareOnWhatsApp: Dalies ar šo lapu “WhatsApp”
+socialMediaCardUrl: ""
 all: Visi
 selectCountry: Atlasīt valsti
-checkTheEvents: Skatīt pasākumus
-goToEventsForCountry: "Doties uz lapu ar pasākumu sarakstu šajā valstī: [valsts nosaukums]"
-goToWebsite: Iet uz tīmekļa vietni
-epWebsite: Eiropas Parlamenta tīmekļvietne
-europeanParliament:
-  - Eiropas
-  - Parlaments
-opensInNewWindow: atveras jaunā pārlūkprogrammas logā
+accessibilityLabel: Pieejamība
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/lv/accessibility
+goToWebsite: "Doties uz tīmekļa vietni:"
+shareOnLabel: Dalies
+facebookLabel: Facebook
+twitterLabel: ""
+shareLabel: Dalīties
+goToPage: Iet uz lapu
+epLogoAltText: Eiropas Parlamenta logotips
 skipToLanguageMenu: Izlaist un iet uz valodu izvēlni
 skipToMainContent: Izlaist un iet uz galveno saturu
+epWebsite: Eiropas Parlamenta tīmekļvietne
+onTwitter: ""
+onFacebook: Facebook
+onLinkedIn: LinkedIn
+onWhatsApp: WhatsApp
 waiShortcut: Īsinājumizvēlne
+opensInNewWindow: atveras jaunā pārlūkprogrammas logā
+loading: Ielāde
+loadingPleaseWait: Ielāde. Lūdzu, uzgaidiet.
+kb: kB
+mb: MB
+openMenuMobile: Atvērt galveno navigācijas izvēlni (atveras dialoglodziņā)
+closeMenuMobile: Aizvērt galveno navigācijas izvēlni

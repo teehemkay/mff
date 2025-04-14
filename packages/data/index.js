@@ -1,5 +1,4 @@
 import path from 'node:path';
-import process from 'node:process';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
@@ -7,25 +6,17 @@ import yaml from 'yaml';
 
 import {
   kIndex,
-  kLocalEvents,
   kLanguages,
+  kLanguageCodes,
   kMetadata,
   kCountries,
-  kCountriesByLangFile,
+  kPageLabelKeys,
 } from './constants.js';
 
 export const __filename = fileURLToPath(import.meta.url);
 export const __dirname = path.dirname(__filename);
 
-export const siteUrl = 'https://www.europarl.europa.eu/europe-day';
-
-export const pageNames = [kIndex, kLocalEvents];
-
-export const lvContainer = () =>
-  Object.keys(languages).reduce((acc, lang) => {
-    acc[lang] = {};
-    return acc;
-  }, {});
+export const siteUrl = 'https://eubudget.europarl.europa.eu/';
 
 export const canonicalHref = (lang, currentPage) =>
   currentPage === kIndex
@@ -62,6 +53,14 @@ export const loadData = (dataType, lang = '') => {
   }
 };
 
+export const lvContainer = () =>
+  kLanguageCodes.reduce((acc, lang) => {
+    acc[lang] = {};
+    return acc;
+  }, {});
+
+export const __DATA__ = lvContainer();
+
 export const getDataByLangAndType = ({ dataType, lang }) => {
   try {
     const ct = __DATA__[lang][dataType];
@@ -84,24 +83,19 @@ export const getDataByLangAndType = ({ dataType, lang }) => {
 export const getData = (dataType) => (lang) =>
   getDataByLangAndType({ dataType, lang });
 
-export const pageLabelsForLang = ({ pageLabelKeys, lang }) => {
-  const metadata = metadataForLang(lang);
-  return pageLabelKeys.map(([key, property]) => ({
-    key,
-    label: metadata[property],
-  }));
-};
-
 export const zip = (xs, ys) => xs.map((x, idx) => ({ ...x, ...ys[idx] }));
 
-export const languages = loadData(kLanguages);
-export const countriesByLang = loadData(kCountriesByLangFile);
+export const kLanguageLabels = loadData(kLanguages);
 
-export const __DATA__ = lvContainer();
+export const contentForPage = (pageName, lang) => getData(pageName)(lang);
 
-export const metadataForLang = getData(kMetadata);
-export const langForLang = getData(kLanguages);
-export const contentForLang = (pageName, lang) => getData(pageName)(lang);
-export const countriesForLang = getData(kCountries);
+export const countryNames = getData(kCountries);
+export const metadata = getData(kMetadata);
 
-export { kIndex, kLocalEvents, kLanguages, kMetadata } from './constants.js';
+export const pageLabels = (lang) => {
+  const data = metadata(lang);
+  return kPageLabelKeys.map(([key, property]) => ({
+    key,
+    label: data[property],
+  }));
+};

@@ -1,36 +1,65 @@
+pageLabelHome: Accueil
+pageLabelWhyItMatters: ""
+pageLabelHowItWorks: ""
+pageLabelOurRole: ""
+pageLabelOurPosition: ""
+pageLabelByCountry: ""
+clickToPlayVideo: Cliquez pour jouer la vidéo
+mainNav: Menu principal
+openMenu: Ouvrir le menu
+closeMenu: Fermer le menu
+menu: Menu
 switchLanguage: Changer la langue
 infoLinks: Liens utiles
 epOnSocialMedia: Le Parlement européen sur les réseaux sociaux
 backToTop: Revenir en haut de la page
 footer: Bas de page
 checkEPOnFacebook: Visitez la page Facebook du Parlement européen
-checkEPOnTwitter: Suivez le Parlement européen sur X
+checkEPOnTwitter: Féach ar Pharlaimint na hEorpa ar X
+checkEPOnFlickr: Visitez la galerie Flickr du Parlement européen
+checkEPOnLinkedIn: Visitez le compte LinkedIn du Parlement européen
 checkEPOnYouTube: Visitez la chaîne YouTube du Parlement européen
 checkEPOnInstagram: Visitez le compte Instagram du Parlement européen
+checkEPOnPinterest: Visitez la galerie Pinterest du Parlement européen
+checkEPOnSnapchat: Visitez le profil Snapchat du Parlement européen
+checkEPOnReddit: Visitez le profil Reddit du Parlement européen
 legalNoticeLabel: Mentions légales
-legalNoticeURL: https://www.europarl.europa.eu/legal-notice/fr/
+legalNoticeURL: https://www.europarl.europa.eu/legal-notice/ga/
 privacyPolicyLabel: Politique de confidentialité
-privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/fr/
+privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/ga/
 sitemap: Plan du site
-sitemapURL: https://common.europarl.europa.eu/fr/sitemap
+sitemapURL: https://common.europarl.europa.eu/ga/sitemap
 contactUs: Contact
-contactUsURL: https://www.europarl.europa.eu/portal/fr/contact
-copyright: © Parlement européen 2025
-accessibilityLabel: Accessibilité
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/fr/accessibility
+contactUsURL: https://www.europarl.europa.eu/portal/ga/contact
 clickHere: Cliquez ici
-epLogoAltText: Logo du Parlement européen
-filterEPLOsA11y: Liste des bureaux de liaison par pays
+shareOnFacebook: Partager sur Facebook
+shareOnTwitter: ""
+shareOnLinkedIn: Partager sur LinkedIn
+shareOnWhatsApp: Partager sur WhatsApp
+socialMediaCardUrl: ""
 all: Tous
 selectCountry: Sélectionner un pays
-checkTheEvents: Accéder aux événements
-goToEventsForCountry: "Accéder à la liste des événements qui ont lieu ici : [Nom du pays]"
-goToWebsite: Accéder au site
-epWebsite: Site web du Parlement européen
-europeanParliament:
-  - Parlement
-  - européen
-opensInNewWindow: s’ouvre dans une nouvelle fenêtre
+accessibilityLabel: Accessibilité
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/ga/accessibility
+goToWebsite: "Allez sur le site :"
+shareOnLabel: Partager sur
+facebookLabel: Facebook
+twitterLabel: ""
+shareLabel: Partager
+goToPage: Aller à la page
+epLogoAltText: Logo du Parlement européen
 skipToLanguageMenu: Aller directement à la liste des langues
 skipToMainContent: Aller directement au contenu principal
+epWebsite: Site web du Parlement européen
+onTwitter: ""
+onFacebook: sur Facebook
+onLinkedIn: sur LinkedIn
+onWhatsApp: sur WhatsApp
 waiShortcut: Menu contextuel
+opensInNewWindow: s’ouvre dans une nouvelle fenêtre
+loading: Chargement
+loadingPleaseWait: Chargement. Veuillez patienter.
+kb: kB
+mb: MB
+openMenuMobile: Ouvrir le menu de navigation principal (s’ouvre dans une nouvelle fenêtre)
+closeMenuMobile: Fermer le menu de navigation principal

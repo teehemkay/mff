@@ -1,0 +1,38 @@
+---
+import { kIndex, kByCountry } from '@packages/data/constants';
+
+import Layout from '../layouts/BaseLayout.astro';
+import MainHomepage from '../components/MainHomepage.astro';
+import MainFAQs from '../components/MainFAQs.astro';
+import MainByCountry from '../components/MainByCountry.astro';
+
+interface Props {
+  lang: string;
+  currentPage: string;
+}
+
+const { lang, currentPage } = Astro.props;
+
+const props = { lang, currentPage };
+
+export { getStaticPaths } from '../js/utils.js';
+
+const selectPage = () => {
+  switch (currentPage) {
+    case kIndex:
+      return MainHomepage;
+
+    case kByCountry:
+      return MainByCountry;
+
+    default:
+      return MainFAQs;
+  }
+};
+
+const Page = selectPage();
+---
+
+<Layout {...props}>
+  <Page {...props} />
+</Layout>

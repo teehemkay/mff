@@ -1,3 +1,14 @@
+pageLabelHome: Esileht
+pageLabelWhyItMatters: ""
+pageLabelHowItWorks: ""
+pageLabelOurRole: ""
+pageLabelOurPosition: ""
+pageLabelByCountry: ""
+clickToPlayVideo: Vajutage siia, et mängida video
+mainNav: Põhimenüü
+openMenu: Ava menüü
+closeMenu: Sulge menüü
+menu: Menüü
 switchLanguage: Muuda keelt
 infoLinks: Infolingid
 epOnSocialMedia: Euroopa Parlament sotsiaalmeedias
@@ -5,32 +16,50 @@ backToTop: Lehe algusesse
 footer: Jalus
 checkEPOnFacebook: Euroopa Parlament Facebookis
 checkEPOnTwitter: Vaata Euroopa Parlamenti Xis
+checkEPOnFlickr: Euroopa Parlament Flickris
+checkEPOnLinkedIn: Euroopa Parlament LinkedInis
 checkEPOnYouTube: Euroopa Parlament YouTube’is
 checkEPOnInstagram: Euroopa Parlament Instagramis
+checkEPOnPinterest: Euroopa Parlament Pinterestis
+checkEPOnSnapchat: Euroopa Parlament Snapchatis
+checkEPOnReddit: Euroopa Parlament Redditis
 legalNoticeLabel: Õigusalane teave
 legalNoticeURL: https://www.europarl.europa.eu/legal-notice/et/
-privacyPolicyLabel: Privaatsuspoliitika
+privacyPolicyLabel: Isikuandmete kaitse põhimõtted
 privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/et/
 sitemap: Sisukaart
 sitemapURL: https://common.europarl.europa.eu/et/sitemap
 contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/et/contact
-copyright: © Euroopa Parlament 2025
-accessibilityLabel: Juurdepääsetavus
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/et/accessibility
 clickHere: Klõpsa siia
-epLogoAltText: Euroopa Parlamendi logo
-filterEPLOsA11y: Euroopa Parlamendi bürood riikide kaupa
+shareOnFacebook: Jaga Facebookis
+shareOnTwitter: ""
+shareOnLinkedIn: Jaga LinkedInis
+shareOnWhatsApp: Jaga WhatsAppis
+socialMediaCardUrl: ""
 all: Kõik
 selectCountry: Vali riik
-checkTheEvents: Vaata üritusi
-goToEventsForCountry: "Vaata üritusi: [riik]"
-goToWebsite: Veebisaidile
-epWebsite: Euroopa Parlamendi veebisait
-europeanParliament:
-  - Euroopa
-  - Parlament
-opensInNewWindow: avaneb uues aknas
+accessibilityLabel: Juurdepääsetavus
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/et/accessibility
+goToWebsite: "Mine veebilehele:"
+shareOnLabel: Jaga
+facebookLabel: Facebook
+twitterLabel: ""
+shareLabel: Jaga
+goToPage: Lehele
+epLogoAltText: Euroopa Parlamendi logo
 skipToLanguageMenu: Otse keelemenüüsse
 skipToMainContent: Põhisisu juurde
+epWebsite: Euroopa Parlamendi veebisait
+onTwitter: ""
+onFacebook: Facebook
+onLinkedIn: LinkedIn
+onWhatsApp: WhatsApp
 waiShortcut: Otseteed
+opensInNewWindow: avaneb uues aknas
+loading: Laadimine
+loadingPleaseWait: Laadimine. Palun oodake.
+kb: kB
+mb: MB
+openMenuMobile: Ava peanavigeerimismenüü (avab dialoogiakna)
+closeMenuMobile: Sulge peanavigeerimismenüü

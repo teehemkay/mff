@@ -7,7 +7,7 @@ import { marked } from 'marked';
 import yaml from 'yaml';
 
 import * as XLSX from '../_vendor/xlsx.mjs';
-import { languageCodes as languages } from '../constants.js';
+import { kLanguageCodes as languages } from '../constants.js';
 
 XLSX.set_fs(fs);
 

@@ -1,3 +1,14 @@
+pageLabelHome: Startpagina
+pageLabelWhyItMatters: ""
+pageLabelHowItWorks: ""
+pageLabelOurRole: ""
+pageLabelOurPosition: ""
+pageLabelByCountry: ""
+clickToPlayVideo: Klik om de video te starten
+mainNav: Hoofdnavigatie
+openMenu: Menu openen
+closeMenu: Menu sluiten
+menu: Menu
 switchLanguage: Taal wijzigen
 infoLinks: Informatielinks
 epOnSocialMedia: Het Europees Parlement op sociale media
@@ -5,32 +16,50 @@ backToTop: Scroll terug naar het begin van de pagina
 footer: Voettekst
 checkEPOnFacebook: Ontdek het Europees Parlement op Facebook
 checkEPOnTwitter: Het Europees Parlement op X
+checkEPOnFlickr: Ontdek het Europees Parlement op Flickr
+checkEPOnLinkedIn: Ontdek het Europees Parlement op LinkedIn
 checkEPOnYouTube: Ontdek het Europees Parlement op YouTube
 checkEPOnInstagram: Ontdek het Europees Parlement op Instagram
+checkEPOnPinterest: Ontdek het Europees Parlement op Pinterest
+checkEPOnSnapchat: Ontdek het Europees Parlement op Snapchat
+checkEPOnReddit: Ontdek het Europees Parlement op reddit
 legalNoticeLabel: Juridische mededeling
 legalNoticeURL: https://www.europarl.europa.eu/legal-notice/nl/
 privacyPolicyLabel: Privacybeleid
 privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/nl/
 sitemap: Sitemap
 sitemapURL: https://common.europarl.europa.eu/nl/sitemap
-contactUs: Neem contact met ons op
+contactUs: Contact
 contactUsURL: https://www.europarl.europa.eu/portal/nl/contact
-copyright: © Europees Parlement 2025
-accessibilityLabel: Toegankelijkheid
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/nl/accessibility
 clickHere: Klik hier
-epLogoAltText: Logo van het Europees Parlement
-filterEPLOsA11y: Filter de lijst met liaisonbureaus van het Europees Parlement per land
+shareOnFacebook: Deze pagina delen op Facebook
+shareOnTwitter: ""
+shareOnLinkedIn: Deze pagina delen op LinkedIn
+shareOnWhatsApp: Deze pagina delen via WhatsApp
+socialMediaCardUrl: ""
 all: Alle
 selectCountry: Selecteer een land
-checkTheEvents: Ontdek de evenementen
-goToEventsForCountry: Naar de pagina met de lijst van evenementen in [Land Titel]
-goToWebsite: Ga naar de website
-epWebsite: Website van het Europees Parlement
-europeanParliament:
-  - Europees
-  - Parlement
-opensInNewWindow: wordt in een nieuw venster geopend
+accessibilityLabel: Toegankelijkheid
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/nl/accessibility
+goToWebsite: "Ga naar de website:"
+shareOnLabel: Delen op
+facebookLabel: Facebook
+twitterLabel: ""
+shareLabel: Delen
+goToPage: Naar de webpagina
+epLogoAltText: Logo van het Europees Parlement
 skipToLanguageMenu: Naar het taalmenu
 skipToMainContent: Naar de inhoud
+epWebsite: Website van het Europees Parlement
+onTwitter: ""
+onFacebook: op Facebook
+onLinkedIn: op LinkedIn
+onWhatsApp: op WhatsApp
 waiShortcut: Sneltoetsen
+opensInNewWindow: wordt in een nieuw venster geopend
+loading: Laden
+loadingPleaseWait: Aan het laden. Even geduld a.u.b.
+kb: kB
+mb: MB
+openMenuMobile: Open hoofdnavigatiemenu (opent in een dialoogvenster)
+closeMenuMobile: Sluit hoofdnavigatiemenu

@@ -11,9 +11,10 @@
     "bundle": "pnpm --filter @packages/build-tools run build:bundle",
     "compress": "pnpm --filter @packages/build-tools run build:compress",
     "clean": "fse remove _site",
+    "data": "pnpm --filter @packages/etl run export",
     "deliver": "run-s --print-name deliver:*",
-    "deliver:protos": "pnpm --filter @apps/prototypes run deliver",
-    "dev": "pnpm --filter @apps/prototypes run dev",
+    "deliver:protos": "pnpm --filter @packages/prototypes run deliver",
+    "dev": "pnpm --filter @packages/prototypes run dev",
     "preview": "serve --listen 3000 _site",
     "site": "cross-env NODE_ENV=production run-s --print-name clean deliver bundle"
   },
@@ -36,7 +37,7 @@
     "bracketSameLine": true,
     "bracketSpacing": true,
     "singleQuote": true,
-    "trailingComma": "es5"
+    "trailingComma": "all"
   },
   "xo": {
     "space": true,
@@ -44,6 +45,7 @@
     "envs": ["node", "browser"],
     "rules": {
       "capitalized-comments": "off",
+      "func-names": ["error", "as-needed"],
       "import/order": [
         "error",
         {
@@ -51,7 +53,6 @@
           "warnOnUnassignedImports": true
         }
       ],
-      "func-names": ["error", "as-needed"],
       "react/react-in-jsx-scope": "off",
       "react/prop-types": "off",
       "spaced-comment": [
@@ -61,16 +62,12 @@
           "exceptions": ["#__PURE__"]
         }
       ],
-      "unicorn/prevent-abbreviations": "off",
-      "unicorn/prefer-object-from-entries": "off"
+      "unicorn/no-array-callback-reference": "off",
+      "unicorn/no-array-reduce": "off",
+      "unicorn/no-fn-reference-in-iterator": "off",
+      "unicorn/prefer-object-from-entries": "off",
+      "unicorn/prevent-abbreviations": "off"
     },
-    "ignores": [
-      "build/**",
-      "out/**",
-      "public/**",
-      "site/**",
-      "site_trials/**",
-      "_site/**"
-    ]
+    "ignores": ["_site/**"]
   }
 }

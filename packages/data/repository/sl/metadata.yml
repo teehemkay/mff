@@ -1,3 +1,14 @@
+pageLabelHome: Domača stran
+pageLabelWhyItMatters: ""
+pageLabelHowItWorks: ""
+pageLabelOurRole: ""
+pageLabelOurPosition: ""
+pageLabelByCountry: ""
+clickToPlayVideo: Odpri video
+mainNav: Glavna navigacija
+openMenu: Odpri meni
+closeMenu: Zapri meni
+menu: Meni
 switchLanguage: Spremeni jezik za uporabo portala
 infoLinks: Povezave z informacijami
 epOnSocialMedia: Evropski parlament v družbenih medijih
@@ -5,32 +16,50 @@ backToTop: Pojdi nazaj na vrh strani
 footer: Noga
 checkEPOnFacebook: Oglej si račun Evropskega parlamenta na Facebooku
 checkEPOnTwitter: Evropski parlament na omrežju X
+checkEPOnFlickr: Oglej si račun Evropskega parlamenta na Flickrju
+checkEPOnLinkedIn: Oglej si račun Evropskega parlamenta na LinkedInu
 checkEPOnYouTube: Oglej si račun Evropskega parlamenta na YouTubu
 checkEPOnInstagram: Oglej si račun Evropskega parlamenta na Instagramu
+checkEPOnPinterest: Oglej si račun Evropskega parlamenta na Pinterestu
+checkEPOnSnapchat: Oglej si račun Evropskega parlamenta na Snapchatu
+checkEPOnReddit: Oglej si račun Evropskega parlamenta na Redditu
 legalNoticeLabel: Pravno obvestilo
 legalNoticeURL: https://www.europarl.europa.eu/legal-notice/sl/
-privacyPolicyLabel: Varstvo osebnih podatkov
+privacyPolicyLabel: Politika varstva osebnih podatkov
 privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/sl/
 sitemap: Kazalo strani
 sitemapURL: https://common.europarl.europa.eu/sl/sitemap
-contactUs: Kontakt
+contactUs: Kontakti
 contactUsURL: https://www.europarl.europa.eu/portal/sl/contact
-copyright: © Evropski parlament 2025
-accessibilityLabel: Dostopnost
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/sl/accessibility
 clickHere: Klikni tukaj
-epLogoAltText: Logotip Evropskega parlamenta
-filterEPLOsA11y: Izberi pisarno EP za stike v svoji državi
+shareOnFacebook: Deli to stran na Facebooku
+shareOnTwitter: ""
+shareOnLinkedIn: Deli to stran na LinkedInu
+shareOnWhatsApp: Deli to stran na WhatsAppu
+socialMediaCardUrl: ""
 all: Vsa
 selectCountry: Izberi državo
-checkTheEvents: Prikaži dogodke
-goToEventsForCountry: Prikaži seznam dogodkov v [ime države]
-goToWebsite: Pojdi na spletišče
-epWebsite: Spletišče Evropskega parlamenta
-europeanParliament:
-  - Evropski
-  - parlament
-opensInNewWindow: odpre se v novem oknu
+accessibilityLabel: Dostopnost
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/sl/accessibility
+goToWebsite: "Pojdi na spletno mesto:"
+shareOnLabel: Objavi na
+facebookLabel: Facebook
+twitterLabel: ""
+shareLabel: Delite
+goToPage: Pojdi na stran
+epLogoAltText: Logotip Evropskega parlamenta
 skipToLanguageMenu: Naravnost k jezikovnemu meniju
 skipToMainContent: Naravnost h glavni vsebini
+epWebsite: Spletišče Evropskega parlamenta
+onTwitter: ""
+onFacebook: na Facebooku
+onLinkedIn: na LinkedInu
+onWhatsApp: na WhatsAppu
 waiShortcut: Meni bližnjic
+opensInNewWindow: odpre se v novem oknu
+loading: Nalaganje
+loadingPleaseWait: Nalaganje. Prosimo, počakaj.
+kb: kB
+mb: MB
+openMenuMobile: Odpri glavni meni (odpre se pogovorno okno)
+closeMenuMobile: Zapri glavni meni

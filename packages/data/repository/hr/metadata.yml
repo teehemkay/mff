@@ -1,3 +1,14 @@
+pageLabelHome: Naslovna strana
+pageLabelWhyItMatters: ""
+pageLabelHowItWorks: ""
+pageLabelOurRole: ""
+pageLabelOurPosition: ""
+pageLabelByCountry: ""
+clickToPlayVideo: Kliknite na video
+mainNav: Glavni izbornik
+openMenu: Otvori izbornik
+closeMenu: Zatvori izbornik
+menu: Izbornik
 switchLanguage: Promijeni jezik
 infoLinks: Informativne poveznice
 epOnSocialMedia: Europski parlament na društvenim mrežama
@@ -5,32 +16,50 @@ backToTop: Povratak na vrh
 footer: Podnožje
 checkEPOnFacebook: Europski parlament na Facebooku
 checkEPOnTwitter: Posjetite Europski parlament na X-u
+checkEPOnFlickr: Europski parlament na Flickru
+checkEPOnLinkedIn: Europski parlament na LinkedInu
 checkEPOnYouTube: Europski parlament na YouTubeu
 checkEPOnInstagram: Europski parlament na Instagramu
+checkEPOnPinterest: Europski parlament na Pinterestu
+checkEPOnSnapchat: Europski parlament na Snapchatu
+checkEPOnReddit: Europski parlament na redditu
 legalNoticeLabel: Pravna obavijest
 legalNoticeURL: https://www.europarl.europa.eu/legal-notice/hr/
 privacyPolicyLabel: Politika zaštite privatnosti
 privacyPolicyURL: https://www.europarl.europa.eu/privacy-policy/hr/
 sitemap: Mapa internetskih stranica
 sitemapURL: https://common.europarl.europa.eu/hr/sitemap
-contactUs: Kontaktirajte nas
+contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/hr/contact
-copyright: © Europski parlament, 2025.
-accessibilityLabel: Pristupačnost
-accessibilityLabelURL: https://www.europarl.europa.eu/portal/hr/accessibility
 clickHere: Kliknite ovdje
-epLogoAltText: Logo Europskog parlamenta
-filterEPLOsA11y: Popis ureda za vezu Europskog parlamenta po zemljama
+shareOnFacebook: Podijelite ovu stranicu na Facebooku
+shareOnTwitter: ""
+shareOnLinkedIn: Podijelite ovu stranicu na LinkedInu
+shareOnWhatsApp: Podijelite ovu stranicu na WhatsAppu
+socialMediaCardUrl: ""
 all: Svi
 selectCountry: Odaberite zemlju
-checkTheEvents: Pogledajte popis događanja
-goToEventsForCountry: Posjetite stranicu s popisom događanja u [Hrvatskoj]
-goToWebsite: Idi na internetsku stranicu
-epWebsite: Internetske stranice Europskog parlamenta
-europeanParliament:
-  - Europski
-  - parlament
-opensInNewWindow: otvara se u novom prozoru
+accessibilityLabel: Pristupačnost
+accessibilityLabelURL: https://www.europarl.europa.eu/portal/hr/accessibility
+goToWebsite: "Idi na internetsku stranicu:"
+shareOnLabel: Podijelite na
+facebookLabel: Facebooku
+twitterLabel: ""
+shareLabel: Podijelite
+goToPage: Posjetite stranicu
+epLogoAltText: Logo Europskog parlamenta
 skipToLanguageMenu: Pređite na izbornik jezika
 skipToMainContent: Pređite na glavni sadržaj
+epWebsite: Internetske stranice Europskog parlamenta
+onTwitter: ""
+onFacebook: na Facebooku
+onLinkedIn: na LinkedInu
+onWhatsApp: na WhatsAppu
 waiShortcut: Izbornik s prečacima
+opensInNewWindow: otvara se u novom prozoru
+loading: Ucitavam
+loadingPleaseWait: Ucitavam. Molimo pricekajte.
+kb: kB
+mb: MB
+openMenuMobile: Otvoriti glavni navigacijski izbornik (otvoren u dijaloškom okviru)
+closeMenuMobile: Zatvoriti glavni navigacijski izbornik

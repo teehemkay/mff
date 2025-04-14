@@ -1,0 +1,40 @@
+---
+import Head from '../components/Head.astro';
+import ShortcutWai from '../components/ShortcutWai.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  lang: string;
+  currentPage: string;
+}
+
+const { lang, currentPage } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <Head {lang} {currentPage} />
+  </head>
+  <body>
+    <ShortcutWai {lang} />
+    <Navigation {lang} {currentPage} />
+
+    {/* Main page content goes here */}
+    <slot />
+
+    <a
+      href="#returnToTop"
+      class="top-link hide js-top"
+      aria-label="Scroll back to top of the page"></a>
+
+    <Footer {lang} />
+
+    {/* Common Scripts */}
+    <script is:inline src="/assets/js/go-to-top.js"></script>
+    <script is:inline src="/assets/js/menu-desktop.js"></script>
+    <script is:inline src="/assets/js/dropdown-desktop.js"></script>
+    <script is:inline src="/assets/js/expand-collapse.js"></script>
+  </body>
+</html>

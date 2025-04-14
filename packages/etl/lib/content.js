@@ -1,4 +1,13 @@
-import { kMetadata, kIndex, kLocalEvents, kCountries } from '../constants.js';
+import {
+  kMetadata,
+  kIndex,
+  kWhyItMatters,
+  kHowItWorks,
+  kOurRole,
+  kOurPosition,
+  kByCountry,
+  kCountries,
+} from '../constants.js';
 
 import {
   lvObjectContainer,
@@ -11,18 +20,23 @@ import {
   writeLVs,
 } from './common.js';
 
-export const contentFile = '2025_ED - Content';
+export const contentFile = 'MFFContent';
 
 export const tabnames2Filenames = {
   Metadata: kMetadata,
   Homepage: kIndex,
-  LocalEvents: kLocalEvents,
+  'Why it matters': kWhyItMatters,
+  'How it works': kHowItWorks,
+  'Our role': kOurRole,
+  'Our position': kOurPosition,
+  'By country': kByCountry,
   Countries: kCountries,
 };
 
 export const fieldProcessors = {
   ...defaultFieldProcessors,
-  edDescription: markdownProcessor,
+  faqAnswer: markdownProcessor,
+  homeIntroText: markdownProcessor,
 };
 
 export const exportContent = (contentFile, destination) => {
@@ -50,7 +64,16 @@ export const test = (contentFile) => {
   return (tabname) => processTab(xls, tabname, container);
 };
 
-export { kMetadata, kIndex } from '../constants.js';
+export {
+  kMetadata,
+  kIndex,
+  kWhyItMatters,
+  kHowItWorks,
+  kOurRole,
+  kOurPosition,
+  kByCountry,
+  kCountries,
+} from '../constants.js';
 
 export {
   lvObjectContainer,
