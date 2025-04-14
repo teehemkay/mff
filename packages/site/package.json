@@ -22,7 +22,7 @@
     "dev": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name clean assets:harvest --parallel watch:harvest astro:dev",
     "export": "fse copy dist/ ../../_site",
     "preview": "astro preview",
-    "watch:harvest": "onchange '../prototypes/assets/**' -- pnpm assets:harvest"
+    "watch:harvest": "onchange '../prototypes/_site/assets/**' -- pnpm assets:harvest"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.3",
