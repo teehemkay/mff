@@ -1,3 +1,5 @@
+import { contentForPage } from '@packages/data';
+
 import {
   kIndex,
   kWhyItMatters,
@@ -28,8 +30,12 @@ export const pair = /* @__NO_SIDE_EFFECTs__ */ (arr1, arr2) => {
   return Array.from({ length: minLength }, (_, i) => [arr1[i], arr2[i]]);
 };
 
-export const makeHref = ({ currentPage, lang }) =>
-  currentPage === kIndex ? `/${lang}/` : `/${lang}/${currentPage}/`;
+export const makeHref = ({ currentPage, currentFAQ, lang }) =>
+  currentPage === kIndex
+    ? `/${lang}/`
+    : currentFAQ === null
+      ? `/${lang}/${currentPage}/`
+      : `/${lang}/${currentPage}/${currentFAQ}/`;
 
 export const zip = (...arrays) =>
   arrays[0].map((_, index) => arrays.map((array) => array[index]));
@@ -52,6 +58,7 @@ export const getStaticPaths = /* @__NO_SIDE_EFFECTs__ */ () => {
       props: {
         lang: 'en',
         currentPage: kIndex,
+        currentFAQ: null,
       },
     },
   ];
@@ -59,16 +66,38 @@ export const getStaticPaths = /* @__NO_SIDE_EFFECTs__ */ () => {
   for (const lang of kLanguageCodes) {
     slugs.push({
       params: { slug: lang },
-      props: { lang, currentPage: kIndex },
+      props: { lang, currentPage: kIndex, currentFAQ: null },
     });
 
     for (const page of pageNames) {
       slugs.push({
         params: { slug: `${lang}/${page}` },
-        props: { lang, currentPage: page },
+        props: { lang, currentPage: page, currentFAQ: null },
       });
+      if (![kIndex, kByCountry].includes(page)) {
+        for (const faqID of contentForPage(page, 'en').faqID) {
+          slugs.push({
+            params: { slug: `${lang}/${page}/${faqID}` },
+            props: { lang, currentPage: page, currentFAQ: faqID },
+          });
+        }
+      }
     }
   }
 
   return slugs;
+};
+
+export const faqDetails = ({ lang, currentPage, currentFAQ }) => {
+  const { faqID, faQuestion, faqAnswerMeta } = contentForPage(
+    currentPage,
+    lang,
+  );
+
+  const index = faqID.indexOf(currentFAQ);
+
+  return {
+    metaTitle: faQuestion[index],
+    metaDescription: faqAnswerMeta[index],
+  };
 };

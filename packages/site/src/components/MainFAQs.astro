@@ -10,9 +10,10 @@ import ShareWidget from './ShareWidget.astro';
 interface Props {
   lang: string;
   currentPage: string;
+  currentFAQ: string | null;
 }
 
-const { lang, currentPage } = Astro.props;
+const { lang, currentPage, currentFAQ } = Astro.props;
 
 const { homeH1: title, homeSubtitle: subtitle } = contentForPage(kIndex, lang);
 
@@ -29,6 +30,8 @@ const {
 const headerProps = { title, subtitle, h1, chapo };
 const faqs = zip(faQuestion, faqAnswer, faqAnswerMeta, faqExpanded, faqID);
 const shareWidgetProps = { lang, currentPage, title: faQuestion };
+const shouldExpand = (status, faqID) =>
+  currentFAQ === null ? status : `${currentFAQ === faqID}`;
 ---
 
 <main role="main" id="mainContent" class="mb-8">
@@ -48,7 +51,7 @@ const shareWidgetProps = { lang, currentPage, title: faQuestion };
             <h2 class="block pb-6">
               <button
                 class="expand-button w-full text-left flex justify-between items-center py-2 hover:underline hover:decoration-1 hover:decoration-blue-default hover:underline-offset-4 focus:outline focus:outline-2 focus:outline-blue-focus focus:outline-offset-4"
-                aria-expanded={expanded}
+                aria-expanded={shouldExpand(expanded, faqID)}
                 aria-controls={`content-${faqID}`}
                 itemprop="name">
                 <span class="expand-title font-EPGammaBold">{question}</span>
