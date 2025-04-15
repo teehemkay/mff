@@ -1,0 +1,33 @@
+---
+interface Props {
+  url: string;
+  a11yLabel: string;
+}
+
+const { url, a11yLabel } = Astro.props;
+
+const linker = ({ url }) => `https://api.whatsapp.com/send?text=${url}`;
+---
+
+<a
+  href={linker({ url: encodeURIComponent(url) })}
+  target="_blank"
+  rel="noopener noreferrer">
+  <span class="sr-only">{a11yLabel}</span>
+  <svg
+    aria-hidden
+    class="whatsapp"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 34 34"
+    width="34"
+    height="34">
+    <path
+      class="back"
+      d="M22.5,38.6a17,17,0,1,0-17-17,17,17,0,0,0,17,17"
+      transform="translate(-5.5 -4.6)"></path>
+    <path
+      class="icon"
+      d="M13.3,30.59l1.36-5A9.58,9.58,0,1,1,23,30.43a9.74,9.74,0,0,1-4.58-1.17Zm5.31-3.07a7.93,7.93,0,1,0-2.21-2.15l-.8,2.94Zm9.18-4.4c-.06-.1-.22-.16-.46-.28s-1.42-.7-1.64-.78-.38-.12-.54.12-.61.78-.75.94-.28.18-.52.06A6.52,6.52,0,0,1,22,22a7.14,7.14,0,0,1-1.33-1.66.35.35,0,0,1,.1-.49,5.52,5.52,0,0,0,.36-.42,1.33,1.33,0,0,0,.24-.4.42.42,0,0,0,0-.42c-.06-.11-.53-1.29-.73-1.77s-.4-.41-.54-.41h-.46a.88.88,0,0,0-.64.3,2.69,2.69,0,0,0-.84,2,4.66,4.66,0,0,0,1,2.47,10.71,10.71,0,0,0,4.09,3.62,12.43,12.43,0,0,0,1.37.5,3.18,3.18,0,0,0,1.5.1,2.48,2.48,0,0,0,1.62-1.14A2,2,0,0,0,27.79,23.12Z"
+      transform="translate(-5.5 -4.6)"></path>
+  </svg>
+</a>

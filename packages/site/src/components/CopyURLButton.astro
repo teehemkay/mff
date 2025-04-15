@@ -1,45 +1,37 @@
-export const CopyUrlButton = ({
-  copyURLToClipboard,
-  copyLabel,
-  copyToClipboard,
-}) => {
-  return (
-    <button
-      className="copy-url-button flex items-center text-white-default font-epSemiBold"
-      aria-label={copyURLToClipboard}
-      id="copy-button"
-      type="button"
-      onClick={copyToClipboard}>
-      <svg
-        viewBox="0 0 34 32.562"
-        className="max-w-[30px] !border-0 mr-1"
-        focusable="false"
-        aria-hidden="true">
-        <defs>
-          <clipPath>
-            <rect
-              width={22}
-              height="23.351"
-              transform="translate(0 0)"
-              fill="none"
-            />
-          </clipPath>
-        </defs>
-        <g transform="translate(6 4)">
-          <g transform="translate(0 0)" clipPath="url(#clip-path)">
-            <path
-              d="M17.031,2.653V4.122h2.318v0A2.65,2.65,0,0,1,22,6.771h0V20.7h0a2.65,2.65,0,0,1-2.645,2.647v0H7.62v0A2.65,2.65,0,0,1,4.973,20.7h0V17.58H2.651v0A2.65,2.65,0,0,1,0,14.931H0V2.651H0A2.65,2.65,0,0,1,2.649,0V0H14.38V0a2.65,2.65,0,0,1,2.647,2.645h0ZM15.02,4.122V2.649h0a.652.652,0,0,0-.642-.64v0H2.651v0a.652.652,0,0,0-.64.642h0v12.28h0a.652.652,0,0,0,.642.64v0H4.971V6.773h0A2.65,2.65,0,0,1,7.62,4.126v0h7.4ZM19.988,20.7V6.771h0a.652.652,0,0,0-.642-.64v0H7.618v0a.652.652,0,0,0-.64.642h0V20.7h0a.652.652,0,0,0,.642.64v0H19.351v0a.652.652,0,0,0,.64-.642h0Z"
-              transform="translate(0 0)"
-              fill="#024EA2"
-              fillRule="evenodd"
-            />
-          </g>
-        </g>
-        <rect width={34} height="32.562" fill="none" />
-      </svg>
-      <span className="text-blue-default">{copyLabel}</span>
-    </button>
-  );
-};
+---
+interface Props {
+  copyURLLabel: string;
+  copyURLToClipboard: string;
+  faqID: string;
+}
 
-export default CopyUrlButton;
+const { copyURLToClipboard, copyURLLabel, faqID } = Astro.props;
+---
+
+<button
+  class="copy-url-button flex items-center text-white-default font-epSemiBold"
+  aria-label={copyURLToClipboard}
+  id={`copy-button-${faqID}`}>
+  <svg
+    viewBox="0 0 34 32.562"
+    class="max-w-[30px] border-0! mr-1"
+    focusable="false"
+    aria-hidden="true">
+    <defs
+      ><clipPath id={`clip-${faqID}`}
+        ><rect width="22" height="23.351" transform="translate(0 0)" fill="none"
+        ></rect></clipPath
+      ></defs
+    >
+    <g transform="translate(6 4)"
+      ><g transform="translate(0 0)" clip-path={`url(#clip-${faqID})`}
+        ><path
+          d="M17.031,2.653V4.122h2.318v0A2.65,2.65,0,0,1,22,6.771h0V20.7h0a2.65,2.65,0,0,1-2.645,2.647v0H7.62v0A2.65,2.65,0,0,1,4.973,20.7h0V17.58H2.651v0A2.65,2.65,0,0,1,0,14.931H0V2.651H0A2.65,2.65,0,0,1,2.649,0V0H14.38V0a2.65,2.65,0,0,1,2.647,2.645h0ZM15.02,4.122V2.649h0a.652.652,0,0,0-.642-.64v0H2.651v0a.652.652,0,0,0-.64.642h0v12.28h0a.652.652,0,0,0,.642.64v0H4.971V6.773h0A2.65,2.65,0,0,1,7.62,4.126v0h7.4ZM19.988,20.7V6.771h0a.652.652,0,0,0-.642-.64v0H7.618v0a.652.652,0,0,0-.64.642h0V20.7h0a.652.652,0,0,0,.642.64v0H19.351v0a.652.652,0,0,0,.64-.642h0Z"
+          transform="translate(0 0)"
+          fill="#024EA2"
+          fill-rule="evenodd"></path></g
+      ></g
+    ><rect width="34" height="32.562" fill="none"></rect>
+  </svg>
+  <span class="text-blue-default">{copyURLLabel}</span>
+</button>
