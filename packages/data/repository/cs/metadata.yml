@@ -33,7 +33,7 @@ contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/cs/contact
 clickHere: Klikněte sem
 shareOnFacebook: Sdílet tuto stránku na Facebooku
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Sdílet tuto stránku na LinkedInu
 shareOnWhatsApp: Sdílet tuto stránku na Whatsappu
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/cs/accessibility
 goToWebsite: "Přejít na webovou stránku:"
 shareOnLabel: Sdílet na
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Sdílet
 goToPage: Přejít na stránku
 epLogoAltText: Logo Evropského parlamentu
 skipToLanguageMenu: Přeskočit na výběr jazyka
 skipToMainContent: Přeskočit na hlavní obsah
 epWebsite: Internetové stránky Evropského parlamentu
-onTwitter: ""
+onX: ""
 onFacebook: na Facebooku
 onLinkedIn: na LinkedIn
 onWhatsApp: na WhatsAppu
@@ -61,5 +61,6 @@ loading: Načítání
 loadingPleaseWait: Načítání. Počkejte prosím.
 kb: kB
 mb: MB
-openMenuMobile: Otevřít hlavní navigační menu (otevře se v dialogovém okně)
-closeMenuMobile: Zavřít hlavní navigační menu
+copyURLLabel: Kopírovat URL
+copyURLToClipboard: Zkopírovat adresu do schránky
+urlCopiedToClipboard: Adresa byla zkopírována do schránky.

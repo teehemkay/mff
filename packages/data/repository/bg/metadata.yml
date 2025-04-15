@@ -33,7 +33,7 @@ contactUs: Контакти
 contactUsURL: https://www.europarl.europa.eu/portal/bg/contact
 clickHere: Натиснете тук
 shareOnFacebook: Споделете тази страница във Facebook
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Споделете тази страница в Linkedin
 shareOnWhatsApp: Споделете тази страница в WhatsApp
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/bg/accessibility
 goToWebsite: "Идете на уебсайта:"
 shareOnLabel: Споделете във
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Споделяне
 goToPage: отидете на страницата
 epLogoAltText: Лого на Европейския парламент
 skipToLanguageMenu: Преминаване към езиковото меню
 skipToMainContent: Преминаване към основното съдържание
 epWebsite: Уебсайт на Европейския парламент
-onTwitter: ""
+onX: ""
 onFacebook: във Facebook
 onLinkedIn: в LinkedIn
 onWhatsApp: в WhatsApp
@@ -61,5 +61,6 @@ loading: Зареждане
 loadingPleaseWait: Зареждане. Моля, изчакайте.
 kb: kB
 mb: MB
-openMenuMobile: Отворете основното меню за навигация (отваря диалоговия прозорец)
-closeMenuMobile: Затворете основното меню за навигация
+copyURLLabel: Копиране на URL
+copyURLToClipboard: Копирайте адреса във Вашия клипборд
+urlCopiedToClipboard: Адресът е копиран във Вашия клипборд.

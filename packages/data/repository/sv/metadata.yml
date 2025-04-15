@@ -33,7 +33,7 @@ contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/sv/contact
 clickHere: Klicka här
 shareOnFacebook: Dela den här sidan på Facebook
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Dela den här sidan på LinkedIn
 shareOnWhatsApp: Dela den här sidan på WhatsApp
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/sv/accessibility
 goToWebsite: "Gå till hemsidan:"
 shareOnLabel: Dela på
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Dela
 goToPage: Gå till sidan
 epLogoAltText: Europaparlamentets logotyp
 skipToLanguageMenu: Direkt till språkmenyn
 skipToMainContent: Direkt till huvudinnehållet
 epWebsite: Europaparlamentets webbplats
-onTwitter: ""
+onX: ""
 onFacebook: på Facebook
 onLinkedIn: på Linkedin
 onWhatsApp: på WhatsApp
@@ -61,5 +61,6 @@ loading: Laddar
 loadingPleaseWait: Laddar. Vänligen vänta.
 kb: kB
 mb: MB
-openMenuMobile: Öppna huvudnavigeringsmenyn (öppnas i en dialogruta)
-closeMenuMobile: Stäng huvudnavigeringsmenyn
+copyURLLabel: Kopiera webbadress
+copyURLToClipboard: Kopiera adressen till urklipp
+urlCopiedToClipboard: Adressen har kopierats till urklipp.

@@ -33,7 +33,7 @@ contactUs: Επικοινωνία
 contactUsURL: https://www.europarl.europa.eu/portal/el/contact
 clickHere: Πατήστε εδώ
 shareOnFacebook: Κοινοποίηση στο Facebook
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Κοινοποίηση στο Linkedin
 shareOnWhatsApp: Κοινοποίηση στο WhatsApp
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/el/accessibility
 goToWebsite: "Μεταβείτε στον ιστότοπο:"
 shareOnLabel: Κοινοποίηση στο
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Κοινοποίηση
 goToPage: Μετάβαση στη σελίδα
 epLogoAltText: Λογότυπο του Ευρωπαϊκού Κοινοβουλίου
 skipToLanguageMenu: Μετάβαση στο μενού γλωσσών
 skipToMainContent: Μετάβαση στο κυρίως περιεχόμενο
 epWebsite: Ιστότοπος του Ευρωπαϊκού Κοινοβουλίου
-onTwitter: ""
+onX: ""
 onFacebook: στο Facebook
 onLinkedIn: στο LinkedIn
 onWhatsApp: στο WhatsApp
@@ -61,5 +61,6 @@ loading: Φόρτωση
 loadingPleaseWait: Φόρτωση. Παρακαλώ περιμένετε.
 kb: kB
 mb: MB
-openMenuMobile: Άνοιγμα του κύριου μενού πλοήγησης (ανοίγει σε πλαίσιο διαλόγου)
-closeMenuMobile: Κλείσιμο του κύριου μενού πλοήγησης
+copyURLLabel: Αντιγραφή URL
+copyURLToClipboard: Αντιγράψτε τη διεύθυνση στο πρόχειρό σας
+urlCopiedToClipboard: Η διεύθυνση έχει αντιγραφεί στο πρόχειρο σας.

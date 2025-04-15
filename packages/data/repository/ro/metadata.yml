@@ -33,7 +33,7 @@ contactUs: Contact
 contactUsURL: https://www.europarl.europa.eu/portal/ro/contact
 clickHere: Faceți clic aici
 shareOnFacebook: Distribuiți această pagină pe Facebook
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Distribuiți această pagină pe LinkedIn
 shareOnWhatsApp: Distribuiți această pagină pe WhatsApp
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/ro/accessibility
 goToWebsite: "Mergi la website:"
 shareOnLabel: Recomandaţi pe
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Distribuie
 goToPage: Accesați pagina
 epLogoAltText: Logoul Parlamentului European
 skipToLanguageMenu: Accesați direct meniul „Limbi”
 skipToMainContent: Accesați direct conținutul principal
 epWebsite: Site-ul Parlamentului European
-onTwitter: ""
+onX: ""
 onFacebook: pe Facebook
 onLinkedIn: pe LinkedIn
 onWhatsApp: pe WhatsApp
@@ -61,5 +61,6 @@ loading: Încărcare
 loadingPleaseWait: Încărcare. Vă rugăm să așteptați.
 kb: kB
 mb: MB
-openMenuMobile: Deschide meniul principal de navigare (se deschide într-o fereastră nouă)
-closeMenuMobile: Închide meniul principal de navigare
+copyURLLabel: Copiază URL
+copyURLToClipboard: Copiați adresa în clipboard
+urlCopiedToClipboard: Adresa a fost copiată în clipboardul dvs.

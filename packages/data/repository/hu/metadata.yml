@@ -33,7 +33,7 @@ contactUs: Kapcsolat
 contactUsURL: https://www.europarl.europa.eu/portal/hu/contact
 clickHere: kattintson ide
 shareOnFacebook: Megosztás a Facebookon
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Megosztás a LinkedIn felületén
 shareOnWhatsApp: Megosztás a WhatsAppon
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/hu/accessibility
 goToWebsite: "Tovább a weboldalra:"
 shareOnLabel: Megosztás a következőn
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Megosztás
 goToPage: Ugrás az oldalra
 epLogoAltText: Az Európai Parlament logója
 skipToLanguageMenu: Ugrás a nyelvi menüre
 skipToMainContent: Ugrás a fő tartalomra
 epWebsite: Az Európai Parlament honlapja
-onTwitter: ""
+onX: ""
 onFacebook: a Facebookon
 onLinkedIn: a LinkedInen
 onWhatsApp: a WhatsAppon
@@ -61,5 +61,6 @@ loading: Betöltés
 loadingPleaseWait: Betöltés. Kérjük, várjon!
 kb: kB
 mb: MB
-openMenuMobile: A fő navigációs menü megnyitása (párbeszédablakban nyílik meg)
-closeMenuMobile: A fő navigációs menü bezárása
+copyURLLabel: URL másolása
+copyURLToClipboard: Webcím másolása a vágólapra
+urlCopiedToClipboard: Webcím a vágólapra másolva

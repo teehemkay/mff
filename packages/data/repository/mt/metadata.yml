@@ -33,7 +33,7 @@ contactUs: Kuntatt
 contactUsURL: https://www.europarl.europa.eu/portal/mt/contact
 clickHere: Agħfas hawn
 shareOnFacebook: Aqsam din il-paġna fuq Facebook
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Aqsam il-paġna fuq Linkedin
 shareOnWhatsApp: Aqsam il-paġna fuq WhatsApp
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/mt/accessibility
 goToWebsite: "Żur is-sit web:"
 shareOnLabel: Aqsam
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Aqsam
 goToPage: Mur fil-paġna
 epLogoAltText: Logo tal-Parlament Ewropew
 skipToLanguageMenu: Mur fil-menù tal-lingwa
 skipToMainContent: Mur fil-kontenut prinċipali
 epWebsite: Is-Sit Web tal-Parlament Ewropew
-onTwitter: ""
+onX: ""
 onFacebook: fuq Facebook
 onLinkedIn: fuq LinkedIn
 onWhatsApp: fuq WhatsApp
@@ -61,5 +61,6 @@ loading: Il-paġna tielgħa
 loadingPleaseWait: Il-paġna tielgħa. Jekk jogħġbok stenna ftit.
 kb: kB
 mb: MB
-openMenuMobile: Iftaħ il-menu prinċipali tan-navigazzjoni (jinfetaħ f’kaxxa tad-djalogu)
-closeMenuMobile: Agħlaq il-menu prinċipali tan-navigazzjoni
+copyURLLabel: Ikkopja l-URL
+copyURLToClipboard: Ikkopja l-URL fuq il-clipboard tiegħek
+urlCopiedToClipboard: Il-URL ġie kkupjat fuq il-clipboard tiegħek.

@@ -33,7 +33,7 @@ contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/et/contact
 clickHere: Klõpsa siia
 shareOnFacebook: Jaga Facebookis
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Jaga LinkedInis
 shareOnWhatsApp: Jaga WhatsAppis
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/et/accessibility
 goToWebsite: "Mine veebilehele:"
 shareOnLabel: Jaga
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Jaga
 goToPage: Lehele
 epLogoAltText: Euroopa Parlamendi logo
 skipToLanguageMenu: Otse keelemenüüsse
 skipToMainContent: Põhisisu juurde
 epWebsite: Euroopa Parlamendi veebisait
-onTwitter: ""
+onX: ""
 onFacebook: Facebook
 onLinkedIn: LinkedIn
 onWhatsApp: WhatsApp
@@ -61,5 +61,6 @@ loading: Laadimine
 loadingPleaseWait: Laadimine. Palun oodake.
 kb: kB
 mb: MB
-openMenuMobile: Ava peanavigeerimismenüü (avab dialoogiakna)
-closeMenuMobile: Sulge peanavigeerimismenüü
+copyURLLabel: Kopeeri URL
+copyURLToClipboard: Kopeeri aadress
+urlCopiedToClipboard: Aadress kopeeritud.

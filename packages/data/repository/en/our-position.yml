@@ -17,3 +17,6 @@ faqAnswerMeta:
 faqExpanded:
   - "false"
   - "false"
+faqID:
+  - q1
+  - q2

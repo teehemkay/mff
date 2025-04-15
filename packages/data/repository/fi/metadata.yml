@@ -33,7 +33,7 @@ contactUs: Yhteystiedot
 contactUsURL: https://www.europarl.europa.eu/portal/fi/contact
 clickHere: Klikkaa tästä
 shareOnFacebook: Jaa tämä sivu Facebookissa
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Jaa tämä sivu Linkedinissä
 shareOnWhatsApp: Jaa tämä sivu WhatsAppissa
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/fi/accessibility
 goToWebsite: "Siirry verkkosivulle:"
 shareOnLabel: Jaa
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Jaa
 goToPage: Siirry sivulle
 epLogoAltText: Euroopan parlamentin logo
 skipToLanguageMenu: Siirry kielivalikkoon
 skipToMainContent: Siirry pääsisältöön
 epWebsite: Euroopan parlamentin verkkosivusto
-onTwitter: ""
+onX: ""
 onFacebook: Facebookissa
 onLinkedIn: LinkedInissä
 onWhatsApp: WhatsAppissa
@@ -61,5 +61,6 @@ loading: Ladataan
 loadingPleaseWait: Ladataan. Ole hyvä ja odota.
 kb: kB
 mb: MB
-openMenuMobile: Avaa päävalikko (avautuu valintaikkunana)
-closeMenuMobile: Sulje päävalikko
+copyURLLabel: Kopioi URL-osoite
+copyURLToClipboard: Kopioi osoite leikepöydälle.
+urlCopiedToClipboard: Osoite on kopioitu leikepöydälle.
