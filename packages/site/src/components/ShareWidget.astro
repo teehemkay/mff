@@ -28,11 +28,7 @@ const {
   urlCopiedToClipboard,
 } = metadata(lang);
 
-const copyURLProps = {
-  faqID,
-  copyURLLabel,
-  copyURLToClipboard,
-};
+const url = `${kBaseURL}${lang}/${currentPage}/${faqID}/`;
 
 const socialNetworkLabels = {
   Facebook: onFacebook,
@@ -49,7 +45,12 @@ const a11yLabels = Object.entries(socialNetworkLabels).reduce(
   {},
 );
 
-const url = `${kBaseURL}${lang}/${currentPage}/${faqID}/`;
+const copyURLProps = {
+  url,
+  faqID,
+  copyURLLabel,
+  copyURLToClipboard,
+};
 ---
 
 <div class="expand-social-share expand-container flex flex-col relative">
@@ -110,12 +111,13 @@ const url = `${kBaseURL}${lang}/${currentPage}/${faqID}/`;
     </ul>
   </div>
   <div
-    id={`copy-message-${faqID}`}
+    id={`container-copy-feedback-${faqID}`}
     aria-hidden="true"
     class="copied-txt mt-2 hidden">
-    <span class="fx--fadeOut">
+    <span id={`copy-feedback-${faqID}`} class="fx--fadeOut">
       {urlCopiedToClipboard}
     </span>
   </div>
-  <div id={`copy-message-sr-only-${faqID}`} class="sr-only" role="status"></div>
+  <div id={`copy-feedback-sr-only-${faqID}`} class="sr-only" role="status">
+  </div>
 </div>

@@ -3,15 +3,18 @@ interface Props {
   copyURLLabel: string;
   copyURLToClipboard: string;
   faqID: string;
+  url: string;
 }
 
-const { copyURLToClipboard, copyURLLabel, faqID } = Astro.props;
+const { url, copyURLToClipboard, copyURLLabel, faqID } = Astro.props;
 ---
 
 <button
   class="copy-url-button flex items-center text-white-default font-epSemiBold"
   aria-label={copyURLToClipboard}
-  id={`copy-button-${faqID}`}>
+  id={`copy-button-${faqID}`}
+  data-id={faqID}
+  data-url={url}>
   <svg
     viewBox="0 0 34 32.562"
     class="max-w-[30px] border-0! mr-1"

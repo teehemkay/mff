@@ -43,6 +43,12 @@ const { lang, currentPage, currentFAQ } = Astro.props;
     {
       ![kIndex, kByCountry].includes(currentFAQ) && (
         <script type="module" is:inline src="/assets/js/expand-collapse.js" />
+
+        <script
+          type="module"
+          is:inline
+          src="/assets/js/copy-url-to-clipboard.js"
+        />
       )
     }
 
@@ -55,5 +61,6 @@ const { lang, currentPage, currentFAQ } = Astro.props;
         />
       )
     }
+
   </body>
 </html>
