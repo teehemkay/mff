@@ -17,7 +17,7 @@ const { homeH1: title, homeSubtitle: subtitle } = contentForPage(kIndex, lang);
 const props = contentForPage(currentPage, lang);
 const { pageH1: h1, pageChapo: chapo } = props;
 
-const headerProps = { title, subtitle, h1, chapo };
+const headerProps = { title, subtitle, h1, chapo, chapoIsContent: false };
 ---
 
 <main role="main" id="mainContent" class="mb-8">

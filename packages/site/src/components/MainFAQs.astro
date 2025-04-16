@@ -27,7 +27,7 @@ const {
   faqID,
 } = contentForPage(currentPage, lang);
 
-const headerProps = { title, subtitle, h1, chapo };
+const headerProps = { title, subtitle, h1, chapo, chapoIsContent: false };
 const faqs = zip(faQuestion, faqAnswer, faqAnswerMeta, faqExpanded, faqID);
 const shareWidgetProps = { lang, currentPage, title: faQuestion };
 const shouldExpand = (status, faqID) =>
