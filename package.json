@@ -13,6 +13,8 @@
     "clean": "fse remove _site",
     "data": "pnpm --filter @packages/etl run export",
     "deliver": "run-s --print-name deliver:*",
+    "build:protos": "pnpm --filter @packages/prototypes run build",
+    "build:site": "pnpm --filter @packages/site run build",
     "deliver:protos": "pnpm --filter @packages/prototypes run deliver",
     "deliver:site": "pnpm --filter @packages/site run deliver",
     "dev": "pnpm --filter @packages/prototypes run dev",
