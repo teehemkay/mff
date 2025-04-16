@@ -22,7 +22,7 @@
     "dev": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name clean assets:harvest --parallel watch:harvest astro:dev",
     "export": "fse copy dist/ ../../_site",
     "preview": "astro preview",
-    "watch:harvest": "onchange '../prototypes/_site/assets/**' -- pnpm assets:harvest"
+    "watch:harvest": "onchange --verbose --await-write-finish 3000 '../prototypes/_site/assets' -- pnpm assets:harvest"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.3",
@@ -51,7 +51,10 @@
     "xo": "^0.60.0",
     "yaml": "^2.7.0"
   },
-  "browserslist": ["defaults", "not IE 11"],
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
   "prettier": {
     "useTabs": false,
     "arrowParens": "always",
@@ -59,7 +62,9 @@
     "bracketSpacing": true,
     "singleQuote": true,
     "trailingComma": "all",
-    "plugins": ["prettier-plugin-astro"],
+    "plugins": [
+      "prettier-plugin-astro"
+    ],
     "astroAllowShorthand": true,
     "overrides": [
       {
@@ -74,10 +79,16 @@
     "extends": "xo-react",
     "space": true,
     "prettier": true,
-    "envs": ["node", "browser"],
+    "envs": [
+      "node",
+      "browser"
+    ],
     "rules": {
       "capitalized-comments": "off",
-      "func-names": ["error", "as-needed"],
+      "func-names": [
+        "error",
+        "as-needed"
+      ],
       "import/order": [
         "error",
         {
@@ -98,7 +109,9 @@
         "error",
         "always",
         {
-          "exceptions": ["#__PURE__"]
+          "exceptions": [
+            "#__PURE__"
+          ]
         }
       ],
       "unicorn/no-array-callback-reference": "off",
@@ -107,6 +120,10 @@
       "unicorn/prefer-object-from-entries": "off",
       "unicorn/prevent-abbreviations": "off"
     },
-    "ignores": ["build", "public/**", "_site/**"]
+    "ignores": [
+      "build",
+      "public/**",
+      "_site/**"
+    ]
   }
 }

@@ -1,4 +1,6 @@
 ---
+import { kIndex, kByCountry } from '@packages/etl/constants';
+
 import Head from '../components/Head.astro';
 import ShortcutWai from '../components/ShortcutWai.astro';
 import Navigation from '../components/Navigation.astro';
@@ -7,19 +9,20 @@ import Footer from '../components/Footer.astro';
 interface Props {
   lang: string;
   currentPage: string;
+  currentFAQ: string | null;
 }
 
-const { lang, currentPage } = Astro.props;
+const { lang, currentPage, currentFAQ } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-    <Head {lang} {currentPage} />
+    <Head {lang} {currentPage} {currentFAQ} />
   </head>
   <body>
     <ShortcutWai {lang} />
-    <Navigation {lang} {currentPage} />
+    <Navigation {lang} {currentPage} {currentFAQ} />
 
     {/* Main page content goes here */}
     <slot />
@@ -32,9 +35,25 @@ const { lang, currentPage } = Astro.props;
     <Footer {lang} />
 
     {/* Common Scripts */}
-    <script is:inline src="/assets/js/go-to-top.js"></script>
-    <script is:inline src="/assets/js/menu-desktop.js"></script>
-    <script is:inline src="/assets/js/dropdown-desktop.js"></script>
-    <script is:inline src="/assets/js/expand-collapse.js"></script>
+    <script type="module" is:inline src="/assets/js/go-to-top.js"></script>
+    <script type="module" is:inline src="/assets/js/menu-desktop.js"></script>
+    <script type="module" is:inline src="/assets/js/dropdown-desktop.js"
+    ></script>
+
+    {
+      ![kIndex, kByCountry].includes(currentFAQ) && (
+        <script type="module" is:inline src="/assets/js/expand-collapse.js" />
+      )
+    }
+
+    {
+      currentFAQ && (
+        <script
+          type="module"
+          is:inline
+          src="/assets/js/scroll-faq-into-view.js"
+        />
+      )
+    }
   </body>
 </html>

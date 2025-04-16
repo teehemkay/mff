@@ -33,7 +33,7 @@ contactUs: Teagmháil
 contactUsURL: https://www.europarl.europa.eu/portal/fr/contact
 clickHere: Cliceáil anseo
 shareOnFacebook: Roinn an leathanach seo ar Facebook
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Roinn an leathanach seo ar LinkedIn
 shareOnWhatsApp: Roinn an leathanach seo ar Whatsapp
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/fr/accessibility
 goToWebsite: "Téigh go dtí an suíomh gréasáin:"
 shareOnLabel: Páirtigh
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Roinn
 goToPage: Téigh go dtí an leathanach
 epLogoAltText: Lógó Pharlaimint na hEorpa
 skipToLanguageMenu: Gabh chuig an roghchlár teanga
 skipToMainContent: Gabh chuig an bpríomhinneachar
 epWebsite: Suíomh gréasáin Pharlaimint na hEorpa
-onTwitter: ""
+onX: ""
 onFacebook: ar Facebook
 onLinkedIn: ar LinkedIn
 onWhatsApp: ar WhatsApp
@@ -61,5 +61,6 @@ loading: Ag lódáil
 loadingPleaseWait: Ag lódáil. Fan nóiméad.
 kb: kB
 mb: MB
-openMenuMobile: Oscail an roghchlár nascleanúna príomha (osclaítear i mbosca dialóige é)
-closeMenuMobile: Dún an roghchlár nascleanúna príomha
+copyURLLabel: Cóipeáil an URL
+copyURLToClipboard: Cóipeáil an seoladh chuig do ghearrthaisce
+urlCopiedToClipboard: Tá an seoladh cóipeáilte chuig do ghearrthaisce

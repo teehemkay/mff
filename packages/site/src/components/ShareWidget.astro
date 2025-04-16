@@ -1,0 +1,121 @@
+---
+import { metadata } from '@packages/data';
+import { kBaseURL, xAccount } from '@packages/data/constants';
+
+import ShareOnFacebook from './ShareOnFacebook.astro';
+import ShareOnX from './ShareOnX.astro';
+import ShareOnLinkedIn from './ShareOnLinkedIn.astro';
+import ShareOnWhatsApp from './ShareOnWhatsapp.astro';
+import CopyURLButton from './CopyURLButton.astro';
+
+interface Props {
+  lang: string;
+  currentPage: string;
+  title: string;
+  faqID: string;
+}
+
+const { lang, currentPage, title, faqID } = Astro.props;
+
+const {
+  onX,
+  onFacebook,
+  onLinkedIn,
+  onWhatsApp,
+  shareLabel,
+  copyURLLabel,
+  copyURLToClipboard,
+  urlCopiedToClipboard,
+} = metadata(lang);
+
+const copyURLProps = {
+  faqID,
+  copyURLLabel,
+  copyURLToClipboard,
+};
+
+const socialNetworkLabels = {
+  Facebook: onFacebook,
+  X: onX,
+  LinkedIn: onLinkedIn,
+  Whatsapp: onWhatsApp,
+};
+
+const a11yLabels = Object.entries(socialNetworkLabels).reduce(
+  (acc, [key, value]) => {
+    acc[key.toLocaleLowerCase()] = `${shareLabel} ${value}`;
+    return acc;
+  },
+  {},
+);
+
+const url = `${kBaseURL}${lang}/${currentPage}/${faqID}/`;
+---
+
+<div class="expand-social-share expand-container flex flex-col relative">
+  <div class="mb-3">
+    <button
+      class="expand-button items-center text-lg2 cursor-pointer border-0 flex text-blue-default underline hover:decoration-2 focus:decoration-2 focus:outline focus:outline-offset-2 focus:outline-2"
+      aria-label={`${shareLabel} - ${title}`}
+      aria-expanded="false"
+      aria-controls={`share-faq-${faqID}`}>
+      <svg
+        x="0px"
+        y="0px"
+        viewBox="0 0 20.59 26.52"
+        class="global-share-icon fill-blue-default w-5 h-5 mr-1"
+        focusable="false"
+        aria-hidden="true">
+        <g transform="translate(-6891.308 1800)">
+          <circle class="st0" cx="6895.09" cy="-1786.24" r="3.5"></circle>
+          <circle class="st0" cx="6907.09" cy="-1780.24" r="3.5"></circle>
+          <circle class="st0" cx="6907.09" cy="-1793.24" r="3.5"></circle>
+          <rect
+            x="6900.88"
+            y="-1788.38"
+            transform="matrix(0.454 -0.891 0.891 0.454 5356.8716 5175.8408)"
+            width="1.41"
+            height="10.86"></rect>
+          <rect
+            x="6896.16"
+            y="-1790.83"
+            transform="matrix(0.891 -0.454 0.454 0.891 1564.9807 2938.2065)"
+            width="10.86"
+            height="1.41"></rect>
+        </g>
+      </svg>
+      <span class="text-lg">{shareLabel}</span>
+    </button>
+  </div>
+  <div class="block">
+    <ul
+      id={`share-faq-${faqID}`}
+      class="social-list expand-container-content block pt-4 hidden">
+      <li>
+        <ShareOnFacebook {url} a11yLabel={a11yLabels.facebook} />
+      </li>
+      <li>
+        <ShareOnX {url} {title} a11yLabel={a11yLabels.x} via={xAccount(lang)} />
+      </li>
+      <li>
+        <ShareOnLinkedIn {url} {title} a11yLabel={a11yLabels.linkedin} />
+      </li>
+      <li>
+        <ShareOnWhatsApp {url} a11yLabel={a11yLabels.whatsapp} />
+      </li>
+      <li>
+        {' '}
+        <CopyURLButton {...copyURLProps} />
+      </li>
+    </ul>
+  </div>
+  <div
+    id={`copy-message-${faqID}`}
+    aria-hidden="true"
+    class="copied-txt mt-2 hidden">
+    <span class="fx--fadeOut">
+      {urlCopiedToClipboard}
+    </span>
+  </div>
+  <div id={`copy-message-sr-only-${faqID}`} class="sr-only" role="status"></div>
+</div>

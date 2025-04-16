@@ -33,7 +33,7 @@ contactUs: Contact
 contactUsURL: https://www.europarl.europa.eu/portal/nl/contact
 clickHere: Klik hier
 shareOnFacebook: Deze pagina delen op Facebook
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Deze pagina delen op LinkedIn
 shareOnWhatsApp: Deze pagina delen via WhatsApp
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/nl/accessibility
 goToWebsite: "Ga naar de website:"
 shareOnLabel: Delen op
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Delen
 goToPage: Naar de webpagina
 epLogoAltText: Logo van het Europees Parlement
 skipToLanguageMenu: Naar het taalmenu
 skipToMainContent: Naar de inhoud
 epWebsite: Website van het Europees Parlement
-onTwitter: ""
+onX: ""
 onFacebook: op Facebook
 onLinkedIn: op LinkedIn
 onWhatsApp: op WhatsApp
@@ -61,5 +61,6 @@ loading: Laden
 loadingPleaseWait: Aan het laden. Even geduld a.u.b.
 kb: kB
 mb: MB
-openMenuMobile: Open hoofdnavigatiemenu (opent in een dialoogvenster)
-closeMenuMobile: Sluit hoofdnavigatiemenu
+copyURLLabel: URL kopiëren
+copyURLToClipboard: Kopieer de URL naar je klembord
+urlCopiedToClipboard: De URL is naar je klembord gekopieerd.

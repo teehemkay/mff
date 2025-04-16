@@ -33,7 +33,7 @@ contactUs: Kontakti
 contactUsURL: https://www.europarl.europa.eu/portal/sl/contact
 clickHere: Klikni tukaj
 shareOnFacebook: Deli to stran na Facebooku
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Deli to stran na LinkedInu
 shareOnWhatsApp: Deli to stran na WhatsAppu
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/sl/accessibility
 goToWebsite: "Pojdi na spletno mesto:"
 shareOnLabel: Objavi na
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Delite
 goToPage: Pojdi na stran
 epLogoAltText: Logotip Evropskega parlamenta
 skipToLanguageMenu: Naravnost k jezikovnemu meniju
 skipToMainContent: Naravnost h glavni vsebini
 epWebsite: Spletišče Evropskega parlamenta
-onTwitter: ""
+onX: ""
 onFacebook: na Facebooku
 onLinkedIn: na LinkedInu
 onWhatsApp: na WhatsAppu
@@ -61,5 +61,6 @@ loading: Nalaganje
 loadingPleaseWait: Nalaganje. Prosimo, počakaj.
 kb: kB
 mb: MB
-openMenuMobile: Odpri glavni meni (odpre se pogovorno okno)
-closeMenuMobile: Zapri glavni meni
+copyURLLabel: Kopiraj URL
+copyURLToClipboard: Kopiraj naslov v odložišče
+urlCopiedToClipboard: Naslov je bil kopiran v vaše odložišče.

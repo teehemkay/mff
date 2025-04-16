@@ -1,21 +1,34 @@
 ---
 import { metadata, contentForPage } from '@packages/data';
-import { kLanguageCodes, xAccount, kAssetsDir } from '@packages/data/constants';
+import {
+  kBaseURL,
+  kLanguageCodes,
+  xAccount,
+  kAssetsDir,
+} from '@packages/data/constants';
+
+import { makeHref, faqDetails } from '../js/utils.js';
 
 interface Props {
   lang: string;
   currentPage: string;
+  currentFAQ: string | null;
 }
 
-const { lang, currentPage } = Astro.props;
+const { lang, currentPage, currentFAQ } = Astro.props;
 const { epWebsite, epLogoAltText } = metadata(lang);
 
-const { metaTitle, metaDescription } = contentForPage(currentPage, lang);
+const { metaTitle, metaDescription } = currentFAQ
+  ? faqDetails({ lang, currentPage, currentFAQ })
+  : contentForPage(currentPage, lang);
 
 const sharingImage =
   'https://elections.europa.eu/assets/img/sharing/social-media-card_en.png';
 const sharingImageX =
   'https://elections.europa.eu/assets/img/sharing/x-social-media-card_en.png';
+
+const url = (lang, currentFAQ = null) =>
+  `${kBaseURL}${makeHref({ lang, currentPage, currentFAQ })}`;
 ---
 
 <head>
@@ -23,19 +36,25 @@ const sharingImageX =
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{metaTitle}</title>
   <meta name="description" content={metaDescription} />
-  <meta name="robots" content="index, follow" />
+  {
+    currentFAQ ? (
+      <meta name="robots" content="noindex, nofollow" />
+    ) : (
+      <meta name="robots" content="index, follow" />
+    )
+  }
 
-  <link rel="canonical" href={`/${lang}/`} />
+  <link rel="canonical" href={url(lang)} />
 
   {
     kLanguageCodes
       .filter((code) => code !== lang)
-      .map((code) => <link rel="alternate" href={`/${code}/`} />)
+      .map((code) => <link rel="alternate" href={url(code)} />)
   }
 
   <meta property="og:title" content={metaTitle} />
   <meta property="og:description" content={metaDescription} />
-  <meta property="og:url" content={`/${lang}/`} />
+  <meta property="og:url" content={url(lang, currentFAQ)} />
   <meta property="og:site_name" content={epWebsite} />
   <meta property="og:locale" content={lang} />
   <meta property="og:image" content={sharingImage} />
@@ -48,52 +67,52 @@ const sharingImageX =
   <meta name="twitter:image:alt" content={epLogoAltText} />
   <meta name="twitter:image:width" content="1200" />
   <meta name="twitter:image:hight" content="1200" />
-  <link rel="icon" href={`${kAssetsDir}img/favicon.ico`} />
-  <link rel="icon" href={`${kAssetsDir}img/favicon.png`} type="image/png" />
+  <link rel="icon" href={`${kAssetsDir}/img/favicon.ico`} />
+  <link rel="icon" href={`${kAssetsDir}/img/favicon.png`} type="image/png" />
   <link
     rel="icon"
-    href={`${kAssetsDir}img/favicon-16x16.png`}
+    href={`${kAssetsDir}/img/favicon-16x16.png`}
     sizes="16x16"
     type="image/png"
   />
   <link
     rel="icon"
-    href={`${kAssetsDir}img/favicon-32x32.png`}
+    href={`${kAssetsDir}/img/favicon-32x32.png`}
     sizes="32x32"
     type="image/png"
   />
   <link
     rel="apple-touch-icon"
-    href={`${kAssetsDir}img/apple-touch-icon-57x57.png`}
+    href={`${kAssetsDir}/img/apple-touch-icon-57x57.png`}
     sizes="57x57"
     type="image/png"
   />
   <link
     rel="apple-touch-icon"
-    href={`${kAssetsDir}img/apple-touch-icon-72x72.png`}
+    href={`${kAssetsDir}/img/apple-touch-icon-72x72.png`}
     sizes="72x72"
     type="image/png"
   />
   <link
     rel="apple-touch-icon"
-    href={`${kAssetsDir}img/apple-touch-icon-144x144.png`}
+    href={`${kAssetsDir}/img/apple-touch-icon-144x144.png`}
     sizes="144x144"
     type="image/png"
   />
 
   <noscript>
-    <link href=`${kAssetsDir}css/index-nojs.css` rel="stylesheet" />
+    <link href=`${kAssetsDir}/css/index-nojs.css` rel="stylesheet" />
   </noscript>
 
-  <link href=`${kAssetsDir}css/tailwind.css` rel="stylesheet" />
-  <link href=`${kAssetsDir}css/index.css` rel="stylesheet" />
+  <link href=`${kAssetsDir}/css/tailwind.css` rel="stylesheet" />
+  <link href=`${kAssetsDir}/css/index.css` rel="stylesheet" />
 
   <script
     is:inline
     defer=""
     data-tracker-name="ATInternet"
-    data-value=`${kAssetsDir}privacy-policy/ati-ee24.js`
-    src=`${kAssetsDir}privacy-policy/privacy-policy.js`></script>
+    data-value=`${kAssetsDir}/privacy-policy/ati-ee24.js`
+    src=`${kAssetsDir}/privacy-policy/privacy-policy.js`></script>
 </head>
 
 <link

@@ -9,11 +9,12 @@ import MainByCountry from '../components/MainByCountry.astro';
 interface Props {
   lang: string;
   currentPage: string;
+  currentFAQ: string | null;
 }
 
-const { lang, currentPage } = Astro.props;
+const { lang, currentPage, currentFAQ } = Astro.props;
 
-const props = { lang, currentPage };
+const props = { lang, currentPage, currentFAQ };
 
 export { getStaticPaths } from '../js/utils.js';
 

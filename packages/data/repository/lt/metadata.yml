@@ -33,7 +33,7 @@ contactUs: Kontaktai
 contactUsURL: https://www.europarl.europa.eu/portal/lt/contact
 clickHere: Spauskite čia
 shareOnFacebook: Dalytis šiuo puslapiu tinkle „Facebook“
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Dalytis šiuo puslapiu tinkle „Linkedin“
 shareOnWhatsApp: Dalytis šiuo puslapiu per programėlę „WhatsApp“
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/lt/accessibility
 goToWebsite: Įeiti į interneto puslapį
 shareOnLabel: Dalintis
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Dalintis
 goToPage: Į puslapį
 epLogoAltText: Europos Parlamento logotipas
 skipToLanguageMenu: Pereiti prie kalbos meniu
 skipToMainContent: Pereiti prie pagrindinio turinio
 epWebsite: Europos Parlamento interneto svetainė
-onTwitter: ""
+onX: ""
 onFacebook: tinkle „Facebook“
 onLinkedIn: tinkle „LinkedIn“
 onWhatsApp: „WhatsApp“ programėlėje
@@ -61,5 +61,6 @@ loading: Pakrovimas
 loadingPleaseWait: Pakrovimas. Prašome palaukti.
 kb: kB
 mb: MB
-openMenuMobile: Atverti pagrindinį naršymo meniu (atidaromas dialogo lange)
-closeMenuMobile: Užverti pagrindinį naršymo meniu
+copyURLLabel: Kopijuoti URL
+copyURLToClipboard: Kopijuoti adresą į iškarpinę
+urlCopiedToClipboard: Adresas nukopijuotas į jūsų iškarpinę

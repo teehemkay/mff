@@ -33,7 +33,7 @@ contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/da/contact
 clickHere: Klik her
 shareOnFacebook: Del denne side på Facebook
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Del denne side på Linkedin
 shareOnWhatsApp: Del denne side på WhatsApp
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/da/accessibility
 goToWebsite: "Gå til hjemmesiden:"
 shareOnLabel: Del på
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Del
 goToPage: Gå til siden
 epLogoAltText: Europa-Parlamentets logo
 skipToLanguageMenu: Gå til sprogmenuen
 skipToMainContent: Gå til hovedindholdet
 epWebsite: Europa-Parlamentets websted
-onTwitter: ""
+onX: ""
 onFacebook: på Facebook
 onLinkedIn: på LinkedIn
 onWhatsApp: på WhatsApp
@@ -61,5 +61,6 @@ loading: Indlæsning
 loadingPleaseWait: Indlæser. Vent venligst.
 kb: kB
 mb: MB
-openMenuMobile: Åbn hovednavigationsmenu (åbner i en dialog)
-closeMenuMobile: Luk hovednavigationsmenu
+copyURLLabel: Kopier URL
+copyURLToClipboard: Kopier adresse til din udklipsholder
+urlCopiedToClipboard: Adresse er blevet kopieret til din udklipsholder.

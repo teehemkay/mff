@@ -7,9 +7,10 @@ import Header from './Header.astro';
 interface Props {
   lang: string;
   currentPage: string;
+  currentFAQ: string | null;
 }
 
-const { lang, currentPage } = Astro.props;
+const { lang, currentPage, currentFAQ } = Astro.props;
 
 const { homeH1: title, homeSubtitle: subtitle } = contentForPage(kIndex, lang);
 

@@ -7,9 +7,10 @@ import { makeHref } from '../js/utils.js';
 interface Props {
   lang: string;
   currentPage: string;
+  currentFAQ: string | null;
 }
 
-const { lang, currentPage } = Astro.props;
+const { lang, currentPage, currentFAQ } = Astro.props;
 
 const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
 ---
@@ -21,7 +22,7 @@ const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
     <div class="logo flex-1 mx-2 sm:mx-0 my-2">
       <a href={`https://www.europarl.europa.eu/portal/${lang}`}>
         <img
-          src={`${kAssetsDir}img/logos/logo-ep-${lang}.svg`}
+          src={`${kAssetsDir}/img/logos/logo-ep-${lang}.svg`}
           alt={epLogoAltText}
           class="w-full max-w-[150px] h-[40px]"
         />
@@ -132,7 +133,7 @@ const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
               <a
                 class={currentPage === key ? ' current' : ''}
                 aria-current={currentPage === key ? 'page' : null}
-                href={makeHref({ currentPage: key, lang })}>
+                href={makeHref({ currentPage: key, currentFAQ, lang })}>
                 {label}
               </a>
             </li>
@@ -154,7 +155,7 @@ const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
                 class={id === lang ? 'current' : ''}
                 lang={id}
                 hreflang={id}
-                href={makeHref({ currentPage, lang: id })}
+                href={makeHref({ currentPage, currentFAQ, lang: id })}
                 aria-current={id === lang || null}>
                 {`${id.toUpperCase()} - ${label}`}
               </a>

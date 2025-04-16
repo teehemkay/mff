@@ -33,7 +33,7 @@ contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/de/contact
 clickHere: Hier klicken
 shareOnFacebook: Diese Seite auf Facebook teilen
-shareOnTwitter: ""
+shareOnX: ""
 shareOnLinkedIn: Diese Seite auf LinkedIn teilen
 shareOnWhatsApp: Diese Seite auf WhatsApp teilen
 socialMediaCardUrl: ""
@@ -44,14 +44,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/de/accessibility
 goToWebsite: "Gehe zur Website:"
 shareOnLabel: Teilen auf
 facebookLabel: Facebook
-twitterLabel: ""
+xLabel: ""
 shareLabel: Teilen
 goToPage: Seite aufrufen
 epLogoAltText: Logo des Europäischen Parlaments
 skipToLanguageMenu: Zum Sprachmenü wechseln
 skipToMainContent: Zum Hauptinhalt wechseln
 epWebsite: Website des Europäischen Parlaments
-onTwitter: ""
+onX: ""
 onFacebook: auf Facebook
 onLinkedIn: auf LinkedIn
 onWhatsApp: auf WhatsApp
@@ -61,5 +61,6 @@ loading: Laden
 loadingPleaseWait: Laden. Bitte warten.
 kb: kB
 mb: MB
-openMenuMobile: Hauptnavigationsmenü öffnen (wird in einem Dialogfeld geöffnet)
-closeMenuMobile: Hauptnavigationsmenü schließen
+copyURLLabel: URL kopieren
+copyURLToClipboard: Adresse in die Zwischenablage kopieren
+urlCopiedToClipboard: Die Adresse wurde in die Zwischenablage kopiert.
