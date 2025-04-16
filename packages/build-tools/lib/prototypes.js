@@ -15,7 +15,7 @@ import {
 
 export const prototypesSources = srcFolder(`html/*.html`);
 export const prototypeParts = srcFolder(`html/**/*.html`);
-export const prototypesDest = destFolder('');
+export const prototypesDest = destFolder('prototypes');
 
 export const processor = (args = {}) =>
   function processPrototypes() {
