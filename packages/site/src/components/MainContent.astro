@@ -1,0 +1,24 @@
+---
+import { contentForPage } from '@packages/data';
+import { kIndex } from '@packages/etl/constants';
+
+import Header from './Header.astro';
+
+interface Props {
+  lang: string;
+  currentPage: string;
+  currentFAQ: string | null;
+}
+
+const { lang, currentPage } = Astro.props;
+
+const { homeH1: title, homeSubtitle: subtitle } = contentForPage(kIndex, lang);
+
+const { pageH1: h1, pageContent: chapo } = contentForPage(currentPage, lang);
+
+const headerProps = { title, subtitle, h1, chapo };
+---
+
+<main role="main" id="mainContent" class="mb-8">
+  <Header {...headerProps} />
+</main>

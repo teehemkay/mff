@@ -74,7 +74,7 @@ export const getStaticPaths = /* @__NO_SIDE_EFFECTs__ */ () => {
         params: { slug: `${lang}/${page}` },
         props: { lang, currentPage: page, currentFAQ: null },
       });
-      if (![kIndex, kByCountry].includes(page)) {
+      if ([kHowItWorks, kOurRole].includes(page)) {
         for (const faqID of contentForPage(page, 'en').faqID) {
           slugs.push({
             params: { slug: `${lang}/${page}/${faqID}` },

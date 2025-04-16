@@ -1,9 +1,15 @@
 ---
-import { kIndex, kByCountry } from '@packages/data/constants';
+import {
+  kIndex,
+  kByCountry,
+  kWhyItMatters,
+  kOurPosition,
+} from '@packages/data/constants';
 
 import Layout from '../layouts/BaseLayout.astro';
 import MainHomepage from '../components/MainHomepage.astro';
 import MainFAQs from '../components/MainFAQs.astro';
+import MainContent from '../components/MainContent.astro';
 import MainByCountry from '../components/MainByCountry.astro';
 
 interface Props {
@@ -26,6 +32,9 @@ const selectPage = () => {
     case kByCountry:
       return MainByCountry;
 
+    case kWhyItMatters:
+    case kOurPosition:
+      return MainContent;
     default:
       return MainFAQs;
   }

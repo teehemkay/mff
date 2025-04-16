@@ -37,6 +37,8 @@ export const fieldProcessors = {
   ...defaultFieldProcessors,
   faqAnswer: markdownProcessor,
   homeIntroText: markdownProcessor,
+  pageChapo: markdownProcessor,
+  pageContent: markdownProcessor,
 };
 
 export const exportContent = (contentFile, destination) => {

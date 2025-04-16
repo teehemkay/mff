@@ -5,15 +5,20 @@ pageChapo: ""
 faQuestion:
   - ""
   - ""
+  - ""
 faqAnswer:
+  - ""
   - ""
   - ""
 faqAnswerMeta:
   - ""
   - ""
+  - ""
 faqExpanded:
   - "false"
   - "false"
+  - ""
 faqID:
   - q1
   - q2
+  - q3

@@ -22,5 +22,8 @@ const { title, subtitle, h1, chapo } = Astro.props;
   <h1 class="font-EPGammaBold text-2.5xl text-black-greydark text-left">
     {h1}
   </h1>
-  <p class="max-w-3xl text-[1.4rem] text-black-grey my-5">{chapo}</p>
+  <div
+    class="htv-page max-w-3xl text-[1.4rem] text-black-grey my-5"
+    set:html={chapo}
+  />
 </div>

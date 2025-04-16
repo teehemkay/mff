@@ -1,26 +1,123 @@
-metaTitle: The European Parliament’s role in the EU's long-term budget
-metaDescription: Find out more about the European Parliament's role in the
-  long-term budget of the European Union.
-pageH1: The European Parliament’s role
-pageChapo: >-
-  The European Parliament plays a crucial role in safeguarding the EU's
+metaTitle: "EU budget’s approval: the role of the European Parliament"
+metaDescription: Discover the European Parliament’s role in deciding and
+  overseeing the implementation of the EU’s long-term budget.
+pageH1: "EU budget’s approval: the role of the European Parliament"
+pageChapo: >
+  <p>The European Parliament plays a crucial role in safeguarding the EU&#39;s
   financial interests. This starts with approving the EU budget, both the
 
-  long-term budget and the annual budgets.
+  long-term budget and the annual budgets.</p>
 faQuestion:
-  - Lorem ipsum
-  - Lorem ipsum
+  - What part does the European Parliament play in adopting the budget?
+  - Who are the European Parliament’s negotiators on the next long-term budget?
+  - How does the Parliament oversee the implementation of the EU budget?
 faqAnswer:
-  - |
-    <p>Lorem ipsum</p>
-  - |
-    <p>Lorem ipsum</p>
+  - >
+    <p>Parliament plays an important role with regard to the EU long-term
+    budget: it has to give its consent to the long-term budgetary framework, and
+    decides jointly with the Council on the annual budget. As the EU’s
+    democratically elected body, Parliament has the responsibility to approve,
+    monitor and scrutinise the EU budget.</p>
+
+    <p>The Commission proposes the draft budget. The Council, representing the
+    EU governments, and the European Parliament hold negotiations to find
+    agreement on it.</p>
+
+    <p>Discussions on the next EU long-term budget have already started.
+    Negotiations between the Council, Parliament and the Commission will begin
+    once the Commission has presented the proposal for the next long-term
+    budget. This is expected in July 2025.</p>
+
+    <p>In anticipation of the Commission proposal, Parliament adopts its
+    priorities and input in an “own initiative report”.</p>
+
+    <p>This report is drawn up in the Budget Committee of the Parliament, where
+    MEPs from all political groups discuss, negotiate and vote on the report. It
+    is then voted on by the whole Parliament in a plenary session. This vote in
+    plenary is expected in May 2025.</p>
+
+    <p>Once the Commission’s proposal is made, Parliament will prepare its
+    position for negotiations with the Council and Commission to reach an
+    agreement on the priorities, structure and size of the next EU long-term
+    budget. Throughout the process, Parliament, as directly-elected legislator,
+    is actively involved in negotiations, adoption, and implementation of the
+    budget.</p>
+
+    <p>At the end of the negotiation process, Parliament cannot make amendments
+    to the final proposal, but will be required to give its consent through a
+    plenary vote. This consent has to be given by an absolute majority of all
+    members of the European Parliament.</p>
+  - >
+    <p>The European Parliament’s co-rapporteurs for the next EU long-term budget
+    are Siegfried Mureşan (Romania) from the European People&#39;s Party group,
+    and Carla Tavares (Portugal) from the Socialists and Democrats group.</p>
+
+    <p>The co-rapporteurs are jointly responsible for preparing and negotiating
+    Parliament’s position on the next EU long-term budget and they represent
+    Parliament in negotiations with the other institutions (EU governments
+    represented by Council, and the Commission). A key position is also held by
+    the chair of the Committee on Budgets, Johan Van Overtveldt, a Belgian
+    member from the European Conservatives and Reformists Group.</p>
+  - >
+    <p>The European Parliament checks how EU funds are spent to make sure they
+    meet citizens&#39; needs. Every year, it reviews reports and audits, then
+    approves the use of the budget by the European Commission and other bodies.
+    </p>
+
+    <p>Members of the European Parliament make fact finding missions to learn
+    about local projects funded by the EU budget and to check national oversight
+    systems. They also monitor the cost-effectiveness of EU investments.</p>
+
+    <p>Parliament members can question the Commission and discuss budgetary
+    practices. They can also adopt  resolutions to address any concerns or
+    suggest improvements. </p>
 faqAnswerMeta:
-  - Lorem ipsum
-  - Lorem ipsum
+  - "Parliament plays an important role with regard to the EU long-term budget:
+    it has to give its consent to the long-term budgetary framework, and decides
+    jointly with the Council on the annual budget. As the EU’s democratically
+    elected body, Parliament has the responsibility to approve, monitor and
+    scrutinise the EU budget. The Commission proposes the draft budget. The
+    Council, representing the EU governments, and the European Parliament hold
+    negotiations to find agreement on it. Discussions on the next EU long-term
+    budget have already started. Negotiations between the Council, Parliament
+    and the Commission will begin once the Commission has presented the proposal
+    for the next long-term budget. This is expected in July 2025. In
+    anticipation of the Commission proposal, Parliament adopts its priorities
+    and input in an “own initiative report”. This report is drawn up in the
+    Budget Committee of the Parliament, where MEPs from all political groups
+    discuss, negotiate and vote on the report. It is then voted on by the whole
+    Parliament in a plenary session. This vote in plenary is expected in May
+    2025. Once the Commission’s proposal is made, Parliament will prepare its
+    position for negotiations with the Council and Commission to reach an
+    agreement on the priorities, structure and size of the next EU long-term
+    budget. Throughout the process, Parliament, as directly-elected legislator,
+    is actively involved in negotiations, adoption, and implementation of the
+    budget. At the end of the negotiation process, Parliament cannot make
+    amendments to the final proposal, but will be required to give its consent
+    through a plenary vote. This consent has to be given by an absolute majority
+    of all members of the European Parliament."
+  - The European Parliament’s co-rapporteurs for the next EU long-term budget
+    are Siegfried Mureşan (Romania) from the European People's Party group, and
+    Carla Tavares (Portugal) from the Socialists and Democrats group. The
+    co-rapporteurs are jointly responsible for preparing and negotiating
+    Parliament’s position on the next EU long-term budget and they represent
+    Parliament in negotiations with the other institutions (EU governments
+    represented by Council, and the Commission). A key position is also held by
+    the chair of the Committee on Budgets, Johan Van Overtveldt, a Belgian
+    member from the European Conservatives and Reformists Group.
+  - The European Parliament checks how EU funds are spent to make sure they meet
+    citizens' needs. Every year, it reviews reports and audits, then approves
+    the use of the budget by the European Commission and other bodies. Members
+    of the European Parliament make fact finding missions to learn about local
+    projects funded by the EU budget and to check national oversight systems.
+    They also monitor the cost-effectiveness of EU investments. Parliament
+    members can question the Commission and discuss budgetary practices. They
+    can also adopt  resolutions to address any concerns or suggest improvements.
 faqExpanded:
+  - "false"
   - "false"
   - "false"
 faqID:
   - q1
   - q2
+  - q3
