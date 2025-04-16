@@ -41,7 +41,7 @@ const { lang, currentPage, currentFAQ } = Astro.props;
     ></script>
 
     {
-      [kHowItWorks, kOurRole].includes(currentFAQ) && (
+      [kHowItWorks, kOurRole].includes(currentPage) && (
         <script type="module" is:inline src="/assets/js/expand-collapse.js" />
 
         <script
