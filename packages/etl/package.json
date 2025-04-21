@@ -18,12 +18,12 @@
     "export": "./export-all.js"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "debug": "^4.3.7",
     "fs-extra": "^11.2.0",
     "marked": "^15.0.3",
     "prettier": "^3.4.1",
     "typescript": "^5.8.2",
-    "xo": "^0.60.0",
     "yaml": "^2.6.1"
   },
   "prettier": {
@@ -34,34 +34,8 @@
     "singleQuote": true,
     "trailingComma": "all"
   },
-  "browserslist": ["defaults", "not IE 11"],
-  "xo": {
-    "space": true,
-    "prettier": true,
-    "envs": ["node", "browser"],
-    "rules": {
-      "capitalized-comments": "off",
-      "import/order": [
-        "error",
-        {
-          "newlines-between": "always-and-inside-groups",
-          "warnOnUnassignedImports": true
-        }
-      ],
-      "func-names": ["error", "as-needed"],
-      "react/react-in-jsx-scope": "off",
-      "react/prop-types": "off",
-      "spaced-comment": [
-        "error",
-        "always",
-        {
-          "exceptions": ["#__PURE__"]
-        }
-      ],
-      "unicorn/no-array-reduce": "off",
-      "unicorn/prevent-abbreviations": "off",
-      "unicorn/prefer-object-from-entries": "off"
-    },
-    "ignores": ["_vendor/**"]
-  }
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ]
 }

@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@atao60/fse-cli": "^0.1.9",
+    "@biomejs/biome": "1.9.4",
     "@packages/data": "workspace:^",
     "@packages/etl": "workspace:^",
     "@rollup/plugin-yaml": "^4.1.2",
@@ -46,7 +47,6 @@
     "sharp": "^0.33.5",
     "tailwindcss": "^4.0.15",
     "typescript": "^5.8.2",
-    "xo": "^0.60.0",
     "yaml": "^2.7.0"
   },
   "browserslist": ["defaults", "not IE 11"],
@@ -67,44 +67,5 @@
         }
       }
     ]
-  },
-  "xo": {
-    "extends": "xo-react",
-    "space": true,
-    "prettier": true,
-    "envs": ["node", "browser"],
-    "rules": {
-      "capitalized-comments": "off",
-      "func-names": ["error", "as-needed"],
-      "import/order": [
-        "error",
-        {
-          "newlines-between": "always-and-inside-groups",
-          "warnOnUnassignedImports": true
-        }
-      ],
-      "react/function-component-definition": [
-        1,
-        {
-          "namedComponents": "arrow-function",
-          "unnamedComponents": "arrow-function"
-        }
-      ],
-      "react/react-in-jsx-scope": "off",
-      "react/prop-types": "off",
-      "spaced-comment": [
-        "error",
-        "always",
-        {
-          "exceptions": ["#__PURE__"]
-        }
-      ],
-      "unicorn/no-array-callback-reference": "off",
-      "unicorn/no-array-reduce": "off",
-      "unicorn/no-fn-reference-in-iterator": "off",
-      "unicorn/prefer-object-from-entries": "off",
-      "unicorn/prevent-abbreviations": "off"
-    },
-    "ignores": ["build", "public/**", "_site/**"]
   }
 }

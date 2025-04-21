@@ -24,16 +24,19 @@
   },
   "author": "webmaster@europarl.europa.eu",
   "license": "ISC",
-  "browserslist": ["defaults", "not IE 11"],
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
   "devDependencies": {
     "@atao60/fse-cli": "^0.1.9",
+    "@biomejs/biome": "1.9.4",
     "cross-env": "^7.0.3",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "npm-run-all2": "^7.0.2",
     "serve": "^14.2.4",
-    "typescript": "^5.8.2",
-    "xo": "^0.60.0"
+    "typescript": "^5.8.2"
   },
   "prettier": {
     "useTabs": false,
@@ -42,36 +45,5 @@
     "bracketSpacing": true,
     "singleQuote": true,
     "trailingComma": "all"
-  },
-  "xo": {
-    "space": true,
-    "prettier": true,
-    "envs": ["node", "browser"],
-    "rules": {
-      "capitalized-comments": "off",
-      "func-names": ["error", "as-needed"],
-      "import/order": [
-        "error",
-        {
-          "newlines-between": "always-and-inside-groups",
-          "warnOnUnassignedImports": true
-        }
-      ],
-      "react/react-in-jsx-scope": "off",
-      "react/prop-types": "off",
-      "spaced-comment": [
-        "error",
-        "always",
-        {
-          "exceptions": ["#__PURE__"]
-        }
-      ],
-      "unicorn/no-array-callback-reference": "off",
-      "unicorn/no-array-reduce": "off",
-      "unicorn/no-fn-reference-in-iterator": "off",
-      "unicorn/prefer-object-from-entries": "off",
-      "unicorn/prevent-abbreviations": "off"
-    },
-    "ignores": ["_site/**"]
   }
 }
