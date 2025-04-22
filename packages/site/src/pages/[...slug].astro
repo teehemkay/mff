@@ -1,4 +1,5 @@
 ---
+import { metadata } from '@packages/data';
 import {
   kIndex,
   kByCountry,
@@ -19,6 +20,8 @@ interface Props {
 }
 
 const { lang, currentPage, currentFAQ } = Astro.props;
+
+const { backToTop } = metadata(lang);
 
 const props = { lang, currentPage, currentFAQ };
 
@@ -44,5 +47,8 @@ const Page = selectPage();
 ---
 
 <Layout {...props}>
-  <Page {...props} />
+  <Page {...props}>
+    <a href="#returnToTop" class="top-link hide js-top" aria-label={backToTop}
+    ></a>
+  </Page>
 </Layout>

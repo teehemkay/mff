@@ -27,18 +27,12 @@ const { lang, currentPage, currentFAQ } = Astro.props;
     {/* Main page content goes here */}
     <slot />
 
-    <a
-      href="#returnToTop"
-      class="top-link hide js-top"
-      aria-label="Scroll back to top of the page"></a>
-
     <Footer {lang} />
 
     {/* Common Scripts */}
     <script type="module" is:inline src="/assets/js/go-to-top.js"></script>
     <script type="module" is:inline src="/assets/js/menu-desktop.js"></script>
-    <script type="module" is:inline src="/assets/js/dropdown-desktop.js"
-    ></script>
+    <script type="module" is:inline src="/assets/js/dropdown-desktop.js"></script>
 
     {
       [kHowItWorks, kOurRole].includes(currentPage) && (
