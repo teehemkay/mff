@@ -157,7 +157,6 @@ button{
 }
 
 /* !!! Don't forget to add focus on each a,button if we remove the outline*/
-a, a:active, button, button:active{outline-style:none;}
 a{
   color: variables.$blue;
   text-decoration: underline;
