@@ -745,6 +745,21 @@ nav.lang-nav {
   }
 }
 
+#mainMenuButton {
+  &[aria-expanded="false"] {
+    svg {
+      transition: all 0.15s ease-out;
+      rotate: 0deg;
+    }
+  }
+  &[aria-expanded="true"] {
+    svg {
+      transition: all 0.15s ease-out;
+      rotate: 180deg;
+    }
+  }
+}
+
 .desktop-menu {
   display: flex;
 }
