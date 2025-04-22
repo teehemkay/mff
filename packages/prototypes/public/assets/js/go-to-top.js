@@ -16,7 +16,10 @@ const scrollTo = (scrollPosition, focusOn) => () => {
   const scrollRatio = 10;
   // Always move by at least 1 pixel to avoid asymptotic proximity to SCROLLPOSITION
   // but never actually reaching it.
-  const scrollAmount = delta < 0 ? Math.floor(delta / scrollRatio) : Math.ceil(delta / scrollRatio);
+  const scrollAmount =
+    delta < 0
+      ? Math.floor(delta / scrollRatio)
+      : Math.ceil(delta / scrollRatio);
 
   // Use requestAnimationFrame for smooth scrolling
   // https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
@@ -52,10 +55,12 @@ const topOfPage = (scrollPosition, focusOn) => {
     scrollTo(scrollPosition, focusOn)();
   });
 };
+
 const runJs = () => {
-  const kNav = document.querySelector('#mainContent');
+  const kNav = document.querySelector('#header');
   kNav.setAttribute('tabindex', '-1');
   const kScrollTop = kNav.offsetTop;
   topOfPage(kScrollTop, kNav);
 };
-window.addEventListener('DOMContentLoaded', runJs);//# sourceMappingURL=goToTop.js.map
+
+window.addEventListener('DOMContentLoaded', runJs); //# sourceMappingURL=goToTop.js.map
