@@ -652,23 +652,6 @@ nav.lang-nav {
       .column_countries {
         columns: 2;
         column-gap: 5rem;
-        .current{
-          color: variables.$blue;
-          position: relative;
-          &:after {
-            content: "";
-            position: absolute;
-            bottom: 1px;
-            left: 0;
-            height: 2px;
-            display: block;
-            width: 100%;
-            background-color: variables.$blue;
-          }
-          a {
-            color: variables.$blue !important;
-          }
-        }
       }
       .sub-nav {
           margin: 0.5rem 0 1rem 0;
@@ -729,6 +712,24 @@ nav.lang-nav {
       }
       a {
         color: variables.$blue !important;
+      }
+    }
+  }
+  ul {
+    li.current {
+      &[aria-current="page"] {
+        color: variables.$blue;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          height: 2px;
+          display: block;
+          width: 100%;
+          background-color: variables.$blue;
+        }
       }
     }
   }
