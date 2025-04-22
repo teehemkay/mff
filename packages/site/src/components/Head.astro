@@ -22,10 +22,9 @@ const { metaTitle, metaDescription } = currentFAQ
   ? faqDetails({ lang, currentPage, currentFAQ })
   : contentForPage(currentPage, lang);
 
-const sharingImage =
-  'https://elections.europa.eu/assets/img/sharing/social-media-card_en.png';
+const sharingImage = 'https://eubudget.europa.eu/assets/img/sharing/share.png';
 const sharingImageX =
-  'https://elections.europa.eu/assets/img/sharing/x-social-media-card_en.png';
+  'https://eubudget.europa.eu/assets/img/sharing/share-x.png';
 
 const url = (lang, currentFAQ = null) =>
   `${kBaseURL}${makeHref({ lang, currentPage, currentFAQ })}`;
