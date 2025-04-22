@@ -715,20 +715,30 @@ nav.lang-nav {
       }
     }
   }
-  ul {
-    li.current {
-      &[aria-current="page"] {
-        color: variables.$blue;
-        position: relative;
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: -3px;
-          left: 0;
-          height: 2px;
-          display: block;
-          width: 100%;
-          background-color: variables.$blue;
+}
+
+#mainList {
+  &.submenu-content {
+    ul {
+      li {
+        display: block;
+        &.current{
+          color: variables.$blue;
+          position: relative;
+          a {
+            position: relative;
+            color: variables.$blue !important;
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: -1px;
+              left: 0;
+              height: 2px;
+              display: block;
+              width: 100%;
+              background-color: variables.$blue;
+            }
+          }
         }
       }
     }
