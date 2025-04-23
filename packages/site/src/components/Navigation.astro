@@ -90,11 +90,11 @@ const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
         role="navigation"
         aria-label={switchLanguage}
         class="lang-nav flex justify-end">
-        <div class="expand-collapse border-[LightGray] border-1 rounded-lg">
+        <div class="expand-collapse">
           {/* This class name might be generic, ensure JS targets correctly */}
           <button
             id="lang-menu"
-            class="nav-button flex items-center rounded-md border border-1 border-solid border-black-greymiddle focus:outline focus:outline-2 focus:outline-blue-focus px-2.5 py-1 mr-4"
+            class="nav-button flex items-center focus:outline focus:outline-2 focus:outline-blue-focus px-2.5 py-1 mr-4"
             aria-expanded="false"
             data-button
             aria-controls="lang-list">
