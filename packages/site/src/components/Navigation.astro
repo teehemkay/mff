@@ -122,46 +122,40 @@ const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
       </nav>
     </div>
 
-    <div
-      id="mainList"
-      class="submenu-content hidden"
-      data-content
-      <ul
-      class="block px-6 mx-auto max-w-[1100px]">
-      {/* Mobile menu items - JS handles visibility and interactions */}
-      {
-        pageLabels(lang).map(({ key, label }) => (
-          <li class={`mb-2${currentPage === key ? ' current' : ''}`}>
-            <a
-              aria-current={currentPage === key ? 'page' : null}
-              href={makeHref({ currentPage: key, currentFAQ, lang })}>
-              {label}
-            </a>
-          </li>
-        ))
-      }
+    <div id="mainList" class="submenu-content hidden" data-content>
+      <ul class="block px-6 mx-auto max-w-[1100px]">
+        {/* Mobile menu items - JS handles visibility and interactions */}
+        {
+          pageLabels(lang).map(({ key, label }) => (
+            <li class={`mb-2${currentPage === key ? ' current' : ''}`}>
+              <a
+                aria-current={currentPage === key ? 'page' : null}
+                href={makeHref({ currentPage: key, currentFAQ, lang })}>
+                {label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </div>
-  </div>
 
-  <div
-    id="lang-list"
-    class="submenu-content hidden"
-    data-content
-    <ul
-    class="lang-content block px-6 mx-auto max-w-[1100px]">
-    {
-      Object.entries(kLanguageLabels).map(([id, label]) => (
-        <li>
-          <a
-            class={id === lang ? 'current' : ''}
-            lang={id}
-            hreflang={id}
-            href={makeHref({ currentPage, currentFAQ, lang: id })}
-            aria-current={id === lang || null}>
-            {`${id.toUpperCase()} - ${label}`}
-          </a>
-        </li>
-      ))
-    }
+    <div id="lang-list" class="submenu-content hidden" data-content>
+      <ul class="lang-content block px-6 mx-auto max-w-[1100px]">
+        {
+          Object.entries(kLanguageLabels).map(([id, label]) => (
+            <li>
+              <a
+                class={id === lang ? 'current' : ''}
+                lang={id}
+                hreflang={id}
+                href={makeHref({ currentPage, currentFAQ, lang: id })}
+                aria-current={id === lang || null}>
+                {`${id.toUpperCase()} - ${label}`}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </div>
 </header>
