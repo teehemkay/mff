@@ -40,7 +40,7 @@ const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
                   <li class={currentPage === key ? 'current' : ''}>
                     <a
                       aria-current={currentPage === key ? 'page' : null}
-                      href={`/${lang}/${key}/`}>
+                      href={makeHref({ currentPage: key, currentFAQ, lang })}>
                       {label}
                     </a>
                   </li>
