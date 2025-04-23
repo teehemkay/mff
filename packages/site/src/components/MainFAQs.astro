@@ -29,7 +29,7 @@ const {
 
 const headerProps = { title, subtitle, h1, chapo, chapoIsContent: false };
 const faqs = zip(faQuestion, faqAnswer, faqAnswerMeta, faqExpanded, faqID);
-const shareWidgetProps = { lang, currentPage, title: faQuestion };
+const shareWidgetProps = { lang, currentPage };
 const shouldExpand = (status, faqID) =>
   currentFAQ === null ? status : `${currentFAQ === faqID}`;
 ---
@@ -78,7 +78,7 @@ const shouldExpand = (status, faqID) =>
               </ul>
               */}
 
-              <ShareWidget {...shareWidgetProps} {id} />
+              <ShareWidget {...shareWidgetProps} {id} title={question} />
             </div>
           </li>
         ))
