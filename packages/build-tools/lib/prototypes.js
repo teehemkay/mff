@@ -14,8 +14,8 @@ import {
 } from './utils.js';
 
 export const prototypesSources = srcFolder(`html/*.html`);
-export const prototypeComponents = srcFolder(`html/components/**/*.html`);
-export const prototypesDest = destFolder('');
+export const prototypeParts = srcFolder(`html/**/*.html`);
+export const prototypesDest = destFolder('prototypes');
 
 export const processor = (args = {}) =>
   function processPrototypes() {
@@ -54,14 +54,16 @@ export const processor = (args = {}) =>
 
 export const process = processor({ doFullRebuild: true });
 
-export const watch = watcher({
+export const watchPrototypes = watcher({
   what: 'prototypes',
   files: prototypesSources,
   handler: processor(),
 });
 
-export const watchComponents = watcher({
-  what: 'prototypes',
-  files: prototypeComponents,
+export const watchPrototypeParts = watcher({
+  what: 'prototypes parts',
+  files: prototypeParts,
   handler: process,
 });
+
+export const watch = gulp.parallel(watchPrototypes, watchPrototypeParts);

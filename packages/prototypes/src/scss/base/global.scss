@@ -1,0 +1,252 @@
+@use "../helpers/mixins";
+@use "../helpers/variables";
+
+:root {
+  --text-wght-rl: 350;
+  --text-wght-r: 400;
+  --text-wght-m: 500;
+  --text-wght-sb: 625;
+  --text-wght-b: 700;
+  --text-wdth: 85;
+  --text-opsz: 80;
+  --text-GRAD: 88;
+  --text-axis: 1;
+  --font-size-text: clamp(1.125rem, 1.287vw + 0.739rem, 1.563rem);
+  //--line-height-text: clamp(1.688rem, 1.011vw + 1.384rem, 2.031rem);
+  --line-height-text: clamp(1.688rem, 1.011vw + 1.884rem, 2.631rem);
+}
+/* Variable fonts */
+.europea-reg {
+  font-family: "EuropeaVar", sans-serif;
+  font-variation-settings: "wght" var(--text-wght-r), "wdth" var(--text-wdth), "opsz" var(--text-opsz), "GRAD" var(--text-GRAD), "ital" var(--text-axis);
+}
+.europea-med {
+  font-family: "EuropeaVar", sans-serif;
+  font-variation-settings: "wght" var(--text-wght-m), "wdth" var(--text-wdth), "opsz" var(--text-opsz), "GRAD" var(--text-GRAD), "ital" var(--text-axis);
+}
+.europea-sb, .font-EPGammaBold {
+  font-family: "EuropeaVar", sans-serif;
+  font-variation-settings: "wght" var(--text-wght-sb), "wdth" var(--text-wdth), "opsz" var(--text-opsz), "GRAD" var(--text-GRAD), "ital" var(--text-axis);
+}
+.europea-bold {
+  font-family: "EuropeaVar", sans-serif;
+  font-variation-settings: "wght" var(--text-wght-b), "wdth" var(--text-wdth), "opsz" var(--text-opsz), "GRAD" var(--text-GRAD), "ital" var(--text-axis);
+}
+.font-epRegular{
+  font-family: "EuropeaVar", sans-serif;
+  font-variation-settings: 'wght' var(--text-wght-rl),
+  'wdth' var(--text-wdth),
+  'opsz' var(--text-opsz),
+  'GRAD' var(--text-GRAD),
+  'ital' var(--text-axis);
+}
+.font-epRegularBolder{
+  font-family: "EuropeaVar", sans-serif;
+  font-variation-settings: 'wght' var(--text-wght-r),
+  'wdth' var(--text-wdth),
+  'opsz' var(--text-opsz),
+  'GRAD' var(--text-GRAD),
+  'ital' var(--text-axis);
+}
+.font-epMedium{
+  font-family: "EuropeaVar", sans-serif;
+  font-variation-settings: 'wght' var(--text-wght-m),
+  'wdth' var(--text-wdth),
+  'opsz' var(--text-opsz),
+  'GRAD' var(--text-GRAD),
+  'ital' var(--text-axis);
+}
+.font-epSemiBold{
+  font-family: "EuropeaVar", sans-serif;
+  font-variation-settings: 'wght' var(--text-wght-sb),
+  'wdth' var(--text-wdth),
+  'opsz' var(--text-opsz),
+  'GRAD' var(--text-GRAD),
+  'ital' var(--text-axis);
+}
+.font-epBold{
+  font-family: "EuropeaVar", sans-serif;
+  font-variation-settings: 'wght' var(--text-wght-b),
+  'wdth' var(--text-wdth),
+  'opsz' var(--text-opsz),
+  'GRAD' var(--text-GRAD),
+  'ital' var(--text-axis);
+}
+
+/*color of item-txt selected*/
+::selection {
+    background: #b3d4fc;
+}
+
+*,
+*:before,
+*:after{
+  box-sizing:border-box
+}
+.sr-break::before {
+  content: "\a";
+  white-space: pre;
+}
+.none {
+  display: none;
+}
+img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+html{
+  /*All px is convert in rem by dependencies gulp. For mobile breakpoint don't forget to change only font-size of html--there will be an impact on all content.
+  font-size: 16px;*/
+}
+
+html, body {
+  scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+  /*font-family: 'EPGammaRegular', Helvetica, arial, sans-serif;*/
+  font-family: "EuropeaVar", sans-serif;
+  font-variation-settings: 'wght' var(--text-wght-rl),
+  'wdth' var(--text-wdth),
+  'opsz' var(--text-opsz),
+  'GRAD' var(--text-GRAD),
+  'ital' var(--text-axis);
+  color: variables.$black;
+}
+body {
+  font-size: 1.125rem; /* base: 18px */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /*font-weight: bold;*/
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.197rem !important;
+  line-height: 2.3rem !important;
+  color: variables.$grey-dark;
+  @include mixins.tablet{}
+  @include mixins.desktop{}
+}
+h2 {
+  font-size: 1.75rem !important;
+  line-height: 2rem !important;
+  @include mixins.tablet{}
+  @include mixins.desktop{}
+}
+h3{
+
+}
+main {
+  p, ul li {
+    color: variables.$black;
+  }
+}
+
+fieldset{
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+button{
+  border: 0;
+  cursor: pointer;
+}
+
+/* !!! Don't forget to add focus on each a,button if we remove the outline*/
+a{
+  color: variables.$blue;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  &:hover, &:focus {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+  &:focus {
+    outline: solid 2px variables.$blue-focus;
+    outline-offset: 4px;
+  }
+}
+
+/* remove the outline in firefox */
+::-moz-focus-inner {
+    border: 0;
+}
+
+/* Hide an element without display none */
+
+.nodisplay, .hidden, .none {
+  display: none !important;
+}
+.novisible{
+  opacity: 0;
+  @include mixins.transition(.3s);
+}
+
+.sticky-element{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+code{
+  background-color: #d1d3d4;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 0 4px;
+}
+
+[role=tabpanel]{
+  outline: none;
+}
+
+.hyphens-auto{
+  -webkit-hyphenate-character: "–";
+  hyphenate-character: "–";
+  hyphens: auto;
+}
+
+/* // Define different types of effects here // */
+.fx--fadeInSlideUp {
+  animation-name: fadeInSlideUp;
+  animation-duration: .5s;
+}
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.fx--fadeIn {
+  animation-name: fadeIn;
+  animation-duration: .5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+.fx--fadeOut {
+  animation-name: fadeOut;
+  animation-duration: .5s;
+}
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}

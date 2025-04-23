@@ -1,0 +1,54 @@
+---
+import { metadata } from '@packages/data';
+import {
+  kIndex,
+  kByCountry,
+  kWhyItMatters,
+  kOurPosition,
+} from '@packages/data/constants';
+
+import Layout from '../layouts/BaseLayout.astro';
+import MainHomepage from '../components/MainHomepage.astro';
+import MainFAQs from '../components/MainFAQs.astro';
+import MainContent from '../components/MainContent.astro';
+import MainByCountry from '../components/MainByCountry.astro';
+
+interface Props {
+  lang: string;
+  currentPage: string;
+  currentFAQ: string | null;
+}
+
+const { lang, currentPage, currentFAQ } = Astro.props;
+
+const { backToTop } = metadata(lang);
+
+const props = { lang, currentPage, currentFAQ };
+
+export { getStaticPaths } from '../js/utils.js';
+
+const selectPage = () => {
+  switch (currentPage) {
+    case kIndex:
+      return MainHomepage;
+
+    case kByCountry:
+      return MainByCountry;
+
+    case kWhyItMatters:
+    case kOurPosition:
+      return MainContent;
+    default:
+      return MainFAQs;
+  }
+};
+
+const Page = selectPage();
+---
+
+<Layout {...props}>
+  <Page {...props}>
+    <a href="#returnToTop" class="top-link hide js-top" aria-label={backToTop}
+    ></a>
+  </Page>
+</Layout>

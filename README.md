@@ -1,4 +1,4 @@
-# EE24 Hub
+# MFF
 
 ## GitHub Content Update Workflow
 
@@ -61,20 +61,29 @@ cd apps/prototypes
 pnpm dev
 ```
 
-Open http://127.0.0.1:8080/
+Open http://localhost:8080/
 
 ## Run in development mode (including prototypes)
 
+*All* assets changes (tailwind, scss, js, img) *MUST* be done in the prototypes package, and they'll be automatically picked up by the site dev server.
+Thus you *MUST* first run the prototypes dev server.
+
 ```
-cd apps/site
+cd packages/prototypes
+pnpm dev
+
+```
+
+```
+cd packages/site
 pnpm dev
 ```
 
-Open:
-http://localhost:3000/
-
-The prototypes are at:
+Prototypes:
 http://localhost:8080/
+
+Site:
+http://localhost:4321/
 
 ## Development preview
 

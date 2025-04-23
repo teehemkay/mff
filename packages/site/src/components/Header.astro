@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  h1: string;
+  chapo: string;
+  chapoIsContent?: boolean;
+}
+
+const { title, subtitle, h1, chapo, chapoIsContent } = Astro.props;
+---
+
+<div id="returnToTop" class="hidden"></div>
+
+<div class="max-w-5xl mx-auto px-4 mt-54px mb-27px">
+  <span class="block font-EPGammaBold text-2lg text-black-default text-left">
+    {title}
+  </span>
+  <span
+    class="text-brand-title-page inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2 mb-12"
+    >{subtitle}</span
+  >
+  <h1 class="font-EPGammaBold text-2.5xl text-black-greydark text-left">
+    {h1}
+  </h1>
+  <div
+    class="htv-page max-w-3xl text-1.2rem] text-black-grey my-5"
+    set:html={chapo}
+  />
+</div>

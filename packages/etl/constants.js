@@ -1,0 +1,37 @@
+export const kIndex = 'index';
+export const kMetadata = 'metadata';
+export const kWhyItMatters = 'why-it-matters';
+export const kHowItWorks = 'how-it-works';
+export const kOurRole = 'our-role';
+export const kOurPosition = 'our-position';
+export const kByCountry = 'by-country';
+export const kCountries = 'countries';
+export const kCountriesByLangFile = 'countries-by-lang';
+export const kLanguages = 'languages';
+
+export const kLanguageCodes = [
+  'en',
+  'bg',
+  'hr',
+  'cs',
+  'da',
+  'et',
+  'fi',
+  'fr',
+  'ga',
+  'de',
+  'el',
+  'hu',
+  'it',
+  'lv',
+  'lt',
+  'mt',
+  'nl',
+  'pl',
+  'pt',
+  'ro',
+  'sk',
+  'sl',
+  'es',
+  'sv',
+];

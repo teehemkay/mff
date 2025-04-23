@@ -11,24 +11,32 @@
     "bundle": "pnpm --filter @packages/build-tools run build:bundle",
     "compress": "pnpm --filter @packages/build-tools run build:compress",
     "clean": "fse remove _site",
-    "deliver": "run-s --print-name deliver:*",
-    "deliver:protos": "pnpm --filter @apps/prototypes run deliver",
-    "dev": "pnpm --filter @apps/prototypes run dev",
+    "build": "run-s --print-name build:protos build:site",
+    "build:protos": "pnpm --filter @packages/prototypes run build",
+    "build:site": "pnpm --filter @packages/site run build",
+    "data": "pnpm --filter @packages/etl run export",
+    "deliver": "run-s --print-name deliver:site deliver:protos",
+    "deliver:protos": "fse move packages/prototypes/_site/prototypes _site/prototypes",
+    "deliver:site": "fse move packages/site/dist _site/",
+    "dev": "pnpm --filter @packages/prototypes run dev",
     "preview": "serve --listen 3000 _site",
-    "site": "cross-env NODE_ENV=production run-s --print-name clean deliver bundle"
+    "site": "cross-env NODE_ENV=production run-s --print-name clean data build deliver bundle"
   },
   "author": "webmaster@europarl.europa.eu",
   "license": "ISC",
-  "browserslist": ["defaults", "not IE 11"],
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
   "devDependencies": {
     "@atao60/fse-cli": "^0.1.9",
+    "@biomejs/biome": "1.9.4",
     "cross-env": "^7.0.3",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "npm-run-all2": "^7.0.2",
     "serve": "^14.2.4",
-    "typescript": "^5.8.2",
-    "xo": "^0.60.0"
+    "typescript": "^5.8.2"
   },
   "prettier": {
     "useTabs": false,
@@ -36,41 +44,6 @@
     "bracketSameLine": true,
     "bracketSpacing": true,
     "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "xo": {
-    "space": true,
-    "prettier": true,
-    "envs": ["node", "browser"],
-    "rules": {
-      "capitalized-comments": "off",
-      "import/order": [
-        "error",
-        {
-          "newlines-between": "always-and-inside-groups",
-          "warnOnUnassignedImports": true
-        }
-      ],
-      "func-names": ["error", "as-needed"],
-      "react/react-in-jsx-scope": "off",
-      "react/prop-types": "off",
-      "spaced-comment": [
-        "error",
-        "always",
-        {
-          "exceptions": ["#__PURE__"]
-        }
-      ],
-      "unicorn/prevent-abbreviations": "off",
-      "unicorn/prefer-object-from-entries": "off"
-    },
-    "ignores": [
-      "build/**",
-      "out/**",
-      "public/**",
-      "site/**",
-      "site_trials/**",
-      "_site/**"
-    ]
+    "trailingComma": "all"
   }
 }

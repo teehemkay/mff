@@ -1,0 +1,32 @@
+@use "../helpers/variables";
+
+/* ---------------------------------------- */
+/* CARDS LINKS POLITICAL GROUPS FOR ELECTIONS
+------------------------------------------- */
+
+.epol-block ul li a {
+  display: inline-block;
+  color: variables.$blue;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+  &:hover, &:focus {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+    outline-offset: 1px;
+  }
+  &:focus {
+    outline: solid 2px variables.$blue-focus;
+    outline-offset: 4px;
+  }
+}
+
+/* Related Links in expand / collapse */
+.related-links-list {
+  ul {
+    margin: 0 !important;
+    li {
+      list-style: none !important;
+    }
+  }
+}

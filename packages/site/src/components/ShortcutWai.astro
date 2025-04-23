@@ -1,0 +1,22 @@
+---
+interface Props {
+  lang: string;
+}
+
+import { metadata } from '@packages/data';
+
+const { lang } = Astro.props;
+const { skipToLanguageMenu, skipToMainContent } = metadata(lang);
+---
+
+<!-- Shortcut for Screen-readers -->
+<nav aria-label="Shortcut menu">
+  <ul class="wai-nav">
+    <li>
+      <a href="#lang-menu" class="skip-main">{skipToLanguageMenu}</a>
+    </li>
+    <li>
+      <a href="#mainContent" class="skip-main">{skipToMainContent}</a>
+    </li>
+  </ul>
+</nav>

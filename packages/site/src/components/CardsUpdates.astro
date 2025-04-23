@@ -1,0 +1,22 @@
+---
+export interface CardProps {
+  updates: string[][];
+}
+---
+
+<!-- CARDS -->
+<ul
+  class="elections-block lg:grid lg:grid-cols-3 md:block sm:block block max-w-5xl mx-auto">
+  {
+    Astro.props.updates.map(([title, text], index) => (
+      <li class={`${index === 0 ? 'lg:mr-5 ' : ''}mb-6`}>
+        <h2 class="!text-2lg font-EPGammaBold flex items-center py-2">
+          <a href="#" class="block decoration-blue-default">
+            <span class="inline mr-2">{title}</span>
+          </a>
+        </h2>
+        <p class="text-lg">{text}</p>
+      </li>
+    ))
+  }
+</ul>

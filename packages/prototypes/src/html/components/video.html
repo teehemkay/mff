@@ -1,0 +1,25 @@
+<section class="xl:flex xl:flex-nowrap xl:items-center bg-blue-light pb-8 xl:pt-8">
+    <div class="wrapper xl:w-1/2 pb-12 pt-24 xl:pt-12 px-8">
+        <hgroup class="text-center xl:text-left px-10 lg:px-20">
+            <h2 class="text-black-darker pb-2">@@heading1</h2>
+            <h3 class="text-blue-dark">@@heading2</h3>
+        </hgroup>
+    </div>
+    <div class="wrapper bg-blue-light xl:w-1/2">
+        <div class="relative overflow-hidden pt-[56.25%]">
+            <a href="#" aria-label="click to go to the video" class="linktovideo">
+                <!-- to add the player button - add class thumb-video on figure -->
+                <figure class="thumb-video w-full absolute top-0 left-0 z-20 m-0 focus:outline-black">
+                    <img src="/assets/img/mediasize_thumb.png" alt="@@alt" class="relative h-full w-full">
+                    <span class="absolute block w-full h-full bg-no-repeat bg-cover top-0 left-0 right-0 bottom-0 transition duration-300 ease-in-out bg-center" style="background-image:url(/assets/img/@@thumb.jpg);"></span>
+                    <figcaption class="sr-only">@@title-iframe</figcaption>
+                </figure>
+            </a>
+            <iframe title="@@title-iframe" allowfullscreen allow="fullscreen" frameborder="0" src="@@urlvideo" width="@@width" height="@@heigth" class="absolute block top-0 left-0 w-full h-full border-0 align-middle"></iframe>
+        </div>
+    </div>
+</section>
+
+
+
+

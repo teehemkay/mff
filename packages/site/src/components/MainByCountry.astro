@@ -1,0 +1,61 @@
+---
+import { countryNames, contentForPage } from '@packages/data';
+import { kIndex } from '@packages/etl/constants';
+
+import Header from './Header.astro';
+
+interface Props {
+  lang: string;
+  currentPage: string;
+  currentFAQ: string | null;
+}
+
+const { lang, currentPage, currentFAQ } = Astro.props;
+
+const { homeH1: title, homeSubtitle: subtitle } = contentForPage(kIndex, lang);
+
+const props = contentForPage(currentPage, lang);
+const { pageH1: h1, pageChapo: chapo } = props;
+
+const headerProps = { title, subtitle, h1, chapo, chapoIsContent: false };
+---
+
+<main role="main" id="mainContent" class="mb-8">
+  <Header {...headerProps} />
+  <div
+    class="max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto mb-16 px-4">
+    <ul class="columns-1 sm:columns-2 lg:columns-3 gap-8 p-4">
+      {
+        Object.entries(countryNames(lang)).map(([code, country]) => (
+          <li class="break-inside-avoid border-b border-b-1 border-[LightGray] py-6">
+            <a
+              href={props[`${code}Url`]}
+              class="flex items-center !no-underline hover:!underline focus:!underline">
+              <>
+                <span class="font-epSemiBold text-[1.781rem] leading-normal inline mr-3">
+                  {country}
+                </span>
+                <span class="inline-block min-w[25px]">
+                  <svg
+                    focusable="false"
+                    aria-hidden="true"
+                    class="fill-blue-default"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25">
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <slot />
+</main>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" itemscope itemtype="https://schema.org/FAQPage">
+	<head>
+		@@include('./components/head.html')
+	</head>
+
+	<body>
+	@@include('./components/shortcut-wai.html')
+
+	<!-- NAVIGATION -->
+	@@include('./components/navigation-revamp.html')
+
+	<!-- // ------------------------ START MAIN AREA ------------------------- // -->
+
+	<!-- CONTENT -->
+	<main role="main" id="mainContent" class="mb-8">
+
+		<div class="legal-page">
+
+		<div class="max-w-4xl mx-auto px-4 mt-54px mb-27px">
+			<span class="block font-EPGammaBold text-2lg text-black-default text-left mb-12">
+				The EU's long-term budget from 2028
+			</span>
+			<h1 class="font-EPGammaBold text-2.5xl text-black-greydark text-left">
+				Cookies inventory
+			</h1>
+			<p>In order to carry out its duties towards European citizens, we may collect personal information (“personal data”), which is gathered and treated in full compliance with Regulation (EU) 2018/1725, “the Regulation”.</p>
+		</div>
+
+
+				<div class="max-w-4xl lg:flex md:block sm:block block mx-auto justify-between items-center">
+
+					@@include('./components/expand-collapse-cookies-inventory.html')
+
+				</div>
+
+		</div>
+
+	</main>
+
+	<!-- // ------------------------ END MAIN AREA -------------------------- // -->
+
+	<!-- // ------------------------ START FOOTER AREA ------------------------- // -->
+
+	@@include('./components/footer.html')
+
+	<!-- // ------------------------ END FOOTER AREA ------------------------- // -->
+
+
+	<!-- JS files -->
+	@@include('./components/scripts.html')
+
+	<script>
+		// Menu component
+		window.addEventListener('DOMContentLoaded', () => {
+
+			// Inject the current menu state in JS (only for html prototyping as the main nav is included globally
+			// Trouver l'élément <ul> par sa classe
+			const navul = document.querySelector('ul.footerLinks');
+			const navli = navul.querySelector('li:nth-child(1)');
+			const navlilink = navli.querySelector('a');
+
+			// Ajouter la classe "current" à la balise <a>
+			navlilink.classList.add('current');
+
+			// Ajouter l'attribut "aria-current" avec la valeur "page" à la balise <a>
+			navlilink.setAttribute('aria-current', 'page');
+
+		});
+
+
+			const menuItems = document.querySelectorAll(".navList li");
+
+			// Retirer "current" de tous les <li> et aria-current des <a>
+			menuItems.forEach(item => {
+				item.classList.remove("current");
+				const link = item.querySelector("a");
+				if (link) link.removeAttribute("aria-current");
+			});
+
+			// Définir quel <li> doit avoir la classe "current" (ex: le 5e élément)
+			const targetIndex = -1; // Index -1 = aucun élément
+
+			if (menuItems[targetIndex]) {
+				menuItems[targetIndex].classList.add("current");
+				const link = menuItems[targetIndex].querySelector("a");
+				if (link) link.setAttribute("aria-current", "page");
+			}
+		});
+	</script>
+
+	</body>
+</html>

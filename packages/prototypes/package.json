@@ -1,0 +1,96 @@
+{
+  "name": "@packages/prototypes",
+  "version": "1.0.0",
+  "description": "Prototypes for the MFF website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teehemkay/mff"
+  },
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "assets": "run-s --print-name assets:*",
+    "assets:public": "fse copy public/ _site/",
+    "assets:scss": "gulp processScss",
+    "assets:tailwind": "tailwindcss -i ./src/css/tailwind.css -o ./_site/assets/css/tailwind.css",
+    "build": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name clean assets prototypes",
+    "clean": "fse remove _site",
+    "dev": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name build --parallel watch serve",
+    "prototypes": "gulp buildPrototypes",
+    "preview": "serve --listen 8080 _site/",
+    "serve": "live-server --mount=/:_site --watch=_site --no-browser",
+    "watch": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name --parallel watch:*",
+    "watch:public": "onchange 'public/**' -- pnpm assets:public",
+    "watch:prototypes": "gulp watchPrototypes",
+    "watch:scss": "gulp watchScss",
+    "watch:tailwind": "pnpm assets:tailwind --watch"
+  },
+  "keywords": [],
+  "author": "webmaster@europarl.europa.eu",
+  "license": "ISC",
+  "devDependencies": {
+    "@atao60/fse-cli": "^0.1.9",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "@biomejs/biome": "1.9.4",
+    "@packages/build-tools": "workspace:^",
+    "@packages/data": "workspace:^",
+    "@rollup/plugin-yaml": "^4.1.2",
+    "@tailwindcss/cli": "^4.0.17",
+    "@tailwindcss/postcss": "^4.0.17",
+    "@tailwindcss/vite": "^4.0.15",
+    "astro": "^5.5.4",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.1",
+    "gulp": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-changed": "^5.0.2",
+    "gulp-cli": "^3.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^5.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-inline-source": "^4.0.0",
+    "gulp-notify": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^6.0.0",
+    "live-server": "^1.2.2",
+    "npm-run-all2": "^7.0.1",
+    "onchange": "^7.1.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "tailwindcss": "^4.0.17",
+    "terser": "^5.36.0",
+    "through2": "^4.0.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": false
+        }
+      ],
+      [
+        "@babel/preset-react",
+        {
+          "pragma": "jsx",
+          "useSpread": true
+        }
+      ]
+    ]
+  },
+  "prettier": {
+    "useTabs": false,
+    "arrowParens": "always",
+    "bracketSameLine": true,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}

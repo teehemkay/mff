@@ -25,6 +25,7 @@
         devShells = {
           default = mkShell {
             packages = [
+              pkgs.astro-language-server
               pkgs.html-tidy
               pkgs.marksman
               pkgs.nodejs

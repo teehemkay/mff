@@ -1,0 +1,70 @@
+---
+import { metadata } from '@packages/data';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+
+const {
+  epLogoAltText,
+  infoLinks,
+  legalNoticeLabel,
+  privacyPolicyLabel,
+  sitemap,
+  contactUs,
+  accessibilityLabel,
+} = await metadata(lang);
+
+const links = [
+  {
+    label: legalNoticeLabel,
+    url: `https://www.europarl.europa.eu/legal-notice/${lang}`,
+  },
+  {
+    label: privacyPolicyLabel,
+    url: `https://www.europarl.europa.eu/privacy-policy/${lang}`,
+  },
+  {
+    label: accessibilityLabel,
+    url: `https://www.europarl.europa.eu/portal/${lang}/accessibility`,
+  },
+  {
+    label: contactUs,
+    url: `https://www.europarl.europa.eu/portal/${lang}/contact`,
+  },
+  /* {
+    label: sitemap,
+    url: `https://www.europarl.europa.eu/portal/${lang}/sitemap`,
+  }, */
+];
+---
+
+<footer class="footer max-w-5xl mx-auto px-4 py-8">
+  <nav
+    class="navFooter pb-4 text-left block md:!flex md:!items-center"
+    aria-label={infoLinks}>
+    <a href={`https://www.europarl.europa.eu/portal/${lang}`} class="inline-block md:mr-5">
+      <img
+        src={`/assets/img/logos/logo-ep-${lang}.svg`}
+        alt={epLogoAltText}
+        class="w-full min-w-[150px] max-w-[150px]"
+      />
+    </a>
+    <ul class="footerLinks block md:flex md:flex-wrap mt-8 md:mt-0">
+      {
+        links.map(({ label, url }) => (
+          <li class="md:pb-0 mx-4 pb-3">
+            <a
+              rel="noreferrer"
+              href={url}
+              target={url.includes('europarl.europa.eu') ? null : '_blank'}>
+              {label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</footer>

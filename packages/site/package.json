@@ -1,0 +1,71 @@
+{
+  "name": "@packages/site",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teehemkay/mff/"
+  },
+  "scripts": {
+    "assets": "run-s --print-name assets:*",
+    "assets:build": "pnpm --filter @packages/prototypes run assets",
+    "assets:clean": "fse remove public",
+    "assets:harvest": "fse copy ../prototypes/_site/assets ./public/assets",
+    "astro:build": "astro build",
+    "astro:dev": "astro dev",
+    "build": "run-s --print-name clean assets:harvest astro:build",
+    "clean": "fse remove _site",
+    "dev": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name clean assets:harvest --parallel watch:harvest astro:dev",
+    "preview": "astro preview",
+    "watch:harvest": "onchange --verbose --await-write-finish 3000 '../prototypes/_site/assets/' -- pnpm assets:harvest"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@atao60/fse-cli": "^0.1.9",
+    "@biomejs/biome": "1.9.4",
+    "@packages/data": "workspace:^",
+    "@packages/etl": "workspace:^",
+    "@rollup/plugin-yaml": "^4.1.2",
+    "@tailwindcss/postcss": "^4.0.15",
+    "@tailwindcss/vite": "^4.0.15",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.2",
+    "astro": "^5.5.4",
+    "eslint-config-xo-react": "^0.27.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "onchange": "^7.1.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^4.0.15",
+    "typescript": "^5.8.2",
+    "yaml": "^2.7.0"
+  },
+  "browserslist": ["defaults", "not IE 11"],
+  "prettier": {
+    "useTabs": false,
+    "arrowParens": "always",
+    "bracketSameLine": true,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "plugins": ["prettier-plugin-astro"],
+    "astroAllowShorthand": true,
+    "overrides": [
+      {
+        "files": "*.astro",
+        "options": {
+          "parser": "astro"
+        }
+      }
+    ]
+  }
+}

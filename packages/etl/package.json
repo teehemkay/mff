@@ -1,0 +1,41 @@
+{
+  "name": "@packages/etl",
+  "description": "XLS ETL",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teehemkay/mff"
+  },
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./constants": "./constants.js"
+  },
+  "author": "webmaster@europarl.europa.eu",
+  "license": "ISC",
+  "scripts": {
+    "export": "./export-all.js"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "debug": "^4.3.7",
+    "fs-extra": "^11.2.0",
+    "marked": "^15.0.3",
+    "prettier": "^3.4.1",
+    "typescript": "^5.8.2",
+    "yaml": "^2.6.1"
+  },
+  "prettier": {
+    "useTabs": false,
+    "arrowParens": "always",
+    "bracketSameLine": true,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ]
+}

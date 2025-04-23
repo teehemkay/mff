@@ -1,0 +1,25 @@
+<!-- FORM - HOW TO VOTE -->
+<form class="max-w-3xl lg:flex md:flex justify-center sm:block border-2 border-[LightGray] rounded-xl px-10 py-16 m-4" action="">
+    <div class="flex flex-col w-full lg:max-w-[350px] mr-5 mb-4">
+        <label for="country" class="flex flex-1 items-end font-epSemiBold mb-2">Choose a country</label>
+        <div class="relative">
+            <select aria-label="country" autocomplete="country" required class="block appearance-none py-3 px-4 pr-8" id="country" aria-describedby="hint-country" disabled>
+                <option selected="selected">Choose a country</option>
+                <!-- Add disabled="disabled" in the previous <option> to disable the field by default  -->
+                <option>Belgium</option>
+                <option>Netherlands</option>
+                <option>Malta</option>
+                <option>...</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
+                <svg class="fill-blue-default h-7 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                </svg>
+            </div>
+        </div>
+        <span class="hidden block error-text pt-2" id="hint-language" role="alert" aria-atomic="true">Please choose a language</span>
+    </div>
+    <div class="flex items-end mb-4">
+        <button class="btn-form btn-country !normal-case !px-16" type="submit">Continue</button>
+    </div>
+</form>
