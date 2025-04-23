@@ -42,7 +42,7 @@ const shouldExpand = (status, faqID) =>
     <ul
       class="expand-collapse max-w-5xl w-full [&>li]:border-b-2 [&>li]:border-black-greylight [&>li:last-of-type]:border-none">
       {
-        faqs.map(([question, answer, _, expanded, faqID]) => (
+        faqs.map(([question, answer, _, expanded, id]) => (
           <li
             class="expand-container pt-36px mb-6"
             itemscope
@@ -51,8 +51,8 @@ const shouldExpand = (status, faqID) =>
             <h2 class="block pb-6">
               <button
                 class="expand-button w-full text-left flex justify-between items-center py-2 hover:underline hover:decoration-1 hover:decoration-blue-default hover:underline-offset-4 focus:outline focus:outline-2 focus:outline-blue-focus focus:outline-offset-4"
-                aria-expanded={shouldExpand(expanded, faqID)}
-                aria-controls={`content-${faqID}`}
+                aria-expanded={shouldExpand(expanded, id)}
+                aria-controls={`content-${id}`}
                 itemprop="name">
                 <span class="expand-title font-EPGammaBold">{question}</span>
                 <svg aria-hidden="true" focusable="false" viewBox="0 0 10 9">
@@ -62,7 +62,7 @@ const shouldExpand = (status, faqID) =>
               </button>
             </h2>
             <div
-              id={`content-${faqID}`}
+              id={`content-${id}`}
               class={`expand-container-content max-w-3xl pb-8${expanded === 'false' ? ' hidden' : ''}`}
               itemscope
               itemprop="acceptedAnswer"
@@ -78,7 +78,7 @@ const shouldExpand = (status, faqID) =>
               </ul>
               */}
 
-              <ShareWidget {...shareWidgetProps} {faqID} />
+              <ShareWidget {...shareWidgetProps} {id} />
             </div>
           </li>
         ))
