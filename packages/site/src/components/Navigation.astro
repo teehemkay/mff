@@ -20,7 +20,9 @@ const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
   <div
     class="lg:max-w-6xl lg:mx-auto relative flex flex-wrap items-center justify-between py-2">
     <div class="logo flex-1 mx-2 my-2">
-      <a href={`https://www.europarl.europa.eu/portal/${lang}`} class="inline-block w-full max-w-[150px]">
+      <a
+        href={`https://www.europarl.europa.eu/portal/${lang}`}
+        class="inline-block w-full max-w-[150px]">
         <img
           src={`${kAssetsDir}/img/logos/logo-ep-${lang}.svg`}
           alt={epLogoAltText}
@@ -124,43 +126,42 @@ const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
       id="mainList"
       class="submenu-content hidden"
       data-content
-      aria-labelledby="mainMenuButton">
-      <ul class="block px-6 mx-auto max-w-[1100px]">
-        {/* Mobile menu items - JS handles visibility and interactions */}
-        {
-          pageLabels(lang).map(({ key, label }) => (
-            <li class={`mb-2${currentPage === key ? ' current' : ''}`}>
-              <a aria-current={currentPage === key ? 'page' : null}
-                href={makeHref({ currentPage: key, currentFAQ, lang })}>
-                {label}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+      <ul
+      class="block px-6 mx-auto max-w-[1100px]">
+      {/* Mobile menu items - JS handles visibility and interactions */}
+      {
+        pageLabels(lang).map(({ key, label }) => (
+          <li class={`mb-2${currentPage === key ? ' current' : ''}`}>
+            <a
+              aria-current={currentPage === key ? 'page' : null}
+              href={makeHref({ currentPage: key, currentFAQ, lang })}>
+              {label}
+            </a>
+          </li>
+        ))
+      }
     </div>
+  </div>
 
-    <div
-      id="lang-list"
-      class="submenu-content hidden"
-      data-content
-      aria-labelledby="lang-menu">
-      <ul class="lang-content block px-6 mx-auto max-w-[1100px]">
-        {
-          Object.entries(kLanguageLabels).map(([id, label]) => (
-            <li>
-              <a
-                class={id === lang ? 'current' : ''}
-                lang={id}
-                hreflang={id}
-                href={makeHref({ currentPage, currentFAQ, lang: id })}
-                aria-current={id === lang || null}>
-                {`${id.toUpperCase()} - ${label}`}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
+  <div
+    id="lang-list"
+    class="submenu-content hidden"
+    data-content
+    <ul
+    class="lang-content block px-6 mx-auto max-w-[1100px]">
+    {
+      Object.entries(kLanguageLabels).map(([id, label]) => (
+        <li>
+          <a
+            class={id === lang ? 'current' : ''}
+            lang={id}
+            hreflang={id}
+            href={makeHref({ currentPage, currentFAQ, lang: id })}
+            aria-current={id === lang || null}>
+            {`${id.toUpperCase()} - ${label}`}
+          </a>
+        </li>
+      ))
+    }
   </div>
 </header>
