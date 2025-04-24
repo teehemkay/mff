@@ -11,9 +11,6 @@ importers:
       '@atao60/fse-cli':
         specifier: ^0.1.9
         version: 0.1.9
-      '@biomejs/biome':
-        specifier: 1.9.4
-        version: 1.9.4
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
