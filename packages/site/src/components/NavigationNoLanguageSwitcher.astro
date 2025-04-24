@@ -1,0 +1,71 @@
+---
+import { metadata, pageLabels } from '@packages/data';
+import { kAssetsDir } from '@packages/data/constants';
+
+import { makeHref } from '../js/utils.js';
+
+interface Props {
+  lang: string;
+  currentPage: string;
+  currentFAQ: string | null;
+}
+
+const { lang, currentPage, currentFAQ } = Astro.props;
+
+const { epLogoAltText, mainNav } = metadata(lang);
+---
+
+<header class="min-h-[72px] shadow-md pl-1 pr-1" id="header">
+  <div
+    class="lg:max-w-6xl lg:mx-auto relative flex flex-wrap items-center justify-between py-2">
+    <div class="logo flex-1 mx-2 my-2">
+      <a
+        href={`https://www.europarl.europa.eu/portal/${lang}`}
+        class="inline-block w-full max-w-[150px]">
+        <img
+          src={`${kAssetsDir}/img/logos/logo-ep-${lang}.svg`}
+          alt={epLogoAltText}
+          class="w-full max-w-[150px] h-[40px]"
+        />
+      </a>
+    </div>
+    <div class="flex items-center ml-auto justify-end pb-0">
+      <div class="desktop-menu flex justify-end">
+        <nav role="navigation" aria-label={mainNav} class="default-menu">
+          <div class="desktop-menu-display">
+            <ul class="navList lg:mr-1">
+              {
+                pageLabels(lang).map(({ key, label }) => (
+                  <li class={currentPage === key ? 'current' : ''}>
+                    <a
+                      aria-current={currentPage === key ? 'page' : null}
+                      href={makeHref({ currentPage: key, currentFAQ, lang })}>
+                      {label}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div id="mainList" class="submenu-content hidden" data-content>
+        <ul class="block px-6 mx-auto max-w-[1100px]">
+          {/* Mobile menu items - JS handles visibility and interactions */}
+          {
+            pageLabels(lang).map(({ key, label }) => (
+              <li class={`mb-2${currentPage === key ? ' current' : ''}`}>
+                <a
+                  aria-current={currentPage === key ? 'page' : null}
+                  href={makeHref({ currentPage: key, currentFAQ, lang })}>
+                  {label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
