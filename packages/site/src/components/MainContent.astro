@@ -14,12 +14,22 @@ const { lang, currentPage } = Astro.props;
 
 const { homeH1: title, homeSubtitle: subtitle } = contentForPage(kIndex, lang);
 
-const { pageH1: h1, pageContent: chapo } = contentForPage(currentPage, lang);
+const {
+  pageH1: h1,
+  pageChapo: chapo,
+  pageContent,
+} = contentForPage(currentPage, lang);
 
-const headerProps = { title, subtitle, h1, chapo, chapoIsContent: true };
+const headerProps = { title, subtitle, h1, chapo };
 ---
 
 <main role="main" id="mainContent" class="mb-8">
   <Header {...headerProps} />
+  <div class="max-w-5xl mx-auto px-4 mt-54px mb-27px">
+    <div
+      class="htv-page max-w-3xl text-1.2rem] text-black-grey my-5"
+      set:html={pageContent}
+    />
+  </div>
   <slot />
 </main>

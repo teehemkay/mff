@@ -27,11 +27,11 @@ const {
   faqID,
 } = contentForPage(currentPage, lang);
 
-const headerProps = { title, subtitle, h1, chapo, chapoIsContent: false };
+const headerProps = { title, subtitle, h1, chapo };
 const faqs = zip(faQuestion, faqAnswer, faqAnswerMeta, faqExpanded, faqID);
 const shareWidgetProps = { lang, currentPage };
-const shouldExpand = (status, faqID) =>
-  currentFAQ === null ? status : `${currentFAQ === faqID}`;
+const shouldExpand = (status, id) =>
+  currentFAQ === null ? status : `${currentFAQ === id}`;
 ---
 
 <main role="main" id="mainContent" class="mb-8">
