@@ -28,13 +28,17 @@ homeNewsCardTitle:
   - ""
   - ""
   - ""
+homeNewsCardUrl:
+  - https://www.europarl.europa.eu/committees/es/budg/home/press-releases
+  - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
+  - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
   - ""
   - ""
   - ""
 homeCampaignTitle: ""
 homeCampaignLinkLabel: ""
-homeCampaignLinkURL: ""
+homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
 homeRelatedLinksTitle: ""
 homeRelatedLinkLabel:
   - ""
