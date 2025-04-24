@@ -1,11 +1,11 @@
 ---
 interface Props {
   lang: string;
-  altText: string;
+  altText?: string;
   url: string;
   label: string;
 }
-const { lang, altText, url, label } = Astro.props;
+const { lang, url, label } = Astro.props;
 ---
 
 <!-- CAMPAIGN block -->
