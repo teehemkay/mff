@@ -12,7 +12,7 @@ interface Props {
 
 const { lang, currentPage, currentFAQ } = Astro.props;
 
-const { epLogoAltText, mainNav } = metadata(lang);
+const { epLogoAltText, mainNav, menu } = metadata(lang);
 ---
 
 <header class="min-h-[72px] shadow-md pl-1 pr-1" id="header">
@@ -46,6 +46,42 @@ const { epLogoAltText, mainNav } = metadata(lang);
                 ))
               }
             </ul>
+          </div>
+        </nav>
+      </div>
+
+      {/* Mobile menu */}
+      <div class="mobile-menu flex justify-end">
+        {/* JS interacts with these elements */}
+        <nav
+          id="navWrapper"
+          role="navigation"
+          aria-label={mainNav}
+          class="navWrapper">
+          <div class="divNavigation" id="divNavigation">
+            <div id="divmainMenuButton" class="divmainMenuButton">
+              {/* Main menu button potentially replaced by JS */}
+              <button
+                id="mainMenuButton"
+                aria-expanded="false"
+                data-button
+                aria-controls="mainList">
+                <span class="mr-3">{menu}</span>
+                <svg
+                  class="inline-block w-[15px] h-[9px]"
+                  viewBox="0 0 21.741 12.602"
+                  aria-hidden="true"
+                  focusable="false">
+                  <path
+                    id="Arrow"
+                    d="M0,.055,9.8,9.442,14.545,4.9,19.666,0"
+                    transform="translate(1.037 1.083)"
+                    fill="none"
+                    stroke="#024ea2"
+                    stroke-width="3"></path>
+                </svg>
+              </button>
+            </div>
           </div>
         </nav>
       </div>
