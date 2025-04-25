@@ -18,16 +18,14 @@
     "deliver": "run-s --print-name deliver:site deliver:protos",
     "deliver:protos": "fse move packages/prototypes/_site/prototypes _site/prototypes",
     "deliver:site": "fse move packages/site/dist _site/",
-    "dev": "pnpm --filter @packages/prototypes run dev",
+    "dev": "pnpm --filter @packages/site run dev",
+    "protos": "pnpm --filter @packages/prototypes run dev",
     "preview": "serve --listen 3000 _site",
     "site": "cross-env NODE_ENV=production run-s --print-name clean data build deliver bundle"
   },
   "author": "webmaster@europarl.europa.eu",
   "license": "ISC",
-  "browserslist": [
-    "defaults",
-    "not IE 11"
-  ],
+  "browserslist": ["defaults", "not IE 11"],
   "devDependencies": {
     "@atao60/fse-cli": "^0.1.9",
     "cross-env": "^7.0.3",
