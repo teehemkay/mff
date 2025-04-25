@@ -1,5 +1,5 @@
 ---
-import { metadata, pageLabels } from '@packages/data';
+import { kLanguageLabels, metadata, pageLabels } from '@packages/data';
 import { kAssetsDir } from '@packages/data/constants';
 
 import { makeHref } from '../js/utils.js';
@@ -12,7 +12,7 @@ interface Props {
 
 const { lang, currentPage, currentFAQ } = Astro.props;
 
-const { epLogoAltText, mainNav, menu } = metadata(lang);
+const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
 ---
 
 <header class="min-h-[72px] shadow-md pl-1 pr-1" id="header">
@@ -86,22 +86,56 @@ const { epLogoAltText, mainNav, menu } = metadata(lang);
         </nav>
       </div>
 
-      <div id="mainList" class="submenu-content hidden" data-content>
-        <ul class="block px-6 mx-auto max-w-[1100px]">
-          {/* Mobile menu items - JS handles visibility and interactions */}
-          {
-            pageLabels(lang).map(({ key, label }) => (
-              <li class={`mb-2${currentPage === key ? ' current' : ''}`}>
-                <a
-                  aria-current={currentPage === key ? 'page' : null}
-                  href={makeHref({ currentPage: key, currentFAQ, lang })}>
-                  {label}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
+      {/* Lang menu dropdown */}
+      <nav
+        role="navigation"
+        aria-label={switchLanguage}
+        class="lang-nav flex justify-end">
+        <div class="expand-collapse">
+          {/* This class name might be generic, ensure JS targets correctly */}
+          <button
+            id="lang-menu"
+            class="nav-button flex items-center focus:outline focus:outline-2 focus:outline-blue-focus px-2.5 py-1 mr-4"
+            aria-expanded="false"
+            data-button
+            aria-controls="lang-list">
+            <span class="inline-block text-base pt-0.5 mr-3">
+              {lang.toUpperCase()}
+              <span class="sr-only">- {kLanguageLabels[lang]}</span>
+            </span>
+            <svg
+              class="inline-block w-[15px] h-[9px]"
+              viewBox="0 0 21.741 12.602"
+              aria-hidden="true"
+              focusable="false">
+              <path
+                id="Arrow"
+                d="M0,.055,9.8,9.442,14.545,4.9,19.666,0"
+                transform="translate(1.037 1.083)"
+                fill="none"
+                stroke="#024ea2"
+                stroke-width="3"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <div id="mainList" class="submenu-content hidden" data-content>
+      <ul class="block px-6 mx-auto max-w-[1100px]">
+        {/* Mobile menu items - JS handles visibility and interactions */}
+        {
+          pageLabels(lang).map(({ key, label }) => (
+            <li class={`mb-2${currentPage === key ? ' current' : ''}`}>
+              <a
+                aria-current={currentPage === key ? 'page' : null}
+                href={makeHref({ currentPage: key, currentFAQ, lang })}>
+                {label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </div>
 </header>
