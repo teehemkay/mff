@@ -88,9 +88,9 @@ const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
 
       {/* Lang menu dropdown */}
       <nav
-        role="navigation"
+        role="presentation"
         aria-label={switchLanguage}
-        class="lang-nav flex justify-end">
+        class="lang-nav flex justify-end hidden" aria-hidden="true" tabindex="-1">
         <div class="expand-collapse">
           {/* This class name might be generic, ensure JS targets correctly */}
           <button
