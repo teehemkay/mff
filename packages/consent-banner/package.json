@@ -1,0 +1,122 @@
+{
+  "name": "@packages/consent-banner",
+  "version": "1.0.0",
+  "description": "Cookie Consent Banner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teehemkay/mff"
+  },
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "assets": "cross-env FORCE_COLOR=1 run-s --print-label clean assets:*",
+    "assets:js": "rollup --config rollup.config.js",
+    "assets:resources": "fse copy resources/ public/",
+    "assets:scss": "postcss src/scss/*.scss --dir public/assets/privacy-policy/ --ext css --map --verbose",
+    "build": "pnpm assets",
+    "clean": "fse remove public",
+    "deliver": "cross-env FORCE_COLOR=1 run-s --print-label build export",
+    "dev": "cross-env FORCE_COLOR=1 npm-run-all clean --print-label --parallel watch serve",
+    "export": "fse copy public/assets/privacy-policy/ ../../_site/assets/privacy-policy/",
+    "preview": "serve --listen 8080 public",
+    "serve": "live-server --mount=/:public --watch=public --no-browser",
+    "watch": "cross-env FORCE_COLOR=1 npm-run-all --print-label --parallel watch:**",
+    "watch:js": "pnpm assets:js --watch",
+    "watch:resources": "onchange --initial 'resources/**' -- pnpm assets:resources",
+    "watch:scss": "pnpm assets:scss --watch"
+  },
+  "keywords": [],
+  "author": "webmaster@europarl.europa.eu",
+  "license": "ISC",
+  "dependencies": {
+    "hyperapp": "^2.0.22",
+    "js-cookie": "^3.0.5"
+  },
+  "devDependencies": {
+    "@atao60/fse-cli": "^0.1.9",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "@packages/build-tools": "workspace:^",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@swc/cli": "^0.5.2",
+    "@swc/core": "^1.9.3",
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
+    "eslint": "8.57.1",
+    "live-server": "^1.2.2",
+    "npm-run-all2": "^7.0.1",
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "postcss-hexrgba": "^2.1.0",
+    "postcss-preset-env": "^10.1.1",
+    "postcss-pxtorem": "^6.1.0",
+    "postcss-scss": "^4.0.9",
+    "postcss-svgo": "^7.0.1",
+    "rollup": "^4.28.0",
+    "xo": "^0.59.3"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": false
+        }
+      ],
+      [
+        "@babel/preset-react",
+        {
+          "pragma": "jsx",
+          "useSpread": true
+        }
+      ]
+    ]
+  },
+  "prettier": {
+    "useTabs": false,
+    "arrowParens": "always",
+    "bracketSameLine": true,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "xo": {
+    "space": true,
+    "prettier": true,
+    "envs": ["node", "browser"],
+    "rules": {
+      "capitalized-comments": "off",
+      "import/order": [
+        "error",
+        {
+          "newlines-between": "always-and-inside-groups",
+          "warnOnUnassignedImports": true
+        }
+      ],
+      "func-names": ["error", "as-needed"],
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "spaced-comment": [
+        "error",
+        "always",
+        {
+          "exceptions": ["#__PURE__"]
+        }
+      ],
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/prefer-object-from-entries": "off"
+    },
+    "ignores": [
+      "build/**",
+      "out/**",
+      "public/**",
+      "site/**",
+      "site_trials/**",
+      "_site/**"
+    ]
+  }
+}
