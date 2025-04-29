@@ -112,24 +112,3 @@ const url = (lang, currentFAQ = null) =>
     data-value="https://www.europarl.europa.eu/website/webanalytics/ati-eu-budget.js"
     src=`${kAssetsDir}/privacy-policy/privacy-policy.js`></script>
 </head>
-
-<script is:inline type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://www.elections.europa.eu",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://eubudget.europarl.europa.eu/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "European Parliament",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "/assets/img/ep-logo.png"
-      }
-    }
-  }
-</script>
