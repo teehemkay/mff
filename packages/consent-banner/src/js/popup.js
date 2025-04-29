@@ -180,7 +180,7 @@ export const popupHandler = ({ optInFx, optOutFx }) => {
 
 export const popupController = () => {
   if (widgetController()) {
-    // indicate that widthe was displayed
+    // indicate that widget was displayed
     // and that no further popup should be displayed
     return true;
   }
