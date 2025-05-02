@@ -13,14 +13,10 @@ import {
 import {
   OPTED_IN,
   OPTED_OUT,
-  DNTED,
   NO_CHOICE,
   JS_AND_CSS_BASENAME,
   domainTokens,
 } from './constants.js';
-
-export const DNT_YES = 'yes';
-export const DNT_ON = '1';
 
 // Cookie time to live: 13 months in days
 export const COOKIE_TTL = 365 + 31;
@@ -53,14 +49,6 @@ export const removeATICookies = () => {
     Cookies.remove(cookie, { sameSite: 'strict' });
   }
 };
-
-/* eslint-disable eqeqeq */
-export const isDNT = () =>
-  navigator.doNotTrack == DNT_YES ||
-  navigator.doNotTrack == DNT_ON ||
-  navigator.msDoNotTrack == DNT_ON ||
-  window.doNotTrack == DNT_ON;
-/* eslint-enable eqeqeq */
 
 export const ATICookies = [
   'atidvisitor',
@@ -98,7 +86,7 @@ export const optedIn = () => Cookies.get(cookie('name')) === cookie('optin');
 export const optedOut = () => Cookies.get(cookie('name')) === cookie('optout');
 
 export const status = () =>
-  isDNT() ? DNTED : optedIn() ? OPTED_IN : optedOut() ? OPTED_OUT : NO_CHOICE;
+  optedIn() ? OPTED_IN : optedOut() ? OPTED_OUT : NO_CHOICE;
 
 export const cleanupTrackers = () => {
   removeScript(trackerUrl(JS_AND_CSS_BASENAME));
@@ -129,25 +117,7 @@ export const registerTrackerAMDShim = () => {
   }
 };
 
-export const logDNTStatus = () => {
-  if (window.doNotTrack || navigator.doNotTrack || navigator.msDoNotTrack) {
-    if (isDNT()) {
-      console.log('DNT enabled');
-    } else {
-      console.log('DNT disabled');
-    }
-  } else {
-    console.log('DNT not supported');
-  }
-};
-
 export const handlers = {
-  [DNTED]() {
-    cleanupTrackers();
-    registerTrackerAMDShim();
-    console.log('Cookie consent: User has DNT enabled');
-    return [DNTED, {}];
-  },
   [OPTED_OUT]() {
     cleanupTrackers();
     registerTrackerAMDShim();
