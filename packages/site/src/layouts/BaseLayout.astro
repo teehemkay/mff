@@ -1,9 +1,9 @@
 ---
-import { kIndex, kByCountry, kWhyItMatters, kOurPosition, kHowItWorks, kOurRole } from '@packages/etl/constants';
+import { kHowItWorks, kOurRole } from '@packages/etl/constants';
 
 import Head from '../components/Head.astro';
-import ShortcutWai from '../components/ShortcutWai.astro';
-import Navigation from '../components/Navigation.astro';
+import ShortcutWai from '../components/ShortcutWaiNoLang.astro';
+import Navigation from '../components/NavigationNoLanguageSwitcher.astro';
 import Footer from '../components/Footer.astro';
 
 interface Props {
@@ -17,9 +17,7 @@ const { lang, currentPage, currentFAQ } = Astro.props;
 
 <!doctype html>
 <html lang="en" class="no-js">
-  <head>
     <Head {lang} {currentPage} {currentFAQ} />
-  </head>
   <body>
     <ShortcutWai {lang} />
     <Navigation {lang} {currentPage} {currentFAQ} />
@@ -30,9 +28,11 @@ const { lang, currentPage, currentFAQ } = Astro.props;
     <Footer {lang} />
 
     {/* Common Scripts */}
+    {/*
     <script type="module" is:inline src="/assets/js/go-to-top.js"></script>
-    <script type="module" is:inline src="/assets/js/menu-desktop.js"></script>
-    <script type="module" is:inline src="/assets/js/dropdown-desktop.js"></script>
+    */}
+
+    <script type="module" is:inline src="/assets/js/dropdown-menu.js"></script>
 
     {
       [kHowItWorks, kOurRole].includes(currentPage) && (

@@ -739,6 +739,8 @@ nav.lang-nav {
           position: relative;
           a {
             position: relative;
+            display: inline-block;
+            text-underline-offset: 8px;
             color: variables.$blue !important;
             &:after {
               content: "";

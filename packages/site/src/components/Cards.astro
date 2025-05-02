@@ -9,10 +9,10 @@ export interface CardProps {
   class="elections-block lg:grid lg:grid-cols-2 md:block sm:block block max-w-5xl mx-auto mb-10 px-4">
   {
     Astro.props.cards.map(([label, url, text], index) => (
-      <li class={`${index === 0 ? 'lg:mr-5 ' : ''}mb-6`}>
+      <li class="lg:mr-5 mb-6">
         <h2 class="text-2-xl font-EPGammaBold flex items-center py-2">
-          <a href={url} class="block decoration-blue-default">
-            <span class="inline mr-2">{label}</span><span class="inline-flex min-w[25px]">
+          <a href={url} class="relative flex">
+            <span class="inline-flex mr-8">{label}</span><span class="absolute top-0 right-0 min-w-[25px]">
               <svg
                 focusable="false"
                 aria-hidden="true"

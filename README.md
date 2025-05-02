@@ -34,12 +34,22 @@ The images will automatically be optimized next time the site is built.
 
 1. Go to https://github.com/teehemkay/mff/
 2. Switch to the appropriate *release* branche (e.g release/v1).
-3. Navigate to the `public/assets/pdf/` folder.
+3. Navigate to the `packages/prototypes/public/assets/pdf/` folder.
 4. Click on the '+' icon and select the `Upload files` options
 5. Select the PDF file(s) to upload
 6. Add a commit message and a description. 
 7. Select the `commit directly to the release/xxx branch` (should be selected by default)
 8. Click the "Commit" button
+9. Trigger a manual rebuild+deployment (see next point below)
+
+### Manually trigger a rebuild+deployment of the website
+
+1. Click on the "actions" button (top bar just below the repository name)
+2. Click on the "trigger deployment" link
+3. Click on the "Run workflow" in the right
+4. Select the correct branch
+5. Click on the "Run workflow" button
+6. Wait for the workflow to complete and the new version of the website should have been deployed
 
 ## Development Setup
 

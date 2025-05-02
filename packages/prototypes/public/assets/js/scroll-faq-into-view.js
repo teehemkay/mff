@@ -1,4 +1,4 @@
-// Determine elementId
+// Determine elementID
 const idFromPathname = (pathname) => {
   const segments = pathname.split('/').filter((segment) => segment !== '');
 
@@ -11,7 +11,7 @@ const idFromPathname = (pathname) => {
   const segment = segments[segments.length - 1];
 
   // test that it's a FAQ ID
-  /^q\d+$/.test(segment) ? segment : null;
+  return /^q\d+$/.test(segment) ? segment : null;
 };
 
 /**
@@ -19,24 +19,25 @@ const idFromPathname = (pathname) => {
  * is found in the URL path (/.../.../q<number>/), using only const.
  */
 export const scrollTargetFromUrlToMiddle = () => {
-  const elementId = idFromPathname(window.location.pathname);
-  if (!elementId) {
-    console.warn(`No ID found in ${window.location.pathname}.`);
+  const elementID = idFromPathname(window.location.pathname);
+  if (!elementID) {
+    console.log(`No ID found in ${window.location.pathname}.`);
+    return;
   }
 
-  const element = document.getElementById(elementId);
+  const faqID = `#content-${elementID}`;
+  const element = document.querySelector(faqID);
 
   if (!element) {
-    console.warn(
-      `Element with ID "${elementId}" found in URL but not on page.`
-    );
+    console.log(`Element with ID "${faqID}" found in URL but not on page.`);
+    return;
   }
 
   element.scrollIntoView({
     behavior: 'smooth', // Or 'auto'
     block: 'center',
   });
-  console.log(`Scrolled to element with ID: ${elementId}`);
+  console.log(`Scrolled to element with ID: ${elementID}`);
 };
 
 // Option 1: Using DOMContentLoaded (fires sooner)

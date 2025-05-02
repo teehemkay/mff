@@ -20,7 +20,9 @@ const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
   <div
     class="lg:max-w-6xl lg:mx-auto relative flex flex-wrap items-center justify-between py-2">
     <div class="logo flex-1 mx-2 my-2">
-      <a href={`https://www.europarl.europa.eu/portal/${lang}`} class="inline-block w-full max-w-[150px]">
+      <a
+        href={`https://www.europarl.europa.eu/portal/${lang}`}
+        class="inline-block w-full max-w-[150px]">
         <img
           src={`${kAssetsDir}/img/logos/logo-ep-${lang}.svg`}
           alt={epLogoAltText}
@@ -38,7 +40,7 @@ const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
                   <li class={currentPage === key ? 'current' : ''}>
                     <a
                       aria-current={currentPage === key ? 'page' : null}
-                      href={`/${lang}/${key}/`}>
+                      href={makeHref({ currentPage: key, currentFAQ, lang })}>
                       {label}
                     </a>
                   </li>
@@ -120,17 +122,14 @@ const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
       </nav>
     </div>
 
-    <div
-      id="mainList"
-      class="submenu-content hidden"
-      data-content
-      aria-labelledby="mainMenuButton">
+    <div id="mainList" class="submenu-content hidden" data-content>
       <ul class="block px-6 mx-auto max-w-[1100px]">
         {/* Mobile menu items - JS handles visibility and interactions */}
         {
           pageLabels(lang).map(({ key, label }) => (
             <li class={`mb-2${currentPage === key ? ' current' : ''}`}>
-              <a aria-current={currentPage === key ? 'page' : null}
+              <a
+                aria-current={currentPage === key ? 'page' : null}
                 href={makeHref({ currentPage: key, currentFAQ, lang })}>
                 {label}
               </a>
@@ -140,11 +139,7 @@ const { epLogoAltText, mainNav, menu, switchLanguage } = metadata(lang);
       </ul>
     </div>
 
-    <div
-      id="lang-list"
-      class="submenu-content hidden"
-      data-content
-      aria-labelledby="lang-menu">
+    <div id="lang-list" class="submenu-content hidden" data-content>
       <ul class="lang-content block px-6 mx-auto max-w-[1100px]">
         {
           Object.entries(kLanguageLabels).map(([id, label]) => (

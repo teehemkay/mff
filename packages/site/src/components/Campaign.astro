@@ -1,17 +1,17 @@
 ---
 interface Props {
   lang: string;
-  altText: string;
+  altText?: string;
   url: string;
   label: string;
 }
-const { lang, altText, url, label } = Astro.props;
+const { lang, url, label } = Astro.props;
 ---
 
 <!-- CAMPAIGN block -->
 <div
   class="block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mt-0 mb-16 px-4">
-  <div class="campaign-block border border-2 border-[LightGray] p-16">
+  <div class="campaign-block border border-2 border-[LightGray] pt-8 pr-8 pb-8 pl-8 sm:p-16">
     <img
       src={`/assets/img/banners/mff_${lang}.svg`}
       alt=""

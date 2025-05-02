@@ -18,7 +18,7 @@
     "astro:dev": "astro dev",
     "build": "run-s --print-name clean assets:harvest astro:build",
     "clean": "fse remove _site",
-    "dev": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name clean assets:harvest --parallel watch:harvest astro:dev",
+    "dev": "cross-env FORCE_COLOR=1 npm-run-all --print-label --print-name assets --parallel watch:harvest astro:dev",
     "preview": "astro preview",
     "watch:harvest": "onchange --verbose --await-write-finish 3000 '../prototypes/_site/assets/' -- pnpm assets:harvest"
   },
