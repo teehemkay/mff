@@ -24,6 +24,7 @@ const {
   homeNewsTitle,
   homeNewsCardTitle,
   homeNewsCardText,
+  homeNewsCardUrl,
   homeRelatedLinksTitle,
   homeRelatedLinkLabel,
   homeRelatedLinkURL,
@@ -33,7 +34,7 @@ const {
 } = contentForPage(currentPage, lang);
 
 const cards = zip(homeCardLinkLabel, homeCardLinkURL, homeCardText);
-const updates = zip(homeNewsCardTitle, homeNewsCardText);
+const updates = zip(homeNewsCardTitle, homeNewsCardText, homeNewsCardUrl);
 const links = zip(homeRelatedLinkLabel, homeRelatedLinkURL);
 
 const campaignProps = {
@@ -73,7 +74,7 @@ const campaignProps = {
     <CardsUpdates {updates} />
   </div>
 
-  <Campaign {...campaignProps} />
+  {/* <Campaign {...campaignProps} /> */}
 
   <div
     class="epol-block lg:flex flex-col md:block sm:block block max-w-5xl mx-auto mb-16 px-4">
@@ -93,4 +94,5 @@ const campaignProps = {
       }
     </ul>
   </div>
+  <slot />
 </main>

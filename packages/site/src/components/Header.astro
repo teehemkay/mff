@@ -4,10 +4,9 @@ interface Props {
   subtitle: string;
   h1: string;
   chapo: string;
-  chapoIsContent?: boolean;
 }
 
-const { title, subtitle, h1, chapo, chapoIsContent } = Astro.props;
+const { title, subtitle, h1, chapo } = Astro.props;
 ---
 
 <div id="returnToTop" class="hidden"></div>
@@ -20,11 +19,15 @@ const { title, subtitle, h1, chapo, chapoIsContent } = Astro.props;
     class="text-brand-title-page inline-block font-EPGammaBold bg-blue-default text-white-default pt-1.5 pb-0.5 px-2 mt-2 mb-12"
     >{subtitle}</span
   >
-  <h1 class="font-EPGammaBold text-2.5xl text-black-greydark text-left">
+  <h1 class="max-w-3xl font-EPGammaBold text-2.5xl text-black-greydark text-left">
     {h1}
   </h1>
-  <div
-    class={`htv-page max-w-3xl text-[${chapoIsContent ? '1.2rem' : '1.4rem'}] text-black-grey my-5`}
-    set:html={chapo}
-  />
+  {
+    chapo && (
+      <div
+        class="htv-page max-w-3xl text-1.2rem] text-black-grey my-5"
+        set:html={chapo}
+      />
+    )
+  }
 </div>

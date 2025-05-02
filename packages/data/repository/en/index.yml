@@ -1,10 +1,10 @@
-metaTitle: "EU long-term budget: all you need to know"
-metaDescription: Find out why the EU long-term budget matters, how it works and
-  the role of the European Parliament.
-homeH1: The EU's long-term budget from 2028
+metaTitle: "The EU long-term budget: all you need to know"
+metaDescription: Learn what the EU long-term budget is and how it is negotiated
+  and invested and how the European Parliament plays a key role.
+homeH1: The EU long-term budget
 homeSubtitle: Invest in what matters
 homeIntroText: >
-  <p>The EU long-term budget drives investments in Europe’s future, improving
+  <p>The EU long-term budget drives investment in Europe’s future, improving
   citizens’ lives. 
 
   It funds common projects and delivers on priorities from economic
@@ -17,7 +17,7 @@ homeCardLinkLabel:
   - How it works
   - The European Parliament’s role
   - The European Parliament’s position
-  - The impact in your country
+  - The EU budget in your country and region
 homeCardLinkURL:
   - /en/why-it-matters/
   - /en/how-it-works/
@@ -25,15 +25,15 @@ homeCardLinkURL:
   - /en/our-position/
   - /en/by-country/
 homeCardText:
-  - Find out why the EU long-term budget matters and how it allows EU countries
-    to achieve more together than if they acted alone.
-  - Discover how the EU's long-term budget is funded, its overall size, what the
-    money is spent on, and more.
-  - Find out more about the European Parliament's role in the long-term budget
-    of the European Union.
-  - Read about the European Parliament's key demands and priorities in the
-    negotiations on the EU's next long-term budget.
-  - Discover how the EU budget is tailored to benefit you and your country.
+  - Find out how the long-term budget allows the EU to pool resources and invest
+    in what matters to Europeans.
+  - Explore how the EU long-term budget is funded, what the money is invested
+    in, and much more.
+  - Learn what part the European Parliament plays in deciding on the EU budget
+    and overseeing its use.
+  - Read about the European Parliament’s priorities in the negotiations on the
+    next EU long-term budget.
+  - Discover how the EU budget benefits you, your region and your country.
 homeVideoTitle: ""
 homeVideoURL: ""
 homeNewsTitle: Latest updates
@@ -41,6 +41,10 @@ homeNewsCardTitle:
   - Press releases
   - In-depth articles
   - Press kit
+homeNewsCardUrl:
+  - https://www.europarl.europa.eu/committees/en/budg/home/press-releases
+  - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
+  - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
   - Read the latest press releases on the EU long-term budget
   - Read the latest policy briefings and studies on the EU's long-term budget
@@ -48,7 +52,7 @@ homeNewsCardText:
     contacts to help you cover the EU's long-term budget"
 homeCampaignTitle: Invest in what matters
 homeCampaignLinkLabel: Campaign material
-homeCampaignLinkURL: ""
+homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
 homeRelatedLinksTitle: Related links
 homeRelatedLinkLabel:
   - Latest public opinion surveys - Eurobarometer

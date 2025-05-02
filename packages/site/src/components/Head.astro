@@ -22,10 +22,8 @@ const { metaTitle, metaDescription } = currentFAQ
   ? faqDetails({ lang, currentPage, currentFAQ })
   : contentForPage(currentPage, lang);
 
-const sharingImage =
-  'https://elections.europa.eu/assets/img/sharing/social-media-card_en.png';
-const sharingImageX =
-  'https://elections.europa.eu/assets/img/sharing/x-social-media-card_en.png';
+const sharingImage = `${kBaseURL}${kAssetsDir}/img/sharing/share.png`;
+const sharingImageX = `${kBaseURL}${kAssetsDir}/img/sharing/share-x.png`;
 
 const url = (lang, currentFAQ = null) =>
   `${kBaseURL}${makeHref({ lang, currentPage, currentFAQ })}`;
@@ -109,51 +107,8 @@ const url = (lang, currentFAQ = null) =>
 
   <script
     is:inline
-    defer=""
+    defer
     data-tracker-name="ATInternet"
-    data-value=`${kAssetsDir}/privacy-policy/ati-ee24.js`
+    data-value="https://www.europarl.europa.eu/website/webanalytics/ati-eu-budget.js"
     src=`${kAssetsDir}/privacy-policy/privacy-policy.js`></script>
 </head>
-
-<link
-  rel="preload"
-  href="/assets/fonts/Europea-Regular.woff2"
-  as="font"
-  type="font/woff2"
-/>
-
-<link
-  rel="preload"
-  href="/assets/fonts/Europea-Bold.woff2"
-  as="font"
-  type="font/woff2"
-/>
-
-<script
-  is:inline
-  type="text/javascript"
-  defer
-  data-tracker-name="ATInternet"
-  data-value="https://www.europarl.europa.eu/website/webanalytics/ati-news.js"
-  src="/assets/privacy-policy/privacy-policy.js"></script>
-
-<script is:inline type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://www.elections.europa.eu",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://eubudget.europarl.europa.eu/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "European Parliament",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "/assets/img/ep-logo.png"
-      }
-    }
-  }
-</script>

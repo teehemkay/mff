@@ -131,7 +131,7 @@ h1 {
   @include mixins.desktop{}
 }
 h2 {
-  font-size: 1.75rem !important;
+  font-size: 1.7rem !important;
   line-height: 2rem !important;
   @include mixins.tablet{}
   @include mixins.desktop{}
@@ -157,7 +157,6 @@ button{
 }
 
 /* !!! Don't forget to add focus on each a,button if we remove the outline*/
-a, a:active, button, button:active{outline-style:none;}
 a{
   color: variables.$blue;
   text-decoration: underline;

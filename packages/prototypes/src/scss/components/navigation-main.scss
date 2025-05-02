@@ -69,6 +69,13 @@ nav {
       flex: 0 0 auto;
       margin-left: 10px;
       .nav-button {
+        &:hover {
+          border-color: var(--color-blue-focus);
+        }
+        &:focus {
+          outline: solid 2px var(--color-blue-focus);
+          outline-offset: 1px;
+        }
         &[aria-expanded="false"] {
           svg {
             rotate: 0;
@@ -93,7 +100,11 @@ nav.lang-nav {
   .expand-collapse {
     button {
       &:hover {
-        border-color: #024EA2;
+        border-color: var(--color-blue-focus);
+      }
+      &:focus {
+        outline: solid 2px var(--color-blue-focus);
+        outline-offset: 1px;
       }
     }
     .list {
@@ -545,10 +556,11 @@ nav.lang-nav {
           border: solid 1px variables.$grey-border;
           border-radius: 0.375rem;
           &:hover {
-            border-color: variables.$blue;
+            border-color: var(--color-blue-focus);
           }
           &:focus {
-            outline-offset: 0;
+            outline: solid 2px var(--color-blue-focus);
+            outline-offset: 1px;
           }
         }
       }
@@ -715,6 +727,68 @@ nav.lang-nav {
       }
     }
   }
+}
+
+#mainList {
+  &.submenu-content {
+    ul {
+      li {
+        display: block;
+        &.current{
+          color: variables.$blue;
+          position: relative;
+          a {
+            position: relative;
+            display: inline-block;
+            text-underline-offset: 8px;
+            color: variables.$blue !important;
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: -1px;
+              left: 0;
+              height: 2px;
+              display: block;
+              width: 100%;
+              background-color: variables.$blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#mainMenuButton {
+  &[aria-expanded="false"] {
+    svg {
+      transition: all 0.15s ease-out;
+      rotate: 0deg;
+    }
+  }
+  &[aria-expanded="true"] {
+    svg {
+      transition: all 0.15s ease-out;
+      rotate: 180deg;
+    }
+  }
+}
+
+#lang-menu {
+    color: variables.$black;
+    text-decoration: none;
+    font-variation-settings: "wght" var(--text-wght-r);
+    margin-right: 0.5rem;
+    padding: 0.35rem 0.625rem 0.20rem 0.625rem;
+    border: solid 1px variables.$grey-border;
+    border-radius: 0.375rem;
+    &:hover {
+      border-color: var(--color-blue-focus);
+    }
+    &:focus {
+      outline: solid 2px var(--color-blue-focus);
+      outline-offset: 1px;
+    }
 }
 
 .desktop-menu {
