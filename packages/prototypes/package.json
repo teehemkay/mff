@@ -72,6 +72,7 @@
     "terser": "^5.36.0",
     "through2": "^4.0.2"
   },
+  "browserslist": ["defaults", "not IE 11"],
   "babel": {
     "presets": [
       [
