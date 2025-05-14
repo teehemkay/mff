@@ -22,8 +22,8 @@ const { metaTitle, metaDescription } = currentFAQ
   ? faqDetails({ lang, currentPage, currentFAQ })
   : contentForPage(currentPage, lang);
 
-const sharingImage = `${kBaseURL}${kAssetsDir}/img/sharing/share.png`;
-const sharingImageX = `${kBaseURL}${kAssetsDir}/img/sharing/share-x.png`;
+const sharingImage = `${kBaseURL}${kAssetsDir}/img/sharing/ep_mff_${lang}.png`;
+const sharingImageX = `${kBaseURL}${kAssetsDir}/img/sharingep_mff_square_${lang}.png`;
 
 const url = (lang, currentFAQ = null) =>
   `${kBaseURL}${makeHref({ lang, currentPage, currentFAQ })}`;
