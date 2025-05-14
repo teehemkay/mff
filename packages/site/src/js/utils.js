@@ -63,7 +63,7 @@ export const getStaticPaths = /* @__NO_SIDE_EFFECTs__ */ () => {
     },
   ];
 
-  for (const lang of ['en']) {
+  for (const lang of kLanguageCodes) {
     // only EN until we receive the LVs translations
     slugs.push({
       params: { slug: lang },

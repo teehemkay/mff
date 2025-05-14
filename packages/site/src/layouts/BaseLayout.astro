@@ -16,7 +16,7 @@ const { lang, currentPage, currentFAQ } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang={lang} class="no-js">
     <Head {lang} {currentPage} {currentFAQ} />
   <body>
     <ShortcutWai {lang} />
