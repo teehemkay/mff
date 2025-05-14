@@ -12,6 +12,7 @@ import MainHomepage from '../components/MainHomepage.astro';
 import MainFAQs from '../components/MainFAQs.astro';
 import MainContent from '../components/MainContent.astro';
 import MainByCountry from '../components/MainByCountry.astro';
+import MainBy404 from '../components/Mai404.astro';
 
 interface Props {
   lang: string;
@@ -20,6 +21,8 @@ interface Props {
 }
 
 const { lang, currentPage, currentFAQ } = Astro.props;
+
+console.log(`slug->currentPage: ${currentPage}`);
 
 const { backToTop } = metadata(lang);
 
