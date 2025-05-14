@@ -1,11 +1,16 @@
-metaTitle: ""
-metaDescription: ""
-pageH1: ""
-pageChapo: ""
+metaTitle: "ES biudžetas: naudos jums ir jūsų valstybei"
+metaDescription: Sužinokite, kaip ES biudžetas yra pritaikytas jūsų ir jūsų šalies poreikiams.
+pageH1: "ES biudžetas: naudos jums ir jūsų šaliai"
+pageChapo: >
+  <p>ES daugiametis biudžetas yra svarbus šalims ir regionams. Juo remiami
+  moksliniai tyrimai, konkurencingumas, žemės ūkis, klimato kaita, pagalba
+  nelaimių atveju ir įvairios iniciatyvos.</p>
+
+  <p>Pasirinkite šalį ir sužinokite apie projektus ir investicijas. </p>
 linkLabel: ""
 linkURL: ""
 selectCountry: Pasirinkti šalį
-buttonContinue: ""
+buttonContinue: Tęsti
 atUrl: https://what-europe-does-for-me.europarl.europa.eu/lt/region?area=AT&txt=%C3%96sterreich
 beUrl: https://what-europe-does-for-me.europarl.europa.eu/lt/region?area=BE&txt=Belgique-Belgi%C3%AB
 bgUrl: https://what-europe-does-for-me.europarl.europa.eu/lt/region?area=BG&txt=%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F

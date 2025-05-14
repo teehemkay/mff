@@ -1,50 +1,65 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "ES daugiametis biudžetas: viskas, ką turite žinoti"
+metaDescription: Sužinokite, kas yra ES daugiametis biudžetas, kaip dėl jo
+  deramasi ir koks yra Europos Parlamento vaidmuo šiame procese.
+homeH1: ES daugiametis biudžetas
+homeSubtitle: Investuokime į tai, kas svarbu
+homeIntroText: >
+  <p>ES daugiametis biudžetas skatina investicijas į Europos ateitį ir gerina
+  piliečių gyvenimą. 
+
+  Juo finansuojami bendri projektai ir įgyvendinami ES prioritetai – nuo
+  ekonomikos konkurencingumo iki žemės ūkio.</p>
+
+  <p><strong>Sužinokite apie ES biudžeto naudą ir su juo susijusių sprendimų
+  priėmimą.</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Kodėl tai svarbu?
+  - Kaip tai veikia?
+  - Europos Parlamento vaidmuo
+  - Europos Parlamento pozicija
+  - ES biudžetas jūsų šalyje ir regione
+homeCardText:
+  - Sužinokite, kaip daugiametis biudžetas leidžia ES sutelkti išteklius ir
+    investuoti į europiečiams svarbius dalykus.
+  - Sužinokite, kaip sudaromas ES daugiametis biudžetas, kur investuojamos lėšos
+    ir dar daugiau.
+  - Sužinokite, kokį vaidmenį Europos Parlamentas atlieka priimant sprendimus
+    dėl ES biudžeto ir prižiūrint jo panaudojimą.
+  - Skaitykite apie Europos Parlamento prioritetus derybose dėl kito ES
+    daugiamečio biudžeto.
+  - Sužinokite, kokią naudą jums, jūsų regionui ir valstybei teikia ES biudžetas.
 homeCardLinkURL:
   - /lt/why-it-matters/
   - /lt/how-it-works/
   - /lt/our-role/
   - /lt/our-position/
   - /lt/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Naujausia informacija
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Pranešimai spaudai
+  - Išsamūs straipsniai
+  - Informacijos rinkinys žiniasklaidai
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/lt/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Skaitykite naujausius pranešimus spaudai apie ES daugiametį biudžetą
+  - Skaitykite naujausias informacijos santraukas ir tyrimus apie ES daugiametį
+    biudžetą.
+  - Informacijos rinkinyje žiniasklaidai pateikiama konkreti informacija ir
+    kontaktai, padėsiantys rengti informaciją apie ES daugiametį biudžetą.
+homeCampaignTitle: Investuokime į tai, kas svarbu
+homeCampaignLinkLabel: Kampanijos medžiaga
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Papildoma informacija
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Naujausios Eurobarometro apklausos
+  - "Faktų suvestinė: ES finansavimas"
+  - Europos Komisijos tinklapis apie ES daugiametį biudžetą
+  - Tarybos tinklapis apie ES daugiametį biudžetą
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/lt/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/lt/section/188/financing

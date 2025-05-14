@@ -1,50 +1,70 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "Az EU hosszú távú költségvetése: minden, amit tudni kell róla"
+metaDescription: Tudja meg, mi az EU hosszú távú költségvetése, hogyan döntenek
+  róla és hogyan fektetik be, és hogy milyen kulcsszerepet játszik ebben az
+  Európai Parlament.
+homeH1: Az EU hosszú távú költségvetése
+homeSubtitle: Abba fektessünk, ami valóban számít
+homeIntroText: >
+  <p>Az EU hosszú távú költségvetése ösztönzi az Európa jövőjébe való
+  beruházást, és javítja a polgárok életét.<br>Közös projekteket finanszíroz, és
+  a gazdasági versenyképességtől a mezőgazdaságig terjedő prioritásokat valósít
+  meg.</p>
+
+  <p><strong>Fedezze fel az uniós költségvetés előnyeit, és ismerje meg, hogyan
+  születnek a költségvetéssel kapcsolatos döntések.</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Miért fontos?
+  - Hogyan működik?
+  - Az Európai Parlament szerepe
+  - Az Európai Parlament álláspontja
+  - Az EU költségvetése az Ön országában és régiójában
+homeCardText:
+  - Tudja meg, hogyan teszi az EU számára lehetővé a hosszú távú költségvetés,
+    hogy egyesítse az erőforrásokat és az európaiak számára fontos terültekbe
+    fektessen.
+  - Fedezze fel, hogyan finanszírozzák az EU hosszú távú költségvetését, mibe
+    fektetik be a pénzt, és még sok minden mást is!
+  - Ismerje meg, milyen szerepet játszik az Európai Parlament az uniós
+    költségvetéssel kapcsolatos döntéshozatalban és felhasználásának
+    felügyeletében.
+  - Itt olvashat arról, hogy melyek az Európai Parlament prioritásai a
+    következő, hosszú távú uniós költségvetésről szóló tárgyalások során.
+  - Fedezze fel, hogyan szolgálja az uniós költségvetés Önt, a területet, ahol
+    él, és az országát!
 homeCardLinkURL:
   - /hu/why-it-matters/
   - /hu/how-it-works/
   - /hu/our-role/
   - /hu/our-position/
   - /hu/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Legfrissebb hírek
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Sajtóközlemények
+  - Részletes cikkek
+  - Sajtóanyag
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/hu/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Itt olvashatja el a legfrissebb sajtóközleményeket az EU hosszú távú
+    költségvetéséről
+  - Itt olvashatja el az EU hosszú távú költségvetéséről szóló legfrissebb
+    szakpolitikai összefoglalókat és tanulmányokat
+  - "Újságíróknak: a sajtóeszköztár specifikus információkat és elérhetőségeket
+    tartalmaz, amelyek segítenek az EU hosszú távú költségvetésének
+    ismertetésében"
+homeCampaignTitle: Abba fektessünk, ami valóban számít
+homeCampaignLinkLabel: Kampányanyagok
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Kapcsolódó linkek
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Legújabb közvélemény-kutatások - Eurobarométer
+  - "Tájékoztató az EU működéséről: az EU finanszírozása"
+  - Az Európai Bizottság weboldala az EU hosszú távú költségvetéséről
+  - A Tanács weboldala az EU hosszú távú költségvetéséről
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/hu/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/hu/section/188/financing

@@ -1,9 +1,9 @@
 pageLabelHome: Startpagina
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Waarom het belangrijk is
+pageLabelHowItWorks: Hoe het werkt
+pageLabelOurRole: Onze rol
+pageLabelOurPosition: Ons standpunt
+pageLabelByCountry: Per land
 clickToPlayVideo: Klik om de video te starten
 mainNav: Hoofdnavigatie
 openMenu: Menu openen
@@ -33,9 +33,10 @@ contactUs: Contact
 contactUsURL: https://www.europarl.europa.eu/portal/nl/contact
 clickHere: Klik hier
 shareOnFacebook: Deze pagina delen op Facebook
-shareOnX: ""
+shareOnX: Deel deze pagina op X
 shareOnLinkedIn: Deze pagina delen op LinkedIn
 shareOnWhatsApp: Deze pagina delen via WhatsApp
+socialMediaCardText: De langetermijnbegroting van de EU
 socialMediaCardUrl: ""
 all: Alle
 selectCountry: Selecteer een land
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/nl/accessibility
 goToWebsite: "Ga naar de website:"
 shareOnLabel: Delen op
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Delen
 goToPage: Naar de webpagina
 epLogoAltText: Logo van het Europees Parlement
 skipToLanguageMenu: Naar het taalmenu
 skipToMainContent: Naar de inhoud
 epWebsite: Website van het Europees Parlement
-onX: ""
+onX: Op X
 onFacebook: op Facebook
 onLinkedIn: op LinkedIn
 onWhatsApp: op WhatsApp
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: URL kopiëren
 copyURLToClipboard: Kopieer de URL naar je klembord
 urlCopiedToClipboard: De URL is naar je klembord gekopieerd.
+error404: fout 404
+error404Message: Deze pagina kon niet worden gevonden of bestaat niet meer

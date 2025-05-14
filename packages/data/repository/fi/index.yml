@@ -1,50 +1,63 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: EU:n pitkän aikavälin budjetti pähkinänkuoressa
+metaDescription: Lue EU:n pitkän aikavälin budjetista, budjettineuvotteluista ja
+  Euroopan parlamentin roolista.
+homeH1: EU:n pitkän aikavälin budjetti
+homeSubtitle: Investoidaan olennaiseen
+homeIntroText: >
+  <p>EU:n pitkän aikavälin budjetti ohjaa investointeja Euroopan tulevaisuuteen
+  ja parantaa EU-kansalaisten elämänlaatua. Siitä rahoitetaan yhteisiä hankkeita
+  ja prioriteetteja talouden kilpailukyvystä maatalouteen.</p>
+
+  <p><strong>Lue, mitä hyötyjä EU-budjetista on ja miten siitä
+  päätetään.</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Miksi EU-budjetti on tärkeä
+  - Miten EU-budjetti toimii
+  - Euroopan parlamentin rooli
+  - Euroopan parlamentin kanta
+  - EU-budjetti kotimaassasi ja alueellasi
+homeCardText:
+  - Tutustu siihen, miten pitkän aikavälin budjetin ansiosta EU voi yhdistää
+    resursseja ja investoida eurooppalaisille olennaisiin asioihin.
+  - Lue, mistä EU:n pitkän aikavälin budjetti koostuu, mihin rahaa käytetään ja
+    paljon muuta.
+  - Tutustu Euroopan parlamentin rooliin EU-budjetin neuvotteluissa sekä sen
+    käytön valvonnassa.
+  - Katso, mitkä Euroopan parlamentin prioriteetit ovat seuraavan EU:n pitkän
+    aikavälin budjetin neuvotteluissa.
+  - Miten EU-budjetti hyödyttää sinua, asuinaluettasi ja kotimaatasi?
 homeCardLinkURL:
   - /fi/why-it-matters/
   - /fi/how-it-works/
   - /fi/our-role/
   - /fi/our-position/
   - /fi/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Tuoreimmat uutiset
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Lehdistötiedotteet
+  - Tutkimustietoa
+  - Lehdistöpaketti
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/fi/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Lue tuoreimmat EU:n pitkän aikavälin budjettia koskevat lehdistötiedotteet
+  - Täältä löydät tuoreimmat tausta-asiakirjat ja tutkimukset EU:n pitkän
+    aikavälin budjetista
+  - Toimittajille tarkoitettu lehdistöpaketti tarjoaa tietoa ja yhteystietoja,
+    jotka auttavat kirjoittamaan EU:n pitkän aikavälin budjetista
+homeCampaignTitle: Investoidaan olennaiseen
+homeCampaignLinkLabel: Kampanjamateriaalit
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Aiheeseen liittyvät linkit
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Tuoreimmat mielipidekyselytulokset - Eurobarometri
+  - "Faktatietoa EU:n toiminnasta: EU:n rahoitus"
+  - Euroopan komission verkkosivusto EU:n pitkän aikavälin budjetista
+  - EU:n neuvoston verkkosivusto EU:n pitkän aikavälin budjetista
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/fi/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/fi/section/188/financing

@@ -1,11 +1,16 @@
-metaTitle: ""
-metaDescription: ""
-pageH1: ""
-pageChapo: ""
+metaTitle: ELi pikaajalise eelarve eelised liikmesriikidele
+metaDescription: Kuidas vastab ELi pikajaline eelarve liikmesriikide ja eurooplaste vajadustele.
+pageH1: ELi pikaajalise eelarve kasud liikmesriikidele
+pageChapo: >
+  <p>ELi pikaajaline eelarve on oluline riikidele ja piirkondadele. Sellega
+  toetatakse teadusuuringuid, konkurentsivõimet, põllumajandust, kliimameetmeid,
+  hädaabi ja muid algatusi.</p>
+
+  <p>Vali riik, et saada teavet projektide ja investeeringute kohta.</p>
 linkLabel: ""
 linkURL: ""
 selectCountry: Vali riik
-buttonContinue: ""
+buttonContinue: Jätka
 atUrl: https://what-europe-does-for-me.europarl.europa.eu/et/region?area=AT&txt=%C3%96sterreich
 beUrl: https://what-europe-does-for-me.europarl.europa.eu/et/region?area=BE&txt=Belgique-Belgi%C3%AB
 bgUrl: https://what-europe-does-for-me.europarl.europa.eu/et/region?area=BG&txt=%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F

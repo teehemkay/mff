@@ -1,9 +1,9 @@
 pageLabelHome: Leathanach baile
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: An tábhacht a bhaineann leis
+pageLabelHowItWorks: Mar a oibríonn sé
+pageLabelOurRole: An ról atá againn
+pageLabelOurPosition: Ár seasamh
+pageLabelByCountry: In aghaidh na tíre
 clickToPlayVideo: Cliceáil chun amharc ar an bhfíseán
 mainNav: Príomh-nascleanúint
 openMenu: Oscail roghchlár
@@ -33,9 +33,10 @@ contactUs: Teagmháil
 contactUsURL: https://www.europarl.europa.eu/portal/fr/contact
 clickHere: Cliceáil anseo
 shareOnFacebook: Roinn an leathanach seo ar Facebook
-shareOnX: ""
+shareOnX: Roinn an leathanach seo ar X
 shareOnLinkedIn: Roinn an leathanach seo ar LinkedIn
 shareOnWhatsApp: Roinn an leathanach seo ar Whatsapp
+socialMediaCardText: Buiséad fadtéarmach an AE
 socialMediaCardUrl: ""
 all: Gach rud
 selectCountry: Roghnaigh tír
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/fr/accessibility
 goToWebsite: "Téigh go dtí an suíomh gréasáin:"
 shareOnLabel: Páirtigh
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Roinn
 goToPage: Téigh go dtí an leathanach
 epLogoAltText: Lógó Pharlaimint na hEorpa
 skipToLanguageMenu: Gabh chuig an roghchlár teanga
 skipToMainContent: Gabh chuig an bpríomhinneachar
 epWebsite: Suíomh gréasáin Pharlaimint na hEorpa
-onX: ""
+onX: ar X
 onFacebook: ar Facebook
 onLinkedIn: ar LinkedIn
 onWhatsApp: ar WhatsApp
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Cóipeáil an URL
 copyURLToClipboard: Cóipeáil an seoladh chuig do ghearrthaisce
 urlCopiedToClipboard: Tá an seoladh cóipeáilte chuig do ghearrthaisce
+error404: earráid 404
+error404Message: Níor aimsíodh an leathanach seo nó ní ann dó a thuilleadh

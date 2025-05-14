@@ -1,11 +1,17 @@
-metaTitle: ""
-metaDescription: ""
-pageH1: ""
-pageChapo: ""
+metaTitle: "Proračun EU: koristi za vas in vašo državo"
+metaDescription: Odkrijte, kako je proračun EU prilagojen vašim potrebam in
+  potrebam vaše države.
+pageH1: "Proračun EU: koristi za vas in vašo državo"
+pageChapo: >
+  <p>Dolgoročni proračun EU prinaša koristi za države in regije. Podpira
+  raziskave, konkurenčnost, kmetijstvo, podnebne ukrepe, nudi pomoč ob naravnih
+  nesrečah in druge pobude.</p>
+
+  <p>Izberite državo in se seznanite s projekti in naložbami.</p>
 linkLabel: ""
 linkURL: ""
 selectCountry: Izberi državo
-buttonContinue: ""
+buttonContinue: Nadaljuj
 atUrl: https://what-europe-does-for-me.europarl.europa.eu/sl/region?area=AT&txt=%C3%96sterreich
 beUrl: https://what-europe-does-for-me.europarl.europa.eu/sl/region?area=BE&txt=Belgique-Belgi%C3%AB
 bgUrl: https://what-europe-does-for-me.europarl.europa.eu/sl/region?area=BG&txt=%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F

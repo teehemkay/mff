@@ -36,6 +36,7 @@ shareOnFacebook: Share this page on Facebook
 shareOnX: Share this page on X
 shareOnLinkedIn: Share the page on Linkedin
 shareOnWhatsApp: Share the page on WhatsApp
+socialMediaCardText: The EU long term budget
 socialMediaCardUrl: ""
 all: All
 selectCountry: Select a country
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Copy URL
 copyURLToClipboard: Copy the address to your clipboard
 urlCopiedToClipboard: The address has been copied to your clipboard.
+error404: error 404
+error404Message: This page was not found or does no longer exist

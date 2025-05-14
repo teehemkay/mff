@@ -1,9 +1,9 @@
 pageLabelHome: Hem
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Varför den är viktig
+pageLabelHowItWorks: Hur den fungerar
+pageLabelOurRole: Europaparlamentets roll
+pageLabelOurPosition: Europaparlamentets ståndpunkt
+pageLabelByCountry: EU-budgeten i ditt land och din region
 clickToPlayVideo: Klicka för att spela videon
 mainNav: Huvudmeny
 openMenu: Öppna meny
@@ -33,9 +33,10 @@ contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/sv/contact
 clickHere: Klicka här
 shareOnFacebook: Dela den här sidan på Facebook
-shareOnX: ""
+shareOnX: Dela denna sida på X
 shareOnLinkedIn: Dela den här sidan på LinkedIn
 shareOnWhatsApp: Dela den här sidan på WhatsApp
+socialMediaCardText: EU:s långtidsbudget
 socialMediaCardUrl: ""
 all: Alla
 selectCountry: Välj land
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/sv/accessibility
 goToWebsite: "Gå till hemsidan:"
 shareOnLabel: Dela på
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Dela
 goToPage: Gå till sidan
 epLogoAltText: Europaparlamentets logotyp
 skipToLanguageMenu: Direkt till språkmenyn
 skipToMainContent: Direkt till huvudinnehållet
 epWebsite: Europaparlamentets webbplats
-onX: ""
+onX: på X
 onFacebook: på Facebook
 onLinkedIn: på Linkedin
 onWhatsApp: på WhatsApp
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Kopiera webbadress
 copyURLToClipboard: Kopiera adressen till urklipp
 urlCopiedToClipboard: Adressen har kopierats till urklipp.
+error404: felkod 404
+error404Message: Sidan kunde inte hittas eller finns inte längre

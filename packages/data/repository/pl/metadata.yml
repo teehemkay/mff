@@ -1,9 +1,9 @@
 pageLabelHome: Strona główna
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Dlaczego to ważne
+pageLabelHowItWorks: Jak to działa
+pageLabelOurRole: Rola Parlamentu Europejskiego
+pageLabelOurPosition: Stanowisko Parlamentu Europejskiego
+pageLabelByCountry: Budżet UE w Twoim kraju i regionie
 clickToPlayVideo: Kliknij aby odtworzyć
 mainNav: Menu główne
 openMenu: Wyświetl menu
@@ -33,9 +33,10 @@ contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/pl/contact
 clickHere: Kliknij tutaj
 shareOnFacebook: Udostępnij tę stronę na Facebooku
-shareOnX: ""
+shareOnX: Udostępnij na X
 shareOnLinkedIn: Udostępnij tę stronę na LinkedIn
 shareOnWhatsApp: Udostępnij tę stronę na WhatsAppie
+socialMediaCardText: Wieloletni budżet UE
 socialMediaCardUrl: ""
 all: Wszystkie
 selectCountry: Wybierz kraj
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/pl/accessibility
 goToWebsite: "Odwiedź stronę:"
 shareOnLabel: Udostępnij
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Udostępnij
 goToPage: Przejdź do tej strony
 epLogoAltText: Logo Parlamentu Europejskiego
 skipToLanguageMenu: Przejdź do menu językowego
 skipToMainContent: Przejdź do treści głównej
 epWebsite: Strona Parlamentu Europejskiego
-onX: ""
+onX: na X
 onFacebook: na Facebooku
 onLinkedIn: na LinkedIn
 onWhatsApp: na WhatsApp
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Kopiuj adres URL
 copyURLToClipboard: Skopiuj adres do schowka
 urlCopiedToClipboard: Adres został skopiowany do schowka
+error404: błąd 404
+error404Message: Ta strona nie została odnaleziona lub już nie istnieje

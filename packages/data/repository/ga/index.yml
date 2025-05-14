@@ -1,50 +1,63 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "Buiséad fadtéarmach an AE: gach eolas a theastaíonn uait"
+metaDescription: Foghlaim cad is buiséad fadtéarmach an AE ann, faoin gcaoi a
+  ndéantar é a chaibidliú agus a infheistiú agus faoin ról lárnach atá ag
+  Parlaimint na hEorpa sa phróiseas
+homeH1: Buiséad fadtéarmach an AE
+homeSubtitle: Infheistiú sna rudaí is tábhachtaí
+homeIntroText: |
+  <p>Spregann buiséad fadtéarmach an AE infheistíocht i dtodhchaí na hEorpa, rud a chuireann feabhas ar shaol na saoránach. Maoiníonn sé comhthionscadail agus cuireann sé tosaíochtaí i gcrích ó iomaíochas eacnamaíoch go talmhaíocht.                                                                                                                                                                 </p>
+  <p><strong>Faigh amach faoi na buntáistí a bhaineann le buiséad an AE agus foghlaim conas a dhéantar cinntí faoi.</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - An tábhacht a bhaineann leis
+  - Mar a oibríonn sé
+  - Ról Pharlaimint na hEorpa
+  - Seasamh Pharlaimint na hEorpa
+  - Buiséad an AE i do thír agus i do réigiún féin
+homeCardText:
+  - Faigh amach faoin gcaoi a gcuireann an buiséad fadtéarmach ar chumas an
+    Aontais acmhainní a chomhthiomsú agus infheistíocht a dhéanamh sna rudaí is
+    tábhachtaí do mhuintir na hEorpa.
+  - Foghlaim faoin gcaoi a maoinítear buiséad fadtéarmach an AE, conas a
+    dhéantar an t-airgead a infheistiú, agus i bhfad níos mó.
+  - Foghlaim faoin ról atá ag Parlaimint na hEorpa i mbuiséad an Aontais a
+    chinneadh agus maoirseacht a dhéanamh ar a úsáid.
+  - Léigh faoi thosaíochtaí Pharlaimint na hEorpa sa chaibidlíocht maidir leis
+    an gcéad bhuiséad fadtéarmach eile de chuid an Aontais.
+  - Faigh amach faoin gcaoi a dtéann buiséad an Aontais chun tairbhe duit, do do
+    réigiún agus do do thír.
 homeCardLinkURL:
   - /ga/why-it-matters/
   - /ga/how-it-works/
   - /ga/our-role/
   - /ga/our-position/
   - /ga/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Nuashonruithe is déanaí
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Preasráitis
+  - Ailt ghrinne
+  - Pacáiste preasa
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/ga/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Léigh na preasráitis is déanaí ar bhuiséad fadtéarmach an AE
+  - Léigh na beartasbhileoga agus na staidéir is déanaí ar bhuiséad fadtéarmach
+    an Aontais
+  - "D'iriseoirí: Cuireann an pacáiste preasa eolas agus teagmhálacha ar leith
+    ar fáil chun cabhrú leat buiséad fadtéarmach an Aontais a chlúdach"
+homeCampaignTitle: Infheistiú sna rudaí is tábhachtaí
+homeCampaignLinkLabel: Ábhair an fheachtais
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Naisc ghaolmhara
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Na suirbhéanna is déanaí ar thuairimí an phobail - Eorabharaiméadar
+  - "Bileog eolais faoin gcaoi a n-oibríonn an tAontas Eorpach: an tAontas a
+    mhaoiniú"
+  - Suíomh gréasáin an Choimisiúin Eorpaigh maidir le buiséad fadtéarmach an AE
+  - Suíomh gréasáin na Comhairle maidir le buiséad fadtéarmach an AE
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/ga/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/ga/section/188/financing

@@ -1,50 +1,65 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "EU's langsigtede budget: alt, du skal vide"
+metaDescription: Lær, hvad EU's langsigtede budget er, hvordan det forhandles og
+  investeres, og hvordan Europa-Parlamentet spiller en central rolle.
+homeH1: EU's langsigtede budget
+homeSubtitle: Invester i det, der tæller
+homeIntroText: >
+  <p>EU&#39;s langsigtede budget fremmer investeringer i Europas fremtid og
+  forbedrer borgernes liv.
+
+  Det finansierer fælles projekter og gennemfører prioriteter inden for alt fra
+  økonomisk konkurrenceevne til landbrug.</p>
+
+  <p><strong>Opdag fordelene ved EU&#39;s budget, og find ud af, hvordan
+  beslutningerne herom træffes.</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Hvorfor er det vigtigt
+  - Sådan fungerer det
+  - Europa-Parlamentets rolle
+  - Europa-Parlamentets holdning
+  - EU-budgettet i dit land og din region
+homeCardText:
+  - Find ud af, hvordan det langsigtede budget giver EU mulighed for at samle
+    ressourcer og investere i det, der er vigtigt for europæerne.
+  - Se, hvordan EU's langsigtede budget finansieres, hvad pengene investeres i
+    og meget mere.
+  - Lær, hvilken rolle Europa-Parlamentet spiller i beslutningerne om EU's
+    budget og i kontrollen med, hvordan det bruges.
+  - Læs om Europa-Parlamentets prioriteter i forhandlingerne om det næste
+    langsigtede EU-budget
+  - Find ud af, hvordan EU-budgettet kommer dig, din region og dit land til gode.
 homeCardLinkURL:
   - /da/why-it-matters/
   - /da/how-it-works/
   - /da/our-role/
   - /da/our-position/
   - /da/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Seneste opdateringer
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Pressemeddelelser
+  - Dybdegående artikler
+  - Pressekit
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/da/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Læs de seneste pressemeddelelser om EU's langsigtede budget
+  - Læs de seneste politiske briefinger og undersøgelser om EU's langsigtede
+    budget
+  - "For journalister: Pressekittet indeholder specifikke oplysninger og
+    kontaktoplysninger, der kan hjælpe dig med at dække EU's langsigtede budget"
+homeCampaignTitle: Invester i det, der tæller
+homeCampaignLinkLabel: Kampagnemateriale
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Relaterede links
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Seneste meningsmålinger – Eurobarometer
+  - "Fakta om, hvordan EU fungerer: finansiering af EU"
+  - Europa-Kommissionens hjemmeside om EU's langsigtede budget
+  - Rådets hjemmeside om EU's langsigtede budget
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/da/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/da/section/188/financing
