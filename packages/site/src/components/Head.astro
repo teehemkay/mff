@@ -18,9 +18,16 @@ interface Props {
 const { lang, currentPage, currentFAQ } = Astro.props;
 const { epWebsite, epLogoAltText } = metadata(lang);
 
+const meta404 = (lang) => {
+  const { error404, error404Message } = metadata(lang);
+  return { metaTitle: error404, metaDescription: error404Message };
+};
+
 const { metaTitle, metaDescription } = currentFAQ
   ? faqDetails({ lang, currentPage, currentFAQ })
-  : contentForPage(currentPage, lang);
+  : currentPage === '404'
+    ? meta404(lang)
+    : contentForPage(currentPage, lang);
 
 const sharingImage = `${kBaseURL}${kAssetsDir}/img/sharing/ep_mff_${lang}.png`;
 const sharingImageX = `${kBaseURL}${kAssetsDir}/img/sharingep_mff_square_${lang}.png`;
