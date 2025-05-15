@@ -5,6 +5,10 @@ pageH1: "Orçamento da UE: os benefícios para si e para o seu país"
 pageChapo: >
   <p>O orçamento da UE apoia países e regiões com investimentos em investigação,
   agricultura, clima, competitividade, ajuda para catástrofes e não só. </p>
+
+  <p>Selecione um país para saber mais sobre projetos e investimentos perto de
+  si.
+   </p>
 linkLabel: ""
 linkURL: ""
 selectCountry: Selecionar o país
