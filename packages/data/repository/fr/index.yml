@@ -1,50 +1,68 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "Le budget à long terme de l'UE : tout ce que vous devez savoir"
+metaDescription: Découvrez ce qu'est le budget à long terme de l'UE, la manière
+  dont il est négocié et investi et apprenez-en davantage sur le rôle clé que
+  joue la Parlement dans son élaboration.
+homeH1: Le budget à long terme de l'UE
+homeSubtitle: Investir dans ce qui compte
+homeIntroText: >
+  <p>Le budget à long terme de l&#39;UE permet d&#39;investir dans l&#39;avenir
+  de l&#39;Europe et d&#39;améliorer la vie des citoyens. Il finance des projets
+  communs et répond à des priorités allant de la compétitivité économique à
+  l&#39;agriculture. </p>
+
+  <p><strong>Découvrez à quoi sert le  budget de l&#39;UE et comment il est
+  élaboré .</strong> </p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Pourquoi c'est important
+  - Comment ça marche ?
+  - Le rôle du Parlement européen
+  - La position du Parlement européen
+  - Le budget de l'UE dans votre pays et votre région
+homeCardText:
+  - Découvrez comment le budget à long terme permet à l'UE de mettre ses
+    ressources en commun et d'investir dans ce qui compte pour les Européens.
+  - Découvrez comment le budget à long terme de l'UE est financé, dans quelles
+    priorités l'argent est investi, et bien plus encore.
+  - Découvrez le rôle que joue le Parlement européen dans les décisions
+    relatives au budget de l'UE et dans le contrôle de son utilisation.
+  - Découvrez les priorités du Parlement européen dans les négociations sur le
+    prochain budget à long terme de l'UE.
+  - Découvrez comment vous, votre région et votre pays bénéficiez du budget de
+    l'UE.
 homeCardLinkURL:
   - /fr/why-it-matters/
   - /fr/how-it-works/
   - /fr/our-role/
   - /fr/our-position/
   - /fr/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Dernières mises à jour
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Communiqués de presse
+  - Articles détaillés
+  - Dossier de presse
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/fr/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Consultez les derniers communiqués de presse sur le budget à long terme de
+    l'UE
+  - Parcourez les dernières notes d'information et études sur le budget à long
+    terme de l'UE
+  - "Pour les journalistes : le dossier de presse fournit des informations
+    détaillées et des contacts pour vous aider à couvrir le budget à long terme
+    de l'UE."
+homeCampaignTitle: Investir dans ce qui compte
+homeCampaignLinkLabel: Matériel de campagne
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Liens connexes
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Derniers sondages d'opinion - Eurobaromètre
+  - "Fiche d'information sur le fonctionnement de l'UE : le financement de l'UE"
+  - Site internet de la Commission européenne sur le budget à long terme de l'UE
+  - Site internet du Conseil sur le budget à long terme de l'UE
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/fr/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/fr/section/188/financing

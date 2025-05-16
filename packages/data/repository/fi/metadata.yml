@@ -1,9 +1,9 @@
 pageLabelHome: Kotisivu
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Miksi EU-budjetti on tärkeä
+pageLabelHowItWorks: Miten EU-budjetti toimii
+pageLabelOurRole: Parlamentin rooli
+pageLabelOurPosition: Parlamentin kanta
+pageLabelByCountry: Maittain
 clickToPlayVideo: Klikkaa toistaaksesi videon
 mainNav: Päävalikko
 openMenu: Avaa valikko
@@ -33,9 +33,10 @@ contactUs: Yhteystiedot
 contactUsURL: https://www.europarl.europa.eu/portal/fi/contact
 clickHere: Klikkaa tästä
 shareOnFacebook: Jaa tämä sivu Facebookissa
-shareOnX: ""
+shareOnX: Jaa sivu X:ssä
 shareOnLinkedIn: Jaa tämä sivu Linkedinissä
 shareOnWhatsApp: Jaa tämä sivu WhatsAppissa
+socialMediaCardText: EU:n pitkän aikavälin budjetti
 socialMediaCardUrl: ""
 all: Kaikki
 selectCountry: Valitse maa
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/fi/accessibility
 goToWebsite: "Siirry verkkosivulle:"
 shareOnLabel: Jaa
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Jaa
 goToPage: Siirry sivulle
 epLogoAltText: Euroopan parlamentin logo
 skipToLanguageMenu: Siirry kielivalikkoon
 skipToMainContent: Siirry pääsisältöön
 epWebsite: Euroopan parlamentin verkkosivusto
-onX: ""
+onX: X:ssä
 onFacebook: Facebookissa
 onLinkedIn: LinkedInissä
 onWhatsApp: WhatsAppissa
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Kopioi URL-osoite
 copyURLToClipboard: Kopioi osoite leikepöydälle.
 urlCopiedToClipboard: Osoite on kopioitu leikepöydälle.
+error404: 404-virhe
+error404Message: Sivua ei löydy tai sitä ei ole enää olemassa

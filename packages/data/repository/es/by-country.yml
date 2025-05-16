@@ -1,11 +1,19 @@
-metaTitle: ""
-metaDescription: ""
-pageH1: ""
-pageChapo: ""
+metaTitle: "Presupuesto de la UE: beneficios para ti y tu país"
+metaDescription: Descubre cómo el presupuesto de la UE responde a tus
+  necesidades y a las de tu país.
+pageH1: "Presupuesto de la UE: beneficios para ti y tu país"
+pageChapo: >
+  <p>El presupuesto de la UE a largo plazo contribuye de forma significativa al
+  desarrollo de los países y las regiones. Financia la investigación, la
+  competitividad, la agricultura, la acción por el clima, la ayuda en caso de
+  catástrofes y otras iniciativas.</p>
+
+  <p>Selecciona un país para descubrir los proyectos e inversiones en
+  marcha.</p>
 linkLabel: ""
 linkURL: ""
 selectCountry: Seleccionar un país
-buttonContinue: ""
+buttonContinue: Continuar
 atUrl: https://what-europe-does-for-me.europarl.europa.eu/es/region?area=AT&txt=%C3%96sterreich
 beUrl: https://what-europe-does-for-me.europarl.europa.eu/es/region?area=BE&txt=Belgique-Belgi%C3%AB
 bgUrl: https://what-europe-does-for-me.europarl.europa.eu/es/region?area=BG&txt=%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F

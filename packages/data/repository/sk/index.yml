@@ -1,50 +1,62 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "Dlhodobý rozpočet EÚ: Všetko, čo potrebujete vedieť"
+metaDescription: Zistite, čo je dlhodobý rozpočet EÚ, ako sa o ňom rokuje, aké
+  sú priority a ako Európsky parlament zohráva kľúčovú úlohu v tomto procese.
+homeH1: Dlhodobý rozpočet EÚ
+homeSubtitle: Investujte do toho, na čom záleží
+homeIntroText: >
+  <p>Dlhodobý rozpočet EÚ stimuluje investície, ktoré vplývajú nabudúcnosť
+  Európy a životy občanov.<br>Financuje spoločné projekty a plní priority od
+  hospodárskej konkurencieschopnosti až po poľnohospodárstvo. </p>
+
+  <p><strong>Objavte výhody rozpočtu EÚ a zistite, ako sa o ňom prijímajú
+  rozhodnutia.</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Prečo je to dôležité
+  - Ako to funguje
+  - Úloha Európskeho parlamentu
+  - Pozícia Európskeho parlamentu
+  - Rozpočet EÚ vo vašej krajine a regióne
+homeCardText:
+  - Zistite, ako dlhodobý rozpočet umožňuje EÚ združovať zdroje a investovať do
+    toho, čo je pre Európanov dôležité.
+  - Preskúmajte, ako sa financuje dlhodobý rozpočet EÚ, do čoho sa investujú
+    peniaze a oveľa viac.
+  - Zistite, akú úlohu zohráva Európsky parlament pri rozhodovaní o rozpočte EÚ
+    a pri dohľade nad jeho využívaním.
+  - Prečítajte si o prioritách Európskeho parlamentu v rokovaniach o budúcom
+    dlhodobom rozpočte EÚ.
+  - Zistite, aký prínos má rozpočet EÚ pre vás, váš región a vašu krajinu.
 homeCardLinkURL:
   - /sk/why-it-matters/
   - /sk/how-it-works/
   - /sk/our-role/
   - /sk/our-position/
   - /sk/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Najnovšie aktualizácie
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Tlačové správy
+  - Podrobné články
+  - Tlačový kit
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/sk/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Prečítajte si najnovšie tlačové správy o dlhodobom rozpočte EÚ
+  - Prečítajte si najnovšie brífingy a štúdie o dlhodobom rozpočte EÚ
+  - "Pre novinárov: Tlačový kit poskytuje konkrétne informácie a kontakty, ktoré
+    vám pomôžu pokryť dlhodobý rozpočet EÚ"
+homeCampaignTitle: Investujeme do toho, na čom záleží
+homeCampaignLinkLabel: Materiál ku kampani
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Súvisiace odkazy
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Najnovšie prieskumy verejnej mienky – Eurobarometer
+  - "Informačný prehľad o fungovaní EÚ: financovanie EÚ"
+  - Webová stránka Európskej komisie o dlhodobom rozpočte EÚ
+  - Webová stránka Rady o dlhodobom rozpočte EÚ
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/sk/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/sk/section/188/financing

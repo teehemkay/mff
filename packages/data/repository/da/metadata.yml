@@ -1,9 +1,9 @@
 pageLabelHome: Hjem
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Hvorfor er det vigtigt
+pageLabelHowItWorks: Sådan fungerer det
+pageLabelOurRole: Vores rolle
+pageLabelOurPosition: Vores holdning
+pageLabelByCountry: Efter land
 clickToPlayVideo: Klik for at afspille videoen
 mainNav: Hovedmenu
 openMenu: Åben menu
@@ -33,9 +33,10 @@ contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/da/contact
 clickHere: Klik her
 shareOnFacebook: Del denne side på Facebook
-shareOnX: ""
+shareOnX: Del denne side på X
 shareOnLinkedIn: Del denne side på Linkedin
 shareOnWhatsApp: Del denne side på WhatsApp
+socialMediaCardText: EU's langsigtede budget
 socialMediaCardUrl: ""
 all: Alle
 selectCountry: Vælg land
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/da/accessibility
 goToWebsite: "Gå til hjemmesiden:"
 shareOnLabel: Del på
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Del
 goToPage: Gå til siden
 epLogoAltText: Europa-Parlamentets logo
 skipToLanguageMenu: Gå til sprogmenuen
 skipToMainContent: Gå til hovedindholdet
 epWebsite: Europa-Parlamentets websted
-onX: ""
+onX: på X
 onFacebook: på Facebook
 onLinkedIn: på LinkedIn
 onWhatsApp: på WhatsApp
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Kopier URL
 copyURLToClipboard: Kopier adresse til din udklipsholder
 urlCopiedToClipboard: Adresse er blevet kopieret til din udklipsholder.
+error404: fejl 404
+error404Message: Siden blev ikke fundet eller eksisterer ikke længere

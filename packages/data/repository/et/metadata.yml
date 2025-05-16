@@ -1,9 +1,9 @@
 pageLabelHome: Esileht
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Miks see on oluline
+pageLabelHowItWorks: Kuidas see toimib
+pageLabelOurRole: Parlamendi roll
+pageLabelOurPosition: Parlamendi seisukoht
+pageLabelByCountry: Riikide kaupa
 clickToPlayVideo: Vajutage siia, et mängida video
 mainNav: Põhimenüü
 openMenu: Ava menüü
@@ -33,9 +33,10 @@ contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/et/contact
 clickHere: Klõpsa siia
 shareOnFacebook: Jaga Facebookis
-shareOnX: ""
+shareOnX: Jaga X'is
 shareOnLinkedIn: Jaga LinkedInis
 shareOnWhatsApp: Jaga WhatsAppis
+socialMediaCardText: ELi pikaajaline eelarve
 socialMediaCardUrl: ""
 all: Kõik
 selectCountry: Vali riik
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/et/accessibility
 goToWebsite: "Mine veebilehele:"
 shareOnLabel: Jaga
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Jaga
 goToPage: Lehele
 epLogoAltText: Euroopa Parlamendi logo
 skipToLanguageMenu: Otse keelemenüüsse
 skipToMainContent: Põhisisu juurde
 epWebsite: Euroopa Parlamendi veebisait
-onX: ""
+onX: X'is
 onFacebook: Facebook
 onLinkedIn: LinkedIn
 onWhatsApp: WhatsApp
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Kopeeri URL
 copyURLToClipboard: Kopeeri aadress
 urlCopiedToClipboard: Aadress kopeeritud.
+error404: viga 404
+error404Message: Lehekülge ei leitud või seda ei ole enam olemas

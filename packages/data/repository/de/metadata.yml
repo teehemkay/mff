@@ -1,9 +1,9 @@
 pageLabelHome: Startseite
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Warum ist er wichtig?
+pageLabelHowItWorks: Wie funktioniert er?
+pageLabelOurRole: Unsere Rolle
+pageLabelOurPosition: Unser Standpunkt
+pageLabelByCountry: Nach Land
 clickToPlayVideo: Klicken, um Video abzuspielen
 mainNav: Hauptmenü
 openMenu: Menü öffnen
@@ -33,9 +33,10 @@ contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/de/contact
 clickHere: Hier klicken
 shareOnFacebook: Diese Seite auf Facebook teilen
-shareOnX: ""
+shareOnX: Teilen Sie diese Seite auf X
 shareOnLinkedIn: Diese Seite auf LinkedIn teilen
 shareOnWhatsApp: Diese Seite auf WhatsApp teilen
+socialMediaCardText: Der langfristige EU-Haushalt
 socialMediaCardUrl: ""
 all: Alle
 selectCountry: Land auswählen
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/de/accessibility
 goToWebsite: "Gehe zur Website:"
 shareOnLabel: Teilen auf
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Teilen
 goToPage: Seite aufrufen
 epLogoAltText: Logo des Europäischen Parlaments
 skipToLanguageMenu: Zum Sprachmenü wechseln
 skipToMainContent: Zum Hauptinhalt wechseln
 epWebsite: Website des Europäischen Parlaments
-onX: ""
+onX: auf X
 onFacebook: auf Facebook
 onLinkedIn: auf LinkedIn
 onWhatsApp: auf WhatsApp
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: URL kopieren
 copyURLToClipboard: Adresse in die Zwischenablage kopieren
 urlCopiedToClipboard: Die Adresse wurde in die Zwischenablage kopiert.
+error404: Fehler 404
+error404Message: Die Seite konnte nicht gefunden werden oder ist nicht mehr vorhanden

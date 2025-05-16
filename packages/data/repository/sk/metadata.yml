@@ -1,9 +1,9 @@
 pageLabelHome: Domovská stránka
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Prečo je to dôležité
+pageLabelHowItWorks: Ako to funguje
+pageLabelOurRole: Úloha Európskeho parlamentu
+pageLabelOurPosition: Pozícia Európskeho parlamentu
+pageLabelByCountry: Podľa krajiny
 clickToPlayVideo: Kliknutím prehráte video
 mainNav: Hlavné menu
 openMenu: Otvoriť menu
@@ -33,9 +33,10 @@ contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/sk/contact
 clickHere: Kliknite sem
 shareOnFacebook: Zdieľať túto stránku na Facebooku
-shareOnX: ""
+shareOnX: Zdieľaj túto stránku na X
 shareOnLinkedIn: Zdieľať túto stránku na LinkedIn
 shareOnWhatsApp: Zdieľať túto stránku na WhatsAppe
+socialMediaCardText: Dlhodobý rozpočet EÚ
 socialMediaCardUrl: ""
 all: Všetky tlačové správy
 selectCountry: Zvoľte krajinu
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/sk/accessibility
 goToWebsite: "Choďte na webovú stránku:"
 shareOnLabel: Informujte ďalších
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Zdieľať
 goToPage: Prejsť na stránku
 epLogoAltText: Logo Európskeho parlamentu
 skipToLanguageMenu: Preskočte na ponuku jazykov
 skipToMainContent: Preskočte na hlavný obsah
 epWebsite: Webová stránka Európskeho parlamentu
-onX: ""
+onX: na X
 onFacebook: na Facebooku
 onLinkedIn: na LinkedIn
 onWhatsApp: na WhatsAppe
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Skopírovať URL
 copyURLToClipboard: Skopírujte adresu do schránky
 urlCopiedToClipboard: Adresa bola skopírovaná do schránky.
+error404: chyba 404
+error404Message: Táto stránka sa nenašla alebo už neexistuje

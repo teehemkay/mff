@@ -1,50 +1,67 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "Wieloletni budżet UE: wszystko, co musisz wiedzieć"
+metaDescription: Dowiedz się, czym jest wieloletni budżet UE, jak przebiegają
+  negocjacje i inwestycje oraz jaką rolę odgrywa w tym procesie Parlament
+  Europejski.
+homeH1: Wieloletni budżet UE
+homeSubtitle: Inwestycje w to, co ważne
+homeIntroText: >
+  <p>Długoterminowy budżet Unii Europejskiej napędza inwestycje w przyszłość
+  Europy, poprawiając jakość życia obywateli i obywatelek.
+
+  Finansuje wspólne projekty i realizuje kluczowe priorytety, od
+  konkurencyjności gospodarczej po rolnictwo.</p>
+
+  <p><strong>Poznaj korzyści płynące z budżetu UE i dowiedz się, jak podejmowane
+  są decyzje w jego sprawie.</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Dlaczego to ważne
+  - Jak to działa
+  - Rola Parlamentu Europejskiego
+  - Stanowisko Parlamentu Europejskiego
+  - Budżet UE w Twoim kraju i regionie
+homeCardText:
+  - Dowiedz się, w jaki sposób wieloletni budżet UE  umożliwia wspólne
+    inwestycje w to, co istotne dla Europejczyków.
+  - Dowiedz się, jak finansowany jest długoterminowy budżet UE, na co jest
+    przeznaczany, i wiele więcej.
+  - Zobacz, jaką rolę odgrywa Parlament Europejski w decydowaniu o budżecie UE i
+    monitorowaniu jego wykorzystania.
+  - Poznaj priorytety Parlamentu w negocjacjach dotyczących kolejnego
+    długoterminowego budżetu UE.
+  - Dowiedz się, jakie korzyści budżet UE przynosi Tobie, Twojemu regionowi i
+    Twojemu krajowi.
 homeCardLinkURL:
   - /pl/why-it-matters/
   - /pl/how-it-works/
   - /pl/our-role/
   - /pl/our-position/
   - /pl/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Najnowsze informacje
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Komunikaty prasowe
+  - Obszerne artykuły
+  - Zestaw prasowy
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/pl/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Zapoznaj się z najnowszymi komunikatami prasowymi dotyczącymi budżetu UE.
+  - Przeczytaj najnowsze analizy polityczne i opracowania dotyczące
+    wieloletniego budżetu UE.
+  - "Dla dziennikarzy: zestaw prasowy zawiera szczegółowe informacje i kontakty
+    pomocne w relacjonowaniu tematów związanych z długoterminowym budżetem UE."
+homeCampaignTitle: Inwestycje w to, co ważne
+homeCampaignLinkLabel: Materiały kampanijne
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Powiązane linki
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Najnowsze badania opinii publicznej – Eurobarometr
+  - "Noty tematyczne o Unii Europejskiej: finansowanie UE"
+  - Strona Komisji Europejskiej dot. długoterminowego budżetu UE
+  - Strona Rady UE dotycząca długoterminowego budżetu
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/pl/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/pl/section/188/financing

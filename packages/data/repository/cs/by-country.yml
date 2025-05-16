@@ -1,11 +1,16 @@
-metaTitle: ""
-metaDescription: ""
-pageH1: ""
-pageChapo: ""
+metaTitle: "Rozpočet EU: výhody pro vás a vaši zemi"
+metaDescription: Zjistěte, jak je rozpočet EU přizpůsoben vašim potřebám a potřebám vaší země.
+pageH1: "Rozpočet EU: co přináší pro vás a vaši zemi"
+pageChapo: >
+  <p>Dlouhodobý rozpočet EU má významný dopad na jednotlivé země a regiony.
+  Podporuje výzkum, konkurenceschopnost, zemědělství, opatření v oblasti
+  klimatu, pomoc při katastrofách a další iniciativy.</p>
+
+  <p>Vyberte zemi a dozvíte se více o projektech a investicích.</p>
 linkLabel: ""
 linkURL: ""
 selectCountry: Vyberte zemi
-buttonContinue: ""
+buttonContinue: Pokračovat
 atUrl: https://what-europe-does-for-me.europarl.europa.eu/cs/region?area=AT&txt=%C3%96sterreich
 beUrl: https://what-europe-does-for-me.europarl.europa.eu/cs/region?area=BE&txt=Belgique-Belgi%C3%AB
 bgUrl: https://what-europe-does-for-me.europarl.europa.eu/cs/region?area=BG&txt=%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F

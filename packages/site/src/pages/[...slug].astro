@@ -2,9 +2,11 @@
 import { metadata } from '@packages/data';
 import {
   kIndex,
-  kByCountry,
   kWhyItMatters,
+  kHowItWorks,
+  kOurRole,
   kOurPosition,
+  kByCountry,
 } from '@packages/data/constants';
 
 import Layout from '../layouts/BaseLayout.astro';
@@ -12,6 +14,7 @@ import MainHomepage from '../components/MainHomepage.astro';
 import MainFAQs from '../components/MainFAQs.astro';
 import MainContent from '../components/MainContent.astro';
 import MainByCountry from '../components/MainByCountry.astro';
+import Main404 from '../components/Main404.astro';
 
 interface Props {
   lang: string;
@@ -38,8 +41,13 @@ const selectPage = () => {
     case kWhyItMatters:
     case kOurPosition:
       return MainContent;
-    default:
+
+    case kOurRole:
+    case kHowItWorks:
       return MainFAQs;
+
+    default:
+      return Main404;
   }
 };
 

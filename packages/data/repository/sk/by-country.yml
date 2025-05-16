@@ -1,11 +1,17 @@
-metaTitle: ""
-metaDescription: ""
-pageH1: ""
-pageChapo: ""
+metaTitle: "Rozpočet EÚ: výhody pre vás a vašu krajinu"
+metaDescription: Zistite, ako je rozpočet EÚ prispôsobený vašim potrebám a
+  potrebám vašej krajiny.
+pageH1: "Rozpočet EÚ: výhody pre vás a vašu krajinu"
+pageChapo: >
+  <p>lhodobý rozpočet EÚ má vplyv na krajiny a regióny. Podporuje výskum,
+  konkurencieschopnosť, poľnohospodárstvo, opatrenia v oblasti klímy,
+  zmierňovanie následkov katastrof a ďalšie iniciatívy. </p>
+
+  <p>Vyberte krajinu, aby ste sa dozvedeli o projektoch a investíciách. </p>
 linkLabel: ""
 linkURL: ""
 selectCountry: Zvoľte krajinu
-buttonContinue: ""
+buttonContinue: Pokračovať
 atUrl: https://what-europe-does-for-me.europarl.europa.eu/sk/region?area=AT&txt=%C3%96sterreich
 beUrl: https://what-europe-does-for-me.europarl.europa.eu/sk/region?area=BE&txt=Belgique-Belgi%C3%AB
 bgUrl: https://what-europe-does-for-me.europarl.europa.eu/sk/region?area=BG&txt=%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F

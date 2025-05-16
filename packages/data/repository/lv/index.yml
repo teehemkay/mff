@@ -1,50 +1,62 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "ES ilgtermiņa budžets: viss, kas tev jāzina"
+metaDescription: Uzzini, kas ir ES ilgtermiņa budžets, kā par to vienojas, kā
+  tas tiek ieguldīts, un kā Eiropas Parlaments tajā visā spēlē svarīgu lomu.
+homeH1: ES ilgtermiņa budžets
+homeSubtitle: Ieguldām svarīgajā
+homeIntroText: >
+  <p>Eiropas Savienības ilgtermiņa budžets veido ieguldījumus Eiropas nākotnē,
+  tādējādi uzlabojot iedzīvotāju dzīvi. Tas finansē kopīgus projektus un gādā
+  par prioritātēm, piemēram, ekonomikas konkurētspēju un lauksaimniecību.</p>
+
+  <p><strong>Apskati ES budžeta sniegtās priekšrocības un uzzini, kā par to tiek
+  veikti lēmumi.</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Kāpēc tas ir svarīgs?
+  - Kā tas darbojas?
+  - Eiropas Parlamenta loma
+  - Eiropas Parlamenta nostāja
+  - ES budžets tavā valstī un reģionā
+homeCardText:
+  - Uzzini, kā ilgtermiņa budžets ļauj Eiropas Savienībai apvienot resursus un
+    ieguldīt eiropiešiem svarīgajā.
+  - Izpēti, kā ES ilgtermiņa budžets tiek finansēts, kur tiek ieguldīta nauda,
+    un daudz ko citu.
+  - Iepazīsties ar Eiropas Parlamenta lomu ES budžeta noteikšanā un pielietojuma
+    pārraudzībā.
+  - Apskati Eiropas Parlamenta prioritātes pārrunās par nākamo ES ilgtermiņa
+    budžetu.
+  - Uzzini, kādu labumu no ES budžeta gūsti tu, tavs reģions un valsts.
 homeCardLinkURL:
   - /lv/why-it-matters/
   - /lv/how-it-works/
   - /lv/our-role/
   - /lv/our-position/
   - /lv/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Jaunākās ziņas
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Preses relīzes
+  - Padziļināti raksti
+  - Preses materiālu komplekts
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/lv/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Lasi jaunākās preses relīzes par ES budžetu
+  - Izpēti jaunākos politikas brīfingus un pētījumus par ES ilgtermiņa budžetu
+  - "Žurnālistiem: Preses materiālu komplekts sniedz konkrētu informāciju un
+    kontaktinformāciju, lai palīdzētu ziņot par ES ilgtermiņa budžetu."
+homeCampaignTitle: Ieguldām svarīgajā
+homeCampaignLinkLabel: Kampaņas materiāli
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Saistītās saites
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Jaunākās sabiedriskās domas aptaujas - Eirobarometrs
+  - "Faktu lapa par to, kā darbojas ES: Eiropas Savienības finansēšana"
+  - Eiropas Komisijas vietne par ES ilgtermiņa budžetu
+  - Eiropadomes vietne par ES ilgtermiņa budžetu
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/lv/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/lv/section/188/financing

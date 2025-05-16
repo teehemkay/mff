@@ -1,50 +1,69 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "Der langfristige EU-Haushalt: Alles, was Sie wissen müssen"
+metaDescription: Erfahren Sie, was der langfristige EU-Haushalt ist, wie er
+  verhandelt und wofür er verwendet wird und warum das Europäische Parlament
+  dabei eine wichtige Rolle spielt.
+homeH1: Der langfristige EU-Haushalt
+homeSubtitle: Investieren in das, was zählt
+homeIntroText: >
+  <p>Der langfristige EU-Haushalt fördert Investitionen in Europas Zukunft und
+  verbessert das Leben der Bürgerinnen und Bürger.
+
+  Mit ihm werden gemeinsame Projekte finanziert und Prioritäten der EU
+  gefördert, von der wirtschaftlichen Wettbewerbsfähigkeit bis hin zur
+  Landwirtschaft.</p>
+
+  <p><strong>Erfahren Sie mehr über die Vorteile des EU-Haushalts und wie
+  darüber entschieden wird.</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Warum ist der langfristige EU-Haushalt wichtig?
+  - Wie funktioniert er?
+  - Die Rolle des Europäischen Parlaments
+  - Der Standpunkt des Europäischen Parlaments
+  - Der EU-Haushalt in Ihrem Land und in Ihrer Region
+homeCardText:
+  - Erfahren Sie, wie die EU durch den langfristigen Haushalt Ressourcen bündeln
+    und in das investieren kann, was den Europäern wichtig ist.
+  - Erkunden Sie, wie der langfristige EU-Haushalt finanziert wird, wofür das
+    Geld ausgegeben wird und vieles mehr.
+  - Erfahren Sie, welche Rolle das Europäische Parlament bei der Entscheidung
+    über den EU-Haushalt sowie bei der Überwachung der Ausgaben spielt.
+  - Lesen Sie, welche Prioritäten das Europäische Parlament bei den
+    Verhandlungen über den nächsten langfristigen EU-Haushalt setzt.
+  - Erfahren Sie, wie der EU-Haushalt Ihnen, Ihrer Region und Ihrem Land
+    zugutekommt.
 homeCardLinkURL:
   - /de/why-it-matters/
   - /de/how-it-works/
   - /de/our-role/
   - /de/our-position/
   - /de/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Neueste Updates
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Pressemitteilungen
+  - Ausführliche Artikel
+  - Pressemappe
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/de/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Lesen Sie die neuesten Pressemitteilungen zum langfristigen EU-Haushalt.
+  - Lesen Sie die neuesten Themenpapiere und Studien zum langfristigen
+    EU-Haushalt.
+  - "Für Journalistinnen und Journalisten: Die Pressemappe bietet spezifische
+    Informationen und Kontaktdaten, die für eine Berichterstattung über den
+    langfristigen EU-Haushalt hilfreich sind."
+homeCampaignTitle: Investieren in das, was zählt
+homeCampaignLinkLabel: Kampagnenmaterial
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Verwandte Links
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Neueste Meinungsumfragen – Eurobarometer
+  - "Informationsblatt: Wie die EU funktioniert – Finanzierung der EU"
+  - Website der Europäischen Kommission zum langfristigen EU-Haushalt
+  - Website des Rats zum langfristigen EU-Haushalt
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/de/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/de/section/188/financing

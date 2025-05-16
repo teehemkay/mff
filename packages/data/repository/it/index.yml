@@ -1,50 +1,65 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "Bilancio a lungo termine dell’UE: tutto quello che c'è da sapere"
+metaDescription: Scopri cos’è il bilancio a lungo termine dell’UE, come viene
+  negoziato, in che modo vengono impiegate le risorse e il ruolo centrale del
+  Parlamento europeo.
+homeH1: Il bilancio a lungo termine dell’UE
+homeSubtitle: Investire in ciò che conta
+homeIntroText: >
+  <p>Il bilancio a lungo termine dell’UE guida gli investimenti per il futuro
+  dell’Europa, migliorando la vita dei cittadini.<br>Serve a finanziare progetti
+  comuni e risponde a priorità che vanno dalla competitività economica
+  all’agricoltura.  </p>
+
+  <p><strong>Scopri i vantaggi del bilancio dell’UE e come vengono prese le
+  decisioni che lo riguardano.</strong> </p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Perché è importante
+  - Come funziona
+  - Il ruolo del Parlamento europeo
+  - La posizione del Parlamento europeo
+  - Il bilancio dell’UE nel tuo Paese e nella tua regione
+homeCardText:
+  - Scopri in che modo il bilancio a lungo termine permette all’UE di mettere
+    insieme le risorse e investire in ciò che conta per i cittadini europei
+  - Scopri come viene finanziato il bilancio a lungo termine dell’UE, in cosa
+    vengono investiti i fondi e molto altro ancora.
+  - Scopri il ruolo del Parlamento europeo nell’approvazione del bilancio
+    dell’UE e nella verifica della sua corretta gestione.
+  - Scopri le priorità del Parlamento europeo nei negoziati per il prossimo
+    bilancio a lungo termine dell’UE.
+  - Scopri i vantaggi del bilancio dell’UE per te, la tua regione e il tuo Paese.
 homeCardLinkURL:
   - /it/why-it-matters/
   - /it/how-it-works/
   - /it/our-role/
   - /it/our-position/
   - /it/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Ultimi aggiornamenti
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Comunicati stampa
+  - Approfondimenti
+  - Kit stampa
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/it/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Leggi gli ultimi comunicati stampa sul bilancio a lungo termine dell’UE
+  - Consulta gli ultimi approfondimenti e gli studi sul bilancio a lungo termine
+    dell’UE
+  - "Per i giornalisti: il kit stampa offre informazioni specifiche e contatti
+    utili per seguire il tema del bilancio a lungo termine dell’UE"
+homeCampaignTitle: Investire in ciò che conta
+homeCampaignLinkLabel: Materiali della campagna
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Link correlati
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Ultimi sondaggi – Eurobarometro
+  - "Scheda informativa sul funzionamento dell’UE: finanziamento dell’UE"
+  - Sito della Commissione europea sul bilancio a lungo termine dell’UE
+  - Sito del Consiglio sul bilancio a lungo termine dell’UE
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/it/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/it/section/188/financing

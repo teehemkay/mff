@@ -1,50 +1,66 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "Bugetul UE pe termen lung: tot ce trebuie să știți"
+metaDescription: Aflați ce este bugetul UE pe termen lung, cum se negociază și
+  se investește acesta și care este rolul esențial jucat de Parlamentul European
+homeH1: Bugetul UE pe termen lung
+homeSubtitle: Să investim în ceea ce contează
+homeIntroText: >
+  <p>Bugetul UE pe termen lung aduce investiții în viitorul Europei,
+  îmbunătățind viețile cetățenilor. Acesta finanțează proiecte comune și
+  contribuie la atingerea priorităților UE, de la competitivitate economică la
+  agricultură.</p>
+
+  <p><strong>Descoperiți beneficiile bugetului UE și aflați cum se iau deciziile
+  în privința acestuia</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - De ce este important
+  - Cum funcționează
+  - Rolul Parlamentului
+  - Poziția Parlamentului European
+  - Bugetul UE în țara și regiunea dumneavoastră
+homeCardText:
+  - Aflați cum bugetul pe termen lung permite UE să pună împreună resursele și
+    să investească în ceea ce contează pentru cetățenii europeni.
+  - Explorați cum este finanțat bugetul UE pe termen lung, în ce sunt investiți
+    banii și multe altele.
+  - Aflați ce rol joacă Parlamentul European în luarea deciziilor privind
+    bugetul UE și în supravegherea cheltuielilor.
+  - Citiți despre prioritățile Parlamentului European în negocierile privind
+    următorul buget UE pe termen lung.
+  - Descoperiți care sunt beneficiile bugetului UE pentru dumneavoastră, țara și
+    regiunea din care faceți parte.
 homeCardLinkURL:
   - /ro/why-it-matters/
   - /ro/how-it-works/
   - /ro/our-role/
   - /ro/our-position/
   - /ro/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Ultimele actualizări
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Comunicate de presă
+  - Analize aprofundate
+  - Kit de presă
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/ro/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Citiți ultimele comunicate de presă cu privire la bugetul UE pe termen lung
+  - Citiți cele mai recente studii și briefinguri cu privire la bugetul pe
+    termen lung al UE
+  - "Pentru jurnaliști: Kitul de instrumente pentru presă oferă informații
+    specifice și contacte pentru a vă ajuta să vă informați cu privire la
+    bugetul pe termen lung al UE"
+homeCampaignTitle: Să investim în ceea ce contează
+homeCampaignLinkLabel: Material de campanie
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Linkuri conexe
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Ultimele sondaje de opinie publică - Eurobarometru
+  - "Fișă descriptivă privind funcționarea UE: cum se finanțează UE"
+  - Site-ul Comisiei Europene privind bugetul UE pe termen lung
+  - Site-ul Consiliului privind bugetul UE pe termen lung
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/ro/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/ro/section/188/financing

@@ -61,14 +61,28 @@ export const getStaticPaths = /* @__NO_SIDE_EFFECTs__ */ () => {
         currentFAQ: null,
       },
     },
+    {
+      params: { slug: '404' },
+      props: {
+        lang: 'en',
+        currentPage: '404',
+        currentFAQ: null,
+      },
+    },
   ];
 
-  for (const lang of ['en']) {
+  for (const lang of kLanguageCodes) {
     // only EN until we receive the LVs translations
-    slugs.push({
-      params: { slug: lang },
-      props: { lang, currentPage: kIndex, currentFAQ: null },
-    });
+    slugs.push(
+      {
+        params: { slug: lang },
+        props: { lang, currentPage: kIndex, currentFAQ: null },
+      },
+      {
+        params: { slug: `${lang}/404` },
+        props: { lang, currentPage: '404', currentFAQ: null },
+      },
+    );
 
     for (const page of pageNames) {
       slugs.push({

@@ -1,0 +1,31 @@
+---
+import { metadata } from '@packages/data';
+interface Props {
+  lang: string;
+  currentPage?: string;
+  currentFAQ?: string | null;
+}
+
+const { lang } = Astro.props;
+const { error404, error404Message } = metadata(lang);
+---
+
+<main role="main" id="mainContent" class="mb-8">
+  <div id="returnToTop" class="hidden"></div>
+
+  <div class="max-w-5xl mx-auto px-4 mt-54px mb-3">
+    <h1
+      class="logo-brand font-epSemiBold text-2.5xl text-black-greydark text-center">
+      {error404}
+    </h1>
+  </div>
+
+  <div
+    class="htv-page max-w-5xl lg:flex lg:flex-col md:block sm:block block mx-auto px-4 mb-40">
+    <p class="text-center text-[1.5rem]">
+      {error404Message}
+    </p>
+  </div>
+
+  <slot />
+</main>

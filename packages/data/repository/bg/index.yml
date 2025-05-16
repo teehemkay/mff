@@ -1,50 +1,66 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "Дългосрочният бюджет на ЕС: всичко, което трябва да знаете"
+metaDescription: "Научете повече за дългосрочния бюджет на ЕС: как се договаря,
+  в какво се инвестират средствата и какъв принос има Европейският парламент при
+  изготвянето му."
+homeH1: Дългосрочният бюджет на ЕС
+homeSubtitle: Да инвестираме в това, което е от значение
+homeIntroText: >
+  <p>Дългосрочният бюджет на ЕС е инструмент за инвестиции в Европа и за
+  подобряване на качеството на живот на хората. Той финансира общи проекти и
+  съдейства за реализиране на приоритетите на ЕС - от конкурентоспособността до
+  селското стопанство.</p>
+
+  <p><strong>Открийте ползите от бюджета на ЕС и научете как се вземат решенията
+  за него.</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Защо е от значение
+  - Как работи бюджетът
+  - Ролята на Европейския парламент
+  - Позицията на Европейския парламент
+  - Бюджетът на ЕС във Вашата страна и регион
+homeCardText:
+  - Научете как дългосрочният бюджет позволява на ЕС да обедини ресурси и да
+    инвестира в това, което е от значение за европейските граждани.
+  - Разберете откъде идват средствата в дългосрочния бюджет на ЕС, в какво се
+    инвестират те и още много факти.
+  - Научете каква роля играе Европейският парламент при определянето на
+    дългосрочния бюджет на ЕС и какъв контрол упражнява той над неговото
+    изпълнение.
+  - Разберете какви са приоритетите на Европейския парламент в преговорите
+    относно следващия дългосрочен бюджет на ЕС.
+  - Научете какви ползи носи бюджетът на ЕС за Вас, Вашия регион и Вашата страна.
 homeCardLinkURL:
   - /bg/why-it-matters/
   - /bg/how-it-works/
   - /bg/our-role/
   - /bg/our-position/
   - /bg/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Последни новини
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Съобщения за пресата
+  - Анализи и изследвания
+  - Материали за пресата
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/bg/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Прочетете най-новите съобщения за пресата относно дългосрочния бюджет на ЕС
+  - Прочетете най-новите информационни материали и изследвания относно
+    дългосрочния бюджет на ЕС
+  - Комплектът от материали за пресата предоставя на журналистите данни и
+    контакти, които да помогнат при отразяването на дългосрочния бюджет на ЕС.
+homeCampaignTitle: Да инвестираме в това, което е от значение
+homeCampaignLinkLabel: Материали за кампанията
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Допълнителна информация
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Последни проучвания на общественото мнение - Евробарометър
+  - Информация за начина на финансиране на ЕС
+  - Уебсайт на Европейската комисия относно дългосрочния бюджет на ЕС
+  - Уебсайт на Съвета относно дългосрочния бюджет
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/bg/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/bg/section/188/financing

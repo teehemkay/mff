@@ -1,9 +1,9 @@
 pageLabelHome: Főoldal
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Miért fontos?
+pageLabelHowItWorks: Hogyan működik?
+pageLabelOurRole: Szerepünk
+pageLabelOurPosition: Álláspontunk
+pageLabelByCountry: Országonként
 clickToPlayVideo: Kattintson a videóra
 mainNav: Fő navigációs menü
 openMenu: Menü megnyitása
@@ -33,9 +33,10 @@ contactUs: Kapcsolat
 contactUsURL: https://www.europarl.europa.eu/portal/hu/contact
 clickHere: kattintson ide
 shareOnFacebook: Megosztás a Facebookon
-shareOnX: ""
+shareOnX: Az oldal megosztása az X-en
 shareOnLinkedIn: Megosztás a LinkedIn felületén
 shareOnWhatsApp: Megosztás a WhatsAppon
+socialMediaCardText: Az EU hosszú távú költségvetése
 socialMediaCardUrl: ""
 all: Mind
 selectCountry: Ország kiválasztása
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/hu/accessibility
 goToWebsite: "Tovább a weboldalra:"
 shareOnLabel: Megosztás a következőn
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Megosztás
 goToPage: Ugrás az oldalra
 epLogoAltText: Az Európai Parlament logója
 skipToLanguageMenu: Ugrás a nyelvi menüre
 skipToMainContent: Ugrás a fő tartalomra
 epWebsite: Az Európai Parlament honlapja
-onX: ""
+onX: X-en
 onFacebook: a Facebookon
 onLinkedIn: a LinkedInen
 onWhatsApp: a WhatsAppon
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: URL másolása
 copyURLToClipboard: Webcím másolása a vágólapra
 urlCopiedToClipboard: Webcím a vágólapra másolva
+error404: 404-es hiba
+error404Message: Ez az oldal nem található, vagy már megszűnt

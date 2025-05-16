@@ -1,9 +1,9 @@
 pageLabelHome: Pagrindinis puslapis
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Kodėl tai svarbu?
+pageLabelHowItWorks: Kaip tai veikia?
+pageLabelOurRole: Europos Parlamento vaidmuo
+pageLabelOurPosition: Europos Parlamento pozicija
+pageLabelByCountry: Pagal šalį
 clickToPlayVideo: Spustelėkite norėdami paleisti vaizdo įrašą
 mainNav: Pagrindinis naršymo meniu
 openMenu: Atverti meniu
@@ -33,9 +33,10 @@ contactUs: Kontaktai
 contactUsURL: https://www.europarl.europa.eu/portal/lt/contact
 clickHere: Spauskite čia
 shareOnFacebook: Dalytis šiuo puslapiu tinkle „Facebook“
-shareOnX: ""
+shareOnX: Pasidalinkite šiuo puslapiu „X“ paskyroje
 shareOnLinkedIn: Dalytis šiuo puslapiu tinkle „Linkedin“
 shareOnWhatsApp: Dalytis šiuo puslapiu per programėlę „WhatsApp“
+socialMediaCardText: ES daugiametis biudžetas
 socialMediaCardUrl: ""
 all: Visi
 selectCountry: Pasirinkti šalį
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/lt/accessibility
 goToWebsite: Įeiti į interneto puslapį
 shareOnLabel: Dalintis
 facebookLabel: Facebook
-xLabel: ""
+xLabel: „X“
 shareLabel: Dalintis
 goToPage: Į puslapį
 epLogoAltText: Europos Parlamento logotipas
 skipToLanguageMenu: Pereiti prie kalbos meniu
 skipToMainContent: Pereiti prie pagrindinio turinio
 epWebsite: Europos Parlamento interneto svetainė
-onX: ""
+onX: „X“
 onFacebook: tinkle „Facebook“
 onLinkedIn: tinkle „LinkedIn“
 onWhatsApp: „WhatsApp“ programėlėje
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Kopijuoti URL
 copyURLToClipboard: Kopijuoti adresą į iškarpinę
 urlCopiedToClipboard: Adresas nukopijuotas į jūsų iškarpinę
+error404: 404 klaida
+error404Message: Puslapis nerastas arba nebeegzistuoja

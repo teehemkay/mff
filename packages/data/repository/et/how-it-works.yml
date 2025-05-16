@@ -1,47 +1,265 @@
-metaTitle: ""
-metaDescription: ""
-pageH1: ""
-pageChapo: ""
+metaTitle: "ELi pikaajaline eelarve lahtiseletatult: suurus, tuluallikad ja toetusesaajad"
+metaDescription: "Kõik, mida pead teadma ELi pikaajalise eelarve kohta (MFF):
+  suurus, toetusesaajad, tuluallikad, kulutused ja arengusuunad."
+pageH1: "ELi pikaajaline eelarve lahtiseletatult: suurus, tuluallikad ja toetusesaajad"
+pageChapo: |
+  <p>ELi pikaajalise eelarve küsimused ja vastused.</p>
 faQuestion:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Mis on ELi pikaajaline eelarve ja kuidas see vastu võetakse?
+  - Millal algab järgmine ELi pikaajaline eelarve?
+  - Milleks kasutatakse ELi pikaajalist eelarvet?
+  - Mida rahastatakse ELi pikaajalise eelarvega?
+  - Kuidas erineb ELi pikaajaline eelarve liikmesriikide eelarvest?
+  - Mis on ELi pikaajalise eelarve suurus?
+  - Kuidas rahastatakse ELi pikaajalist eelarvet?
+  - Kas ELi rahastuse saamiseks on kindlad tingimused?
+  - Mis on ELi pikaajalise eelarve ajalugu ja kuidas on see ajas muutunud?
 faqAnswer:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - >
+    <p>ELi pikaajalist eelarvet nimetatakse ka mitmeaastaseks
+    finantsraamistikuks (MFF). See on finantseelarve, millega määratakse
+    kindlaks maksimaalne summa, mida saab kindlasse poliitikavaldkonda
+    investeerida. ELi iga-aastastes eelarvetes ning kulutustes ELi programmidele
+    ja poliitikatele peab järgima ülemmäärasid.</p>
+
+    <p>Eelarve põhineb Euroopa Komisjoni ettepanekul ja selle peab ühehäälselt
+    vastu võtma ELi Nõukogu, mis esindab ELi valitsusi. Enne seda peab Euroopa
+    Parlament andma oma nõusoleku absoluutse häälteenamusega.</p>
+  - >
+    <p>Praegune pikaajaline eelarve hõlmab ajavahemikku 2021–2027. Järgmises
+    eelarves tuleb kokku leppida 2027. aasta lõpuks, et see jõustuks 1.
+    jaanuaril 2028.</p>
+  - >
+    <p>See on peamiselt investeerimiseelarve, mis keskendub ühiste probleemide
+    lahendamisele ja kokkulepitud eesmärkide saavutamisele, näiteks:</p>
+
+    <ul>
+
+    <li>   majanduse tugevdamine, töökohtade loomine ning teadusuuringute ja
+    investeeringute toetamine;</li>
+
+    <li>   kliimamuutustega võitlemine ja keskkonnakaitse;</li>
+
+    <li>   välispiiride tugevdamine ja Euroopa julgeoleku parandamine;</li>
+
+    <li>   töötajate ja sotsiaalsete õiguste toetamine;</li>
+
+    <li>   Euroopa piirkondade toetamine majanduslikus ja sotsiaalses
+    ühtekuuluvuses ning piiriüleses koostöös;</li>
+
+    <li>   põllumajanduse toetamine ja toiduga kindlustatuse tagamine.</li>
+
+    </ul>
+
+    <p>Rohkem kui 93% eelarvega rahastatakse tegevusi, mis toovad kaasa muutusi
+    ELi riikides ja mujal. Sellest saavad kasu kodanikud, piirkonnad, linnad,
+    põllumajandustootjad, teadlased, üliõpilased, kodanikuühiskond ja
+    ettevõtjad.</p>
+
+    <p>ELi halduskulud moodustavad vähem kui 7% ELi kogueelarvest. See võimaldab
+    ELi institutsioonidel toimida, valmistuda ja tegutseda Euroopa ühiste huvide
+    saavutamiseks.</p>
+  - >
+    <p>Siin on mõned näited, keda ja mida ELi eelarvega toetatakse:</p>
+
+    <p><strong>Väikeettevõtted</strong>: väikesed ja keskmise suurusega
+    ettevõtjad on ELi majanduse nurgakivi. Erinevad ELi programmid toetavad
+    ettevõtete laienemist, innovatsiooni ja konkurentsivõimet ülemaailmsel
+    tasandil. Nende rahastamine aitab suurendada tööhõivet ning hoogustada
+    majanduskasvu kohalikul tasandil ja ELis tervikuna.</p>
+
+    <p><strong>Põllumajandustootjad ja maapiirkonnad</strong>: tagada toiduga
+    kindlustatus, säilitada säästev põllumajandus ja toetada maaelu arengut.</p>
+
+    <p><strong>Üliõpilased ja haridusasutused</strong>: programmid, näiteks
+    Erasmus+, pakuvad üliõpilastele võimalusi välismaal õppimiseks, edendavad
+    kultuuridevahelist õppimist ja hariduskogemusi. Rahastusega toetatakse
+    ülikoole ja kutseõppekeskusi, et luua kohanemisvõimeline ja vajalike
+    oskustega tööjõud.</p>
+
+    <p><strong>Teadusuuringud ja innovatsioon</strong>: ELi teadusuuringute ja
+    innovatsiooni juhtprogramm „Euroopa horisont“ investeerib uuenduslikesse
+    teadusuuringutesse ja tehnoloogia arengusse. See toetab teadlasi ja
+    idufirmasid, kes edendavad innovatsiooni valdkondades nagu tervishoid,
+    digitehnoloogia ja taastuvenergia.</p>
+
+    <p><strong>Taristu</strong>: EL investeerib taristu arendamisse, et
+    parandada transpordivõrke, arendada energiatõhusust ja -sõltumatust ning
+    digitaalset ühenduvust. Need projektid loovad töökohti ja toetavad
+    piirkondlikku arengut.</p>
+
+    <p><strong>Kultuuri- ja loomesektor</strong>: programmiga „Loov Euroopa“
+    toetatakse kunstnikke, kultuuriorganisatsioone ja meediakanaleid, et
+    edendada kultuuririkkust ja aidata loomemajandusel konkurentsitihedas
+    turukeskkonnas areneda.</p>
+
+    <p><strong>Võitlus kliimamuutustega ja keskkonnakaitse</strong>: EL rahastab
+    programme ja projekte, mille eesmärk on võidelda kliimamuutustega, säilitada
+    elurikkus ja edendada kestlikke tavasid.</p>
+
+    <p><strong>Rahvatervis ja valmisolek</strong>: EL investeerib
+    tervishoiuprojektidesse ja kriisidele reageerimise programmidesse,
+    sealhulgas rahvatervise taristusse, et tugevdada valmisolekut võimalikeks
+    pandeemiateks, loodusõnnetusteks ja muudeks hädaolukordadeks.</p>
+
+    <p><strong>Euroopa piirkondade tugevdamine</strong>: ELi eelarvest
+    toetatakse majanduslikku ja sotsiaalset ühtekuuluvust ja rahastatakse
+    projekte, mis vähendavad piirkondadevahelisi erinevusi. Fond investeerib
+    taristusse, haridusse ja töökohtade loomisse, et toetada arengut vähem
+    jõukates piirkondades. See aitab luua tasakaalustatud majanduskasvu ja
+    parandada elatustaset kogu ELis.</p>
+  - >
+    <p>Võrreldes liikmesriikide eelarvetega on ELi eelarve paindlikkus rahaliste
+    vahendite kasutamisel piiratud ning eelarve puudujääki ei saa tekkida.</p>
+
+    <p>Eelarved hõlmavad erinevaid valdkondi. Riigid kasutatavad oma eelarveid
+    suures osas avalike teenuste osutamiseks ja sotsiaalkindlustussüsteemide
+    rahastamiseks. ELi eelarvet kasutatakse peamiselt investeeringute
+    tegemiseks, mis on kasulikud Euroopale tervikuna.</p>
+  - |
+    <p>ELi eelarve on liikmesriikide eelarvetega võrreldes suhteliselt väike. See on ligikaudu <a target="_blank" rel="noreferrer noopener nofollow" href="https://www.eca.europa.eu/en/the-eu-finances">1% ELi kogurahvatulust</a> ehk 160-180 miljardit eurot. ELi liikmesriikide avaliku sektori kulutused moodustavad keskmiselt peaaegu 50% nende kogurahvatulust.</p>
+    <p>Praeguse ELi pikaajalise eelarve raames võib EL võtta kohustuse kulutada aastatel 2021–2027 triljon eurot (2018. aasta hinnad).</p>
+    <p>Eelarve hõlmab 450 miljonit elanikku ja moodustab väikese osa ELi avaliku sektori kogukulutustest. Näiteks on see väiksem Austria (9 miljonit elanikku) riigieelarvest: 2022. aastal oli <a target="_blank" rel="noreferrer noopener nofollow" href="https://commission.europa.eu/strategy-and-policy/eu-budget/annual-eu-budget/all-annual-budgets/2022_en?prefLang=et">ELi eelarve ligikaudu 170 miljardit eurot</a>, <a target="_blank" rel="noreferrer noopener nofollow" href="https://ec.europa.eu/eurostat/databrowser/view/gov_10a_exp__custom_13928345/default/table?lang=en">Austria riiklik eelarve ligikaudu 240 miljardit eurot</a>. </p>
+  - |
+    <p>Teine erinevus ELi eelarve ja liikmesriikide eelarvete vahel on see, et ELil puudub otsene maksustamispädevus eelarve rahastamiseks ja selle asemel toetutakse tuludele, mida nimetatakse omavahenditeks.</p>
+    <p>Omavahendid on: 
+    -	ELi importimisel kohaldatavad tollimaksud;
+    -	osa iga ELi liikmesriigi kogutavast käibemaksust;
+    -	panus, mis põhineb ringlusse võtmata plastijäätmete hulgal igas ELi liikmesriigis;
+    -	iga ELi liikmesriigi kogurahvatulul põhinev riiklik panus. Kõik liikmesriigid panustavad vastavalt oma osakaalule ELi riikide summaarsest kogurahvatulust. See on suurim osa omavahenditest.</p>
+    <p>Euroopa Parlament toetab järjekindlalt seisukohta, et ELi eelarve vajab uusi <a href="https://www.europarl.europa.eu/topics/et/article/20221110STO53101/parlament-tahab-euroopa-liidule-kolme-uut-tuluallikat">tuluallikaid</a>, et tagada kindlam rahastus.</p>
+  - |
+    <p>Jah, ELi rahalise toetuse saamiseks peavad saajad <a href="https://www.europarl.europa.eu/factsheets/et/sheet/146/the-protection-of-article-2-teu-values-in-the-">austama Euroopa Liidu lepingu artiklis 2</a> sätestatud ELi põhiväärtusi: inimväärikus, vabadus, demokraatia, võrdsus, õigusriik ja inimõigused, sealhulgas vähemuste õigused.</p>
+    <p>Õigusriigi tingimuslikkuse määrus võimaldab õigusriigi põhimõtete rikkumise korral peatada maksed ELi eelarvest. See tagab, et raha kasutatakse otstarbekalt ning ühiste eeskirjade ja põhimõtete järgi. Ilma ELi alusväärtusi austamata ei saa riigid kasutada ELi rahalisi vahendeid. </p>
+    <p>Euroopa Parlamendi nõudmisel võeti tingimuslikkuse määrus vastu osana ELi pikaajalisest eelarvest aastateks 2021–2027 ja <a target="_blank" rel="noreferrer noopener nofollow" href="https://next-generation-eu.europa.eu/index_et">taasterahastust „NextGenerationEU“</a>.</p>
+  - >
+    <p>Esialgu rahastati Euroopa Liitu (tol ajal Euroopa Ühendusi) peamiselt
+    liikmesriikide osamaksetest.</p>
+
+    <p>1970. aastal võeti kasutusele omavahendite süsteem, ehk Euroopa ühendused
+    hakkasid saama tuluallikaid automaatselt.</p>
+
+    <p>Mitut aastat hõlmava pikaajalise eelarve idee töötati välja 1980.
+    aastatel, et ühtlustada ELi institutsioonide tööd ja tugevdada
+    eelarvedistsipliini. Esimene pikaajaline eelarve võeti vastu 1988.
+    aastal.</p>
+
+    <p>Seni on ELil olnud kuus pikaajalist eelarvet. Kuues ja praegune programm
+    hõlmab ajavahemikku 2021–2027 ja lõpeb 31. detsembril 2027. Järgmine
+    pikaajaline eelarve jõustub 1. jaanuaril 2028 ja kestab tõenäoliselt 2034.
+    aastani.</p>
 faqAnswerMeta:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - ELi pikaajalist eelarvet nimetatakse ka mitmeaastaseks finantsraamistikuks
+    (MFF). See on finantseelarve, millega määratakse kindlaks maksimaalne summa,
+    mida saab kindlasse poliitikavaldkonda investeerida. ELi iga-aastastes
+    eelarvetes ning kulutustes ELi programmidele ja poliitikatele peab järgima
+    ülemmäärasid. Eelarve põhineb Euroopa Komisjoni ettepanekul ja selle peab
+    ühehäälselt vastu võtma ELi Nõukogu, mis esindab ELi valitsusi. Enne seda
+    peab Euroopa Parlament andma oma nõusoleku absoluutse häälteenamusega.
+  - Praegune pikaajaline eelarve hõlmab ajavahemikku 2021–2027. Järgmises
+    eelarves tuleb kokku leppida 2027. aasta lõpuks, et see jõustuks 1.
+    jaanuaril 2028.
+  - "See on peamiselt investeerimiseelarve, mis keskendub ühiste probleemide
+    lahendamisele ja kokkulepitud eesmärkide saavutamisele, näiteks:
+    -\tmajanduse tugevdamine, töökohtade loomine ning teadusuuringute ja
+    investeeringute toetamine; -\tkliimamuutustega võitlemine ja
+    keskkonnakaitse; -\tvälispiiride tugevdamine ja Euroopa julgeoleku
+    parandamine; -\ttöötajate ja sotsiaalsete õiguste toetamine; -\tEuroopa
+    piirkondade toetamine majanduslikus ja sotsiaalses ühtekuuluvuses ning
+    piiriüleses koostöös; -\tpõllumajanduse toetamine ja toiduga kindlustatuse
+    tagamine. Rohkem kui 93% eelarvega rahastatakse tegevusi, mis toovad kaasa
+    muutusi ELi riikides ja mujal. Sellest saavad kasu kodanikud, piirkonnad,
+    linnad, põllumajandustootjad, teadlased, üliõpilased, kodanikuühiskond ja
+    ettevõtjad. ELi halduskulud moodustavad vähem kui 7% ELi kogueelarvest. See
+    võimaldab ELi institutsioonidel toimida, valmistuda ja tegutseda Euroopa
+    ühiste huvide saavutamiseks."
+  - "Siin on mõned näited, keda ja mida ELi eelarvega toetatakse:
+    Väikeettevõtted: väikesed ja keskmise suurusega ettevõtjad on ELi majanduse
+    nurgakivi. Erinevad ELi programmid toetavad ettevõtete laienemist,
+    innovatsiooni ja konkurentsivõimet ülemaailmsel tasandil. Nende rahastamine
+    aitab suurendada tööhõivet ning hoogustada majanduskasvu kohalikul tasandil
+    ja ELis tervikuna. Põllumajandustootjad ja maapiirkonnad: tagada toiduga
+    kindlustatus, säilitada säästev põllumajandus ja toetada maaelu arengut.
+    Üliõpilased ja haridusasutused: programmid, näiteks Erasmus+, pakuvad
+    üliõpilastele võimalusi välismaal õppimiseks, edendavad kultuuridevahelist
+    õppimist ja hariduskogemusi. Rahastusega toetatakse ülikoole ja
+    kutseõppekeskusi, et luua kohanemisvõimeline ja vajalike oskustega tööjõud.
+    Teadusuuringud ja innovatsioon: ELi teadusuuringute ja innovatsiooni
+    juhtprogramm „Euroopa horisont“ investeerib uuenduslikesse
+    teadusuuringutesse ja tehnoloogia arengusse. See toetab teadlasi ja
+    idufirmasid, kes edendavad innovatsiooni valdkondades nagu tervishoid,
+    digitehnoloogia ja taastuvenergia. Taristu: EL investeerib taristu
+    arendamisse, et parandada transpordivõrke, arendada energiatõhusust ja
+    -sõltumatust ning digitaalset ühenduvust. Need projektid loovad töökohti ja
+    toetavad piirkondlikku arengut. Kultuuri- ja loomesektor: programmiga „Loov
+    Euroopa“ toetatakse kunstnikke, kultuuriorganisatsioone ja meediakanaleid,
+    et edendada kultuuririkkust ja aidata loomemajandusel konkurentsitihedas
+    turukeskkonnas areneda. Võitlus kliimamuutustega ja keskkonnakaitse: EL
+    rahastab programme ja projekte, mille eesmärk on võidelda kliimamuutustega,
+    säilitada elurikkus ja edendada kestlikke tavasid. Rahvatervis ja
+    valmisolek: EL investeerib tervishoiuprojektidesse ja kriisidele
+    reageerimise programmidesse, sealhulgas rahvatervise taristusse, et
+    tugevdada valmisolekut võimalikeks pandeemiateks, loodusõnnetusteks ja
+    muudeks hädaolukordadeks. Euroopa piirkondade tugevdamine: ELi eelarvest
+    toetatakse majanduslikku ja sotsiaalset ühtekuuluvust ja rahastatakse
+    projekte, mis vähendavad piirkondadevahelisi erinevusi. Fond investeerib
+    taristusse, haridusse ja töökohtade loomisse, et toetada arengut vähem
+    jõukates piirkondades. See aitab luua tasakaalustatud majanduskasvu ja
+    parandada elatustaset kogu ELis."
+  - Võrreldes liikmesriikide eelarvetega on ELi eelarve paindlikkus rahaliste
+    vahendite kasutamisel piiratud ning eelarve puudujääki ei saa tekkida.
+    Eelarved hõlmavad erinevaid valdkondi. Riigid kasutatavad oma eelarveid
+    suures osas avalike teenuste osutamiseks ja sotsiaalkindlustussüsteemide
+    rahastamiseks. ELi eelarvet kasutatakse peamiselt investeeringute
+    tegemiseks, mis on kasulikud Euroopale tervikuna.
+  - "ELi eelarve on liikmesriikide eelarvetega võrreldes suhteliselt väike. See
+    on ligikaudu 1% ELi kogurahvatulust ehk 160-180 miljardit eurot. ELi
+    liikmesriikide avaliku sektori kulutused moodustavad keskmiselt peaaegu 50%
+    nende kogurahvatulust. Praeguse ELi pikaajalise eelarve raames võib EL võtta
+    kohustuse kulutada aastatel 2021–2027 triljon eurot (2018. aasta hinnad).
+    Eelarve hõlmab 450 miljonit elanikku ja moodustab väikese osa ELi avaliku
+    sektori kogukulutustest. Näiteks on see väiksem Austria (9 miljonit
+    elanikku) riigieelarvest: 2022. aastal oli ELi eelarve ligikaudu 170
+    miljardit eurot, Austria riiklik eelarve ligikaudu 240 miljardit eurot."
+  - "Teine erinevus ELi eelarve ja liikmesriikide eelarvete vahel on see, et
+    ELil puudub otsene maksustamispädevus eelarve rahastamiseks ja selle asemel
+    toetutakse tuludele, mida nimetatakse omavahenditeks. Omavahendid on: - ELi
+    importimisel kohaldatavad tollimaksud;- osa iga ELi liikmesriigi kogutavast
+    käibemaksust;- panus, mis põhineb ringlusse võtmata plastijäätmete hulgal
+    igas ELi liikmesriigis;- iga ELi liikmesriigi kogurahvatulul põhinev riiklik
+    panus. Kõik liikmesriigid panustavad vastavalt oma osakaalule ELi riikide
+    summaarsest kogurahvatulust. See on suurim osa omavahenditest. Euroopa
+    Parlament toetab järjekindlalt seisukohta, et ELi eelarve vajab uusi
+    tuluallikaid, et tagada kindlam rahastus."
+  - "Jah, ELi rahalise toetuse saamiseks peavad saajad austama Euroopa Liidu
+    lepingu artiklis 2 sätestatud ELi põhiväärtusi: inimväärikus, vabadus,
+    demokraatia, võrdsus, õigusriik ja inimõigused, sealhulgas vähemuste
+    õigused.Õigusriigi tingimuslikkuse määrus võimaldab õigusriigi põhimõtete
+    rikkumise korral peatada maksed ELi eelarvest. See tagab, et raha
+    kasutatakse otstarbekalt ning ühiste eeskirjade ja põhimõtete järgi. Ilma
+    ELi alusväärtusi austamata ei saa riigid kasutada ELi rahalisi vahendeid.
+    Euroopa Parlamendi nõudmisel võeti tingimuslikkuse määrus vastu osana ELi
+    pikaajalisest eelarvest aastateks 2021–2027 ja taasterahastust
+    „NextGenerationEU“."
+  - Esialgu rahastati Euroopa Liitu (tol ajal Euroopa Ühendusi) peamiselt
+    liikmesriikide osamaksetest. 1970. aastal võeti kasutusele omavahendite
+    süsteem, ehk Euroopa ühendused hakkasid saama tuluallikaid automaatselt.
+    Mitut aastat hõlmava pikaajalise eelarve idee töötati välja 1980. aastatel,
+    et ühtlustada ELi institutsioonide tööd ja tugevdada eelarvedistsipliini.
+    Esimene pikaajaline eelarve võeti vastu 1988. aastal. Seni on ELil olnud
+    kuus pikaajalist eelarvet. Kuues ja praegune programm hõlmab ajavahemikku
+    2021–2027 ja lõpeb 31. detsembril 2027. Järgmine pikaajaline eelarve jõustub
+    1. jaanuaril 2028 ja kestab tõenäoliselt 2034. aastani.
 faqExpanded:
   - "false"
   - "false"
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - "false"
+  - "false"
+  - "false"
+  - "false"
+  - "false"
+  - "false"
+  - "false"
 faqID:
   - q1
   - q2

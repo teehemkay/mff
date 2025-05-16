@@ -1,11 +1,16 @@
-metaTitle: ""
-metaDescription: ""
-pageH1: ""
-pageChapo: ""
+metaTitle: "EU-budgettet: Fordelene for dig og dit land"
+metaDescription: Find ud af, hvordan EU-budgettet er tilpasset dine behov og dit lands behov.
+pageH1: "EU-budgettet: Fordelene for dig og dit land"
+pageChapo: >
+  <p>EU&#39;s langsigtede budget gør en forskel for lande og regioner. Det
+  støtter forskning, konkurrenceevne, landbrug, klimaindsats, katastrofehjælp og
+  andre initiativer.</p>
+
+  <p>Vælg et land for at læse mere om projekter og investeringer.</p>
 linkLabel: ""
 linkURL: ""
 selectCountry: Vælg land
-buttonContinue: ""
+buttonContinue: Fortsæt
 atUrl: https://what-europe-does-for-me.europarl.europa.eu/da/region?area=AT&txt=%C3%96sterreich
 beUrl: https://what-europe-does-for-me.europarl.europa.eu/da/region?area=BE&txt=Belgique-Belgi%C3%AB
 bgUrl: https://what-europe-does-for-me.europarl.europa.eu/da/region?area=BG&txt=%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F

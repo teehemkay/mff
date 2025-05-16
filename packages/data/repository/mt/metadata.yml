@@ -1,9 +1,9 @@
 pageLabelHome: Paġna ewlenija
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Għaliex huwa importanti
+pageLabelHowItWorks: Kif jaħdem
+pageLabelOurRole: Ir-rwol tal-Parlament Ewropew
+pageLabelOurPosition: Il-pożizzjoni tagħna
+pageLabelByCountry: Skont il-pajjiż
 clickToPlayVideo: Ikklikkja biex tara il-video
 mainNav: Navigazzjoni ewlenija
 openMenu: Iftaħ il-menu
@@ -33,9 +33,10 @@ contactUs: Kuntatt
 contactUsURL: https://www.europarl.europa.eu/portal/mt/contact
 clickHere: Agħfas hawn
 shareOnFacebook: Aqsam din il-paġna fuq Facebook
-shareOnX: ""
+shareOnX: Aqsam fuq X
 shareOnLinkedIn: Aqsam il-paġna fuq Linkedin
 shareOnWhatsApp: Aqsam il-paġna fuq WhatsApp
+socialMediaCardText: Il-baġit fit-tul tal-UE
 socialMediaCardUrl: ""
 all: Kollha
 selectCountry: Agħżel pajjiż
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/mt/accessibility
 goToWebsite: "Żur is-sit web:"
 shareOnLabel: Aqsam
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Aqsam
 goToPage: Mur fil-paġna
 epLogoAltText: Logo tal-Parlament Ewropew
 skipToLanguageMenu: Mur fil-menù tal-lingwa
 skipToMainContent: Mur fil-kontenut prinċipali
 epWebsite: Is-Sit Web tal-Parlament Ewropew
-onX: ""
+onX: fuq X
 onFacebook: fuq Facebook
 onLinkedIn: fuq LinkedIn
 onWhatsApp: fuq WhatsApp
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Ikkopja l-URL
 copyURLToClipboard: Ikkopja l-URL fuq il-clipboard tiegħek
 urlCopiedToClipboard: Il-URL ġie kkupjat fuq il-clipboard tiegħek.
+error404: żball 404
+error404Message: Il-paġna ma nstabitx jew m'għadhiex teżisti
