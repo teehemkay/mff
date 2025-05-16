@@ -1,9 +1,9 @@
 pageLabelHome: Начало
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Защо е от значение
+pageLabelHowItWorks: Как работи
+pageLabelOurRole: Нашата роля
+pageLabelOurPosition: Нашата позиция
+pageLabelByCountry: По държави
 clickToPlayVideo: Натиснете, за да пуснете видеото
 mainNav: Основно меню
 openMenu: Отваряне на менюто
@@ -33,9 +33,10 @@ contactUs: Контакти
 contactUsURL: https://www.europarl.europa.eu/portal/bg/contact
 clickHere: Натиснете тук
 shareOnFacebook: Споделете тази страница във Facebook
-shareOnX: ""
+shareOnX: Споделете тази страница в Х
 shareOnLinkedIn: Споделете тази страница в Linkedin
 shareOnWhatsApp: Споделете тази страница в WhatsApp
+socialMediaCardText: Дългосрочният бюджет на ЕС
 socialMediaCardUrl: ""
 all: Всички
 selectCountry: Изберете държава
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/bg/accessibility
 goToWebsite: "Идете на уебсайта:"
 shareOnLabel: Споделете във
 facebookLabel: Facebook
-xLabel: ""
+xLabel: Х
 shareLabel: Споделяне
 goToPage: отидете на страницата
 epLogoAltText: Лого на Европейския парламент
 skipToLanguageMenu: Преминаване към езиковото меню
 skipToMainContent: Преминаване към основното съдържание
 epWebsite: Уебсайт на Европейския парламент
-onX: ""
+onX: в Х
 onFacebook: във Facebook
 onLinkedIn: в LinkedIn
 onWhatsApp: в WhatsApp
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Копиране на URL
 copyURLToClipboard: Копирайте адреса във Вашия клипборд
 urlCopiedToClipboard: Адресът е копиран във Вашия клипборд.
+error404: грешка 404
+error404Message: Страницата не е намерена или вече не съществува

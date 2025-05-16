@@ -1,11 +1,16 @@
-metaTitle: ""
-metaDescription: ""
-pageH1: ""
-pageChapo: ""
+metaTitle: Miten EU-budjetti hyödyttää sinua, asuinaluettasi ja kotimaatasi?
+metaDescription: Katso, miten EU-budjetti vastaa sinun ja kotimaasi tarpeisiin.
+pageH1: Miten EU-budjetti hyödyttää sinua, asuinaluettasi ja kotimaatasi?
+pageChapo: >
+  <p>EU:n pitkän aikavälin budjetti vaikuttaa suoraan EU-maihin ja niiden
+  alueisiin. Budjetista rahoitetaan tutkimusta, kilpailukykyä, maanviljelystä,
+  ilmastotoimia, kriisiapua ja monia muita aloitteita.</p>
+
+  <p>Valitse maa, niin pääset lukemaan lisää hankkeista ja investoinneista.</p>
 linkLabel: ""
 linkURL: ""
 selectCountry: Valitse maa
-buttonContinue: ""
+buttonContinue: Jatka
 atUrl: https://what-europe-does-for-me.europarl.europa.eu/fi/region?area=AT&txt=%C3%96sterreich
 beUrl: https://what-europe-does-for-me.europarl.europa.eu/fi/region?area=BE&txt=Belgique-Belgi%C3%AB
 bgUrl: https://what-europe-does-for-me.europarl.europa.eu/fi/region?area=BG&txt=%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F

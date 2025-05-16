@@ -1,50 +1,63 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "Dolgoročni proračun EU: vse, kar morate vedeti"
+metaDescription: Spoznajte, kaj je dolgoročni proračun EU, kako potekajo
+  pogajanja o njem in kako se vanj vlagajo sredstva ter kakšno ključno vlogo ima
+  pri tem Evropski parlament.
+homeH1: Dolgoročni proračun EU
+homeSubtitle: Naložbe v tisto, kar je pomembno
+homeIntroText: >
+  <p>Dolgoročni proračun EU spodbuja naložbe v prihodnost Evrope in izboljšuje
+  življenje državljanov. Financira skupne projekte in uresničuje prednostne
+  naloge, od gospodarske konkurenčnosti do kmetijstva.</p>
+
+  <p><strong>Spoznajte koristi proračuna EU in  kako se sprejemajo odločitve o
+  njem.</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Zakaj je pomemben
+  - Kako deluje
+  - Vloga Evropskega parlamenta
+  - Stališče Evropskega parlamenta
+  - Proračun EU v vaši državi in regiji
+homeCardText:
+  - Kako dolgoročni proračun omogoča EU, da združi sredstva in vlaga v tisto,
+    kar je pomembno za Evropejce.
+  - Raziščite, kako se financira dolgoročni proračun EU, v kaj se vlagajo
+    sredstva in še veliko več.
+  - Preberite, kakšno vlogo ima Evropski parlament pri odločanju o proračunu EU
+    in nadzoru njegove uporabe.
+  - Preberite o prednostnih nalogah Evropskega parlamenta v pogajanjih o
+    naslednjem dolgoročnem proračunu EU.
+  - Spoznajte, kako proračun EU koristi vam, vaši regiji in državi.
 homeCardLinkURL:
   - /sl/why-it-matters/
   - /sl/how-it-works/
   - /sl/our-role/
   - /sl/our-position/
   - /sl/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Najnovejše novice
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Sporočila za javnost
+  - Poglobljeni članki
+  - Zbirka za javnost
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/sl/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Preberite najnovejša sporočila za javnost o dolgoročnem proračunu EU
+  - Preberite najnovejša politična poročila in študije o dolgoročnem proračunu EU
+  - "Za novinarje: v priročniku za novinarje najdete več informacij in kontakte
+    ki vam bodo v pomoč pri poročanju o dolgoročnem proračunu EU."
+homeCampaignTitle: Naložbe v tisto, kar je pomembno
+homeCampaignLinkLabel: Gradivo za kampanjo
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Sorodne povezave
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Najnovejše raziskave javnega mnenja - Eurobarometer
+  - "Kratki vodnik po Evropski uniji: Financiranje"
+  - Spletna stran Evropske komisije o dolgoročnem proračunu EU
+  - Spletna stran Sveta o dolgoročnem proračunu EU
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/sl/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/sl/section/188/financing

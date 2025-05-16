@@ -1,9 +1,9 @@
 pageLabelHome: Pagina principală
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: De ce este important
+pageLabelHowItWorks: Cum funcționează
+pageLabelOurRole: Rolul Parlamentului European
+pageLabelOurPosition: Poziția Parlamentului European
+pageLabelByCountry: După țară
 clickToPlayVideo: Clic pentru a vizualiza video
 mainNav: Meniu principal
 openMenu: Deschideți meniul
@@ -33,9 +33,10 @@ contactUs: Contact
 contactUsURL: https://www.europarl.europa.eu/portal/ro/contact
 clickHere: Faceți clic aici
 shareOnFacebook: Distribuiți această pagină pe Facebook
-shareOnX: ""
+shareOnX: Distribuie această pagină pe X
 shareOnLinkedIn: Distribuiți această pagină pe LinkedIn
 shareOnWhatsApp: Distribuiți această pagină pe WhatsApp
+socialMediaCardText: Bugetul UE pe termen lung
 socialMediaCardUrl: ""
 all: Toate
 selectCountry: Selectați țara
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/ro/accessibility
 goToWebsite: "Mergi la website:"
 shareOnLabel: Recomandaţi pe
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Distribuie
 goToPage: Accesați pagina
 epLogoAltText: Logoul Parlamentului European
 skipToLanguageMenu: Accesați direct meniul „Limbi”
 skipToMainContent: Accesați direct conținutul principal
 epWebsite: Site-ul Parlamentului European
-onX: ""
+onX: pe X
 onFacebook: pe Facebook
 onLinkedIn: pe LinkedIn
 onWhatsApp: pe WhatsApp
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Copiază URL
 copyURLToClipboard: Copiați adresa în clipboard
 urlCopiedToClipboard: Adresa a fost copiată în clipboardul dvs.
+error404: eroare 404
+error404Message: Această pagină nu a fost găsită sau nu mai există

@@ -8,7 +8,7 @@ import { lang, findInBody } from './dom.js';
 
 import { cookieHandler } from './cookies.js';
 import { translations } from './widget-translations.js';
-import { OPTED_IN, OPTED_OUT, DNTED, NO_CHOICE } from './constants.js';
+import { OPTED_IN, OPTED_OUT, NO_CHOICE } from './constants.js';
 
 export const PLACEHOLDER_SELECTOR = '#ep-opt-js';
 
@@ -16,7 +16,6 @@ export const descriptionLabels = {
   [OPTED_IN]: 'optInDesc',
   [OPTED_OUT]: 'optOutDesc',
   [NO_CHOICE]: 'chooseDesc',
-  [DNTED]: 'dntDesc',
 };
 
 export const descriptionLabel = ({ lang, status }) =>
@@ -49,8 +48,7 @@ export const widget =
           <div class="ep-a_text">
             <p>{descriptionLabel({ lang, status })}</p>
           </div>
-          {status !== DNTED && (
-            <div class="ep_cookies-form-field">
+          <div class="ep_cookies-form-field">
               <input
                 id="a11y-issue-1"
                 name="cookies-validation"
@@ -61,8 +59,6 @@ export const widget =
               />
               <label htmlFor="a11y-issue-1">{optOutLabel}</label>
             </div>
-          )}
-          {status !== DNTED && (
             <div class="ep_cookies-form-field">
               <input
                 id="a11y-issue-2"
@@ -74,7 +70,6 @@ export const widget =
               />
               <label htmlFor="a11y-issue-2">{optInLabel}</label>
             </div>
-          )}
         </fieldset>
       </form>
     </div>

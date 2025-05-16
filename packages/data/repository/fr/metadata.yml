@@ -1,9 +1,9 @@
 pageLabelHome: Accueil
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Pourquoi c'est important
+pageLabelHowItWorks: Comment ça marche
+pageLabelOurRole: Notre rôle
+pageLabelOurPosition: Notre position
+pageLabelByCountry: Par pays
 clickToPlayVideo: Cliquez pour jouer la vidéo
 mainNav: Menu principal
 openMenu: Ouvrir le menu
@@ -33,9 +33,10 @@ contactUs: Contact
 contactUsURL: https://www.europarl.europa.eu/portal/ga/contact
 clickHere: Cliquez ici
 shareOnFacebook: Partager sur Facebook
-shareOnX: ""
+shareOnX: Partagez cette page sur X
 shareOnLinkedIn: Partager sur LinkedIn
 shareOnWhatsApp: Partager sur WhatsApp
+socialMediaCardText: Le budget à long terme de l'UE
 socialMediaCardUrl: ""
 all: Tous
 selectCountry: Sélectionner un pays
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/ga/accessibility
 goToWebsite: "Allez sur le site :"
 shareOnLabel: Partager sur
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Partager
 goToPage: Aller à la page
 epLogoAltText: Logo du Parlement européen
 skipToLanguageMenu: Aller directement à la liste des langues
 skipToMainContent: Aller directement au contenu principal
 epWebsite: Site web du Parlement européen
-onX: ""
+onX: sur X
 onFacebook: sur Facebook
 onLinkedIn: sur LinkedIn
 onWhatsApp: sur WhatsApp
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Copier l’adresse URL
 copyURLToClipboard: Copier l’adresse dans le presse-papiers
 urlCopiedToClipboard: L’adresse a été copiée dans votre presse-papiers
+error404: erreur 404
+error404Message: Cette page est introuvable ou n’existe plus

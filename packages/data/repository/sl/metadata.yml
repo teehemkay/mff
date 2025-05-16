@@ -1,9 +1,9 @@
 pageLabelHome: Domača stran
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Zakaj je pomemben
+pageLabelHowItWorks: Kako deluje
+pageLabelOurRole: Vloga Evropskega parlamenta
+pageLabelOurPosition: Stališče Evropskega parlamenta
+pageLabelByCountry: Po državah
 clickToPlayVideo: Odpri video
 mainNav: Glavna navigacija
 openMenu: Odpri meni
@@ -33,9 +33,10 @@ contactUs: Kontakti
 contactUsURL: https://www.europarl.europa.eu/portal/sl/contact
 clickHere: Klikni tukaj
 shareOnFacebook: Deli to stran na Facebooku
-shareOnX: ""
+shareOnX: Deli na omrežju X
 shareOnLinkedIn: Deli to stran na LinkedInu
 shareOnWhatsApp: Deli to stran na WhatsAppu
+socialMediaCardText: Dolgoročni proračun EU
 socialMediaCardUrl: ""
 all: Vsa
 selectCountry: Izberi državo
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/sl/accessibility
 goToWebsite: "Pojdi na spletno mesto:"
 shareOnLabel: Objavi na
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Delite
 goToPage: Pojdi na stran
 epLogoAltText: Logotip Evropskega parlamenta
 skipToLanguageMenu: Naravnost k jezikovnemu meniju
 skipToMainContent: Naravnost h glavni vsebini
 epWebsite: Spletišče Evropskega parlamenta
-onX: ""
+onX: na X
 onFacebook: na Facebooku
 onLinkedIn: na LinkedInu
 onWhatsApp: na WhatsAppu
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Kopiraj URL
 copyURLToClipboard: Kopiraj naslov v odložišče
 urlCopiedToClipboard: Naslov je bil kopiran v vaše odložišče.
+error404: napaka 404
+error404Message: Strani ni mogoče najti ali ne obstaja več

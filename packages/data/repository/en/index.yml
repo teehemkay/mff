@@ -18,12 +18,6 @@ homeCardLinkLabel:
   - The European Parliament’s role
   - The European Parliament’s position
   - The EU budget in your country and region
-homeCardLinkURL:
-  - /en/why-it-matters/
-  - /en/how-it-works/
-  - /en/our-role/
-  - /en/our-position/
-  - /en/by-country/
 homeCardText:
   - Find out how the long-term budget allows the EU to pool resources and invest
     in what matters to Europeans.
@@ -34,6 +28,12 @@ homeCardText:
   - Read about the European Parliament’s priorities in the negotiations on the
     next EU long-term budget.
   - Discover how the EU budget benefits you, your region and your country.
+homeCardLinkURL:
+  - /en/why-it-matters/
+  - /en/how-it-works/
+  - /en/our-role/
+  - /en/our-position/
+  - /en/by-country/
 homeVideoTitle: ""
 homeVideoURL: ""
 homeNewsTitle: Latest updates
@@ -58,7 +58,7 @@ homeRelatedLinkLabel:
   - Latest public opinion surveys - Eurobarometer
   - "Factsheet on how the EU works: financing the EU"
   - European Commission's website on the EU’s long-term budget
-  - Council of the EU's website on the EU’s long-term budget
+  - Council's website on the EU’s long-term budget
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/en/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/en/section/188/financing

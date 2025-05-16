@@ -1,9 +1,9 @@
 pageLabelHome: Portada
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Por qué es importante
+pageLabelHowItWorks: Cómo funciona
+pageLabelOurRole: Nuestro papel
+pageLabelOurPosition: Nuestra posición
+pageLabelByCountry: Por países
 clickToPlayVideo: Clique para ver el vídeo
 mainNav: Menú principal
 openMenu: Abrir menú
@@ -33,9 +33,10 @@ contactUs: Contacto
 contactUsURL: https://www.europarl.europa.eu/portal/es/contact
 clickHere: Clique aquí
 shareOnFacebook: Compartir esta página en Facebook
-shareOnX: ""
+shareOnX: Compartir esta página en X
 shareOnLinkedIn: Compartir esta página en Linkedin
 shareOnWhatsApp: Compartir esta página en WhatsApp
+socialMediaCardText: El presupuesto de la UE a largo plazo
 socialMediaCardUrl: ""
 all: Todos
 selectCountry: Seleccionar un país
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/es/accessibility
 goToWebsite: "Ir a la página web:"
 shareOnLabel: Compartir en
 facebookLabel: Facebook
-xLabel: ""
+xLabel: X
 shareLabel: Compartir
 goToPage: Ir a la página
 epLogoAltText: Logo del Parlamento Europeo
 skipToLanguageMenu: Ir al menú de idiomas
 skipToMainContent: Ir al contenido principal
 epWebsite: Sitio web del Parlamento Europeo
-onX: ""
+onX: en X
 onFacebook: en Facebook
 onLinkedIn: en LinkedIn
 onWhatsApp: en WhatsApp
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Copiar URL
 copyURLToClipboard: Copiar la dirección al portapapeles
 urlCopiedToClipboard: Se ha copiado la dirección al portapapeles.
+error404: error 404
+error404Message: La página solicitada no se ha encontrado o ha dejado de existir

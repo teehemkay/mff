@@ -1,9 +1,9 @@
 pageLabelHome: Αρχική
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Γιατί έχει σημασία
+pageLabelHowItWorks: Πώς λειτουργεί
+pageLabelOurRole: Ο ρόλος μας
+pageLabelOurPosition: Η θέση μας
+pageLabelByCountry: Ανά χώρα
 clickToPlayVideo: Κάντε κλικ για να δείτε το βίντεο
 mainNav: Μενού πλοήγησης
 openMenu: Άνοιγμα μενού
@@ -33,9 +33,10 @@ contactUs: Επικοινωνία
 contactUsURL: https://www.europarl.europa.eu/portal/el/contact
 clickHere: Πατήστε εδώ
 shareOnFacebook: Κοινοποίηση στο Facebook
-shareOnX: ""
+shareOnX: Μοιραστείτε το στον λογαριασμό του X
 shareOnLinkedIn: Κοινοποίηση στο Linkedin
 shareOnWhatsApp: Κοινοποίηση στο WhatsApp
+socialMediaCardText: Ο μακροπρόθεσμος προϋπολογισμός της ΕΕ
 socialMediaCardUrl: ""
 all: Όλα
 selectCountry: Επιλέξτε χώρα
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/el/accessibility
 goToWebsite: "Μεταβείτε στον ιστότοπο:"
 shareOnLabel: Κοινοποίηση στο
 facebookLabel: Facebook
-xLabel: ""
+xLabel: Χ
 shareLabel: Κοινοποίηση
 goToPage: Μετάβαση στη σελίδα
 epLogoAltText: Λογότυπο του Ευρωπαϊκού Κοινοβουλίου
 skipToLanguageMenu: Μετάβαση στο μενού γλωσσών
 skipToMainContent: Μετάβαση στο κυρίως περιεχόμενο
 epWebsite: Ιστότοπος του Ευρωπαϊκού Κοινοβουλίου
-onX: ""
+onX: στο X
 onFacebook: στο Facebook
 onLinkedIn: στο LinkedIn
 onWhatsApp: στο WhatsApp
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Αντιγραφή URL
 copyURLToClipboard: Αντιγράψτε τη διεύθυνση στο πρόχειρό σας
 urlCopiedToClipboard: Η διεύθυνση έχει αντιγραφεί στο πρόχειρο σας.
+error404: σφάλμα 404
+error404Message: Η σελίδα αυτή δεν βρέθηκε ή δεν υπάρχει πλέον

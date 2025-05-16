@@ -1,9 +1,9 @@
 pageLabelHome: Naslovna strana
-pageLabelWhyItMatters: ""
-pageLabelHowItWorks: ""
-pageLabelOurRole: ""
-pageLabelOurPosition: ""
-pageLabelByCountry: ""
+pageLabelWhyItMatters: Zašto je to važno
+pageLabelHowItWorks: Kako djeluje
+pageLabelOurRole: Naša uloga
+pageLabelOurPosition: Naša pozicija
+pageLabelByCountry: Po zemlji
 clickToPlayVideo: Kliknite na video
 mainNav: Glavni izbornik
 openMenu: Otvori izbornik
@@ -33,9 +33,10 @@ contactUs: Kontakt
 contactUsURL: https://www.europarl.europa.eu/portal/hr/contact
 clickHere: Kliknite ovdje
 shareOnFacebook: Podijelite ovu stranicu na Facebooku
-shareOnX: ""
+shareOnX: Podijeli ovu stranicu na X-u
 shareOnLinkedIn: Podijelite ovu stranicu na LinkedInu
 shareOnWhatsApp: Podijelite ovu stranicu na WhatsAppu
+socialMediaCardText: EU-ov dugoročni proračun
 socialMediaCardUrl: ""
 all: Svi
 selectCountry: Odaberite zemlju
@@ -44,14 +45,14 @@ accessibilityLabelURL: https://www.europarl.europa.eu/portal/hr/accessibility
 goToWebsite: "Idi na internetsku stranicu:"
 shareOnLabel: Podijelite na
 facebookLabel: Facebooku
-xLabel: ""
+xLabel: X
 shareLabel: Podijelite
 goToPage: Posjetite stranicu
 epLogoAltText: Logo Europskog parlamenta
 skipToLanguageMenu: Pređite na izbornik jezika
 skipToMainContent: Pređite na glavni sadržaj
 epWebsite: Internetske stranice Europskog parlamenta
-onX: ""
+onX: na X-u
 onFacebook: na Facebooku
 onLinkedIn: na LinkedInu
 onWhatsApp: na WhatsAppu
@@ -64,3 +65,5 @@ mb: MB
 copyURLLabel: Kopiraj url
 copyURLToClipboard: Kopirajte URL u međuspremnik
 urlCopiedToClipboard: URL je kopiran u vaš međuspremnik.
+error404: pogreška 404
+error404Message: Stranica nije pronađena ili više ne postoji

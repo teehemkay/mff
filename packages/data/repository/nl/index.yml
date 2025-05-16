@@ -1,50 +1,67 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "De langetermijnbegroting van de EU: alles wat je moet weten"
+metaDescription: Ontdek wat de langetermijnbegroting van de EU is, hoe deze
+  wordt onderhandeld en besteed en welke belangrijke rol het Europees Parlement
+  hierin speelt.
+homeH1: De langetermijnbegroting van de EU
+homeSubtitle: Investeren in wat belangrijk is
+homeIntroText: >
+  <p>De meerjarenbegroting van de EU stimuleert investeringen in de toekomst van
+  Europa om zo het leven van de burgers te verbeteren. 
+
+  De begroting financiert gemeenschappelijke projecten en maakt prioriteiten op
+  het gebied van economische concurrentie tot landbouw mogelijk.</p>
+
+  <p><strong>Ontdek de voordelen van de EU-begroting en hoe beslissingen
+  hierover worden genomen.</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Waarom het belangrijk is
+  - Hoe het werkt
+  - De rol van het Europees Parlement
+  - Het standpunt van het Europees Parlement
+  - De EU-begroting in jouw land en regio
+homeCardText:
+  - Ontdek hoe de langetermijnbegroting de EU in staat stelt om middelen te
+    bundelen en te investeren in wat Europeanen belangrijk vinden.
+  - Ontdek hoe de langetermijnbegroting van de EU wordt gefinancierd, waar het
+    geld in wordt geïnvesteerd en nog veel meer.
+  - Ontdek welke rol het Europees Parlement speelt bij de besluitvorming over de
+    EU-begroting en het toezicht op de besteding ervan.
+  - Lees meer over de prioriteiten van het Europees Parlement voor de
+    onderhandelingen over de volgende langetermijnbegroting van de EU.
+  - Ontdek hoe de EU-begroting jou, jouw regio en jouw land ten goede komt.
 homeCardLinkURL:
   - /nl/why-it-matters/
   - /nl/how-it-works/
   - /nl/our-role/
   - /nl/our-position/
   - /nl/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Laatste updates
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Persberichten
+  - Diepgaande artikelen
+  - Mediakit
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/nl/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Lees de laatste persberichten over de langetermijnbegroting van de EU
+  - Lees de meest recente beleidsnota's en studies over de langetermijnbegroting
+    van de EU
+  - "Voor journalisten: De mediakit bevat specifieke informatie en contacten die
+    je kunnen helpen bij de verslaggeving over de langetermijnbegroting van de
+    EU."
+homeCampaignTitle: Investeren in wat belangrijk is
+homeCampaignLinkLabel: Campagnemateriaal
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Gerelateerde links
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - Recentste opiniepeilingen - Eurobarometer
+  - "Factsheet over de werking van de EU: financiering van de EU"
+  - Website van de Europese Commissie over de langetermijnbegroting van de EU
+  - Website van de Raad over de langetermijnbegroting van de EU
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/nl/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/nl/section/188/financing

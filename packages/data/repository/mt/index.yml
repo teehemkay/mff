@@ -1,50 +1,65 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "Il-baġit fit-tul tal-UE: Kulma għandek bżonn tkun taf"
+metaDescription: Tgħallem x'inhu l-baġit fit-tul tal-UE, kif jiġi nnegozjat u
+  investit u kif il-Parlament Ewropew għandu rwol ewlieni.
+homeH1: Il-baġit fit-tul tal-UE
+homeSubtitle: Investiment f’dak li jgħodd l-aktar
+homeIntroText: >
+  <p>Il-baġit fit-tul tal-UE jixpruna l-investiment fil-futur tal-Ewropa,
+  filwaqt li jtejjeb il-ħajja taċ-ċittadini. 
+
+  Huwa jiffinanzja proġetti komuni u jagħti r-riżultati dwar il-prijoritajiet
+  bħalm&#39;huma l-kompetittività ekonomika u l-agrikoltura.</p>
+
+  <p><strong>Skopri l-benefiċċji tal-baġit tal-UE u tgħallem kif jittieħdu
+  d-deċiżjonijiet dwaru.</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Għaliex huwa importanti
+  - Kif jaħdem
+  - Ir-rwol tal-Parlament Ewropew
+  - Il-pożizzjoni tal-Parlament Ewropew
+  - Il-baġit tal-UE f’pajjiżek u fir-reġjun tiegħek
+homeCardText:
+  - Skopri kif il-baġit fit-tul jippermetti lill-UE tiġbor flimkien ir-riżorsi u
+    tinvesti f’dak li jgħodd l-aktar għall-Ewropej.
+  - Esplora kif jiġi ffinanzjat il-baġit fit-tul tal-UE, f’xiex jiġu investiti
+    l-flus, u ħafna aktar.
+  - Skopri x'sehem għandu l-Parlament Ewropew fid-deċiżjonijiet dwar il-baġit
+    tal-UE u fis-sorveljanza tal-użu tiegħu.
+  - Aqra dwar il-prijoritajiet tal-Parlament Ewropew fin-negozjati dwar il-baġit
+    fit-tul tal-UE li jmiss.
+  - Skopri kif il-baġit tal-UE huwa ta’ benefiċċju għalik, għar-reġjun tiegħek u
+    għal pajjiżek.
 homeCardLinkURL:
   - /mt/why-it-matters/
   - /mt/how-it-works/
   - /mt/our-role/
   - /mt/our-position/
   - /mt/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: L-aħħar aġġornamenti
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Stqarrijiet għall-istampa
+  - Artikli fil-fond
+  - Għodod għall-istampa
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/mt/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Aqra l-aħħar stqarrijiet għall-istampa dwar il-baġit fit-tul tal-UE
+  - Aqra l-aħħar aġġornamenti u studji ta’ politika dwar il-baġit fit-tul tal-UE
+  - "Għall-ġurnalisti: Is-sett ta’ għodod għall-istampa jipprovdi informazzjoni
+    u kuntatti speċifiċi biex jgħinuk tkopri l-baġit fit-tul tal-UE"
+homeCampaignTitle: Investiment f’dak li jgħodd l-aktar
+homeCampaignLinkLabel: Materjal tal-kampanja
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Ħoloq relatati
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - L-aħħar stħarriġiet tal-opinjoni pubblika - L-Ewrobarometru
+  - "Skeda informattiva dwar kif taħdem l-UE: il-finanzjament tal-UE"
+  - Is-sit web tal-Kummissjoni Ewropea dwar il-baġit fit-tul tal-UE
+  - Is-sit web tal-Kunsill dwar il-baġit fit-tul tal-UE
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/mt/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/mt/section/188/financing

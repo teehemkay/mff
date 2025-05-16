@@ -1,50 +1,68 @@
-metaTitle: ""
-metaDescription: ""
-homeH1: ""
-homeSubtitle: ""
-homeIntroText: ""
+metaTitle: "Presupuesto de la UE a largo plazo: todo lo que necesitas saber"
+metaDescription: Descubre qué es el presupuesto de la UE a largo plazo, cómo se
+  negocia y se invierte, y cuál es el papel clave que desempeña el Parlamento
+  Europeo.
+homeH1: El presupuesto de la UE a largo plazo
+homeSubtitle: Invertir en lo que importa
+homeIntroText: >
+  <p>El presupuesto de la UE a largo plazo impulsa la inversión en el futuro de
+  Europa y mejora la vida de las personas.
+
+  Financia proyectos comunes y responde a prioridades que van desde la
+  competitividad económica hasta la agricultura.</p>
+
+  <p><strong>Descubre los beneficios del presupuesto de la UE y cómo se toman
+  las decisiones sobre su uso.</strong></p>
 homeCardLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - Por qué es importante
+  - Cómo funciona
+  - El papel del Parlamento Europeo
+  - La posición del Parlamento Europeo
+  - El presupuesto de la UE en tu país y en tu región
+homeCardText:
+  - Conoce cómo el presupuesto a largo plazo permite a la UE sumar recursos e
+    invertir en lo que importa a las personas en Europa.
+  - Descubre cómo se financia el presupuesto de la UE a largo plazo, en qué se
+    invierte el dinero y mucho más.
+  - Descubre qué papel desempeña el Parlamento Europeo en la decisión sobre el
+    presupuesto de la UE y en la supervisión de su uso.
+  - Conoce las prioridades del Parlamento Europeo en las negociaciones sobre el
+    próximo presupuesto de la UE a largo plazo.
+  - Descubre cómo el presupuesto de la UE beneficia a tu país, a tu región y a
+    ti.
 homeCardLinkURL:
   - /es/why-it-matters/
   - /es/how-it-works/
   - /es/our-role/
   - /es/our-position/
   - /es/by-country/
-homeCardText:
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
 homeVideoTitle: ""
 homeVideoURL: ""
-homeNewsTitle: ""
+homeNewsTitle: Últimas noticias
 homeNewsCardTitle:
-  - ""
-  - ""
-  - ""
+  - Comunicados de prensa
+  - Artículos en profundidad
+  - Kit de prensa
 homeNewsCardUrl:
   - https://www.europarl.europa.eu/committees/es/budg/home/press-releases
   - https://www.europarl.europa.eu/thinktank/en/research/advanced-search?textualSearch=&policyAreas=BUDGET&startDate=&endDate
   - https://www.europarl.europa.eu/news/en/press-room/press-tool-kit/1/all-you-need-to-know-about-the-eu-s-long-term-budget
 homeNewsCardText:
-  - ""
-  - ""
-  - ""
-homeCampaignTitle: ""
-homeCampaignLinkLabel: ""
+  - Consulta las últimas notas de prensa sobre el presupuesto de la UE a largo
+    plazo.
+  - Consulta los últimos informes y estudios sobre el presupuesto de la UE a
+    largo plazo.
+  - "Para periodistas: el kit de prensa ofrece información específica y
+    contactos para ayudar a cubrir el presupuesto de la UE a largo plazo."
+homeCampaignTitle: Invertir en lo que importa
+homeCampaignLinkLabel: Material de la campaña
 homeCampaignLinkURL: https://brandportal.europarl.europa.eu/multipliers/
-homeRelatedLinksTitle: ""
+homeRelatedLinksTitle: Enlaces relacionados
 homeRelatedLinkLabel:
-  - ""
-  - ""
-  - ""
-  - ""
+  - "Últimas encuentas de opinión pública: Eurobarómetro"
+  - "Ficha temática sobre el funcionamiento de la UE: financiación de la UE"
+  - Sitio web de la Comisión Europea sobre el presupuesto de la UE a largo plazo
+  - Sitio web del Consejo sobre el presupuesto de la UE a largo plazo
 homeRelatedLinkURL:
   - https://www.europarl.europa.eu/at-your-service/es/be-heard/eurobarometer
   - https://www.europarl.europa.eu/factsheets/es/section/188/financing
